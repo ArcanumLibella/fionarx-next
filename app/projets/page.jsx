@@ -1,8 +1,10 @@
-const ProjectPage = ({}) => {
+import { ProjectsLayout } from "../_components/layouts/ProjectsLayout"
+
+const ProjectPage = ({ children }) => {
   return (
-    <main>
-      <h1>Projets</h1>
-    </main>
+    <ProjectsLayout>
+      {children}
+    </ProjectsLayout>
   )
 }
 
