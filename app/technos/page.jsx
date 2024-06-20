@@ -1,8 +1,10 @@
+import { ProjectsByCategoryLayout } from "../_components/layouts/ProjectsByCategoryLayout"
+
 const ProjectsByTechnoPage = ({}) => {
   return (
-    <main>
+    <ProjectsByCategoryLayout>
       <h1>Technos</h1>
-    </main>
+    </ProjectsByCategoryLayout>
   )
 }
 

@@ -1,8 +1,10 @@
+import { ProjectsByCategoryLayout } from "../_components/layouts/ProjectsByCategoryLayout"
+
 const ProjectsByMissionPage = ({}) => {
   return (
-    <main>
+    <ProjectsByCategoryLayout>
       <h1>Missions</h1>
-    </main>
+    </ProjectsByCategoryLayout>
   )
 }
 
