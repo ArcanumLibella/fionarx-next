@@ -1,5 +1,3 @@
-// import { RDVButton } from "../molecules/RDVButton";
-import { Menu } from "./_components/organisms/Menu";
 import "./globals.css";
 
 export const metadata = {
@@ -11,11 +9,7 @@ export default function RootLayout({pageTitle, children, className: additionalSt
   return (
     <html lang="fr">
       <body>
-        <main className="MainLayout relative h-screen overflow-auto bg-midnight z-0">
-          <Menu />
-          {/* <RDVButton /> TODO: A réactiver quand je suis prête ! */}
-            {children}
-        </main>
+        {children}
       </body>
     </html>
   )
