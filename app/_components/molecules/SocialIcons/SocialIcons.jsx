@@ -1,5 +1,5 @@
 import React from "react";
-import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../_assets/icons";
+import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../public/_assets/icons";
 import { COLORS } from "../../../_constants/Colors";
 
 export const SocialIcons = ({

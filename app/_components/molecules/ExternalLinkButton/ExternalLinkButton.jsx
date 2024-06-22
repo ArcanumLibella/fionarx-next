@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "../../atoms/Text";
-import { ArrowLeftIcon, ArrowRightIcon } from "../../../_assets/icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "../../../../public/_assets/icons";
 import { COLORS } from "../../../_constants/Colors";
 
 export const ExternalLinkButton = ({

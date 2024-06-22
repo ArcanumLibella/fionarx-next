@@ -1,7 +1,7 @@
 import React from 'react';
 import { COLORS } from "../../../_constants/Colors";
 import { Heading } from "../../atoms/Heading";
-import { ArrowLeftIcon, ArrowRightIcon } from "@/app/_assets/icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@/public/_assets/icons";
 import Link from "next/link";
 
 export const LinkButton = ({

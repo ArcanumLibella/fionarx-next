@@ -7,7 +7,7 @@ import { TagTechno } from "../atoms/TagTechno";
 import { LinkButton } from "../molecules/LinkButton";
 import { ExternalLinkButton } from "../molecules/ExternalLinkButton";
 import { Blobs } from "../organisms/Blobs";
-import { ChevronsDownIcon } from "../../_assets/icons";
+import { ChevronsDownIcon } from "../../../public/_assets/icons";
 import { COLORS } from "../../_constants/Colors";
 
 export const ProjectLayout = ({title, description, preview, year, technos, links}) => {

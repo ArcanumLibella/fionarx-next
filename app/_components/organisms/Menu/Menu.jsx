@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { NavButton } from "../../molecules/NavButton";
 import { MenuItem } from "../../atoms/MenuItem";
-import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../_assets/icons";
+import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../public/_assets/icons";
 import { COLORS } from "../../../_constants/Colors";
 import { menuItemVariants, menuItemsVariants, socialItemsVariants } from "./Menu.const";
 
