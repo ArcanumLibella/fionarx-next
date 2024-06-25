@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = process.env.STRAPI_URL || 'http://127.0.0.1:1337';
+export const BASE_URL = process.env.STRAPI_URL || 'http://127.0.0.1:1337';
 
 export async function fetchDataFromStrapi(route) {
   const url = `${BASE_URL}/api/${route}`;
@@ -38,6 +38,6 @@ function processProject(project) {
   return {
     ...project.attributes,
     id: project.id,
-    thumbnail: BASE_URL + project.attributes.thumbnail.data.attributes.url
+    thumbnail: project.attributes.thumbnail.data.attributes
   }
 }
