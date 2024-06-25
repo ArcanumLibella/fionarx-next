@@ -1,4 +1,4 @@
-"use client"; // top to the file
+"use client";
 
 import React, { useState } from "react";
 import { useIsMobile } from "../../../_utils/useWindowSize";
@@ -11,52 +11,8 @@ import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../p
 import { COLORS } from "../../../_constants/Colors";
 import { menuItemVariants, menuItemsVariants, socialItemsVariants } from "./Menu.const";
 
-export const Menu = () => {
-  // const data = useStaticQuery(graphql`
-  //   query GetMenuItems {
-  //     strapiGlobal {
-  //       menu {
-  //         label
-  //         link
-  //       }
-  //       socials {
-  //         linkedin
-  //         malt
-  //         github
-  //         instagram
-  //       }
-  //     }
-  //   }
-  // `);
-
-  // const menuItems = data.strapiGlobal.menu;
-  const menuItems = [
-    {
-        label: "Projets",
-        link: "/projets"
-    },
-    {
-        label: "À propos",
-        link: "/a-propos"
-    },
-    {
-        label: "Prestations",
-        link: "/prestations"
-    },
-    {
-        label: "Contact",
-        link: "/contact"
-    }
-  ]
-
-  // const { linkedin, malt, github, instagram } = data.strapiGlobal.socials;
-  const { linkedin, malt, github, instagram } = {
-    linkedin: "https://www.linkedin.com/in/fionaroux/",
-    malt: "https://www.malt.fr/profile/fionaroux",
-    github: "https://github.com/ArcanumLibella",
-    instagram: "https://www.instagram.com/sukhakulii/"
-  }
-
+export const Menu = ({ socialsItems, menuItems }) => {
+  const { linkedin, malt, github, instagram } = socialsItems;
 
   const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
