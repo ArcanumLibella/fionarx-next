@@ -1,9 +1,9 @@
 import React from "react";
-import { MainLayout } from "./MainLayout";
-import { BlobsLight } from "../organisms/BlobsLight/BlobsLight";
-import { Blobs } from "../organisms/Blobs";
 import { Heading } from "../atoms/Heading";
 import { TagCategory } from "../atoms/TagCategory";
+import { BlobsLight } from "../organisms/BlobsLight/BlobsLight";
+import { Blobs } from "../organisms/Blobs";
+import { MainLayout } from "./MainLayout";
 
 export const ProjectsLayout = ({ categories, children }) => {
   return (
@@ -17,7 +17,7 @@ export const ProjectsLayout = ({ categories, children }) => {
           </Heading>
           <div className="ProjectsLayout__categories flex flex-wrap items-start w-full gap-2 md:gap-4">
             {categories && categories.map((category, i) => (
-              <TagCategory key={category.node.slug} name={category.node.name} slug={category.node.slug} />
+              <TagCategory key={category.attributes.slug} name={category.attributes.name} slug={category.attributes.slug} />
             ))}
           </div>
         </div>
