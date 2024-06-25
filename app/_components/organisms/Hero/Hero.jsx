@@ -1,13 +1,12 @@
 import React from 'react';
-import axios from "axios";
 import { Blobs } from "../Blobs";
 import Link from "next/link";
 import { Heading } from "../../atoms/Heading";
+import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
 
 export const Hero = async () => {
-  const response = await axios.get("http://127.0.0.1:1337/api/global?populate=deep");
-  console.log("response : ", response.data.data.attributes.hero)
-  const heroItems = response.data.data.attributes.hero;
+  const data = await fetchDataFromStrapi("global?populate=deep");
+  const heroItems = data.attributes.hero;
 
   const renderHero = heroItems.map((item) => {
     if (item.link) {
