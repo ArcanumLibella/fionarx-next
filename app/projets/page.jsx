@@ -13,9 +13,9 @@ const ProjectPage = async () => {
           <ProjectCard
             key={project.slug}
             title={project.title}
-            missions={project.missions}
             slug={project.slug}
             thumbnail={project.thumbnail}
+            missions={project.missions}
           />
       ))}
     </ProjectsLayout>

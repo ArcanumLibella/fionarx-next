@@ -14,6 +14,8 @@ export const ProjectCard = ({
   thumbnail,
 }) => {
   // TODO: Ajouter le loading avec un skeleton dans le composant ?
+  const missionsData = missions.data;
+
   return (
     <AnimatePresence>
       {/* TODO: Add animation on page loading */}
@@ -53,8 +55,8 @@ export const ProjectCard = ({
 
           {/* MISSIONS */}
           <div className="ProjectCard__missions absolute flex flex-wrap items-start w-full gap-2 bottom-[6%] left-[4%] md:top-[64vh] md:left-0">
-            {missions && missions.map((mission) => (
-              <TagMission key={mission.slug} label={mission.name} slug={mission.slug} />
+            {missionsData && missionsData.map((mission) => (
+              <TagMission key={mission.attributes.slug} label={mission.attributes.name} slug={mission.attributes.slug} />
             ))}
           </div>
         </Link>

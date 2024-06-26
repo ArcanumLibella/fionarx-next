@@ -13,20 +13,21 @@ import { COLORS } from "../../_constants/Colors";
 import { BASE_URL } from "@/app/_utils/strapi.utils";
 
 export const ProjectLayout = ({title, description, preview, year, technos, links}) => {
-  const image = preview.data.attributes;
+  const imageData = preview.data.attributes;
+  const technosData = technos.data;
   
   return (
     <MainLayout>
       <div className="Project flex flex-col justify-between xl:flex-row md:ml-20 xl:h-screen">
         <div className="Project__preview overflow-auto w-full h-[60vh] xl:max-h-screen xl:h-screen xl:text-center bg-purple">
           <div className="flex justify-center items-end h-full w-full">
-            {image && (
-              <figure key={image.id} className="Project__preview h-full">
+            {imageData && (
+              <figure key={imageData.id} className="Project__preview h-full">
                 <Image
-                  src={BASE_URL + image.url}
-                  alt={image.alternativeText}
-                  width={image.width}
-                  height={image.height}
+                  src={BASE_URL + imageData.url}
+                  alt={imageData.alternativeText}
+                  width={imageData.width}
+                  height={imageData.height}
                 />
               </figure>
             )}
@@ -55,8 +56,8 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
             {/* TECHNOS */}
             <div className="Project__technos justify-between mb-10 md:flex">
               <div className="flex flex-wrap items-start w-full gap-2 mb-8 md:mb-0 md:gap-4">
-                {technos && technos.map((techno) => {
-                  return <TagTechno key={techno.slug} label={techno.name} slug={techno.slug} />
+                {technosData && technosData.map((techno) => {
+                  return <TagTechno key={techno.attributes.slug} label={techno.attributes.name} slug={techno.attributes.slug} />
                 })}
               </div>
             </div>
