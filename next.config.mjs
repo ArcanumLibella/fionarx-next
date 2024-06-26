@@ -15,5 +15,8 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ['127.0.0.1'], /* FIXME: A changer en prod */
+  },
 };
 export default nextConfig;

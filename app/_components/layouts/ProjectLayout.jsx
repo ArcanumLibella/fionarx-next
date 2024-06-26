@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { MainLayout } from "./MainLayout";
 import { Heading } from "../atoms/Heading";
 import { Paragraph } from "../atoms/Paragraph";
@@ -9,21 +10,24 @@ import { ExternalLinkButton } from "../molecules/ExternalLinkButton";
 import { Blobs } from "../organisms/Blobs";
 import { ChevronsDownIcon } from "../../../public/_assets/icons";
 import { COLORS } from "../../_constants/Colors";
+import { BASE_URL } from "@/app/_utils/strapi.utils";
 
 export const ProjectLayout = ({title, description, preview, year, technos, links}) => {
+  const image = preview.data.attributes;
+  
   return (
     <MainLayout>
       <div className="Project flex flex-col justify-between xl:flex-row md:ml-20 xl:h-screen">
         <div className="Project__preview overflow-auto w-full h-[60vh] xl:max-h-screen xl:h-screen xl:text-center bg-purple">
           <div className="flex justify-center items-end h-full w-full">
-            {preview && (
-              <figure key={preview.id} className="Project__preview h-full">
-                {/* <GatsbyImage
-                  image={getImage(preview.localFile)}
-                  alt={preview.alternativeText}
-                  width={preview.width}
-                  height={preview.height}
-                /> */}
+            {image && (
+              <figure key={image.id} className="Project__preview h-full">
+                <Image
+                  src={BASE_URL + image.url}
+                  alt={image.alternativeText}
+                  width={image.width}
+                  height={image.height}
+                />
               </figure>
             )}
             <ChevronsDownIcon 

@@ -1,30 +1,37 @@
+import React from 'react';
 import { ProjectLayout } from "@/app/_components/layouts/ProjectLayout"
-import React from 'react'
+import { fetchDataFromStrapi, fetchProjects } from "@/app/_utils/strapi.utils";
 
-const ProjectPage = ({ params, data }) => {
-  // const { 
-  //   title,
-  //   description,
-  //   slug,
-  //   year,
-  //   preview,
-  //   technos,
-  //   links
-  // } = data.strapiProject
+export default async function ProjectPage({ params }) {
+  const { projet: slug } = params
 
-  const { projet } = params
+  const projects = await fetchProjects();
+  const project = projects.find((project) => project.slug === slug);
+
 
   return (
     <ProjectLayout
-      title={projet}
-      description={"description"}
-      slug={"slug"}
-      year={"year"}
-      preview={"preview"}
-      // technos={"technos"}
-      // links={"links"}
+      title={project.title}
+      description={project.description}
+      slug={slug}
+      year={project.year}
+      preview={project.preview}
+      technos={project.technos}
+      links={project.links}
     />
   )
 }
 
-export default ProjectPage
+export async function generateStaticParams() {
+  try {
+    const projects = await fetchDataFromStrapi("projects");
+
+    return projects.map((project) => ({
+      project: project.attributes.slug,
+    }));
+  } catch (error) {
+    console.log("Error fetching slugs for projects", error);
+  }
+}
+
+export const revalidate = 300;
