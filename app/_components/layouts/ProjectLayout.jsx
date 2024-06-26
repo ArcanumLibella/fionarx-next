@@ -57,7 +57,7 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
             <div className="Project__technos justify-between mb-10 md:flex">
               <div className="flex flex-wrap items-start w-full gap-2 mb-8 md:mb-0 md:gap-4">
                 {technosData && technosData.map((techno) => {
-                  return <TagTechno key={techno.attributes.slug} label={techno.attributes.name} slug={techno.attributes.slug} />
+                  return <TagTechno key={techno.id} label={techno.attributes.name} slug={techno.attributes.slug} />
                 })}
               </div>
             </div>

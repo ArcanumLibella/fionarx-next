@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from "framer-motion";
 import { TagMission } from "../../atoms/TagMission";
 import { cardVariants, titleVariants } from "./ProjectCard.const";
@@ -14,6 +15,10 @@ export const ProjectCard = ({
   thumbnail,
 }) => {
   // TODO: Ajouter le loading avec un skeleton dans le composant ?
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/projets/${slug}`);
+  };
   const missionsData = missions.data;
 
   return (
@@ -27,9 +32,9 @@ export const ProjectCard = ({
         whileHover={{ scale: 1.05, transition: { when: "afterChildren" } }}
         className="ProjectCard h-[64vh] max-h-[64vh] cursor-pointer"
       >
-        <Link
-          href={`/projets/${slug}`}
-          className="relative inline-block w-[74vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] h-full"
+        <div
+          onClick={handleClick}
+          className="relative inline-block w-[74vw] md:w-[32vw] xl:w-[20vw] max-w-[480px] h-full cursor-pointer"
         >
           {/* IMAGE */}
           <div className="ProjectCard__image absolute h-[62vh] w-full md:w-[32vw] xl:w-[20vw] max-w-[480px] bg-purple-light">
@@ -56,10 +61,10 @@ export const ProjectCard = ({
           {/* MISSIONS */}
           <div className="ProjectCard__missions absolute flex flex-wrap items-start w-full gap-2 bottom-[6%] left-[4%] md:top-[64vh] md:left-0">
             {missionsData && missionsData.map((mission) => (
-              <TagMission key={mission.attributes.slug} label={mission.attributes.name} slug={mission.attributes.slug} />
+              <TagMission key={mission.id} label={mission.attributes.name} slug={mission.attributes.slug} />
             ))}
           </div>
-        </Link>
+        </div>
       </motion.div>
     </AnimatePresence>
   );
