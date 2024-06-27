@@ -4,13 +4,15 @@ import { ProjectsByCategoryLayout } from "@/app/_components/layouts/ProjectsByCa
 import { ProjectCard } from "@/app/_components/organisms/ProjectCard";
 import { NoContent } from "@/app/_components/molecules/NoContent";
 
-export default async function ProjectsByCategoryPage({ params }) {
-  const { categorie: slug } = params
+export default async function ProjectsByMissionPage({ params }) {
+  const { mission: slug } = params
   
-  const categories = await fetchDataFromStrapi("categories?populate=deep");
-  const categorie = categories.find((categorie) => categorie.attributes.slug === slug);
-  const {name, projects} = categorie.attributes;
+  const missions = await fetchDataFromStrapi("missions?populate=deep");
+  const mission = missions.find((mission) => mission.attributes.slug === slug);
+  const {name, projects} = mission.attributes;
   const noContent = projects.data.length === 0;
+
+  console.log("PROJECT-DATA :", missions[0].attributes.projects.data)
 
   return (
     <ProjectsByCategoryLayout name={name} noContent={noContent}>
@@ -21,7 +23,6 @@ export default async function ProjectsByCategoryPage({ params }) {
           <ProjectCard
             key={project.id}
             title={project.attributes.title}
-            missions={project.attributes.missions}
             slug={project.attributes.slug}
             thumbnail={project.attributes.thumbnail.data.attributes}
           />
@@ -33,13 +34,13 @@ export default async function ProjectsByCategoryPage({ params }) {
 
 export async function generateStaticParams() {
   try {
-    const categories = await fetchDataFromStrapi("categories");
+    const missions = await fetchDataFromStrapi("missions");
 
-    return categories.map((categorie) => ({
-      categorie: categorie.attributes.slug,
+    return missions.map((mission) => ({
+      mission: mission.attributes.slug,
     }));
   } catch (error) {
-    console.log("Error fetching slugs for categories", error);
+    console.log("Error fetching slugs for missions", error);
   }
 }
 

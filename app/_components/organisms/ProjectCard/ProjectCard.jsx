@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from "framer-motion";
 import { TagMission } from "../../atoms/TagMission";
 import { cardVariants, titleVariants } from "./ProjectCard.const";
-import Link from "next/link";
 import { BASE_URL } from "@/app/_utils/strapi.utils";
+import Image from "next/image";
 
 export const ProjectCard = ({
   title,
@@ -19,7 +19,7 @@ export const ProjectCard = ({
   const handleClick = () => {
     router.push(`/projets/${slug}`);
   };
-  const missionsData = missions.data;
+  const missionsData = missions?.data;
 
   return (
     <AnimatePresence>
@@ -40,10 +40,14 @@ export const ProjectCard = ({
           <div className="ProjectCard__image absolute h-[62vh] w-full md:w-[32vw] xl:w-[20vw] max-w-[480px] bg-purple-light">
             {thumbnail && (
               <figure className="h-full">
-                <img
-                  className="w-full h-full object-cover"
+                <Image
                   src={BASE_URL + thumbnail.url}
                   alt={thumbnail.alternativeText}
+                  width={thumbnail.width}
+                  height={thumbnail.height}
+                  blurDataURL={BASE_URL + thumbnail.url}
+                  placeholder="blur"
+                  className="h-full object-cover"
                 />
               </figure>
             )}
@@ -58,12 +62,12 @@ export const ProjectCard = ({
             {title}
           </motion.h2>
 
-          {/* MISSIONS */}
-          <div className="ProjectCard__missions absolute flex flex-wrap items-start w-full gap-2 bottom-[6%] left-[4%] md:top-[64vh] md:left-0">
-            {missionsData && missionsData.map((mission) => (
-              <TagMission key={mission.id} label={mission.attributes.name} slug={mission.attributes.slug} />
-            ))}
-          </div>
+        </div>
+        {/* MISSIONS */}
+        <div className="ProjectCard__missions absolute flex flex-wrap items-start w-full gap-2 bottom-[6%] left-[4%] md:top-[64vh] md:left-0">
+          {missionsData && missionsData.map((mission) => (
+            <TagMission key={mission.id} label={mission.attributes.name} slug={mission.attributes.slug} />
+          ))}
         </div>
       </motion.div>
     </AnimatePresence>
