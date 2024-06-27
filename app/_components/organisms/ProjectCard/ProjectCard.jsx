@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from "framer-motion";
 import { TagMission } from "../../atoms/TagMission";
 import { cardVariants, titleVariants } from "./ProjectCard.const";
 import { BASE_URL } from "@/app/_utils/strapi.utils";
-import Image from "next/image";
 
 export const ProjectCard = ({
   title,
