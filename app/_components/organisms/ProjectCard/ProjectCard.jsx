@@ -41,11 +41,11 @@ export const ProjectCard = ({
             {thumbnail && (
               <figure className="h-full">
                 <Image
-                  src={BASE_URL + thumbnail.url}
+                  src={BASE_URL + thumbnail.url} //FIXME: à changer en prod
                   alt={thumbnail.alternativeText}
                   width={thumbnail.width}
                   height={thumbnail.height}
-                  blurDataURL={BASE_URL + thumbnail.url}
+                  blurDataURL={BASE_URL + thumbnail.url} //FIXME: à changer en prod
                   placeholder="blur"
                   className="h-full object-cover"
                 />

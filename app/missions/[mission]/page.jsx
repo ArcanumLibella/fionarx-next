@@ -12,8 +12,6 @@ export default async function ProjectsByMissionPage({ params }) {
   const {name, projects} = mission.attributes;
   const noContent = projects.data.length === 0;
 
-  console.log("PROJECT-DATA :", missions[0].attributes.projects.data)
-
   return (
     <ProjectsByCategoryLayout name={name} noContent={noContent}>
       {noContent ? (
