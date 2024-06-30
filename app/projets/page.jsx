@@ -8,23 +8,25 @@ const ProjectPage = async () => {
 
   try {
     projects = await fetchProjects();
-    console.log("projects !!! : ", projects)
+    console.log("Projects fetched:", projects);
   } catch (error) {
     console.error("Error fetching projects:", error);
   }
 
   try {
-    categories = await fetchDataFromStrapi("categories?populate=deep");
+    const categoriesResponse = await fetchDataFromStrapi("categories?populate=deep");
+    categories = categoriesResponse || [];
+    console.log("Categories fetched:", categories);
   } catch (error) {
     console.error("Error fetching categories:", error);
   }
 
-  console.log("PROJECTS ????? : ", projects)
-
+  // Vérifiez si les projets sont vides
   if (!projects || projects.length === 0) {
     return <div>No projects found</div>;
   }
 
+  // Vérifiez si les catégories sont vides
   if (!categories || categories.length === 0) {
     return <div>No categories found</div>;
   }
