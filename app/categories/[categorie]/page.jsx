@@ -1,14 +1,25 @@
 import React from 'react';
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
 import { NoContent, ProjectCard, ProjectsByCategoryLayout } from "@/app/_components";
+import NotFoundPage from "@/app/404";
 
 
 export default async function ProjectsByCategoryPage({ params }) {
   const { categorie: slug } = params
+  let categorie;
   
-  const categories = await fetchDataFromStrapi("categories?populate=deep");
-  const categorie = categories.find((categorie) => categorie.attributes.slug === slug);
-  const {name, projects} = categorie.attributes;
+  try {
+    const categories = await fetchDataFromStrapi("categories?populate=deep");
+    categorie = categories.find((categorie) => categorie.attributes.slug === slug);
+  } catch (error) {
+    console.error("Error fetching categories", error);
+  }
+
+  if (!categorie) {
+    return <NotFoundPage />;
+  }
+
+  const { name, projects } = categorie.attributes || { name: "", projects: { data: [] } };
   const noContent = projects.data.length === 0;
 
   return (
@@ -39,6 +50,7 @@ export async function generateStaticParams() {
     }));
   } catch (error) {
     console.log("Error fetching slugs for categories", error);
+    return [];
   }
 }
 
