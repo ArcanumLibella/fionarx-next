@@ -26,7 +26,7 @@ export default async function ProjectsByMissionPage({ params }) {
       {noContent ? (
         <NoContent />
       ) : (
-        projects.data.map((project) => (
+        projects?.data?.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.attributes.title}

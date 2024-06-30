@@ -5,7 +5,7 @@ import NotFoundPage from "@/app/404";
 
 
 export default async function ProjectsByCategoryPage({ params }) {
-  const { categorie: slug } = params
+  const { categorie: slug } = params;
   let categorie;
   
   try {
@@ -27,7 +27,7 @@ export default async function ProjectsByCategoryPage({ params }) {
       {noContent ? (
         <NoContent />
       ) : (
-        projects.data.map((project) => (
+        projects?.data?.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.attributes.title}
