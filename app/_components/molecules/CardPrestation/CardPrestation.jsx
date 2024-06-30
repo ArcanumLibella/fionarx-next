@@ -1,6 +1,5 @@
 import React from "react";
-import { Heading } from "../../atoms/Heading";
-import { Paragraph } from "../../atoms/Paragraph";
+import { Heading, Paragraph } from "../../atoms";
 
 export const CardPrestation = ({ title, description }) => {
   // TODO: A transformer en élément cliquable

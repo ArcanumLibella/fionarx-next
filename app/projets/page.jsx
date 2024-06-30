@@ -1,6 +1,5 @@
 import React from 'react';
-import { ProjectsLayout } from "../_components/layouts/ProjectsLayout"
-import { ProjectCard } from "../_components/organisms/ProjectCard";
+import { ProjectCard, ProjectsLayout } from "../_components";
 import { fetchDataFromStrapi, fetchProjects } from "../_utils/strapi.utils";
 
 const ProjectPage = async () => {

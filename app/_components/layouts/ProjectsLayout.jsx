@@ -1,9 +1,7 @@
 import React from "react";
-import { Heading } from "../atoms/Heading";
-import { TagCategory } from "../atoms/TagCategory";
-import { BlobsLight } from "../organisms/BlobsLight/BlobsLight";
-import { Blobs } from "../organisms/Blobs";
-import { MainLayout } from "./MainLayout";
+import { Heading, TagCategory } from "../atoms";
+import { Blobs, BlobsLight } from "../organisms";
+import { MainLayout } from ".";
 
 export const ProjectsLayout = ({ categories, children }) => {
   return (

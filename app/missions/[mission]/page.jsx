@@ -1,8 +1,6 @@
 import React from 'react';
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
-import { ProjectsByCategoryLayout } from "@/app/_components/layouts/ProjectsByCategoryLayout";
-import { ProjectCard } from "@/app/_components/organisms/ProjectCard";
-import { NoContent } from "@/app/_components/molecules/NoContent";
+import { NoContent, ProjectCard, ProjectsByCategoryLayout } from "@/app/_components";
 
 export default async function ProjectsByMissionPage({ params }) {
   const { mission: slug } = params

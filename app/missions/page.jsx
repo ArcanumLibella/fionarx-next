@@ -1,4 +1,4 @@
-import { ProjectsByCategoryLayout } from "../_components/layouts/ProjectsByCategoryLayout"
+import { ProjectsByCategoryLayout } from "../_components"
 
 const ProjectsByMissionPage = ({}) => {
   return (

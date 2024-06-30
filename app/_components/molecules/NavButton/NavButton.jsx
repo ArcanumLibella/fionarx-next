@@ -1,11 +1,13 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Squash as Hamburger } from "hamburger-react";
-import { useIsMobile } from "../../../_utils/useWindowSize";
 import { SocialIcons } from "../SocialIcons";
+import { useIsMobile } from "../../../_utils/useWindowSize";
 
 
-export const NavButton = ({ openMenuHandler, isMenuOpen }) => {
+export const NavButton = ({ socialsItems, openMenuHandler, isMenuOpen }) => {
   const isMobile = useIsMobile();
 
   return (
@@ -33,7 +35,10 @@ export const NavButton = ({ openMenuHandler, isMenuOpen }) => {
             />
           )}
         </span>
-        <SocialIcons className="flex-col justify-end flex-1 hidden gap-3 md:flex" />
+        <SocialIcons
+          socialsItems={socialsItems}
+          className="flex-col justify-end flex-1 hidden gap-3 md:flex"
+        />
       </div>
     </div>
   );

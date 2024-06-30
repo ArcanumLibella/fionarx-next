@@ -1,8 +1,7 @@
 import React from 'react';
 import { fetchDataFromStrapi } from "../_utils/strapi.utils";
-import { BlocksManager } from "../_components";
-import { PageLayout } from "../_components/layouts";
 import NotFoundPage from "../404";
+import { BlocksManager, PageLayout } from "../_components";
 
 const SinglePage = async ({ params }) => {
   const { slug } = params;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Text } from "../../atoms/Text";
+import { Text } from "../../atoms";
 
 export const ButtonLarge = ({
   label,

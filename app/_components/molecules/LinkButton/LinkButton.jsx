@@ -1,8 +1,8 @@
 import React from 'react';
-import { COLORS } from "../../../_constants/Colors";
-import { Heading } from "../../atoms/Heading";
-import { ArrowLeftIcon, ArrowRightIcon } from "@/public/_assets/icons";
 import Link from "next/link";
+import { Heading } from "../../atoms";
+import { COLORS } from "../../../_constants/Colors";
+import { ArrowLeftIcon, ArrowRightIcon } from "@/public/_assets/icons";
 
 export const LinkButton = ({
   side = "right",

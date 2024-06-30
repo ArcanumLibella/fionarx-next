@@ -3,5 +3,5 @@
   "rules": {
     // Autres règles...
     "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }]
-  },
+  }
 }

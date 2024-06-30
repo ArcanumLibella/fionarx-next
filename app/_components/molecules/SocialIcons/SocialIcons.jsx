@@ -3,29 +3,12 @@ import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../p
 import { COLORS } from "../../../_constants/Colors";
 
 export const SocialIcons = ({
+  socialsItems,
   className: additionalStyle,
 }) => {
-  // const { strapiGlobal } = useStaticQuery(graphql`
-  //   query {
-  //     strapiGlobal {
-  //       socials {
-  //         github
-  //         instagram
-  //         linkedin
-  //         malt
-  //       }
-  //     }
-  //   }
-  // `);
+  if (!socialsItems) return;
+  const { linkedin, malt, github, instagram } = socialsItems;
 
-  // const { linkedin, malt, github, instagram } = strapiGlobal.socials;
-  const { linkedin, malt, github, instagram } = {
-    linkedin: "https://www.linkedin.com/in/fionaroux/",
-    malt: "https://www.malt.fr/profile/fionaroux",
-    github: "https://github.com/ArcanumLibella",
-    instagram: "https://www.instagram.com/sukhakulii/"
-  }
-  
   const socialIcons = [
     {
       label: 'Linkedin',

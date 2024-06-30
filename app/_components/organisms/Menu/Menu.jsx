@@ -4,9 +4,8 @@ import React, { useState } from "react";
 import { useIsMobile } from "../../../_utils/useWindowSize";
 import { useOuterClick } from "../../../_hooks/useOutsideClick";
 import { AnimatePresence, motion } from "framer-motion";
-
-import { NavButton } from "../../molecules/NavButton";
-import { MenuItem } from "../../atoms/MenuItem";
+import { NavButton } from "../../molecules";
+import { MenuItem } from "../../atoms";
 import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../public/_assets/icons";
 import { COLORS } from "../../../_constants/Colors";
 import { menuItemVariants, menuItemsVariants, socialItemsVariants } from "./Menu.const";
@@ -32,7 +31,11 @@ export const Menu = ({ socialsItems, menuItems }) => {
 
   return (
     <>
-      <NavButton openMenuHandler={openMenuHandler} isMenuOpen={isMenuOpen} />
+      <NavButton
+        socialsItems={socialsItems}
+        openMenuHandler={openMenuHandler}
+        isMenuOpen={isMenuOpen}
+      />
       <AnimatePresence>
         {isMenuOpen && (
           <motion.nav

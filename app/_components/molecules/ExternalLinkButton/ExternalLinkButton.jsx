@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "../../atoms/Text";
+import { Text } from "../../atoms";
 import { ArrowLeftIcon, ArrowRightIcon } from "../../../../public/_assets/icons";
 import { COLORS } from "../../../_constants/Colors";
 

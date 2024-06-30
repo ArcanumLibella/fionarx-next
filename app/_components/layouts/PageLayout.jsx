@@ -1,9 +1,7 @@
 import React from "react";
-import { MainLayout } from "./MainLayout";
-import { Blobs } from "../organisms/Blobs";
-import { BlobsLight } from "../organisms/BlobsLight/BlobsLight";
-// import { Footer } from "../organisms/Footer";
-import { Heading } from "../atoms/Heading";
+import { MainLayout } from ".";
+import { Blobs, BlobsLight } from "../organisms";
+import { Heading } from "../atoms";
 
 export const PageLayout = ({title, children, className: additionalStyle}) => {
   return (

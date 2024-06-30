@@ -1,8 +1,6 @@
 import React from 'react';
+import { NoContent, ProjectCard, ProjectsByCategoryLayout } from "@/app/_components";
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
-import { ProjectsByCategoryLayout } from "@/app/_components/layouts/ProjectsByCategoryLayout";
-import { ProjectCard } from "@/app/_components/organisms/ProjectCard";
-import { NoContent } from "@/app/_components/molecules/NoContent";
 
 export default async function ProjectsByTechnoPage({ params }) {
   const { techno: slug } = params

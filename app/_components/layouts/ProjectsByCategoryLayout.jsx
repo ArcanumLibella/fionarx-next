@@ -1,9 +1,8 @@
 import React from "react";
-import { MainLayout } from "./MainLayout";
-import { BlobsLight } from "../organisms/BlobsLight/BlobsLight";
-import { Blobs } from "../organisms/Blobs";
-import { LinkButton } from "../molecules/LinkButton";
-import { Heading } from "../atoms/Heading";
+import { Heading } from "../atoms";
+import { LinkButton } from "../molecules";
+import { Blobs, BlobsLight } from "../organisms";
+import { MainLayout } from ".";
 
 export const ProjectsByCategoryLayout = ({ name, children, noContent }) => {
   return (

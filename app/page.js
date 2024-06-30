@@ -1,5 +1,4 @@
-import { MainLayout } from "./_components/layouts/MainLayout";
-import { Hero } from "./_components/organisms/Hero";
+import { Hero, MainLayout } from "./_components";
 
 export default function Home() {
   return (

@@ -1,11 +1,9 @@
 import React from "react";
-import { Menu } from "../organisms/Menu";
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
-// import { RDVButton } from "../molecules/RDVButton";
+import { Menu } from "../organisms";
 
 export const MainLayout = async ({pageTitle, children, className: additionalStyle}) => {
   const globalData = await fetchDataFromStrapi("global?populate=deep");
-
   const socialsItems = globalData.attributes.socials;
   const menuItems = globalData.attributes.menu;
 

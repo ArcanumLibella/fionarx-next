@@ -1,13 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { MainLayout } from "./MainLayout";
-import { Heading } from "../atoms/Heading";
-import { Paragraph } from "../atoms/Paragraph";
-import { Text } from "../atoms/Text";
-import { TagTechno } from "../atoms/TagTechno";
-import { LinkButton } from "../molecules/LinkButton";
-import { ExternalLinkButton } from "../molecules/ExternalLinkButton";
-import { Blobs } from "../organisms/Blobs";
+import { Heading, Paragraph, TagTechno, Text } from "../atoms";
+import { ExternalLinkButton, LinkButton } from "../molecules";
+import { Blobs } from "../organisms";
+import { MainLayout } from ".";
 import { ChevronsDownIcon } from "../../../public/_assets/icons";
 import { COLORS } from "../../_constants/Colors";
 import { BASE_URL } from "@/app/_utils/strapi.utils";

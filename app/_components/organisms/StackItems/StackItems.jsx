@@ -1,5 +1,5 @@
 import React from "react";
-import { StackItem } from "../../molecules/StackItem";
+import { StackItem } from "../../molecules";
 
 export const StackItems = ({ items }) => {
   if (!items) return;

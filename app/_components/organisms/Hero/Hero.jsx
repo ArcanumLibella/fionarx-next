@@ -1,7 +1,7 @@
 import React from 'react';
-import { Blobs } from "../Blobs";
 import Link from "next/link";
-import { Heading } from "../../atoms/Heading";
+import { Heading } from "../../atoms";
+import { Blobs } from "../Blobs";
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
 
 export const Hero = async () => {

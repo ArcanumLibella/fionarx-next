@@ -1,6 +1,6 @@
 import React from "react";
+import { Heading } from "../../atoms";
 import { ButtonLarge } from "../ButtonLarge";
-import { Heading } from "../../atoms/Heading";
 
 export const NoContent = () => {
   return (

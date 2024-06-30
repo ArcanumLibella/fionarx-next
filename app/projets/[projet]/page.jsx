@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectLayout } from "@/app/_components/layouts/ProjectLayout"
+import { ProjectLayout } from "@/app/_components";
 import { fetchDataFromStrapi, fetchProjects } from "@/app/_utils/strapi.utils";
 
 export default async function ProjectPage({ params }) {

@@ -1,16 +1,11 @@
 "use client";
 
 import React from "react";
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { Heading } from "./atoms/Heading";
-import { Paragraph } from "./atoms/Paragraph";
-import { Quote } from "./atoms/Quote";
-import { Spacer } from "./atoms/Spacer";
-import { Separator } from "./atoms/Separator";
-import { ButtonLarge } from "./molecules/ButtonLarge";
-import { ListItem } from "./molecules/ListItem";
-import { StackItems } from "./organisms/StackItems";
-import { CardsPrestation } from "./organisms/CardsPrestation";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
+import { ButtonLarge, ListItem } from "./molecules";
+import { CardsPrestation, StackItems } from "./organisms";
+
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
@@ -22,6 +17,7 @@ export function BlocksManager({ blocks }) {
           case "blocks.text":
             return (
               <BlocksRenderer
+                key={`BlocksRenderer-${block.id}`}
                 content={block.textContent}
                 blocks={{
                   paragraph: ({ children }) => {
@@ -49,17 +45,17 @@ export function BlocksManager({ blocks }) {
           case "blocks.list":
             return renderListBlock(block);
           case "blocks.prestations":
-            return <CardsPrestation key={block.id} cardsPrestation={block.cardsPrestation} />
+            return <CardsPrestation key={`CardsPrestation-${block.id}`} cardsPrestation={block.cardsPrestation} />
           case "blocks.stack":
-            return <StackItems key={block.id} items={block.items} />
+            return <StackItems key={`StackItems-${block.id}`} items={block.items} />
           case "blocks.quote":
-            return <Quote key={block.id} quoteContent={block.quoteContent} />;
+            return <Quote key={`Quote-${block.id}`} quoteContent={block.quoteContent} />;
           case "blocks.button":
-            return <ButtonLarge key={block.id} label={block.label} url={block.url} isExternal={block.isExternal} isCentered={block.isCentered} />;
+            return <ButtonLarge key={`ButtonLarge-${block.id}`} label={block.label} url={block.url} isExternal={block.isExternal} isCentered={block.isCentered} />;
           case "blocks.spacer":
-            return <Spacer key={block.id} mobileSize={block.mobileSize} size={block.size} />;
+            return <Spacer key={`Spacer-${block.id}`} mobileSize={block.mobileSize} size={block.size} />;
           case "blocks.separator":
-            return <Separator key={block.id} />;
+            return <Separator key={`Separator-${block.id}`} />;
           default:
             return null;
         }

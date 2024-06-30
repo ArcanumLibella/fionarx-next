@@ -1,10 +1,8 @@
 import * as React from "react"
-import { Blobs } from "./_components/organisms/Blobs"
-import { BlobsLight } from "./_components/organisms/BlobsLight"
-import { Heading } from "./_components/atoms/Heading"
 import Link from "next/link"
 import { ArrowLeftIcon } from "@/public/_assets/icons"
 import { COLORS } from "./_constants/Colors"
+import { Blobs, BlobsLight, Heading } from "./_components"
 
 const NotFoundPage = () => {
   return (
