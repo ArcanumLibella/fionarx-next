@@ -36,6 +36,12 @@ const ProjectPage = async () => {
       {projects && projects.map((project) => {
         console.log("PROJECTS !!!!! : ", projects)
         console.log("PROJECT !!!!! : ", project)
+         // Vérifiez que project n'est pas null ou undefined
+         if (!project) {
+          console.warn("Project is null or undefined !!!!!!!!!!!!!!!!! :", project);
+          return null;
+        }
+
         const { title, slug, thumbnail, missions } = project || {};
 
         
