@@ -8,6 +8,7 @@ const ProjectPage = async () => {
 
   try {
     projects = await fetchProjects();
+    console.log("projects !!! : ", projects)
   } catch (error) {
     console.error("Error fetching projects:", error);
   }
@@ -30,7 +31,7 @@ const ProjectPage = async () => {
 
   return (
     <ProjectsLayout categories={categories}>
-      {projects.map((project) => {
+      {projects && projects.map((project) => {
         const { title, slug, thumbnail, missions } = project || {};
         
         return (
