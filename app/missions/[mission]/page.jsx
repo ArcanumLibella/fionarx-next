@@ -1,13 +1,24 @@
 import React from 'react';
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
 import { NoContent, ProjectCard, ProjectsByCategoryLayout } from "@/app/_components";
+import NotFoundPage from "@/app/404";
 
 export default async function ProjectsByMissionPage({ params }) {
-  const { mission: slug } = params
+  const { mission: slug } = params;
+  let mission;
   
-  const missions = await fetchDataFromStrapi("missions?populate=deep");
-  const mission = missions.find((mission) => mission.attributes.slug === slug);
-  const {name, projects} = mission.attributes;
+  try {
+    const missions = await fetchDataFromStrapi("missions?populate=deep");
+    mission = missions.find((mission) => mission.attributes.slug === slug);
+  } catch (error) {
+    console.error("Error fetching missions", error);
+  }
+
+  if (!mission) {
+    return <NotFoundPage />;
+  }
+  
+  const { name, projects } = mission.attributes || { name: "", projects: { data: [] } };
   const noContent = projects.data.length === 0;
 
   return (
@@ -37,6 +48,7 @@ export async function generateStaticParams() {
     }));
   } catch (error) {
     console.log("Error fetching slugs for missions", error);
+    return [];
   }
 }
 
