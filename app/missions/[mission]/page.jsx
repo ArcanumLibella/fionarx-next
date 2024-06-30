@@ -9,31 +9,37 @@ export default async function ProjectsByMissionPage({ params }) {
   
   try {
     const missions = await fetchDataFromStrapi("missions?populate=deep");
-    mission = missions.find((mission) => mission.attributes.slug === slug);
+    if (missions && missions.length > 0) {
+      mission = missions.find((mission) => mission.attributes.slug === slug);
+    }
   } catch (error) {
     console.error("Error fetching missions", error);
+    return <NotFoundPage />;
   }
 
-  if (!mission) {
+  if (!mission || !mission.attributes) {
     return <NotFoundPage />;
   }
   
-  const { name, projects } = mission.attributes || { name: "", projects: { data: [] } };
-  const noContent = projects.data.length === 0;
+  const { name, projects } = mission.attributes;
+  const noContent = !projects?.data || projects.data.length === 0;
 
   return (
     <ProjectsByCategoryLayout name={name} noContent={noContent}>
       {noContent ? (
         <NoContent />
       ) : (
-        projects?.data?.map((project) => (
+        projects?.data?.map((project) => {
+          const projectAttributes = project?.attributes || {};
+
+          return (
           <ProjectCard
             key={project.id}
-            title={project.attributes.title}
-            slug={project.attributes.slug}
-            thumbnail={project.attributes.thumbnail.data.attributes}
+            title={projectAttributes.title}
+            slug={projectAttributes.slug}
+            thumbnail={projectAttributes.thumbnail?.data?.attributes}
           />
-        ))
+        )})
       )}
     </ProjectsByCategoryLayout>
   )
@@ -42,7 +48,6 @@ export default async function ProjectsByMissionPage({ params }) {
 export async function generateStaticParams() {
   try {
     const missions = await fetchDataFromStrapi("missions");
-
     return missions.map((mission) => ({
       mission: mission.attributes.slug,
     }));
