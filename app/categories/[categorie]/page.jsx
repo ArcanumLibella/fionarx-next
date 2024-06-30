@@ -31,7 +31,6 @@ export default async function ProjectsByCategoryPage({ params }) {
       ) : (
         projects.data.map((project) => {
           const projectAttributes = project?.attributes || {};
-          const thumbnail = projectAttributes.thumbnail?.data?.attributes || null;
 
           return (
             <ProjectCard
@@ -39,7 +38,7 @@ export default async function ProjectsByCategoryPage({ params }) {
               title={projectAttributes.title}
               missions={projectAttributes.missions}
               slug={projectAttributes.slug}
-              thumbnail={thumbnail}
+              thumbnail={projectAttributes.thumbnail?.data?.attributes}
             />
           );
         })
