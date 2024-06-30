@@ -7,7 +7,9 @@ const ProjectPage = async () => {
   let categories = [];
 
   try {
-    projects = await fetchProjects();
+    const projectsResponse = await fetchDataFromStrapi("projects?populate=deep");
+    projects = projectsResponse || [];
+    // projects = await fetchProjects();
     console.log("Projects fetched:", projects);
   } catch (error) {
     console.error("Error fetching projects:", error);
@@ -16,7 +18,6 @@ const ProjectPage = async () => {
   try {
     const categoriesResponse = await fetchDataFromStrapi("categories?populate=deep");
     categories = categoriesResponse || [];
-    console.log("Categories fetched:", categories);
   } catch (error) {
     console.error("Error fetching categories:", error);
   }
@@ -42,7 +43,7 @@ const ProjectPage = async () => {
           return null;
         }
 
-        const { title, slug, thumbnail, missions } = project || {};
+        const { title, slug, thumbnail, missions } = project.attributes || {};
 
         
         return (
@@ -50,7 +51,7 @@ const ProjectPage = async () => {
             key={slug}
             title={title}
             slug={slug}
-            thumbnail={thumbnail}
+            thumbnail={thumbnail.data.attributes || {} }
             missions={missions}
           />
         );
