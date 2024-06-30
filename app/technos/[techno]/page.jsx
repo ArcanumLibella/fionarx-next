@@ -1,13 +1,24 @@
 import React from 'react';
 import { NoContent, ProjectCard, ProjectsByCategoryLayout } from "@/app/_components";
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
+import NotFoundPage from "@/app/404";
 
 export default async function ProjectsByTechnoPage({ params }) {
-  const { techno: slug } = params
+  const { techno: slug } = params;
+  let techno;
   
-  const technos = await fetchDataFromStrapi("technos?populate=deep");
-  const techno = technos.find((techno) => techno.attributes.slug === slug);
-  const {name, projects} = techno.attributes;
+  try {
+    const technos = await fetchDataFromStrapi("technos?populate=deep");
+    techno = technos.find((techno) => techno.attributes.slug === slug);
+  } catch (error) {
+    console.error("Error fetching technos", error);
+  }
+
+  if (!techno) {
+    return <NotFoundPage />;
+  }
+
+  const { name, projects } = techno.attributes || { name: "", projects: { data: [] } };
   const noContent = projects.data.length === 0;
 
   return (
@@ -38,6 +49,7 @@ export async function generateStaticParams() {
     }));
   } catch (error) {
     console.log("Error fetching slugs for technos", error);
+    return [];
   }
 }
 
