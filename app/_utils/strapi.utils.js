@@ -25,7 +25,9 @@ export function processProjects(data) {
 
 export async function fetchProjects() {
   const projectsData = await fetchDataFromStrapi("projects?populate=deep");
+  console.log("projectsData : ", projectsData)
   const processedProjects = projectsData.map(processProject);
+  console.log("processedProjects : ", processedProjects)
 
   processedProjects.sort(
     (a, z) => new Date(z.year) - new Date(a.year)

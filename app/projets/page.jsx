@@ -18,6 +18,8 @@ const ProjectPage = async () => {
     console.error("Error fetching categories:", error);
   }
 
+  console.log("PROJECTS ????? : ", projects)
+
   if (!projects || projects.length === 0) {
     return <div>No projects found</div>;
   }
