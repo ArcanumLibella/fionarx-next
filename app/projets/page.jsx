@@ -34,7 +34,10 @@ const ProjectPage = async () => {
   return (
     <ProjectsLayout categories={categories}>
       {projects && projects.map((project) => {
+        console.log("PROJECTS !!!!! : ", projects)
+        console.log("PROJECT !!!!! : ", project)
         const { title, slug, thumbnail, missions } = project || {};
+
         
         return (
           <ProjectCard
