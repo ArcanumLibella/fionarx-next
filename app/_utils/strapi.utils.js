@@ -5,6 +5,8 @@ export const BASE_URL = process.env.STRAPI_URL || 'http://127.0.0.1:1337';
 export async function fetchDataFromStrapi(route) {
   const url = `${BASE_URL}/api/${route}`;
 
+  console.log("BASE_URL !!!!!!!!!!!!!!", BASE_URL)
+
   try {
     const response = await axios.get(url);
     console.log("RESPONSE !!!!", response)
@@ -44,6 +46,6 @@ function processProject(project) {
   return {
     ...project.attributes,
     id: project.id,
-    thumbnail: project.attributes.thumbnail.data.attributes
+    thumbnail: project.attributes.thumbnail?.data?.attributes || null
   }
 }
