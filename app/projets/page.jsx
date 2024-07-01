@@ -20,6 +20,7 @@ const ProjectPage = async () => {
   }
 
   if (!projects || projects.length === 0) {
+    console.log("No projects found or projects is empty !!!!!!!!!!!!!", projects);
     return <div>No projects found</div>;
   }
 

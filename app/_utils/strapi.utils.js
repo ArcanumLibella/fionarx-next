@@ -7,10 +7,15 @@ export async function fetchDataFromStrapi(route) {
 
   try {
     const response = await axios.get(url);
+    console.log("RESPONSE !!!!", response)
+    if (response.status !== 200) {
+      console.error('Error fetching response:', response.statusText);
+      throw new Error('Network response was not ok');
+    }
     return response.data.data;
   } catch (error) {
     console.log(error);
-    throw new Error(`Could not fetch data from ${url}.`)
+    throw new Error(`!!!! Could not fetch data from ${url}.`)
   }
 }
 
@@ -25,6 +30,7 @@ export function processProjects(data) {
 
 export async function fetchProjects() {
   const projectsData = await fetchDataFromStrapi("projects?populate=deep");
+  console.log("PROJECTS DATA : ", projectsData)
   const processedProjects = projectsData.map(processProject);
 
   processedProjects.sort(
