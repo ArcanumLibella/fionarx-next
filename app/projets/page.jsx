@@ -7,7 +7,6 @@ const ProjectPage = async () => {
 
   try {
     projects = await fetchProjects();
-    console.log("PROJECTS !!!! : ", projects);
   } catch (error) {
     console.error("Error fetching projects:", error);
   }

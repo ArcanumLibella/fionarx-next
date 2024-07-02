@@ -7,7 +7,6 @@ export async function fetchDataFromStrapi(route) {
 
   try {
     const response = await axios.get(url);
-    console.log("RESPONSE !!!!", response)
     if (response.status !== 200) {
       console.error('Error fetching response:', response.statusText);
       throw new Error('Network response was not ok');
