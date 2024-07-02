@@ -8,7 +8,7 @@ export const MainLayout = async ({pageTitle, children, className: additionalStyl
   const menuItems = globalData.attributes.menu;
 
   return (
-    <main className="MainLayout relative h-screen overflow-auto bg-midnight z-0">
+    <main className="MainLayout relative h-svh overflow-auto bg-midnight z-0">
       <Menu menuItems={menuItems} socialsItems={socialsItems} />
       {/* <RDVButton /> TODO: A réactiver quand je suis prête ! */}
         {children}

@@ -23,7 +23,7 @@ export const Hero = async () => {
   })
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen min-h-screen overflow-hidden text-center px-4 md:pl-16 md:pr-8 lg:px-16 lg:py-16 md:items-end md:text-right bg-midnight">
+    <div className="flex flex-col items-center justify-center h-svh min-h-svh overflow-hidden text-center px-4 md:pl-16 md:pr-8 lg:px-16 lg:py-16 md:items-end md:text-right bg-midnight">
       <Blobs className="absolute flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[56vw] h-[36vh] lg:w-[48vw] lg:h-[54vh] xl:w-[32vw] xl:h-[56vh]" />
       {renderHero}
     </div>
