@@ -5,8 +5,6 @@ export const BASE_URL = process.env.STRAPI_URL || 'http://127.0.0.1:1337';
 export async function fetchDataFromStrapi(route) {
   const url = `${BASE_URL}/api/${route}`;
 
-  console.log("BASE_URL !!!!!!!!!!!!!!", BASE_URL)
-
   try {
     const response = await axios.get(url);
     console.log("RESPONSE !!!!", response)
@@ -32,7 +30,6 @@ export function processProjects(data) {
 
 export async function fetchProjects() {
   const projectsData = await fetchDataFromStrapi("projects?populate=deep");
-  console.log("PROJECTS DATA : ", projectsData)
   const processedProjects = projectsData.map(processProject);
 
   processedProjects.sort(

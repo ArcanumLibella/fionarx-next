@@ -6,11 +6,10 @@ import { Blobs } from "../organisms";
 import { MainLayout } from ".";
 import { ChevronsDownIcon } from "../../../public/_assets/icons";
 import { COLORS } from "../../_constants/Colors";
-import { BASE_URL } from "@/app/_utils/strapi.utils";
 
 export const ProjectLayout = ({title, description, preview, year, technos, links}) => {
-  const imageData = preview.data.attributes;
-  const technosData = technos.data;
+  const imageData = preview?.data?.attributes;
+  const technosData = technos?.data;
   
   return (
     <MainLayout>
@@ -20,7 +19,7 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
             {imageData && (
               <figure key={imageData.id} className="Project__preview h-full">
                 <Image
-                  src={BASE_URL + imageData.url}
+                  src={imageData.url}
                   alt={imageData.alternativeText}
                   width={imageData.width}
                   height={imageData.height}

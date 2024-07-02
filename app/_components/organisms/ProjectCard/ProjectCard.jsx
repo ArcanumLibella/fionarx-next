@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from "framer-motion";
 import { TagMission } from "../../atoms";
 import { cardVariants, titleVariants } from "./ProjectCard.const";
-import { BASE_URL } from "@/app/_utils/strapi.utils";
 
 export const ProjectCard = ({
   title,
@@ -41,11 +40,11 @@ export const ProjectCard = ({
             {thumbnail && (
               <figure className="h-full">
                 <Image
-                  src={BASE_URL + thumbnail.url} //FIXME: à changer en prod
+                  src={thumbnail.url}
                   alt={thumbnail.alternativeText}
                   width={thumbnail.width}
                   height={thumbnail.height}
-                  blurDataURL={BASE_URL + thumbnail.url} //FIXME: à changer en prod
+                  blurDataURL={thumbnail.url}
                   placeholder="blur"
                   className="h-full object-cover"
                 />

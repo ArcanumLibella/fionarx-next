@@ -16,7 +16,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['127.0.0.1'], /* FIXME: A changer en prod */
+    domains: ['fionarx-strapi-images.s3.eu-west-3.amazonaws.com']
   },
 };
 export default nextConfig;
