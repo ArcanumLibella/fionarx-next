@@ -14,8 +14,8 @@ export const ProjectsLayout = ({ categories, children }) => {
             Filtrer les projets
           </Heading>
           <div className="ProjectsLayout__categories flex flex-wrap items-start w-full gap-2 md:gap-4">
-            {categories && categories.map((category, i) => (
-              <TagCategory key={category.attributes.slug} name={category.attributes.name} slug={category.attributes.slug} />
+            {categories && categories.map((category) => (
+              <TagCategory key={category.id} name={category.attributes.name} slug={category.attributes.slug} />
             ))}
           </div>
         </div>

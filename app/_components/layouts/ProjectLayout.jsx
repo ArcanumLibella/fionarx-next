@@ -30,11 +30,11 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
               stroke={COLORS.tomato.DEFAULT}
               width={24}
               height={24}
-              className="absolute top-[56svh] xl:bottom-4 justify-self-auto animate-down z-50"
+              className="absolute top-[52svh] xs:top-[54svh] md:top-[56svh] xl:top-[94svh] 2xl:top-[96svh] xl:bottom-4 justify-self-auto animate-down z-50"
             />
           </div>
         </div>
-        <div className="Project__description relative flex flex-col-reverse w-full xl:h-svh p-5 pb-10 md:p-10 xl:min-w-[580px] xl:max-w-[35%]">
+        <div className="Project__description relative flex flex-col-reverse w-full xl:h-svh p-5 pb-16 md:p-10 xl:min-w-[580px] xl:max-w-[35%]">
           <LinkButton
             label="Retour"
             side="left"
@@ -58,7 +58,7 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
             </div>
 
             {/* DESCRIPTION */}
-            <Paragraph className="Project__description mb-10 md:text-normal">
+            <Paragraph className="Project__description !mb-10 md:text-normal">
               {description}
             </Paragraph>
 

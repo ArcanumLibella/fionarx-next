@@ -4,9 +4,8 @@
 
 /* GLOBAL STYLE */
 html {
-  @apply font-body;
-  @apply text-white;
-  @apply bg-purple-ultraDark;
+  @apply font-body text-white bg-purple-ultraDark;
+  font-size: 16px;
   height: -webkit-fill-available;
 }
 

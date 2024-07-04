@@ -17,7 +17,7 @@ export const Heading = ({
     case 2: /* TITRE DE PAGE */
       return (
         <h2
-          className={`Heading font-brother font-black text-mxl md:text-xl 2xl:text-xxl tracking-tight md:tracking-tightest uppercase selection:bg-purple ${additionalStyle}`}
+          className={`Heading font-brother font-black text-lg xs:text-2lg md:text-2xl 2xl:text-3xl tracking-tight md:tracking-tightest uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h2>
@@ -25,7 +25,7 @@ export const Heading = ({
     case 3: /* TITRE DE PROJET */
       return (
         <h3
-          className={`Heading font-brother font-extrabold text-lg md:text-xlg 2xl:text-xxlg leading-none selection:bg-purple text-tomato ${additionalStyle}`}
+          className={`Heading font-brother font-extrabold text-md xs:text-lg md:text-3lg 2xl:text-2xl leading-none selection:bg-purple text-tomato ${additionalStyle}`}
         >
           {children}
         </h3>
@@ -33,7 +33,7 @@ export const Heading = ({
     case 4: /* SOUS-TITRE */
       return (
         <h4
-          className={`Heading mb-4 font-brother font-extrabold text-mmd md:text-md 2xl:text-xmd selection:bg-purple uppercase text-tomato ${additionalStyle}`}
+          className={`Heading mb-4 font-brother font-extrabold text-2base md:text-md 2xl:text-2md selection:bg-purple uppercase text-tomato ${additionalStyle}`}
         >
           {children}
         </h4>
@@ -41,7 +41,7 @@ export const Heading = ({
     case 5: /* Introduction et Bandeau CTA */
       return (
         <h5
-          className={`Heading font-brother font-bold text-xbase 2xl:text-lg -tracking-wide selection:bg-purple ${additionalStyle}`}
+          className={`Heading font-brother font-bold text-base xs:text-2base md:text-3base 2xl:text-lg -tracking-wide selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h5>
@@ -49,7 +49,7 @@ export const Heading = ({
     case 6: /* MINI-TITRE */
       return (
         <h6
-          className={`Heading font-brother font-black text-normal text-tomato selection:bg-purple uppercase ${additionalStyle}`}
+          className={`Heading font-brother font-black text-tiny xs:text-normal text-tomato selection:bg-purple uppercase ${additionalStyle}`}
         >
           {children}
         </h6>

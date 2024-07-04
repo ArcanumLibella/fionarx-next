@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'xs': '360px',
         '3xl': '1920px',
       },
       colors: {
@@ -31,26 +32,22 @@ module.exports = {
         body: ['Josefin Sans', 'sans-serif'],
       },
       fontSize: {
-        // xxs: '.5rem', // 8px
+        "xxs": '.5rem', // 8px
         xs: '.625rem', // 10px
-        "xxs": '1rem', // 16px
         tiny: '.75rem', // 12px
         sm: '.875rem', // 14px
-        "xsm": '1.25rem', // 20px
         normal: '1rem', // 16px
-        "mbase": '1rem', // 16px
         base: '1.25rem', // 20px
-        "xbase": '1.75rem', // 28px
-        "mmd": '1.5rem', // 24px
+        "2base": '1.5rem', // 24px
+        "3base": '1.75rem', // 28px
         md: '2rem', // 32px
-        "xmd": '2.25rem', // 36px
-        "mlg": '1.5rem', // 24px
+        "2md": '2.25rem', // 36px
         lg: '2.5rem', // 40px
-        "xlg": '3.5rem', // 56px
-        "xxlg": '4rem', // 64px
-        "mxl": '3rem', // 48px
-        xl: '5rem', // 80px
-        "xxl": '8rem', // 128px
+        "2lg": '3rem', // 48px
+        "3lg": '3.5rem', // 56px
+        xl: '4rem', // 64px
+        "2xl": '5rem', // 80px
+        "3xl": '8rem', // 128px
       },
       letterSpacing: {
         tightest: '-0.4rem', // -8px
