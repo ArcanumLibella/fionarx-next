@@ -30,7 +30,7 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
               stroke={COLORS.tomato.DEFAULT}
               width={24}
               height={24}
-              className="absolute top-[52svh] xs:top-[54svh] md:top-[56svh] xl:top-[94svh] 2xl:top-[96svh] xl:bottom-4 justify-self-auto animate-down z-50"
+              className="absolute top-[54svh] md:top-[56svh] xl:top-[94svh] 2xl:top-[96svh] xl:bottom-4 justify-self-auto animate-down z-50"
             />
           </div>
         </div>

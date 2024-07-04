@@ -32,6 +32,7 @@ module.exports = {
         body: ['Josefin Sans', 'sans-serif'],
       },
       fontSize: {
+        "xxxs": '.375rem', // 6px
         "xxs": '.5rem', // 8px
         xs: '.625rem', // 10px
         tiny: '.75rem', // 12px
