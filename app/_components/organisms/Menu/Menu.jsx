@@ -73,7 +73,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
                     variants={menuItemVariants}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <MenuItem 
+                    <MenuItem
                       toggleMenuItem={toggleMenuItem}
                       label={item.label}
                       path={`${item.link}`}
