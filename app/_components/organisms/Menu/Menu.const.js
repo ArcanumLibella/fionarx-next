@@ -15,11 +15,11 @@ export const menuItemsVariants = {
 
 export const menuItemVariants = {
   closed: {
-    translateX: "-10%",
+    translateX: "-8%",
     opacity: 0,
   },
   open: {
-    translateX: "10%",
+    translateX: "8%",
     opacity: 1,
   },
 };

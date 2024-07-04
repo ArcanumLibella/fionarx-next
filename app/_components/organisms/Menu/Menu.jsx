@@ -66,10 +66,10 @@ export const Menu = ({ socialsItems, menuItems }) => {
                     />
                   </motion.li>
               )}
-              {menuItems.map((item, i) => {
+              {menuItems.map((item) => {
                 return (
                   <motion.li
-                    key={i}
+                    key={item.id}
                     variants={menuItemVariants}
                     whileHover={{ scale: 1.05 }}
                   >
