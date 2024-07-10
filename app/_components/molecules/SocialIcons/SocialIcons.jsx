@@ -39,6 +39,7 @@ export const SocialIcons = ({
         key={index}
         target="_blank"
         rel="noreferrer"
+        role="link"
         aria-label={`Lien vers ${icon.label}`}
       >
         {icon.icon}
