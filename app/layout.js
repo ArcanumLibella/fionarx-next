@@ -9,6 +9,7 @@ export const metadata = {
   },
   description: "Développeuse web indépendante, je vous accompagne à toutes les étapes de votre projet de digitalisation.",
   keywords: ['Web Development', 'WebDesign', 'Branding', 'NoCode', 'SEO', 'Social Media', 'Automation'],
+  metadataBase: new URL('https://www.fionarx.com/'),
   openGraph: {
     title: 'Fiona Roux',
     description: 'Dévelopement Web, WebDesign & Stratégie Digitale',

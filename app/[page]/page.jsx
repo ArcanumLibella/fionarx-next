@@ -13,8 +13,9 @@ export async function generateMetadata({ params }) {
     description: seoData.metaDescription,
     keywords: seoData.keywords,
     robots: seoData.metaRobots,
-    canonical: seoData.canonicalURL,
-    metadataBase: seoData.canonicalURL,
+    alternates: {
+      canonical: `/${params.page}`,
+    },
     structuredData: seoData.structuredData
   }
 }
