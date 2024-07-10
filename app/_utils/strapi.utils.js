@@ -45,3 +45,16 @@ function processProject(project) {
     thumbnail: project.attributes.thumbnail?.data?.attributes || null
   }
 }
+
+export async function fetchSEOData(slug) {
+  try {
+    const response = await axios.get(`${BASE_URL}/api/pages?populate=deep`);
+    const pages = response.data.data;
+
+    const seoData = pages.find(page => page.attributes.slug === slug)?.attributes?.seo || null;
+    return seoData;
+  } catch (error) {
+    console.error('Error fetching SEO data:', error);
+    return null;
+  }
+}

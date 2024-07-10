@@ -17,6 +17,6 @@ const nextConfig = {
   },
   images: {
     domains: ['fionarx-strapi-images.s3.eu-west-3.amazonaws.com']
-  },
+  }
 };
 export default nextConfig;

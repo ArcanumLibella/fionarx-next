@@ -7,7 +7,7 @@ export const metadata = {
     template: '%s | FionaRx',
     default: 'FionaRx', // a default is required when creating a template
   },
-  description: "Depuis 2018, j'ai acquis une expérience riche et diversifiée en agences, start-ups et grands groupes. En tant qu’indépendante, je vous accompagne dans la digitalisation de votre projet : branding, webdesign, développement de sites et applications web, mise en ligne optimisée pour le SEO et optimisatin de vos réseaux sociaux. Collaborons ensemble pour faire de votre projet une véritable réussite !",
+  description: "Développeuse web indépendante, je vous accompagne à toutes les étapes de votre projet de digitalisation.",
   keywords: ['Web Development', 'WebDesign', 'Branding', 'NoCode', 'SEO', 'Social Media', 'Automation'],
   openGraph: {
     title: 'Fiona Roux',
@@ -27,7 +27,7 @@ export const metadata = {
   }
 }
 
-export default function RootLayout({children, className: additionalStyle}) {
+export default function RootLayout({ children, className: additionalStyle }) {
   return (
     <html lang="fr">
       <body>

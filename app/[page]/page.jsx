@@ -1,7 +1,23 @@
 import React from 'react';
 import { BlocksManager, PageLayout } from "../_components";
 import NotFoundPage from "../404";
-import { fetchDataFromStrapi } from "../_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchSEOData } from "../_utils/strapi.utils";
+
+export async function generateMetadata({ params }) {
+  const seoData = await fetchSEOData(params.page);
+
+  if (!seoData) return;
+ 
+  return {
+    title: seoData.metaTitle,
+    description: seoData.metaDescription,
+    keywords: seoData.keywords,
+    robots: seoData.metaRobots,
+    canonical: seoData.canonicalURL,
+    metadataBase: seoData.canonicalURL,
+    structuredData: seoData.structuredData
+  }
+}
 
 const SinglePage = async ({ params }) => {
   const { page: slug } = params;
