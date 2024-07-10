@@ -35,6 +35,7 @@ strong {
         url('../public/_assets/fonts/brother-1816-black-webfont.woff') format('woff');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -43,6 +44,7 @@ strong {
         url('../public/_assets/fonts/brother-1816-bold-webfont.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -51,6 +53,7 @@ strong {
         url('../public/_assets/fonts/brother-1816-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
