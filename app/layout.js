@@ -20,13 +20,7 @@ export const metadata = {
         width: 800,
         height: 600,
         alt: 'OpenGraph - 800 x 600',
-      },
-      {
-        url: 'https://raw.githubusercontent.com/ArcanumLibella/fionarx-next/main/public/_assets/images/OPENGRAPH-1800x1600.png', // Must be an absolute URL
-        width: 1800,
-        height: 1600,
-        alt: 'OpenGraph - 1800 x 1600',
-      },
+      }
     ],
     locale: 'fr_FR',
     type: 'website',
