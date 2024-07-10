@@ -34,6 +34,8 @@ export const NavButton = ({ socialsItems, openMenuHandler, isMenuOpen }) => {
               toggled={isMenuOpen}
               toggle={() => openMenuHandler}
               onToggle={() => openMenuHandler}
+              role="button"
+              aria-label="Burger button to open menu"
             />
           )}
         </span>
