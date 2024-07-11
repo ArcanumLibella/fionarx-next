@@ -18,7 +18,7 @@ export const Hero = async () => {
         </Link>
       )
     } else {
-      return <Heading key={item.id} level={2} className="font-brother font-black uppercase mb-4 xl:mb-0 select-none !text-[8vw] lg:!text-[6vh] xl:!text-[8vh] !tracking-normal text-shadow text-stroke-purple-ultraLight md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">{item.label}</Heading>
+      return <Heading key={item.id} level={2} className="font-brother font-black uppercase mb-4 xl:mb-0 select-none !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal text-shadow text-stroke-purple-ultraLight md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">{item.label}</Heading>
     }
   })
 
