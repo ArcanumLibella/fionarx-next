@@ -1,5 +1,30 @@
 import { ProjectCard, ProjectsLayout } from "../_components";
-import { fetchDataFromStrapi, fetchProjects } from "../_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchProjects, fetchSEOData } from "../_utils/strapi.utils";
+
+export const metadata = {
+  title: 'Projets',
+  description: "Voici une liste de quelques projets que j'ai réalisé ces dernières années.",
+  keywords: ['Design', 'Création', 'Freelance', 'Web Development', 'WebDesign', 'Branding', 'NoCode', 'SEO', 'Social Media', 'Automation'],
+  alternates: {
+    canonical: '/projets',
+  },
+  openGraph: {
+    title: 'Fiona Roux',
+    description: 'Dévelopement Web, WebDesign & Stratégie Digitale',
+    url: 'https://www.fionarx.com',
+    siteName: 'FionaRx',
+    images: [
+      {
+        url: 'https://raw.githubusercontent.com/ArcanumLibella/fionarx-next/main/public/_assets/images/OPENGRAPH-800x600.png', // Must be an absolute URL
+        width: 800,
+        height: 600,
+        alt: 'OpenGraph - 800 x 600',
+      }
+    ],
+    locale: 'fr_FR',
+    type: 'website',
+  }
+}
 
 const ProjectPage = async () => {
   let projects = [];
