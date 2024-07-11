@@ -13,7 +13,7 @@ export const CardPrestation = ({ title, description }) => {
           {title}
         </Heading>
       </div>
-      <div className="p-6 bg-tomato">
+      <div className="p-6 bg-purple-light">
         <Paragraph>{description}</Paragraph>
       </div>
     </div>

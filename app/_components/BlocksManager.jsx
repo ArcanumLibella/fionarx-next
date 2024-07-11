@@ -43,7 +43,7 @@ export function BlocksManager({ blocks }) {
               />
             );
           case "blocks.list":
-            return renderListBlock(block);
+            return <ul key={`ListItems-${block.id}`} className="ListItems">{renderListBlock(block)}</ul>;
           case "blocks.prestations":
             return <CardsPrestation key={`CardsPrestation-${block.id}`} cardsPrestation={block.cardsPrestation} />
           case "blocks.stack":
@@ -65,7 +65,7 @@ export function BlocksManager({ blocks }) {
 };
 
 export const renderListBlock = (block) => {
-  return block.item.map((item, index) => (
-    <ListItem key={index} number={item.number} text={item.text} />
+  return block.item.map((item) => (
+      <ListItem key={item.id} number={item.number} text={item.text} />
   ));
 };
