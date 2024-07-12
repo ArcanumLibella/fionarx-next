@@ -1,13 +1,28 @@
 import React from 'react';
 import { ProjectLayout } from "@/app/_components";
-import { fetchDataFromStrapi, fetchProjects } from "@/app/_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchProjects, fetchSEODataProject } from "@/app/_utils/strapi.utils";
+
+export async function generateMetadata({ params }) {
+  const seoData = await fetchSEODataProject(params.projet);
+  if (!seoData) return;
+ 
+  return {
+    title: seoData.metaTitle,
+    description: seoData.metaDescription,
+    keywords: seoData.keywords,
+    robots: seoData.metaRobots,
+    alternates: {
+      canonical: `/projets/${params.projet}`,
+    },
+    structuredData: seoData.structuredData
+  }
+}
 
 export default async function ProjectPage({ params }) {
   const { projet: slug } = params
 
   const projects = await fetchProjects();
   const project = projects.find((project) => project.slug === slug);
-
 
   return (
     <ProjectLayout

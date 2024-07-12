@@ -1,11 +1,12 @@
 import React from 'react';
 import { BlocksManager, PageLayout } from "../_components";
 import NotFoundPage from "../404";
-import { fetchDataFromStrapi, fetchSEOData } from "../_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchSEODataPage } from "../_utils/strapi.utils";
 
 export async function generateMetadata({ params }) {
-  const seoData = await fetchSEOData(params.page);
-
+  const seoData = await fetchSEODataPage(params.page);
+  console.log("params PAGE : ", params)
+  console.log("seoData PAGE: ", seoData)
   if (!seoData) return;
  
   return {

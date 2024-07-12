@@ -46,12 +46,26 @@ function processProject(project) {
   }
 }
 
-export async function fetchSEOData(slug) {
+export async function fetchSEODataPage(slug) {
   try {
     const response = await axios.get(`${BASE_URL}/api/pages?populate=deep`);
     const pages = response.data.data;
 
     const seoData = pages.find(page => page.attributes.slug === slug)?.attributes?.seo || null;
+    return seoData;
+  } catch (error) {
+    console.error('Error fetching SEO data:', error);
+    return null;
+  }
+}
+
+
+export async function fetchSEODataProject(slug) {
+  try {
+    const response = await axios.get(`${BASE_URL}/api/projects?populate=deep`);
+    const projects = response.data.data;
+
+    const seoData = projects.find(project => project.attributes.slug === slug)?.attributes?.seo || null;
     return seoData;
   } catch (error) {
     console.error('Error fetching SEO data:', error);
