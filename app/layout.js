@@ -5,14 +5,15 @@ import "./globals.css";
 export const metadata = {
   title: {
     template: '%s | FionaRx',
-    default: 'FionaRx', // a default is required when creating a template
+    default: 'Fiona Roux - Développeur web freelance',
   },
-  description: "Développeuse web indépendante, je vous accompagne à toutes les étapes de votre projet de digitalisation.",
-  keywords: ['Web Development', 'WebDesign', 'Branding', 'NoCode', 'SEO', 'Social Media', 'Automation'],
+  description: "Développeuse web et Webdesigner indépendante, je vous accompagne à toutes les étapes de votre projet de digitalisation : branding, webdesign, développement web, référencement...",
+  keywords: ['Développement web', 'WebDesign', 'Charte graphique', 'Branding', 'NoCode', 'SEO', 'Réseaux sociaux', 'Automatisation'],
+  authors: [{ name: 'Fiona Roux' }],
   metadataBase: new URL('https://www.fionarx.com/'),
   openGraph: {
-    title: 'Fiona Roux',
-    description: 'Dévelopement Web, WebDesign & Stratégie Digitale',
+    title: 'Fiona Roux - Développeur web freelance',
+    description: 'Développeuse web et Webdesigner depuis 2018, je vous accompagne dans la création de votre projet de digitalisation.',
     url: 'https://www.fionarx.com',
     siteName: 'FionaRx',
     images: [
