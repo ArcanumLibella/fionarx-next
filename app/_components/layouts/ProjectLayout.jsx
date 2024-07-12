@@ -4,7 +4,7 @@ import { Heading, Paragraph, TagTechno, Text } from "../atoms";
 import { ExternalLinkButton, LinkButton } from "../molecules";
 import { Blobs } from "../organisms";
 import { MainLayout } from ".";
-import { ChevronsDownIcon } from "../../../public/_assets/icons";
+import { ChevronsDownBigIcon } from "../../../public/_assets/icons";
 import { COLORS } from "../../_constants/Colors";
 
 export const ProjectLayout = ({title, description, preview, year, technos, links}) => {
@@ -17,7 +17,7 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
         <div className="Project__preview overflow-auto w-full h-[60vh] xl:max-h-svh xl:h-svh xl:text-center bg-purple">
           <div className="flex justify-center items-end h-full w-full">
             {imageData && (
-              <figure key={imageData.id} className="Project__preview h-full">
+              <figure key={imageData.id} className="Project__image h-full">
                 <Image
                   src={imageData.url}
                   alt={imageData.alternativeText}
@@ -26,11 +26,11 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
                 />
               </figure>
             )}
-            <ChevronsDownIcon 
+            <ChevronsDownBigIcon 
               stroke={COLORS.tomato.DEFAULT}
-              width={24}
-              height={24}
-              className="absolute top-[54svh] md:top-[56svh] xl:top-[94svh] 2xl:top-[96svh] xl:bottom-4 justify-self-auto animate-down z-50"
+              width={32}
+              height={32}
+              className="absolute top-[56svh] xl:top-[94svh] 2xl:top-[96svh] xl:bottom-4 justify-self-auto animate-down z-50"
             />
           </div>
         </div>

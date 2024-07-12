@@ -9,6 +9,7 @@ import ArrowLeftIcon from "./arrow-left.svg";
 import ArrowRightIcon from "./arrow-right.svg";
 import CalendarIcon from "./calendar.svg";
 import ChevronsDownIcon from "./chevrons-down.svg";
+import ChevronsDownBigIcon from "./chevrons-down-32.svg";
 
 export {
   GithubIcon,
@@ -21,5 +22,6 @@ export {
   ArrowLeftIcon,
   ArrowRightIcon,
   CalendarIcon,
-  ChevronsDownIcon
+  ChevronsDownIcon,
+  ChevronsDownBigIcon
 };
