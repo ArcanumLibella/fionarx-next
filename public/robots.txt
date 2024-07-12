@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.fionarx.com/
+
+# Sitemaps
+Sitemap: https://www.fionarx.com/sitemap.xml
