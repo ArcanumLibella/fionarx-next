@@ -24,7 +24,7 @@ export const NavButton = ({ socialsItems, openMenuHandler, isMenuOpen }) => {
         onClick={(e) => openMenuHandler(e)}
         role="button"
         aria-label="Bouton pour ouvrir le menu"
-        className="NavButton__button flex-col items-center justify-between md:py-4 md:w-20 md:h-svh md:flex md:bg-purple-ultraDark"
+        className="NavButton__button flex-col items-center justify-between md:py-4 md:w-20 md:h-full md:flex md:bg-purple-ultraDark"
       >
         <span 
           className="NavButton__menu flex items-center justify-center w-full p-2 font-bold border-2 rounded-full lg:p-0 font-brother text-tiny md:items-start md:flex-1 border-purple-light md:border-none h-14 filter backdrop-blur-md"
