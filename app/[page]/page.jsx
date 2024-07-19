@@ -5,8 +5,6 @@ import { fetchDataFromStrapi, fetchSEODataPage } from "../_utils/strapi.utils";
 
 export async function generateMetadata({ params }) {
   const seoData = await fetchSEODataPage(params.page);
-  console.log("params PAGE : ", params)
-  console.log("seoData PAGE: ", seoData)
   if (!seoData) return;
  
   return {
