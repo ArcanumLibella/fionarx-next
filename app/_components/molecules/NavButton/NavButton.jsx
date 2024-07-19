@@ -16,7 +16,7 @@ export const NavButton = ({ socialsItems, openMenuHandler, isMenuOpen }) => {
         href="/"
         role="link"
         aria-label="Lien vers l'accueil"
-        className="NavButton__home hidden w-20 h-full max-h-20 font-bold transition-all duration-300 bg-transparent border-2 md:items-center md:justify-center md:flex hover:text-tomato font-brother text-tiny border-purple-ultraDark"
+        className="NavButton__home hidden w-20 h-20 max-h-20 font-bold transition-all duration-300 bg-transparent border-2 md:items-center md:justify-center md:flex hover:text-tomato font-brother text-tiny border-purple-ultraDark"
       >
         HOME
       </Link>
