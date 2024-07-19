@@ -7,7 +7,7 @@ export const metadata = {
     template: '%s | FionaRx',
     default: 'Fiona Roux - Développeur web freelance',
   },
-  description: "Développeuse web et Webdesigner indépendante, je vous accompagne à toutes les étapes de votre projet de digitalisation : branding, webdesign, développement web, référencement...",
+  description: "Développeur web et Webdesigner indépendante, je vous accompagne à toutes les étapes de votre projet de digitalisation : branding, webdesign, développement web, référencement...",
   keywords: ['Développement web', 'WebDesign', 'Charte graphique', 'Branding', 'NoCode', 'SEO', 'Réseaux sociaux', 'Automatisation'],
   authors: [{ name: 'Fiona Roux' }],
   metadataBase: new URL('https://www.fionarx.com/'),
