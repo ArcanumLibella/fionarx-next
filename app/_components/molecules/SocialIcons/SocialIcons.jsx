@@ -1,5 +1,5 @@
 import React from "react";
-import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../public/_assets/icons";
+import { BehanceIcon, DribbbleIcon, GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../public/_assets/icons";
 import { COLORS } from "../../../_constants/Colors";
 
 export const SocialIcons = ({
@@ -7,18 +7,28 @@ export const SocialIcons = ({
   className: additionalStyle,
 }) => {
   if (!socialsItems) return;
-  const { linkedin, malt, github, instagram } = socialsItems;
+  const { linkedin, malt, github, instagram, dribbble, behance } = socialsItems;
 
   const socialIcons = [
+    {
+      label: 'Malt',
+      path: malt,
+      icon: <MaltIcon fill={COLORS.white.DEFAULT} className="transition-all duration-300 hover:fill-tomato" />
+    },
     {
       label: 'Linkedin',
       path: linkedin,
       icon: <LinkedinIcon fill={COLORS.white.DEFAULT} className="transition-all duration-300 hover:fill-tomato" />
     },
     {
-      label: 'Malt',
-      path: malt,
-      icon: <MaltIcon fill={COLORS.white.DEFAULT} className="transition-all duration-300 hover:fill-tomato" />
+      label: 'Behance',
+      path: behance,
+      icon: <BehanceIcon fill={COLORS.white.DEFAULT} className="transition-all duration-300 hover:fill-tomato" />
+    },
+    {
+      label: 'Dribbble',
+      path: dribbble,
+      icon: <DribbbleIcon fill={COLORS.white.DEFAULT} className="transition-all duration-300 hover:fill-tomato" />
     },
     {
       label: 'Github',
@@ -29,7 +39,7 @@ export const SocialIcons = ({
       label: 'Instagram',
       path: instagram,
       icon: <InstagramIcon fill={COLORS.white.DEFAULT} className="transition-all duration-300 hover:fill-tomato" />
-    },
+    }
   ];
   
   const renderedSocialIcons = socialIcons.map((icon, index) => {

@@ -6,12 +6,12 @@ import { useOuterClick } from "../../../_hooks/useOutsideClick";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavButton } from "../../molecules";
 import { MenuItem } from "../../atoms";
-import { GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../public/_assets/icons";
+import { BehanceIcon, DribbbleIcon, GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "../../../../public/_assets/icons";
 import { COLORS } from "../../../_constants/Colors";
 import { menuItemVariants, menuItemsVariants, socialItemsVariants } from "./Menu.const";
 
 export const Menu = ({ socialsItems, menuItems }) => {
-  const { linkedin, malt, github, instagram } = socialsItems;
+  const { linkedin, malt, github, instagram, behance, dribbble } = socialsItems;
 
   const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,6 +126,34 @@ export const Menu = ({ socialsItems, menuItems }) => {
                   variants={menuItemVariants}
                 >
                   <GithubIcon
+                    fill={COLORS.purple.DEFAULT}
+                    height={32}
+                    width={32}
+                    className="transition-all duration-300 hover:fill-purple-light"
+                  />
+                </motion.a>
+                <motion.a
+                  href={dribbble}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{ scale: 1.2 }}
+                  variants={menuItemVariants}
+                >
+                  <DribbbleIcon
+                    fill={COLORS.purple.DEFAULT}
+                    height={32}
+                    width={32}
+                    className="transition-all duration-300 hover:fill-purple-light"
+                  />
+                </motion.a>
+                <motion.a
+                  href={behance}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{ scale: 1.2 }}
+                  variants={menuItemVariants}
+                >
+                  <BehanceIcon
                     fill={COLORS.purple.DEFAULT}
                     height={32}
                     width={32}
