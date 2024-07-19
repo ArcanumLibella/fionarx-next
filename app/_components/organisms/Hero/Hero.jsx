@@ -9,7 +9,7 @@ export const Hero = async () => {
   const heroItems = data.attributes.hero;
 
   const renderHero = heroItems.map((item) => {
-    if (item.link) {
+    if (item.isMainTitle) {
       return (
         <Link href={item.link} key={item.id} rel="canonical" className="z-10 no-underline">
           <h1 className="text-[12vw] font-black uppercase cursor-pointer select-none md:text-[10vw] lg-text-[10vh] xl:text-[12vh] font-brother text-white">
@@ -18,7 +18,11 @@ export const Hero = async () => {
         </Link>
       )
     } else {
-      return <Heading key={item.id} level={2} className="font-brother font-black uppercase mb-4 xl:mb-0 select-none !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal text-shadow text-stroke-purple-ultraLight md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">{item.label}</Heading>
+      return (
+        <Link href={`prestations/${item.link}`} key={item.id} rel="canonical" className="z-10 no-underline">
+          <Heading key={item.id} level={2} className="font-brother font-black uppercase mb-4 xl:mb-0 select-none !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal text-shadow text-stroke-purple-ultraLight md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">{item.label}</Heading>
+        </Link>
+      )
     }
   })
 
