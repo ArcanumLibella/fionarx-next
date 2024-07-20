@@ -1,5 +1,5 @@
 import React from "react";
-import { CardPrestation } from "../../molecules/CardPrestation";
+import { CardPrestation } from "../../molecules";
 import { ArrowRightIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
 
