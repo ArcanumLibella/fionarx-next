@@ -17,21 +17,31 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
         <div className="Project__preview overflow-auto w-full h-[60vh] xl:max-h-svh xl:h-svh xl:text-center bg-purple">
           <div className="flex justify-center items-end h-full w-full">
             {imageData && (
-              <figure key={imageData.id} className="Project__image h-full">
-                <Image
-                  src={imageData.url}
-                  alt={imageData.alternativeText}
-                  width={imageData.width}
-                  height={imageData.height}
+              <>
+                <figure key={imageData.id} className="Project__image h-full">
+                  <Image
+                    src={imageData.url}
+                    alt={imageData.alternativeText}
+                    width={imageData.width}
+                    height={imageData.height}
+                  />
+                </figure>
+                <div className="absolute flex justify-center h-[60vh] xl:max-h-svh xl:h-svh w-full md:ml-20 inset-0 bg-gradient-to-b from-transparent via-transparent to-purple-ultraDark opacity-80 pointer-events-none">
+                  <ChevronsDownBigIcon 
+                    stroke={COLORS.tomato.DEFAULT}
+                    width={32}
+                    height={32}
+                    className="absolute bottom-2 xl:hidden md:mr-20 animate-down z-50"
+                  />
+                </div>
+                <ChevronsDownBigIcon 
+                  stroke={COLORS.tomato.DEFAULT}
+                  width={32}
+                  height={32}
+                  className="hidden xl:block absolute top-[56svh] xl:top-[94svh] 2xl:top-[96svh] xl:bottom-4 justify-self-auto animate-down z-50"
                 />
-              </figure>
+              </>
             )}
-            <ChevronsDownBigIcon 
-              stroke={COLORS.tomato.DEFAULT}
-              width={32}
-              height={32}
-              className="absolute top-[56svh] xl:top-[94svh] 2xl:top-[96svh] xl:bottom-4 justify-self-auto animate-down z-50"
-            />
           </div>
         </div>
         <div className="Project__description relative flex flex-col-reverse w-full xl:h-svh p-5 pb-16 md:p-10 xl:min-w-[580px] xl:max-w-[35%]">
