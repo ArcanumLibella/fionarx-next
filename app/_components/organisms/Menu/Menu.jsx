@@ -7,7 +7,6 @@ import { NavButton } from "../../molecules";
 import { menuItemVariants, menuItemsVariants, socialItemsVariants } from "./Menu.const";
 import { BehanceIcon, DribbbleIcon, GithubIcon, InstagramIcon, LinkedinIcon, MaltIcon } from "@/public/_assets/icons";
 import { useIsMobile } from "@/app/_utils/useWindowSize";
-import { useOuterClick } from "../../../_hooks/useOutsideClick";
 import { COLORS } from "@/app/_constants/Colors";
 
 export const Menu = ({ socialsItems, menuItems }) => {
@@ -15,10 +14,6 @@ export const Menu = ({ socialsItems, menuItems }) => {
 
   const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const innerRef = useOuterClick(() => {
-    setIsMenuOpen(false);
-  }, "click");
 
   const openMenuHandler = (e) => {
     e.stopPropagation();
@@ -38,7 +33,6 @@ export const Menu = ({ socialsItems, menuItems }) => {
         isMenuOpen={isMenuOpen}
       />
       <motion.nav
-        ref={innerRef}
         key="menuAside"
         initial={{ width: "0%", opacity: 0 }}
         animate={{ width: isMenuOpen ? "100%" : "0%", opacity: isMenuOpen ? 1 : 0 }}
