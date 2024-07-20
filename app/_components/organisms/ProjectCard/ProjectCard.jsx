@@ -56,7 +56,7 @@ export const ProjectCard = ({
           <motion.h2
             variants={titleVariants}
             whileHover="hover"
-            className="ProjectCard__title drop-shadow-2xl absolute flex justify-center items-center h-full w-full md:w-[32vw] xl:w-[20vw] max-w-[480px] hover:backdrop-blur-xl text-[6svh] xs:text-[4svh] md:text-[3vh] xl:text-[2.8vw] font-black text-center uppercase font-brother text-white hover:text-tomato"
+            className="ProjectCard__title drop-shadow-2xl absolute flex justify-center items-center h-full w-full md:w-[32vw] xl:w-[20vw] max-w-[480px] hover:backdrop-blur-xl text-[6svh] xs:text-[4svh] md:text-[3vh] xl:text-[2.8vw] font-black text-center uppercase font-brother bg-clip-text text-transparent bg-gradient-to-r from-tomato via-tomato to-orange"
           >
             {title}
           </motion.h2>
