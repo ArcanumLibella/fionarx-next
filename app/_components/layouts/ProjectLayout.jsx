@@ -26,7 +26,7 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
                     height={imageData.height}
                   />
                 </figure>
-                <div className="absolute flex justify-center h-[60vh] xl:max-h-svh xl:h-svh w-full md:ml-20 inset-0 bg-gradient-to-b from-transparent via-transparent to-purple-ultraDark opacity-80 pointer-events-none">
+                <div className="absolute flex justify-center h-[60vh] xl:max-h-svh xl:h-svh w-full md:ml-20 top-1 bg-gradient-to-b from-transparent via-transparent to-purple-ultraDark opacity-80 pointer-events-none">
                   <ChevronsDownBigIcon 
                     stroke={COLORS.tomato.DEFAULT}
                     width={32}
