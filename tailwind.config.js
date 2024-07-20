@@ -74,6 +74,7 @@ module.exports = {
       width: {
         12: '48px',
         54: '216px',
+        'project-calc': 'calc(100% - 80px)',
       },
       spacing: {
         '1/10': '10%',
