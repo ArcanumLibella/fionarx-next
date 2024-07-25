@@ -24,7 +24,7 @@ const renderText = (text) => {
 
 export const Footer = ({ content, button }) => {
   return (
-    <div className="Footer relative -bottom-16 md:-bottom-24 xl:-bottom-48 2xl:-bottom-96 flex flex-col items-center md:ml-20 px-4 md:px-8 pb-24 md:pb-48 z-100">
+    <div className="Footer relative -bottom-16 md:-bottom-24 xl:-bottom-48 2xl:-bottom-96 flex flex-col items-center md:ml-20 px-4 md:px-8 pb-24 md:pb-48 z-50">
       {content.map(renderText)}
 
       <Separator />
