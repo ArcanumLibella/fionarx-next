@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "./_components/GoogleAnalytics";
+import { MainLayout } from "./_components";
 import "./globals.css";
 
 export const metadata = {
@@ -35,7 +36,9 @@ export default function RootLayout({ children, className: additionalStyle }) {
     <html lang="fr">
       <GoogleAnalytics />
       <body>
-        {children}
+        <MainLayout>
+          {children}
+        </MainLayout>
         <Analytics />
         <SpeedInsights />
       </body>
