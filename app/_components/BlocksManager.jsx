@@ -6,7 +6,6 @@ import { Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, ListItem } from "./molecules";
 import { CardsPrestation, StackItems } from "./organisms";
 
-
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
 

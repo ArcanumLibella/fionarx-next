@@ -1,5 +1,6 @@
 import React from 'react';
 import { BlocksManager, PageLayout } from "../_components";
+import { Footer } from "../_components/organisms/Footer";
 import NotFoundPage from "../404";
 import { fetchDataFromStrapi, fetchSEODataPage } from "../_utils/strapi.utils";
 
@@ -38,15 +39,21 @@ const SinglePage = async ({ params }) => {
   }
 
   const blocks = page.attributes.blocks || [];
+  const footer = page.attributes.footer || null;
 
   return (
-    <PageLayout
-      className="overflow-y-auto xl:pb-96 2xl:pb-[36rem]"
-      title={page.attributes.title}
-      slug={page.attributes.slug}
-    >
-      <BlocksManager blocks={blocks} />
-    </PageLayout>
+    <>
+      <PageLayout
+        className="xl:pb-48 2xl:pb-96"
+        title={page.attributes.title}
+        slug={page.attributes.slug}
+      >
+        <BlocksManager blocks={blocks} />
+      </PageLayout>
+      {footer && (
+        <Footer key={`Footer-${footer.id}`} content={footer.content} button={footer.button} />
+      )}
+    </>
   );
 };
 
