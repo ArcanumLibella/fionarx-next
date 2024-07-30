@@ -12,6 +12,7 @@ import ChevronsDownIcon from "./chevrons-down.svg";
 import ChevronsDownBigIcon from "./chevrons-down-32.svg";
 import DribbbleIcon from "./dribbble.svg";
 import BehanceIcon from "./behance.svg";
+import CheckIcon from "./check.svg";
 
 export {
   GithubIcon,
@@ -27,5 +28,6 @@ export {
   ChevronsDownIcon,
   ChevronsDownBigIcon,
   DribbbleIcon,
-  BehanceIcon
+  BehanceIcon,
+  CheckIcon
 };

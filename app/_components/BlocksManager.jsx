@@ -5,6 +5,7 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, ListItem } from "./molecules";
 import { CardsPrestation, StackItems } from "./organisms";
+import { CardsPricing } from "./organisms/CardsPricing";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
@@ -55,6 +56,8 @@ export function BlocksManager({ blocks }) {
             return <Spacer key={`Spacer-${block.id}`} mobileSize={block.mobileSize} size={block.size} />;
           case "blocks.separator":
             return <Separator key={`Separator-${block.id}`} />;
+          case "blocks.pricings":
+            return <CardsPricing key={`CardsPricing-${block.id}`} title={block.title} pricingCards={block.pricingCards} />;
           default:
             return null;
         }
