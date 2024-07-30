@@ -55,7 +55,7 @@ export const PricingCard = ({
               width={16}
               height={16}
             />
-            <Text type="custom" className="ml-2 font-body text-tiny">
+            <Text type="custom" className="w-full ml-2 font-body text-normal md:text-tiny">
               {item1}
             </Text>
           </div>
@@ -67,7 +67,7 @@ export const PricingCard = ({
               width={16}
               height={16}
             />
-            <Text type="custom" className="ml-2 font-body text-tiny">
+            <Text type="custom" className="w-full ml-2 font-body text-normal md:text-tiny">
               {item2}
             </Text>
           </div>
@@ -79,7 +79,7 @@ export const PricingCard = ({
               width={16}
               height={16}
             />
-            <Text type="custom" className="ml-2 font-body text-tiny">
+            <Text type="custom" className="w-full ml-2 font-body text-normal md:text-tiny">
               {item3}
             </Text>
           </div>
@@ -91,7 +91,7 @@ export const PricingCard = ({
               width={16}
               height={16}
             />
-            <Text type="custom" className="ml-2 font-body text-tiny">
+            <Text type="custom" className="w-full ml-2 font-body text-normal md:text-tiny">
               {item4}
             </Text>
           </div>
@@ -103,7 +103,7 @@ export const PricingCard = ({
               width={16}
               height={16}
             />
-            <Text type="custom" className="ml-2 font-body text-tiny">
+            <Text type="custom" className="w-full ml-2 font-body text-normal md:text-tiny">
               {item5}
             </Text>
           </div>
@@ -115,7 +115,7 @@ export const PricingCard = ({
               width={16}
               height={16}
             />
-            <Text type="custom" className="ml-2 font-body text-tiny">
+            <Text type="custom" className="w-full ml-2 font-body text-normal md:text-tiny">
               {item6}
             </Text>
           </div>
