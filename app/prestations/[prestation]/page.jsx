@@ -5,6 +5,7 @@ import UnderConstructionPage from "@/app/under-construction";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
+import { PagePrestationLayout } from "@/app/_components/layouts/PagePrestationLayout";
 
 // TODO:
 // export async function generateMetadata({ params }) {
@@ -44,7 +45,9 @@ export default async function PrestationPage({ params }) {
   const { title, blocks } = prestation.attributes || [];
 
   return (
-    <PageLayout>
+    <PagePrestationLayout
+      className="xl:pb-48 2xl:pb-96"
+    >
       <Link href="/prestations" className="flex items-center mb-8">
         <ArrowLeftIcon
           fill={COLORS.white.DEFAULT}
@@ -57,7 +60,7 @@ export default async function PrestationPage({ params }) {
       </Link>
       <Heading level={3} className="mb-6 md:mb-10 text-tomato">{title}</Heading>
       <BlocksManager blocks={blocks} />
-    </PageLayout>
+    </PagePrestationLayout>
   );
 }
 
