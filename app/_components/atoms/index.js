@@ -6,5 +6,6 @@ export { Separator } from './Separator';
 export { Spacer } from './Spacer';
 export { TagCategory } from './TagCategory';
 export { TagMission } from './TagMission';
+export { TagFormula } from './TagFormula';
 export { TagTechno } from './TagTechno';
 export { Text } from './Text';
