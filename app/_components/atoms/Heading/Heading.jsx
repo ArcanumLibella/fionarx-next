@@ -38,7 +38,7 @@ export const Heading = ({
           {children}
         </h4>
       );
-    case 5: /* Introduction et Bandeau CTA */
+    case 5: /* INTRODUCTION ET FOOTER */
       return (
         <h5
           className={`Heading font-brother font-bold text-base xs:text-2base md:text-3base 2xl:text-lg -tracking-wide selection:bg-purple ${additionalStyle}`}
@@ -46,7 +46,7 @@ export const Heading = ({
           {children}
         </h5>
       );
-    case 6: /* MINI-TITRE */
+    case 6: /* MINI-TITRE ET LINK */
       return (
         <h6
           className={`Heading font-brother font-black text-tiny xs:text-normal text-tomato selection:bg-purple uppercase ${additionalStyle}`}
