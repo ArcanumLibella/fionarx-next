@@ -9,3 +9,4 @@ export { TagMission } from './TagMission';
 export { TagFormula } from './TagFormula';
 export { TagTechno } from './TagTechno';
 export { Text } from './Text';
+export { FootNote } from './FootNote';

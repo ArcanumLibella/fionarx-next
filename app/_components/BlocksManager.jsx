@@ -2,7 +2,7 @@
 
 import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
+import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, ListItem } from "./molecules";
 import { CardsPrestation, StackItems } from "./organisms";
 import { CardsPricing } from "./organisms/CardsPricing";
@@ -58,6 +58,26 @@ export function BlocksManager({ blocks }) {
             return <Separator key={`Separator-${block.id}`} />;
           case "blocks.pricings":
             return <CardsPricing key={`CardsPricing-${block.id}`} title={block.title} pricingCards={block.pricingCards} />;
+          case "blocks.foot-note":
+            return (
+              <div className="mt-4">
+                <BlocksRenderer
+                  key={`BlocksRenderer-${block.id}`}
+                  content={block.note}
+                  blocks={{
+                    paragraph: ({ children }) => {
+                      return (
+                        <FootNote key={`FootNote-${block.id}`} note={children} />
+                      )
+                    }
+                  }}
+                  modifiers={{
+                    bold: ({ children }) => <strong key={`strong-${block.id}`} className="font-bold text-tomato">{children}</strong>,
+                    italic: ({ children }) => <span key={`span-${block.id}`} className="italic">{children}</span>,
+                  }}
+                />
+              </div>
+            );
           default:
             return null;
         }
