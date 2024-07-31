@@ -1,11 +1,10 @@
 import React from 'react';
-import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
-import { PageLayout, Heading, BlocksManager } from "@/app/_components";
-import UnderConstructionPage from "@/app/under-construction";
 import Link from "next/link";
-import { ArrowLeftIcon } from "@/public/_assets/icons";
+import { Heading, BlocksManager, ImagesSlider, PagePrestationLayout } from "@/app/_components";
+import UnderConstructionPage from "@/app/under-construction";
+import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
-import { PagePrestationLayout } from "@/app/_components/layouts/PagePrestationLayout";
+import { ArrowLeftIcon } from "@/public/_assets/icons";
 
 // TODO:
 // export async function generateMetadata({ params }) {
