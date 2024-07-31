@@ -18,7 +18,7 @@ export const ProjectsByCategoryLayout = ({ name, children, noContent }) => {
           path="/projets"
         />
       </div>
-      <div className={`ProjectsByCategoryLayout__projects flex ${noContent && "justify-center"} items-center h-full gap-8 md:gap-16 px-8 overflow-x-auto overflow-y-hidden xl:gap-[6vw] md:px-12 lg:px-24 xl:px-32`}>
+      <div className={`ProjectsByCategoryLayout__projects flex ${noContent && "justify-center"} items-center h-full gap-8 md:gap-16 px-8 overflow-x-auto overflow-y-hidden xl:gap-[6vw] md:px-12 lg:px-24 xl:px-32 scrollbar-hidden`}>
         {children}
       </div>
     </div>

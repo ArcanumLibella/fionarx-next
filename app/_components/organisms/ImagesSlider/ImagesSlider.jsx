@@ -8,7 +8,7 @@ export const ImagesSlider = ({ images }) => {
   
   return (
     <div className="ImagesSlider relative">
-      <div className="ImagesSlider__images flex gap-4 max-h-[640px] px-4 mb-12 !-mx-4 overflow-x-auto lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl md:px-8 md:!-mx-8 xl:!mx-0 xl:px-0">
+      <div className="ImagesSlider__images flex gap-4 max-h-[640px] px-4 mb-12 !-mx-4 overflow-x-auto lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl md:px-8 md:!-mx-8 xl:!mx-0 xl:px-0 scrollbar-hidden">
         {images.data.map((image) => {
           return (
             <figure key={image.id} className="min-w-72 md:max-w-fit lg:min-w-80 xl:min-w-min">
