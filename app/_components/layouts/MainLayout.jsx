@@ -1,6 +1,7 @@
 import React from "react";
-import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
 import { Menu } from "../organisms";
+import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
+import { Copyright } from "../atoms";
 
 export const MainLayout = async ({pageTitle, children, className: additionalStyle}) => {
   const globalData = await fetchDataFromStrapi("global?populate=deep");
@@ -12,6 +13,7 @@ export const MainLayout = async ({pageTitle, children, className: additionalStyl
       <Menu menuItems={menuItems} socialsItems={socialsItems} />
       {/* <RDVButton /> TODO: A réactiver quand je suis prête ! */}
         {children}
+        <Copyright />
     </main>
   )
 };

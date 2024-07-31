@@ -10,3 +10,4 @@ export { TagFormula } from './TagFormula';
 export { TagTechno } from './TagTechno';
 export { Text } from './Text';
 export { FootNote } from './FootNote';
+export { Copyright } from './Copyright';
