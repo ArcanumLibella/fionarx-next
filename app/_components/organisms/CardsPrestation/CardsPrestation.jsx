@@ -9,7 +9,7 @@ if (!cardsPrestation) return;
   return (
     <div className="relative">
       <ArrowRightIcon 
-        className="absolute lg:hidden -right-2 top-1/2 -translate-y-1/2 w-12 h-12 animate-pulse"
+        className="absolute lg:hidden -right-2 top-1/2 -translate-y-1/2 w-12 h-12 animate-pulse z-50"
         fill={COLORS.white.DEFAULT}
         width={40}
         height={40}
