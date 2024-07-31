@@ -4,7 +4,7 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, ListItem } from "./molecules";
-import { CardsPrestation, StackItems } from "./organisms";
+import { CardsPrestation, ImagesSlider, StackItems } from "./organisms";
 import { CardsPricing } from "./organisms/CardsPricing";
 
 export function BlocksManager({ blocks }) {
@@ -79,6 +79,8 @@ export function BlocksManager({ blocks }) {
                 />
               </div>
             );
+          case "blocks.images-slider":
+            return <ImagesSlider key={`ImagesSlider-${block.id}`} images={block.images} />;  
           default:
             return null;
         }

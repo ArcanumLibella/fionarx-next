@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./node_modules/flowbite-react/lib/**/*.js",
     "./app/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
@@ -154,5 +155,6 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-text-fill-stroke')(), // no options to configure
+    require("flowbite/plugin")
   ],
 };

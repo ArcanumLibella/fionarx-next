@@ -7,7 +7,9 @@ export { Spacer } from './atoms';
 export { TagCategory } from './atoms';
 export { TagMission } from './atoms';
 export { TagTechno } from './atoms';
+export { TagFormula } from './atoms';
 export { Text } from './atoms';
+export { Copyright } from './atoms';
 
 export { ButtonLarge } from './molecules';
 export { CardPrestation } from './molecules';
@@ -26,11 +28,13 @@ export { Hero } from "./organisms";
 export { Menu } from "./organisms";
 export { ProjectCard } from "./organisms";
 export { StackItems } from "./organisms";
+export { ImagesSlider } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";
 export { ProjectLayout } from "./layouts";
 export { ProjectsLayout } from "./layouts";
 export { ProjectsByCategoryLayout } from "./layouts";
+export { PagePrestationLayout } from "./layouts";
 
 export { BlocksManager } from "./BlocksManager";
