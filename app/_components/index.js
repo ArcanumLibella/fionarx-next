@@ -29,6 +29,7 @@ export { Menu } from "./organisms";
 export { ProjectCard } from "./organisms";
 export { StackItems } from "./organisms";
 export { ImagesSlider } from "./organisms";
+export { Stages } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";

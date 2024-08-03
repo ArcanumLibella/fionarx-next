@@ -6,3 +6,4 @@ export { Menu } from "./Menu";
 export { ProjectCard } from "./ProjectCard";
 export { StackItems } from "./StackItems";
 export { ImagesSlider } from "./ImagesSlider";
+export { Stages } from "./Stages";
