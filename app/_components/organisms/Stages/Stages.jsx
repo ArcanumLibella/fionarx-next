@@ -27,8 +27,7 @@ export const Stages = ({ stages }) => {
               }}
             />
         </li>
-        )
-      )}                
+        ))}                
     </ol>
   );
 };

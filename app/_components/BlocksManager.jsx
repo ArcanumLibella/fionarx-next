@@ -50,7 +50,7 @@ export function BlocksManager({ blocks }) {
           case "blocks.stack":
             return <StackItems key={`StackItems-${block.id}`} items={block.items} />
           case "blocks.quote":
-            return <Quote key={`Quote-${block.id}`} quoteContent={block.quoteContent} />;
+            return <Quote key={`Quote-${block.id}`} quotes={block.quotes} />;
           case "blocks.button":
             return <ButtonLarge key={`ButtonLarge-${block.id}`} label={block.label} url={block.url} isExternal={block.isExternal} isCentered={block.isCentered} />;
           case "blocks.spacer":
