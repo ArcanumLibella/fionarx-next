@@ -3,6 +3,8 @@ import { Text } from "../Text";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export const Quote = ({ quotes }) => {
+  if (!quotes) return;
+
   return (
     <div className="Quote p-6 w-full max-w-full rounded bg-purple-light">
       <BlocksRenderer 

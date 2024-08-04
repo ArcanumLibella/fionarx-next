@@ -4,13 +4,13 @@ import { fetchDataFromStrapi, fetchProjects, fetchSEOData } from "../_utils/stra
 export const metadata = {
   title: 'Projets',
   description: "Voici une liste de quelques projets que j'ai réalisé ces dernières années.",
-  keywords: ['Design', 'Création', 'Freelance', 'Web Development', 'WebDesign', 'Branding', 'NoCode', 'SEO', 'Social Media', 'Automation'],
+  keywords: ['Indépendant', 'Freelance', 'Design', 'Développement Web', 'WebDesign', 'Branding', 'WebMarketing', 'SEO', 'Social Media', 'Tunnel de vente', 'Site vitrine', 'Tunnel de vente'],
   alternates: {
     canonical: '/projets',
   },
   openGraph: {
     title: 'Fiona Roux',
-    description: 'Dévelopement Web, WebDesign & Stratégie Digitale',
+    description: 'Consultante en Stratégie Digitale dans le Sud de la France',
     url: 'https://www.fionarx.com',
     siteName: 'FionaRx',
     images: [

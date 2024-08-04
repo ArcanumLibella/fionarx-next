@@ -7,15 +7,15 @@ import "./globals.css";
 export const metadata = {
   title: {
     template: '%s | FionaRx',
-    default: 'Fiona Roux - Développeur web freelance',
+    default: 'Fiona Roux - Consultante en Stratégie Digitale freelance',
   },
-  description: "Développeur web et Webdesigner indépendante, je vous accompagne à toutes les étapes de votre projet de digitalisation : branding, webdesign, développement web, référencement...",
-  keywords: ['Développement web', 'WebDesign', 'Charte graphique', 'Branding', 'NoCode', 'SEO', 'Réseaux sociaux', 'Automatisation'],
+  description: "Consultante en Stratégie Digitale indépendante, j'accompagne les entrepreneurs, indépendants, artisans et petites entreprises à s'adapter à la révolution digitale ou réinventer leur stratégie web",
+  keywords: ['Audit digital', 'Développement web', 'WebDesign', 'Charte graphique', 'Branding', 'WebMarketing', 'SEO', 'Réseaux sociaux', 'Tunnel de vente', 'Landing page'],
   authors: [{ name: 'Fiona Roux' }],
   metadataBase: new URL('https://www.fionarx.com/'),
   openGraph: {
-    title: 'Fiona Roux - Développeur web freelance',
-    description: 'Développeuse web et Webdesigner depuis 2018, je vous accompagne dans la création de votre projet de digitalisation.',
+    title: "Fiona Roux - Consultante en Stratégie Digitale freelance",
+    description: "Consultante en Stratégie Digitale indépendante, j'accompagne les entrepreneurs, indépendants, artisans et petites entreprises à s'adapter à la révolution digitale ou réinventer leur stratégie web",
     url: 'https://www.fionarx.com',
     siteName: 'FionaRx',
     images: [

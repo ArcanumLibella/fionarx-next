@@ -2,28 +2,27 @@ import React from 'react';
 import Link from "next/link";
 import { Heading, BlocksManager, ImagesSlider, PagePrestationLayout } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
-import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchSEODataPage } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
 import { ArrowLeftIcon } from "@/public/_assets/icons";
 
-// TODO:
-// export async function generateMetadata({ params }) {
-//   const seoData = await fetchSEODataPage(params.page);
-//   if (!seoData) return;
+export async function generateMetadata({ params }) {
+  const seoData = await fetchSEODataPage(params.prestation);
+  if (!seoData) return;
  
-//   return {
-//     title: seoData.metaTitle,
-//     description: seoData.metaDescription,
-//     keywords: seoData.keywords,
-//     robots: seoData.metaRobots,
-//     alternates: {
-//       canonical: `/${params.page}`,
-//     },
-//     structuredData: seoData.structuredData
-//   }
-// }
+  return {
+    title: seoData.metaTitle,
+    description: seoData.metaDescription,
+    keywords: seoData.keywords,
+    robots: seoData.metaRobots,
+    alternates: {
+      canonical: `/${params.prestation}`,
+    },
+    structuredData: seoData.structuredData
+  }
+}
 
-export default async function PrestationPage({ params }) {
+const PrestationPage = async ({ params }) => {
   const { prestation: slug } = params;
   let prestation;
 
@@ -63,16 +62,4 @@ export default async function PrestationPage({ params }) {
   );
 }
 
-export async function generateStaticParams() {
-  try {
-    const prestations = await fetchDataFromStrapi("prestations");
-    return prestations.map((prestation) => ({
-      prestation: prestation.attributes.slug,
-    }));
-  } catch (error) {
-    console.log("Error fetching slugs for prestations", error);
-    return [];
-  }
-}
-
-export const revalidate = 300;
+export default PrestationPage;
