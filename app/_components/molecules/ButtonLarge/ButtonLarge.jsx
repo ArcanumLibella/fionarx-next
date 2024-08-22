@@ -7,7 +7,7 @@ export const ButtonLarge = ({
   url,
   isExternal,
   isCentered,
-  style: additionalStyle,
+  className: additionalStyle,
 }) => {
   return (
     <Link

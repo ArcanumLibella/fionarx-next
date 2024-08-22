@@ -15,6 +15,10 @@ body {
   min-height: -webkit-fill-available;
 }
 
+li {
+  font-weight: 300;
+}
+
 /* Avoid Chrome to see Safari hack */
 @supports (-webkit-touch-callout: none) {
   body {

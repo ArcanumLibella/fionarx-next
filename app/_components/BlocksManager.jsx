@@ -34,8 +34,8 @@ export function BlocksManager({ blocks }) {
                       </Heading>
                     )
                   },
-                  link: ({ children, url }) => <a key={`link-${block.id}`} href={url} target="_blank" rel="noreferrer">{children}</a>,
-                  list: ({ children }) => <ul key={`list-items-${block.id}`} className="ml-4 list-disc list-inside">{children}</ul>,
+                  link: ({ children, url }) => <a key={`link-${block.id}`} href={url} target="_blank" rel="noreferrer" className="Link">{children}</a>,
+                  list: ({ children }) => <ul key={`list-items-${block.id}`} className="List font-normal list-disc list-inside">{children}</ul>,
                 }}
                 modifiers={{
                   bold: ({ children }) => <strong key={`strong-${block.id}`} className="font-bold text-tomato">{children}</strong>,
@@ -52,7 +52,7 @@ export function BlocksManager({ blocks }) {
           case "blocks.quote":
             return <Quote key={`Quote-${block.id}`} quotes={block.quotes} />;
           case "blocks.button":
-            return <ButtonLarge key={`ButtonLarge-${block.id}`} label={block.label} url={block.url} isExternal={block.isExternal} isCentered={block.isCentered} />;
+            return <ButtonLarge key={`ButtonLarge-${block.id}`} label={block.label} url={block.url} isExternal={block.isExternal} isCentered={block.isCentered} className="my-12 md:my-16" />;
           case "blocks.spacer":
             return <Spacer key={`Spacer-${block.id}`} mobileSize={block.mobileSize} size={block.size} />;
           case "blocks.separator":

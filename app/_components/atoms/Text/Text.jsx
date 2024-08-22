@@ -9,7 +9,7 @@ export const Text = ({
     case "paragraphLarge":
       return (
         <p
-          className={`font-body text-mbase md:text-base 2xl:text-xbase selection:bg-purple ${additionalStyle}`}
+          className={`Heading font-brother font-bold text-base xs:text-2base md:text-3base 2xl:text-md -tracking-wide selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </p>

@@ -49,7 +49,7 @@ module.exports = {
         "3lg": '3.5rem', // 56px
         xl: '4rem', // 64px
         "2xl": '5rem', // 80px
-        "3xl": '8rem', // 128px
+        "3xl": '6rem', // 96px
       },
       letterSpacing: {
         tightest: '-0.4rem', // -8px

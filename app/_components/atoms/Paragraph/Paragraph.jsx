@@ -6,7 +6,7 @@ export const Paragraph = ({
 }) => {
   return (
     <p
-      className={`Paragraph mb-4 font-body font-medium text-normal xl:text-base selection:bg-purple ${additionalStyle}`}
+      className={`Paragraph mb-4 font-body font-light text-normal xl:text-base selection:bg-purple ${additionalStyle}`}
     >
       {children}
     </p>

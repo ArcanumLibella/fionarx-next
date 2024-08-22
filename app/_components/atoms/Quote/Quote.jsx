@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from "../Text";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { Paragraph } from "../Paragraph";
 
 export const Quote = ({ quotes }) => {
   if (!quotes) return;
@@ -11,14 +11,14 @@ export const Quote = ({ quotes }) => {
         content={quotes}
         blocks={{
           paragraph: ({ children }) => (
-            <Text type="paragraphLarge" className="text-white">
+            <Paragraph className="!mb-0 text-white">
               {children}
-            </Text>
+            </Paragraph>
           )
         }}
         modifiers={{
-          bold: ({ children }) => <strong className="font-bold text-tomato">{children}</strong>,
-          italic: ({ children }) => <span className="italic">{children}</span>,
+          bold: ({ children }) => <strong className="!font-bold text-tomato">{children}</strong>,
+          italic: ({ children }) => <span className="!italic">{children}</span>,
         }}
       />
     </div>

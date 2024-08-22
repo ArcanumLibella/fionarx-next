@@ -49,10 +49,13 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
           path="/projets"
           className="absolute top-10"
         />
-        <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh]" />
+        <Blobs className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[40vw] xl:h-[48vh] 2xl:w-[35vw] 2xl:h-[44vh] !-z-1" />
         <div className="pt-16 md:pt-12 xl:pt-0">
           {/* TITLE */}
-          <Heading level={3} className="Project__title mb-4 normal-case">
+          <Heading 
+            level={1}
+            className="Project__title mb-4 !text-md xs:!text-lg md:!text-3lg 2xl:!text-2xl normal-case leading-none text-shadow text-tomato"
+          >
             {title}
           </Heading>
 
@@ -66,7 +69,7 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
           </div>
 
           {/* DESCRIPTION */}
-          <Paragraph className="Project__description !mb-10 md:text-normal">
+          <Paragraph className="Project__description !mb-10 lg:!text-base xl:!text-normal 2xl:!text-base">
             {description}
           </Paragraph>
 

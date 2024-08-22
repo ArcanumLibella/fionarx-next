@@ -6,39 +6,39 @@ export const Heading = ({
   className: additionalStyle,
 }) => {
   switch (level) {
-    case 1: /* TITRE DE LA HOMEPAGE */
+    case 1: /* TITRE DE LA PAGE */ 
       return (
         <h1
-          className={`Heading font-black uppercase select-none text-[8vw] lg:text-[6vh] xl:text-[8vh] font-brother text-shadow text-stroke-purple-ultraLight md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 ${additionalStyle}`}
+          className={`Heading font-brother font-black text-lg xs:text-2lg md:text-2xl 2xl:text-3xl selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h1>
       );
-    case 2: /* TITRE DE PAGE */
+    case 2: /* SOUS-TITRE DE PAGE */
       return (
         <h2
-          className={`Heading font-brother font-black text-lg xs:text-2lg md:text-2xl 2xl:text-3xl tracking-tight md:tracking-tightest uppercase selection:bg-purple ${additionalStyle}`}
+          className={`Heading mt-12 md:mt-16 mb-4 font-brother font-black text-base md:text-3base 2xl:text-md uppercase text-tomato selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h2>
       );
-    case 3: /* TITRE DE PROJET */
+    case 3: /* PETIT-TITRE DE PAGE */
       return (
         <h3
-          className={`Heading font-brother font-extrabold text-md xs:text-lg md:text-3lg 2xl:text-2xl leading-none selection:bg-purple text-tomato ${additionalStyle}`}
+          className={`Heading mt-12 md:mt-16 mb-4 md:mb-8 font-brother font-extrabold text-base md:text-3base 2xl:text-2md leading-none text-tomato selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h3>
       );
-    case 4: /* SOUS-TITRE */
+    case 4: /* MINI-TITRE OU TITRE DE CARD */
       return (
         <h4
-          className={`Heading mb-4 font-brother font-extrabold text-2base md:text-md 2xl:text-2md selection:bg-purple uppercase text-tomato ${additionalStyle}`}
+          className={`Heading mb-4 font-brother font-bold text-base 2xl:text-2base selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h4>
       );
-    case 5: /* INTRODUCTION ET FOOTER */
+    case 5: /* INTRODUCTION ET FOOTER FIXME: */
       return (
         <h5
           className={`Heading font-brother font-bold text-base xs:text-2base md:text-3base 2xl:text-lg -tracking-wide selection:bg-purple ${additionalStyle}`}
@@ -46,7 +46,7 @@ export const Heading = ({
           {children}
         </h5>
       );
-    case 6: /* MINI-TITRE ET LINK */
+    case 6: /* MINI-TITRE ET LINK FIXME: */
       return (
         <h6
           className={`Heading font-brother font-black text-tiny xs:text-normal text-tomato selection:bg-purple uppercase ${additionalStyle}`}
