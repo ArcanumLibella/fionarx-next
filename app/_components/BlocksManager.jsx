@@ -35,7 +35,7 @@ export function BlocksManager({ blocks }) {
                     )
                   },
                   link: ({ children, url }) => <a key={`link-${block.id}`} href={url} target="_blank" rel="noreferrer" className="Link">{children}</a>,
-                  list: ({ children }) => <ul key={`list-items-${block.id}`} className="List font-normal list-disc list-inside">{children}</ul>,
+                  list: ({ children }) => <ul key={`list-items-${block.id}`} className="List list-disc list-inside">{children}</ul>,
                 }}
                 modifiers={{
                   bold: ({ children }) => <strong key={`strong-${block.id}`} className="font-bold text-tomato">{children}</strong>,

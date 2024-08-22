@@ -15,7 +15,7 @@ export const Hero = async () => {
           <h1 className="font-brother font-black uppercase text-[12vw] md:text-[10vw] lg:text-[8vh] xl:text-[12vh] text-white cursor-pointer select-none">
             {item.label}
           </h1>
-          <Heading level={3} className="font-brother font-bold uppercase xs:!text-[5vw] !text-[5vw] md:!text-[4vw] lg:!text-[3.5vh] xl:!text-[5vh] 2xl:!text-[5vh] text-white opacity-60 cursor-pointer select-none">
+          <Heading level={3} className="font-brother !my-0 font-bold uppercase xs:!text-[5vw] !text-[5vw] md:!text-[4vw] lg:!text-[3.5vh] xl:!text-[5vh] 2xl:!text-[5vh] text-white opacity-60 cursor-pointer select-none">
             Consultante en Stratégie Digitale
           </Heading>
         </Link>
@@ -27,7 +27,7 @@ export const Hero = async () => {
           href={`prestations/${item.link}`}
           className="select-none no-underline z-10"
         >
-          <Heading key={item.id} level={2} className="font-brother font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal text-shadow text-stroke-purple-ultraLight md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">{item.label}</Heading>
+          <Heading key={item.id} level={2} className="font-brother !my-0 font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal text-shadow text-stroke-purple-ultraLight md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 !text-purple-ultraLight">{item.label}</Heading>
         </Link>
       )
     }
