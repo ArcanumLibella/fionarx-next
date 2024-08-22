@@ -46,6 +46,7 @@ const SinglePage = async ({ params }) => {
       <PageLayout
         className="xl:pb-48 2xl:pb-96"
         title={page.attributes.title}
+        introduction={page.attributes.introduction}
         slug={page.attributes.slug}
       >
         <BlocksManager blocks={blocks} />

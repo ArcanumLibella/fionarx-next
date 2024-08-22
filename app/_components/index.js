@@ -10,6 +10,7 @@ export { TagTechno } from './atoms';
 export { TagFormula } from './atoms';
 export { Text } from './atoms';
 export { Copyright } from './atoms';
+export { Introduction } from './atoms';
 
 export { ButtonLarge } from './molecules';
 export { CardPrestation } from './molecules';
