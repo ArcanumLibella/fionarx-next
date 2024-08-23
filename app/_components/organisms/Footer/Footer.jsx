@@ -7,13 +7,13 @@ const renderText = (text) => {
   switch (text.type) {
     case TEXT_TYPES.HEADING:
       return (
-        <Heading key={`Heading-${text.id}`} level={text.level} className="mb-2 text-center text-balance">
+        <Heading key={`Heading-${text.id}`} level={text.level} className="mb-4 md:mb-2 text-center text-balance">
           {text.children[0].text}
         </Heading>
       );
     case TEXT_TYPES.PARAGRAPH:
       return (
-        <Paragraph key={`Paragraph-${text.id}`}>
+        <Paragraph key={`Paragraph-${text.id}`} className="text-center text-balance">
           {text.children[0].text}
         </Paragraph>
       );

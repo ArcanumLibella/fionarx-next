@@ -37,7 +37,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
         initial={{ width: "0%", opacity: 0 }}
         animate={{ width: isMenuOpen ? "100%" : "0%", opacity: isMenuOpen ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className={`Menu fixed z-100 overflow-hidden xl:max-w-8/12`}
+        className={`Menu fixed overflow-hidden xl:max-w-8/12 z-[200]`}
         style={{ pointerEvents: isMenuOpen ? 'auto' : 'none' }}
       >
         <motion.ul
@@ -83,7 +83,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
             animate={isMenuOpen ? "open" : "closed"}
             exit="closed"
             variants={socialItemsVariants}
-            className="absolute z-50 flex items-center gap-4 h-14 right-20 bottom-2 "
+            className="absolute z-50 flex items-center gap-2 xs:gap-4 h-14 right-20 bottom-2"
           >
             <motion.a
               href={malt}
