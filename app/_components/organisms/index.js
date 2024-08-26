@@ -7,3 +7,4 @@ export { ProjectCard } from "./ProjectCard";
 export { StackItems } from "./StackItems";
 export { ImagesSlider } from "./ImagesSlider";
 export { Stages } from "./Stages";
+export { SectionCTA } from "./SectionCTA";

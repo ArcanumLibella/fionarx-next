@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlocksManager, PageLayout } from "../_components";
-import { Footer } from "../_components/organisms/Footer";
+import { SectionCTA } from "../_components/organisms";
 import NotFoundPage from "../404";
 import { fetchDataFromStrapi, fetchSEODataPage } from "../_utils/strapi.utils";
 
@@ -39,7 +39,7 @@ const SinglePage = async ({ params }) => {
   }
 
   const blocks = page.attributes.blocks || [];
-  const footer = page.attributes.footer || null;
+  const sectionCTA = page.attributes.sectionCTA || null;
 
   return (
     <>
@@ -51,8 +51,8 @@ const SinglePage = async ({ params }) => {
       >
         <BlocksManager blocks={blocks} />
       </PageLayout>
-      {footer && (
-        <Footer key={`Footer-${footer.id}`} title={footer.title} subtitle={footer.subtitle} button={footer.button} />
+      {sectionCTA && (
+        <SectionCTA key={`SectionCTA-${sectionCTA.id}`} title={sectionCTA.title} subtitle={sectionCTA.subtitle} button={sectionCTA.button} />
       )}
     </>
   );
