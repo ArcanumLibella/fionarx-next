@@ -11,7 +11,7 @@ export const CardPrestation = ({
   description 
 }) => {
   return (
-    <div className="CardPrestation flex-1 h-full text-center min-w-240 scroll-mr-8 group">
+    <div className="CardPrestation flex-1 h-full text-center min-w-240 scroll-mr-8 group cursor-default">
       <div className="p-6 bg-purple">
         <Heading
           level={4}

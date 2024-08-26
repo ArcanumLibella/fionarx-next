@@ -8,11 +8,10 @@ export const SectionCTA = ({ title, subtitle, button }) => {
       <Text type="paragraphLarge" className="SectionCTA__title mb-4 text-base lg:!text-md 2xl:!text-2lg text-center text-tomato">
         {title}
       </Text>
-      <Text type="custom" className="SectionCTA__subtitle font-normal text-normal xs:text-base lg:!text-2base 2xl:!text-2md text-center">
+      <Text type="custom" className="SectionCTA__subtitle mb-16 font-normal text-normal xs:text-base lg:!text-2base 2xl:!text-2md text-center">
         {subtitle}
       </Text>
 
-      <Separator />
       {button && (
         <ButtonLarge
           label={button.label}

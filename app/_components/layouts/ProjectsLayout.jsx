@@ -8,7 +8,7 @@ export const ProjectsLayout = ({ categories, children }) => {
       <BlobsLight className="hidden fixed xl:flex justify-center items-center -top-1/5 -right-1/10 xl:right-auto xl:top-auto xl:-left-1/10 xl:-bottom-1/5 w-[56vw] h-[36vh] lg:w-[48vw] lg:h-[54vh] xl:w-[40vw] xl:h-[64vh]" />
       <Blobs className="fixed flex justify-center items-center -right-1/10 -top-1/5 w-[56vw] h-[40vh] lg:w-[48vw] lg:h-[54vh] xl:w-[40vw] xl:h-[72vh] !-z-1" />
       <div className="ProjectsLayout__filter pt-8 px-8 md:px-12 lg:px-24 xl:px-32">
-        <Heading level={6} className="mb-4 font-bold text-purple-ultraLight uppercase">
+        <Heading level={6} className="mb-4 font-bold text-white uppercase">
           Filtrer les projets
         </Heading>
         <div className="ProjectsLayout__categories flex flex-wrap items-start w-full gap-2 md:gap-4">

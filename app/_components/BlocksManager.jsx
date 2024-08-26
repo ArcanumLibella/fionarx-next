@@ -46,7 +46,7 @@ export function BlocksManager({ blocks }) {
           case "blocks.list":
             return <ul key={`ListItems-${block.id}`} className="ListItems">{renderListBlock(block)}</ul>;
           case "blocks.prestations":
-            return <CardsPrestation key={`CardsPrestation-${block.id}`} cardsPrestation={block.cardsPrestation} />
+            return <CardsPrestation key={`CardsPrestation-${block.id}`} title={block.title} cardsPrestation={block.cardsPrestation} />
           case "blocks.stack":
             return <StackItems key={`StackItems-${block.id}`} items={block.items} />
           case "blocks.quote":

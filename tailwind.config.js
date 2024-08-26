@@ -16,7 +16,7 @@ module.exports = {
           dark: '#3C0D6E',
           DEFAULT: '#410087',
           light: '#5C0AB4',
-          ultraLight: '#E4D8F0',
+          ultraLight: '#8342C8',
         },
         white: {
           DEFAULT: '#FBF7FF'
