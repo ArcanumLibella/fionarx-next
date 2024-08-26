@@ -52,7 +52,7 @@ const SinglePage = async ({ params }) => {
         <BlocksManager blocks={blocks} />
       </PageLayout>
       {footer && (
-        <Footer key={`Footer-${footer.id}`} content={footer.content} button={footer.button} />
+        <Footer key={`Footer-${footer.id}`} title={footer.title} subtitle={footer.subtitle} button={footer.button} />
       )}
     </>
   );

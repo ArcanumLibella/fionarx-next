@@ -1,31 +1,16 @@
 import React from "react";
-import { Heading, Paragraph, Separator } from "../../atoms";
+import { Separator, Text } from "../../atoms";
 import { ButtonLarge } from "../../molecules";
-import { TEXT_TYPES } from "./Footer.const";
 
-const renderText = (text) => {
-  switch (text.type) {
-    case TEXT_TYPES.HEADING:
-      return (
-        <Heading key={`Heading-${text.id}`} level={text.level} className="mb-4 md:mb-2 text-center text-balance">
-          {text.children[0].text}
-        </Heading>
-      );
-    case TEXT_TYPES.PARAGRAPH:
-      return (
-        <Paragraph key={`Paragraph-${text.id}`} className="text-center text-balance">
-          {text.children[0].text}
-        </Paragraph>
-      );
-    default:
-      return null;
-  }
-};
-
-export const Footer = ({ content, button }) => {
+export const Footer = ({ title, subtitle, button }) => {
   return (
-    <div className="Footer relative -bottom-16 md:-bottom-24 xl:-bottom-48 2xl:-bottom-96 flex flex-col items-center md:ml-20 px-4 md:px-8 pb-24 md:pb-48 z-50">
-      {content.map(renderText)}
+    <div className="Footer relative -bottom-16 md:-bottom-24 xl:-bottom-48 2xl:-bottom-96 flex flex-col items-center md:ml-24 px-4 md:px-20 pb-24 md:pb-48 z-50">
+      <Text type="paragraphLarge" className="Footer__title mb-4 text-base lg:!text-md 2xl:!text-2lg text-center text-tomato">
+        {title}
+      </Text>
+      <Text type="custom" className="Footer__subtitle font-normal text-normal xs:text-base lg:!text-2base 2xl:!text-2md text-center">
+        {subtitle}
+      </Text>
 
       <Separator />
       {button && (
