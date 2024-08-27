@@ -16,7 +16,7 @@ export const NavButton = ({ socialsItems, openMenuHandler, isMenuOpen }) => {
         href="/"
         role="link"
         aria-label="Lien vers l'accueil"
-        className="NavButton__home hidden w-20 h-20 md:flex md:items-center md:justify-center font-bold transition-all duration-300 bg-transparent border-2 hover:text-tomato font-brother text-tiny border-purple-ultraDark"
+        className="NavButton__home hidden w-20 h-20 md:flex md:items-center md:justify-center font-bold transition-all duration-300 bg-transparent border-2 font-brother text-tiny border-purple-ultraDark"
       >
         HOME
       </Link>
@@ -43,7 +43,7 @@ export const NavButton = ({ socialsItems, openMenuHandler, isMenuOpen }) => {
         </span>
         <SocialIcons
           socialsItems={socialsItems}
-          className="flex-col justify-end flex-1 hidden gap-3 md:flex"
+          className="SocialIcons flex-col justify-end flex-1 hidden md:flex"
         />
       </div>
     </div>

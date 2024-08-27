@@ -37,11 +37,11 @@ export const Menu = ({ socialsItems, menuItems }) => {
         initial={{ width: "0%", opacity: 0 }}
         animate={{ width: isMenuOpen ? "100%" : "0%", opacity: isMenuOpen ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className={`Menu fixed overflow-hidden xl:max-w-8/12 z-[200]`}
+        className="Menu fixed overflow-hidden xl:max-w-8/12 z-[200]"
         style={{ pointerEvents: isMenuOpen ? 'auto' : 'none' }}
       >
         <motion.ul
-          className="flex flex-col justify-center w-full h-svh bg-twilight pl-0 md:ml-20"
+          className="Menu__items flex flex-col justify-center w-full h-svh bg-twilight pl-0 md:ml-20"
           key="menuUl"
           initial="closed"
           animate={isMenuOpen ? "open" : "closed"}
@@ -52,7 +52,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
             <motion.li
               variants={menuItemVariants}
               whileHover={{ scale: 1.05 }}
-              className="not-italic"
+              className="Menu__item not-italic"
             >
               <MenuItem
                 toggleMenuItem={toggleMenuItem}
@@ -67,7 +67,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
                 key={item.id}
                 variants={menuItemVariants}
                 whileHover={{ scale: 1.05 }}
-                className="not-italic"
+                className="Menu__item not-italic"
               >
                 <MenuItem
                   toggleMenuItem={toggleMenuItem}
@@ -85,7 +85,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
             animate={isMenuOpen ? "open" : "closed"}
             exit="closed"
             variants={socialItemsVariants}
-            className="absolute z-50 flex items-center gap-2 xs:gap-4 h-14 right-20 bottom-2"
+            className="absolute z-50 flex items-center h-14 right-20 bottom-2"
           >
             <motion.a
               href={malt}
@@ -93,6 +93,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
               rel="noreferrer"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
+              className="ml-1 xs:ml-4"
             >
               <MaltIcon
                 fill={COLORS.purple.DEFAULT}
@@ -107,6 +108,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
               rel="noreferrer"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
+              className="ml-1 xs:ml-4"
             >
               <LinkedinIcon
                 fill={COLORS.purple.DEFAULT}
@@ -121,6 +123,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
               rel="noreferrer"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
+              className="ml-1 xs:ml-4"
             >
               <GithubIcon
                 fill={COLORS.purple.DEFAULT}
@@ -135,6 +138,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
               rel="noreferrer"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
+              className="ml-1 xs:ml-4"
             >
               <DribbbleIcon
                 fill={COLORS.purple.DEFAULT}
@@ -149,6 +153,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
               rel="noreferrer"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
+              className="ml-1 xs:ml-4"
             >
               <BehanceIcon
                 fill={COLORS.purple.DEFAULT}
@@ -163,6 +168,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
               rel="noreferrer"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
+              className="ml-1 xs:ml-4"
             >
               <InstagramIcon
                 fill={COLORS.purple.DEFAULT}

@@ -51,6 +51,7 @@ export const SocialIcons = ({
         rel="noreferrer"
         role="link"
         aria-label={`Lien vers ${icon.label}`}
+        className="mb-3"
       >
         {icon.icon}
       </a>
