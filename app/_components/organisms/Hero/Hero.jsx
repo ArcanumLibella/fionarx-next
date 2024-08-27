@@ -22,19 +22,15 @@ export const Hero = async () => {
       )
     } else {
       return (
-        <Link
-          key={item.id} rel="canonical" 
-          href={`prestations/${item.link}`}
-          className="select-none no-underline z-10"
-        >
-          <Heading key={item.id} level={2} className="font-brother !my-0 font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">{item.label}</Heading>
-        </Link>
+        <Heading key={item.id} level={2} className="font-brother !my-0 font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">
+          {item.label}
+        </Heading>
       )
     }
   })
 
   return (
-    <div className="Hero flex flex-col items-center justify-center h-full min-h-screen overflow-hidden text-center px-4 md:pl-16 md:pr-8 lg:px-16 lg:py-16 md:items-end md:text-right bg-midnight">
+    <div className="Hero flex flex-col items-center justify-center h-full min-h-svh overflow-hidden text-center px-4 md:pl-16 md:pr-8 lg:px-16 lg:py-16 md:items-end md:text-right bg-midnight">
       <Blobs className="absolute flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[56vw] h-[36vh] lg:w-[48vw] lg:h-[54vh] xl:w-[32vw] xl:h-[56vh]" />
       {renderHero}
     </div>
