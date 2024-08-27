@@ -22,7 +22,7 @@ export const PricingCard = ({
   return (
     <div className="PricingCard px-4 py-6 bg-purple-dark outline outline-white -outline-offset-2 outline-2 hover:outline-tomato lg:transform lg:hover:scale-110 transition-all rounded-xl cursor-pointer">
       {/* FORMULA */}
-      <TagFormula label={`Formule ${formula}`} additionnalStyle="mb-6" />
+      <TagFormula label={formula} additionnalStyle="mb-6" />
 
       {/* TITLE */}
       <Heading

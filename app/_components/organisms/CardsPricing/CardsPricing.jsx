@@ -1,18 +1,15 @@
 import React from "react";
 import { PricingCard } from "../PricingCard";
-import { Heading } from "../../atoms";
+import { Text } from "../../atoms";
 
 export const CardsPricing = ({ title, pricingCards }) => {
 if (!pricingCards) return;
 
   return (
     <div className="CardsPricing w-full">
-      <Heading
-        level={5}
-        className="CardsPricing__title max-w-2xl mx-auto my-16 text-center"
-      >
+      <Text type="custom" className="CardsPricing__title mt-16 mb-8 text-base md:text-3base text-center md:text-left lg:text-center font-black text-balance uppercase text-purple-ultraLight">
         {title}
-      </Heading>
+      </Text>
       
       <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 lg:px-6">
         {pricingCards.map((card) => {
