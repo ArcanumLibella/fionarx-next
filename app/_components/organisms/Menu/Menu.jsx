@@ -66,6 +66,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
                 key={item.id}
                 variants={menuItemVariants}
                 whileHover={{ scale: 1.05 }}
+                className="not-italic"
               >
                 <MenuItem
                   toggleMenuItem={toggleMenuItem}

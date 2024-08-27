@@ -16,7 +16,9 @@ body {
 }
 
 li {
+  font-size: 1.125rem;
   font-weight: 300;
+  font-style: italic;
 }
 
 /* Avoid Chrome to see Safari hack */

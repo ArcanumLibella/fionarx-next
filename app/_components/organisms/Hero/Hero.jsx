@@ -27,7 +27,7 @@ export const Hero = async () => {
           href={`prestations/${item.link}`}
           className="select-none no-underline z-10"
         >
-          <Heading key={item.id} level={2} className="font-brother !my-0 font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal text-shadow text-stroke-purple-ultraLight md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">{item.label}</Heading>
+          <Heading key={item.id} level={2} className="font-brother !my-0 font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40">{item.label}</Heading>
         </Link>
       )
     }
