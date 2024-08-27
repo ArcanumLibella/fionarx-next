@@ -52,6 +52,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
             <motion.li
               variants={menuItemVariants}
               whileHover={{ scale: 1.05 }}
+              className="not-italic"
             >
               <MenuItem
                 toggleMenuItem={toggleMenuItem}

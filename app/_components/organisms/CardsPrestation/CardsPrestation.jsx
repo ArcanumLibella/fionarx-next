@@ -18,7 +18,7 @@ if (!cardsPrestation) return;
       {title && (
         <Text type="custom" className="mt-16 mb-8 text-normal md:text-base lg:text-center font-black text-balance uppercase text-purple-ultraLight">{title}</Text>
       )}
-      <div className="CardsPrestation flex lg:flex-wrap gap-8 px-4 mb-12 !-mx-4 overflow-x-auto lg:overflow-hidden max-w-800 lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl md:px-8 md:!-mx-8 xl:!mx-0 xl:px-0 xl:gap-10 scrollbar-hidden">
+      <div className="CardsPrestation flex lg:flex-wrap px-4 mb-12 !-mx-4 overflow-x-auto lg:overflow-hidden max-w-800 lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl md:px-8 md:!-mx-8 xl:!mx-0 xl:px-0 scrollbar-hidden">
         {cardsPrestation.map((card) => {
           return (
             <CardPrestation
