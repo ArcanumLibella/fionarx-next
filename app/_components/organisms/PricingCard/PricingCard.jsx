@@ -20,7 +20,7 @@ export const PricingCard = ({
   const items = [item1, item2, item3, item4, item5, item6];
 
   return (
-    <div className="PricingCard px-4 py-6 bg-purple-dark outline outline-white -outline-offset-2 outline-2 hover:outline-tomato lg:transform lg:hover:scale-110 transition-all rounded-xl cursor-pointer">
+    <div className="PricingCard mr-8 mb-8 px-4 py-6 bg-purple-dark outline outline-white -outline-offset-2 outline-2 hover:outline-tomato lg:transform lg:hover:scale-110 transition-all rounded-xl cursor-pointer">
       {/* FORMULA */}
       <TagFormula label={formula} additionnalStyle="mb-6" />
 

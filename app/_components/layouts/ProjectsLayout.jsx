@@ -11,13 +11,13 @@ export const ProjectsLayout = ({ categories, children }) => {
         <Heading level={6} className="mb-4 font-bold text-white uppercase">
           Filtrer les projets
         </Heading>
-        <div className="ProjectsLayout__categories flex flex-wrap items-start w-full gap-2 md:gap-4">
+        <div className="ProjectsLayout__categories flex flex-wrap items-start w-full">
           {categories && categories.map((category) => (
             <TagCategory key={category.id} name={category.attributes.name} slug={category.attributes.slug} />
           ))}
         </div>
       </div>
-      <div className="ProjectsLayout__projects flex items-center h-full gap-8 md:gap-16 px-8 overflow-x-auto overflow-y-hidden xl:gap-[6vw] md:px-12 lg:px-24 xl:px-32 scrollbar-hidden">
+      <div className="ProjectsLayout__projects flex items-center h-full px-8 overflow-x-auto overflow-y-hidden md:px-12 lg:px-24 xl:px-32 scrollbar-hidden">
         {children}
       </div>
     </div>

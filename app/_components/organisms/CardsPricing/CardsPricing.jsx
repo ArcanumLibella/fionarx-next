@@ -11,7 +11,7 @@ if (!pricingCards) return;
         {title}
       </Text>
       
-      <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 lg:px-6">
+      <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 mb-12 lg:px-6">
         {pricingCards.map((card) => {
           return (
             <PricingCard

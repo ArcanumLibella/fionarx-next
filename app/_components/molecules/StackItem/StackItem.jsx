@@ -5,7 +5,7 @@ export const StackItem = ({title, content, items}) => {
   if (!content) return;
 
   return (
-    <div className="StackItem">
+    <div className="StackItem mr-8 mb-8">
       <Text
           type="custom"
           className="mb-4 font-bold uppercase font-body text-purple-light text-base md:text-xbase"
