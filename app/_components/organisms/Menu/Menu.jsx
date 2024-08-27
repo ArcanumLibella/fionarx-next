@@ -41,7 +41,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
         style={{ pointerEvents: isMenuOpen ? 'auto' : 'none' }}
       >
         <motion.ul
-          className="Menu__items flex flex-col justify-center w-full h-svh min-h-svh bg-twilight pl-0 md:ml-20"
+          className="Menu__items flex flex-col justify-center w-full h-full min-h-svh bg-twilight pl-0 md:ml-20"
           key="menuUl"
           initial="closed"
           animate={isMenuOpen ? "open" : "closed"}
