@@ -11,7 +11,7 @@ export const NavButton = ({ socialsItems, openMenuHandler, isMenuOpen }) => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="NavButton fixed flex-col items-center justify-between bottom-2 right-2 md:bottom-0 md:left-0 md:w-20 md:h-dvh md:flex z-[1000]">
+    <div className="NavButton fixed flex-col items-center justify-between bottom-2 right-2 md:bottom-0 md:left-0 md:w-20 md:h-full md:flex z-[1000]">
       <Link
         href="/"
         role="link"
