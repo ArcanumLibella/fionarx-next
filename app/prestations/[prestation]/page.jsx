@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, ImagesSlider, PagePrestationLayout } from "@/app/_components";
+import { Heading, BlocksManager, PagePrestationLayout, Introduction } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { fetchDataFromStrapi, fetchSEODataPage } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
@@ -40,7 +40,7 @@ const PrestationPage = async ({ params }) => {
     return <UnderConstructionPage />;
   }
 
-  const { title, blocks } = prestation.attributes || [];
+  const { title, introduction, blocks } = prestation.attributes || [];
 
   return (
     <PagePrestationLayout
@@ -56,7 +56,8 @@ const PrestationPage = async ({ params }) => {
           Prestations
         </Heading>
       </Link>
-      <Heading level={3} className="mb-6 md:mb-10 text-tomato">{title}</Heading>
+      <Heading level={1} className="mb-6 md:mb-10 text-tomato">{title}</Heading>
+      <Introduction content={introduction.content} />
       <BlocksManager blocks={blocks} />
     </PagePrestationLayout>
   );

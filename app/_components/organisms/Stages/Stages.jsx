@@ -6,7 +6,7 @@ export const Stages = ({ stages }) => {
   return (
     <ol className="Stages relative ml-4 md:ml-0 mt-16 border-s border-tomato">  
       {stages.map((stage) => (
-        <li className="mb-10 ms-8 md:ms-10" key={stage.id}>            
+        <li className="mb-10 ms-8 md:ms-10 not-italic" key={stage.id}>            
           <span className="absolute flex items-center justify-center w-8 h-8 md:w-10 md:h-10 -start-4 md:-start-5 bg-tomato rounded-full">
             <Heading level={5} className="!mb-0 2xl:!text-2base">{stage.number}</Heading>
           </span>

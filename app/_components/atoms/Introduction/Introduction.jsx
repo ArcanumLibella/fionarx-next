@@ -12,7 +12,7 @@ export const Introduction = ({ content }) => {
       content={content}
       blocks={{
         paragraph: ({ children }) => (
-          <Text type="paragraphLarge" className="Introduction">
+          <Text type="paragraphLarge" className="Introduction mb-8">
             {children}
           </Text>
         )

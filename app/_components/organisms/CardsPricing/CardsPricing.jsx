@@ -7,7 +7,7 @@ if (!pricingCards) return;
 
   return (
     <div className="CardsPricing w-full">
-      <Text type="custom" className="CardsPricing__title mt-16 mb-8 text-base md:text-3base text-center md:text-left lg:text-center font-black text-balance uppercase text-purple-ultraLight">
+      <Text type="custom" className="CardsPricing__title mt-16 mb-8 xl:mb-12 text-normal md:text-base lg:text-center font-black text-balance uppercase text-purple-ultraLight">
         {title}
       </Text>
       
