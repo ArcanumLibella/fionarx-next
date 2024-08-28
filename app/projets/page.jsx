@@ -1,10 +1,10 @@
 import { ProjectCard, ProjectsLayout } from "../_components";
-import { fetchDataFromStrapi, fetchProjects, fetchSEOData } from "../_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchProjects } from "../_utils/strapi.utils";
 
 export const metadata = {
   title: 'Projets',
   description: "Voici une liste de quelques projets que j'ai réalisé ces dernières années.",
-  keywords: ['Indépendant', 'Freelance', 'Design', 'Développement Web', 'WebDesign', 'Branding', 'WebMarketing', 'SEO', 'Social Media', 'Tunnel de vente', 'Site vitrine', 'Tunnel de vente'],
+  keywords: ['Indépendant', 'Freelance', 'Design', 'Développement Web', 'WebDesign', 'Branding', 'WebMarketing', 'SEO', 'SEA', 'Social Media', 'Tunnel de vente', 'Site vitrine'],
   alternates: {
     canonical: '/projets',
   },

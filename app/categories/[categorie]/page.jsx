@@ -3,7 +3,32 @@ import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
 import { NoContent, ProjectCard, ProjectsByCategoryLayout } from "@/app/_components";
 import NotFoundPage from "@/app/404";
 
-export default async function ProjectsByCategoryPage({ params }) {
+export const metadata = { /* TODO: À dynamiser */
+  title: 'Catégories',
+  description: "Voici une liste de quelques projets que j'ai réalisé pour cette catégorie.",
+  keywords: ['Indépendant', 'Freelance', 'Design', 'Développement Web', 'WebDesign', 'Branding', 'WebMarketing', 'SEO', 'SEA', 'Social Media', 'Tunnel de vente', 'Site vitrine'],
+  alternates: {
+    canonical: '/categories',
+  },
+  openGraph: {
+    title: 'Fiona Roux',
+    description: 'Consultante en Stratégie Digitale dans le Sud de la France',
+    url: 'https://www.fionarx.com',
+    siteName: 'FionaRx',
+    images: [
+      {
+        url: 'https://raw.githubusercontent.com/ArcanumLibella/fionarx-next/main/public/_assets/images/OPENGRAPH-800x600.png', // Must be an absolute URL
+        width: 800,
+        height: 600,
+        alt: 'OpenGraph - 800 x 600',
+      }
+    ],
+    locale: 'fr_FR',
+    type: 'website',
+  }
+}
+
+const ProjectsByCategoryPage = async ({ params }) => {
   const { categorie: slug } = params;
   let categorie;
 
@@ -46,6 +71,8 @@ export default async function ProjectsByCategoryPage({ params }) {
     </ProjectsByCategoryLayout>
   );
 }
+
+export default ProjectsByCategoryPage;
 
 export async function generateStaticParams() {
   try {
