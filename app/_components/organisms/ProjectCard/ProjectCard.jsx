@@ -29,7 +29,7 @@ export const ProjectCard = ({
         exit={{ scale: 1, transition: { delay: 0.7, duration: 0.3 } }}
         variants={cardVariants}
         whileHover={{ scale: 1.05, transition: { when: "afterChildren" } }}
-        className="ProjectCard h-[56vh] max-h-[56vh] mr-8 md:mr-16 xl:mr-32 cursor-pointer"
+        className="ProjectCard h-[56vh] max-h-[56vh] mr-8 md:mr-16 xl:mr-24 cursor-pointer"
       >
         <div
           onClick={handleClick}
