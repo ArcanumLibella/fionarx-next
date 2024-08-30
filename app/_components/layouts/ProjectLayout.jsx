@@ -69,7 +69,7 @@ export const ProjectLayout = ({title, description, preview, year, technos, links
           </div>
 
           {/* DESCRIPTION */}
-          <Paragraph className="Project__description !mb-10 lg:!text-base xl:!text-normal 2xl:!text-base">
+          <Paragraph className="Project__description !mb-10">
             {description}
           </Paragraph>
 

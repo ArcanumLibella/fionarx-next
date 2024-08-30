@@ -33,7 +33,7 @@ export const Heading = ({
     case 4: /* MINI-TITRE OU TITRE DE CARD */
       return (
         <h4
-          className={`Heading mb-4 font-brother font-bold text-base 2xl:text-2base selection:bg-purple ${additionalStyle}`}
+          className={`Heading mb-4 font-brother font-extrabold text-base 2xl:text-2base uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h4>
@@ -54,8 +54,13 @@ export const Heading = ({
           {children}
         </h6>
       );
-    case "custom":
+    case "gradient": /* TITRE DEGRADÉ */
+      return (
+        <h6 className={`HeadingGradient ${additionalStyle} font-brother text-center font-black text-2base md:text-md lg:text-lg leading-tight text-balance bg-gradient-to-r from-purple-light from-12% via-tomato via-44% to-orange to-96% bg-clip-text text-transparent`}>
+          {children}
+        </h6>
+      )
     default:
-      return <h6 className={additionalStyle}>{children}</h6>;
+      return <h6 className={`HeadingCustom ${additionalStyle}`}>{children}</h6>;
   }
 };
