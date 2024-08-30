@@ -1,72 +1,95 @@
 "use client";
 
 import React from "react";
-import { Heading, TagFormula, Text } from "../../atoms";
+import { Heading, Paragraph, TagFormula, Text } from "../../atoms";
 import { CheckIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
+import { Button } from "../../molecules";
+import Link from "next/link";
 
 export const PricingCard = ({
   title,
+  slug,
   formula,
   isFrom,
   price,
+  time,
   item1,
   item2,
   item3,
   item4,
   item5,
   item6,
+  item7,
+  item8,
+  item9,
 }) => {
-  const items = [item1, item2, item3, item4, item5, item6];
+  const items = [item1, item2, item3, item4, item5, item6, item7, item8, item9];
 
   return (
-    <div className="PricingCard mr-8 mb-8 px-4 py-6 bg-purple-dark outline outline-white -outline-offset-2 outline-2 hover:outline-tomato lg:transform lg:hover:scale-110 transition-all rounded-xl cursor-pointer">
-      {/* FORMULA */}
-      <TagFormula label={formula} additionnalStyle="mb-6" />
+    <Link href={`prestations/${slug}`} className="PricingCard flex flex-col justify-between md:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 bg-purple-dark outline outline-2 outline-white -outline-offset-2 hover:outline-tomato xl:transform xl:hover:scale-110 transition-all rounded-xl cursor-pointer">
+      <div className="PricingCard__top">
+        {/* FORMULA */}
+        <TagFormula label={formula} additionnalStyle="mb-6" />
 
-      {/* TITLE */}
-      <Heading
-        level="custom"
-        className="PricingCard__title mb-6 font-brother font-black uppercase text-base tracking-wider text-white"
-      >
-        {title}
-      </Heading>
-
-      <div className="PricingCard__pricing relative mb-6">
-        {/* ISFROM */}
-        {isFrom && (
-          <Text type="custom" className="PricingCard__from absolute -top-2 font-body text-tiny text-tomato" >
-            à partir de
-          </Text>
-        )}
-        {/* PRICE */}
+        {/* TITLE */}
         <Heading
           level="custom"
-          className="PricingCard__price mb-6 font-body font-bold uppercase text-2lg text-tomato"
+          className="PricingCard__title mb-6 lg:min-h-[72px] font-brother font-black uppercase text-2base xs:text-md md:text-2base tracking-wider text-white"
         >
-          {price} €
+          {title}
         </Heading>
+
+        {/* PRICING */}
+        <div className="PricingCard__pricing relative">
+          {/* ISFROM */}
+          {isFrom && (
+            <Text type="custom" className="PricingCard__from absolute -top-2 font-body text-tiny text-tomato" >
+              à partir de
+            </Text>
+          )}
+          {/* PRICE */}
+          <Heading
+            level="custom"
+            className="PricingCard__price font-body font-bold uppercase text-2lg text-tomato"
+          >
+            {price} €
+          </Heading>
+          <Text type="custom">➤ {time} mois à vos côtés 💪🏻</Text>
+        </div>
+
+        {/* SEPARATOR */}
+        <div className="PricingCard__separator flex justify-between items-center my-6 xs:my-8 lg:my-6">
+          <div className="Separator w-full h-px max-w-4/12 bg-gradient-to-r from-purple-light from-12% via-tomato via-44% to-orange to-96%" />
+          <Text type="custom" className="px-4 font-body !font-light text-tiny xs:text-normal md:text-tiny text-tomato">CONTENU</Text>
+          <div className="Separator w-full h-px max-w-4/12 bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%" />
+        </div>
+
+        {/* ITEMS */}
+        <div className="PricingCard__items">
+          {items.map((item, index) => 
+            item && (
+              <div key={index} className="PricingCard__item flex w-full mb-1">
+                <div className="PricingCard__icon min-w-4 pt-0.5">
+                  <CheckIcon 
+                    fill={COLORS.white.DEFAULT}
+                    width={16}
+                    height={16}
+                  />
+                </div>
+                <Paragraph className="w-full ml-2 !mb-2 !text-normal">
+                  {item}
+                </Paragraph>
+              </div>
+            )
+          )}
+        </div>
       </div>
 
-      {/* ITEMS */}
-      <div className="PricingCard__items">
-        {items.map((item, index) => 
-          item && (
-            <div key={index} className="PricingCard__item flex w-full mb-2">
-              <div className="PricingCard__icon min-w-4 pt-0.5 md:pt-0">
-                <CheckIcon 
-                  fill={COLORS.white.DEFAULT}
-                  width={16}
-                  height={16}
-                />
-              </div>
-              <Text type="custom" className="w-full ml-2 font-body text-normal md:text-tiny">
-                {item}
-              </Text>
-            </div>
-          )
-        )}
+      <div className="PricingCard__bottom flex items-end h-full">
+        {/* BUTTON */}
+        <Button label="En savoir plus" url={`prestations/${slug}`} isCentered className="PricingCard__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%" />
       </div>
-    </div>
+    </Link>
   );
 };
