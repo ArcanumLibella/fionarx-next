@@ -1,4 +1,5 @@
 export { ButtonLarge } from './ButtonLarge';
+export { Button } from './Button';
 export { CardPrestation } from './CardPrestation';
 export { ExternalLinkButton } from './ExternalLinkButton';
 export { LinkButton } from './LinkButton';

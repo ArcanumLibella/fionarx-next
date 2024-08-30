@@ -13,6 +13,7 @@ export { Copyright } from './atoms';
 export { Introduction } from './atoms';
 
 export { ButtonLarge } from './molecules';
+export { Button } from './molecules';
 export { CardPrestation } from './molecules';
 export { ExternalLinkButton } from './molecules';
 export { LinkButton } from './molecules';
