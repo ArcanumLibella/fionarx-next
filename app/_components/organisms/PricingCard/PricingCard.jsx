@@ -53,7 +53,7 @@ export const PricingCard = ({
           {/* PRICE */}
           <Heading
             level="custom"
-            className="PricingCard__price font-body font-bold uppercase text-2lg text-tomato"
+            className="PricingCard__price font-body font-bold uppercase text-xl text-tomato"
           >
             {price} €
           </Heading>
