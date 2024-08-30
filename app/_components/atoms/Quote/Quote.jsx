@@ -6,8 +6,8 @@ export const Quote = ({ quotes }) => {
   if (!quotes) return;
 
   return (
-    <div className="Quote p-6 w-full max-w-full rounded bg-purple-light">
-      <BlocksRenderer 
+    <div className="Quote my-6 p-6 w-full max-w-full rounded bg-purple-light">
+      <BlocksRenderer
         content={quotes}
         blocks={{
           paragraph: ({ children }) => (
