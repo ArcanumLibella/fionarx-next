@@ -57,7 +57,7 @@ export const PricingCard = ({
           >
             {price} €
           </Heading>
-          <Text type="custom">➤ {time} mois à vos côtés 💪🏻</Text>
+          <Text type="custom" className="font-bold">➤ {time} mois à vos côtés 💪🏻</Text>
         </div>
 
         {/* SEPARATOR */}
