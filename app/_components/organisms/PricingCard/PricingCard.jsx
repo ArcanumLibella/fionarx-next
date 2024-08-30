@@ -23,6 +23,8 @@ export const PricingCard = ({
   item7,
   item8,
   item9,
+  supportTitle,
+  supportDescription
 }) => {
   const items = [item1, item2, item3, item4, item5, item6, item7, item8, item9];
 
@@ -61,7 +63,9 @@ export const PricingCard = ({
         {/* SEPARATOR */}
         <div className="PricingCard__separator flex justify-between items-center my-6 xs:my-8 lg:my-6">
           <div className="Separator w-full h-px max-w-4/12 bg-gradient-to-r from-purple-light from-12% via-tomato via-44% to-orange to-96%" />
-          <Text type="custom" className="px-4 font-body !font-light text-tiny xs:text-normal md:text-tiny text-tomato">CONTENU</Text>
+          <Text type="custom" className="px-2 font-body !font-light text-tiny xs:text-normal md:text-tiny uppercase text-tomato">
+            Contenu
+          </Text>
           <div className="Separator w-full h-px max-w-4/12 bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%" />
         </div>
 
@@ -86,7 +90,24 @@ export const PricingCard = ({
         </div>
       </div>
 
-      <div className="PricingCard__bottom flex items-end h-full">
+      <div className="PricingCard__bottom flex flex-col justify-between">
+        {/* SEPARATOR */}
+        <div className="PricingCard__separator flex justify-between items-center my-6 xs:my-8 lg:my-6">
+          <div className="Separator w-full h-px max-w-4/12 bg-gradient-to-r from-purple-light from-12% via-tomato via-44% to-orange to-96%" />
+          <Text type="custom" className="px-2 font-body !font-light text-tiny xs:text-normal md:text-tiny uppercase text-tomato">
+            Accompagnement
+          </Text>
+          <div className="Separator w-full h-px max-w-4/12 bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%" />
+        </div>
+
+        {/* SUPPORT */}
+        <Text type="custom" className="PricingCard__support-title mb-6 font-brother font-bold text-center text-base text-white" >
+          {supportTitle}
+        </Text>
+        <Text type="custom" className="PricingCard__support-description mb-6 font-body text-center text-normal text-white" >
+          {supportDescription}
+        </Text>
+        
         {/* BUTTON */}
         <Button label="En savoir plus" url={`prestations/${slug}`} isCentered className="PricingCard__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%" />
       </div>

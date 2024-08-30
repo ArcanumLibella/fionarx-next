@@ -13,12 +13,12 @@ if (!pricingCards) return;
         </div>
       )}
       {description && (
-        <div className="CardsPrestation__description flex justify-center w-full mb-12 md:mb-16">
+        <div className="CardsPrestation__description flex justify-center w-full">
           <Paragraph level="gradient" className="text-center">{description}</Paragraph>
         </div>
       )}
       
-      <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 lg:px-0">
+      <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 mt-12 md:mt16 lg:px-0">
         {pricingCards.map((card) => {
           return (
             <PricingCard
@@ -38,6 +38,8 @@ if (!pricingCards) return;
               item7={card.item7}
               item8={card.item8}
               item9={card.item9}
+              supportTitle={card.supportTitle}
+              supportDescription={card.supportDescription}
             />
           );
         })}
