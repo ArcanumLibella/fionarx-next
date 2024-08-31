@@ -85,7 +85,7 @@ export const PricingCard = ({
                       height={16}
                     />
                   </div>
-                  <Paragraph className="w-full ml-2 !mb-2 !text-normal">
+                  <Paragraph className="w-full ml-2 !mb-2 md:!text-normal">
                     {item}
                   </Paragraph>
                 </div>
