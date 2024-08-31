@@ -52,7 +52,13 @@ const SinglePage = async ({ params }) => {
         <BlocksManager blocks={blocks} />
       </PageLayout>
       {sectionCTA && (
-        <SectionCTA key={`SectionCTA-${sectionCTA.id}`} title={sectionCTA.title} subtitle={sectionCTA.subtitle} button={sectionCTA.button} />
+        <SectionCTA
+          key={`SectionCTA-${sectionCTA.id}`}
+          title={sectionCTA.title}
+          subtitle={sectionCTA.subtitle}
+          button={sectionCTA.button}
+          className="relative -bottom-16 md:-bottom-24 xl:-bottom-48 2xl:-bottom-96 md:ml-24 pb-24 md:pb-48"
+        />
       )}
     </>
   );

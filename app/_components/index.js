@@ -34,6 +34,7 @@ export { StackItems } from "./organisms";
 export { ImagesSlider } from "./organisms";
 export { Stages } from "./organisms";
 export { SectionCTA } from "./organisms";
+export { CardsPricing } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";

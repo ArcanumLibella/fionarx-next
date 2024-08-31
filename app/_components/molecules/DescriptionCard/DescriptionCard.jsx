@@ -10,7 +10,7 @@ export const DescriptionCard = ({ description }) => {
   if (!description) return;
 
   return (
-    <div className="DescriptionCard flex flex-col justify-between items-center md:h-full md:max-h-[200px] md:min-h-[200px] xl:max-h-[220px] xl:min-h-[220px] 2xl:max-h-[180px] 2xl:min-h-[180px] md:mx-4 xl:mx-3 mb-4 p-2">
+    <div className="DescriptionCard flex flex-col justify-between items-center md:h-full md:max-h-[188px] md:min-h-[188px] xl:max-h-[220px] xl:min-h-[220px] 2xl:max-h-[180px] 2xl:min-h-[180px] md:mx-4 xl:mx-3 mb-4 p-2">
       <BlocksRenderer 
         content={description}
         blocks={{
