@@ -1,6 +1,6 @@
 import React from "react";
 import { PricingCard } from "../PricingCard";
-import { Heading, Paragraph, Text } from "../../atoms";
+import { Heading, Paragraph } from "../../atoms";
 
 export const CardsPricing = ({ title, description, pricingCards }) => {
 if (!pricingCards) return;
@@ -23,6 +23,7 @@ if (!pricingCards) return;
           return (
             <PricingCard
               key={card.formula}
+              description={card.description}
               formula={card.formula}
               title={card.title}
               slug={card.slug}

@@ -22,6 +22,7 @@ export { NavButton } from './molecules';
 export { NoContent } from './molecules';
 export { SocialIcons } from './molecules';
 export { StackItem } from './molecules';
+export { DescriptionCard } from "./molecules";
 
 export { Blobs } from "./organisms";
 export { BlobsLight } from "./organisms";

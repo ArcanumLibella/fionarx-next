@@ -8,3 +8,4 @@ export { NavButton } from './NavButton';
 export { NoContent } from './NoContent';
 export { SocialIcons } from './SocialIcons';
 export { StackItem } from './StackItem';
+export { DescriptionCard } from './DescriptionCard';

@@ -38,7 +38,7 @@ export const Heading = ({
           {children}
         </h4>
       );
-    case 5: /* INTRODUCTION ET FOOTER FIXME: */
+    case 5: /* FIXME: */
       return (
         <h5
           className={`Heading font-brother font-bold text-base xs:text-2base md:text-3base 2xl:text-lg -tracking-wide selection:bg-purple ${additionalStyle}`}
@@ -46,7 +46,7 @@ export const Heading = ({
           {children}
         </h5>
       );
-    case 6: /* MINI-TITRE ET LINK FIXME: */
+    case 6: /* FIXME: */
       return (
         <h6
           className={`Heading font-brother font-black text-tiny xs:text-normal text-tomato selection:bg-purple uppercase ${additionalStyle}`}
@@ -54,7 +54,7 @@ export const Heading = ({
           {children}
         </h6>
       );
-    case "gradient": /* TITRE DEGRADÉ -> FIXME: Remplacer le dégradé par un text plein pour les navigateurs non compatibles */
+    case "gradient": /* TITRE DEGRADÉ */
       return (
         <h6 className={`HeadingGradient ${additionalStyle} font-brother text-center font-black text-3base md:text-md lg:text-lg leading-tight text-balance bg-gradient-to-r from-purple-light from-12% via-tomato via-44% to-orange to-96% bg-clip-text text-transparent text-tomato`}>
           {children}

@@ -58,7 +58,14 @@ export function BlocksManager({ blocks }) {
           case "blocks.separator":
             return <Separator key={`Separator-${block.id}`} />;
           case "blocks.pricings":
-            return <CardsPricing key={`CardsPricing-${block.id}`} title={block.title} description={block.description} pricingCards={block.pricingCards} />;
+            return (
+              <CardsPricing 
+                key={`CardsPricing-${block.id}`}
+                title={block.title}
+                description={block.description}
+                pricingCards={block.pricingCards}
+              />
+            );
           case "blocks.foot-note":
             return (
               <div className="mt-4">
