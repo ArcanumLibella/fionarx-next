@@ -9,3 +9,4 @@ export { StackItems } from "./StackItems";
 export { ImagesSlider } from "./ImagesSlider";
 export { Stages } from "./Stages";
 export { SectionCTA } from "./SectionCTA";
+export { Accordion } from "./Accordion";

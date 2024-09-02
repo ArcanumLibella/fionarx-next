@@ -23,6 +23,7 @@ export { NoContent } from './molecules';
 export { SocialIcons } from './molecules';
 export { StackItem } from './molecules';
 export { DescriptionCard } from "./molecules";
+export { ChecklistItems } from "./molecules";
 
 export { Blobs } from "./organisms";
 export { BlobsLight } from "./organisms";
@@ -35,6 +36,7 @@ export { ImagesSlider } from "./organisms";
 export { Stages } from "./organisms";
 export { SectionCTA } from "./organisms";
 export { CardsPricing } from "./organisms";
+export { Accordion } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";

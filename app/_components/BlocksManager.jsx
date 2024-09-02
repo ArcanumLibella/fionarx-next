@@ -4,11 +4,10 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer, Text } from "./atoms";
 import { ButtonLarge, ListItem } from "./molecules";
-import { CardsPrestation, CardsPricing, ImagesSlider, SectionCTA, StackItems, Stages } from "./organisms";
+import { Accordion, CardsPrestation, CardsPricing, ImagesSlider, SectionCTA, StackItems, Stages } from "./organisms";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
-  console.log("BLOCKS : ", blocks)
 
   return (
     <div className="Blocks">
@@ -92,6 +91,13 @@ export function BlocksManager({ blocks }) {
             return <Stages key={`Stages-${block.id}`} stages={block.stages} />;  
           case "blocks.section-cta":
             return <SectionCTA key={`SectionCTA-${block.id}`} title={block.title} subtitle={block.subtitle} button={block.button}  />;  
+          case "blocks.accordions-group":
+            return (
+              <Accordion
+                key={`Accordion-${block.id}`}
+                accordion={block.accordion}
+              />
+            ); 
           default:
             return null;
         }
