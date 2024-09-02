@@ -26,11 +26,11 @@ export const DescriptionCard = ({ description }) => {
         }}
       />
       <ChevronsDownBigIcon 
-          stroke={COLORS.tomato.DEFAULT}
-          width={32}
-          height={32}
-          className="mt-4 animate-down"
-        />
+        stroke={COLORS.tomato.DEFAULT}
+        width={32}
+        height={32}
+        className="mt-4 animate-down"
+      />
     </div>
   );
 };

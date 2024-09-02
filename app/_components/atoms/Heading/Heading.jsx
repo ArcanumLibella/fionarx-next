@@ -33,23 +33,23 @@ export const Heading = ({
     case 4: /* MINI-TITRE OU TITRE DE CARD */
       return (
         <h4
-          className={`Heading mb-4 font-brother font-extrabold text-base 2xl:text-2base uppercase selection:bg-purple ${additionalStyle}`}
+          className={`Heading mb-4 font-brother font-extrabold text-base md:text-2base 2xl:text-3base uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h4>
       );
-    case 5: /* FIXME: */
+    case 5:
       return (
         <h5
-          className={`Heading font-brother font-bold text-base xs:text-2base md:text-3base 2xl:text-lg -tracking-wide selection:bg-purple ${additionalStyle}`}
+          className={`Heading font-brother font-bold text-2normal lg:text-base 2xl:text-2base uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h5>
       );
-    case 6: /* FIXME: */
+    case 6:
       return (
         <h6
-          className={`Heading font-brother font-black text-tiny xs:text-normal text-tomato selection:bg-purple uppercase ${additionalStyle}`}
+          className={`Heading font-bold text-sm md:text-normal lg:text-2normal 2xl:text-base uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h6>
