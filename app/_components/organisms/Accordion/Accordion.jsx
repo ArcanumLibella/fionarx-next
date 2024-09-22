@@ -4,11 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { Heading } from "../../atoms";
 import { ChevronsDownIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
-import { ChecklistItems } from "../../molecules";
+import { Checklist } from "../../molecules";
 
-export const Accordion = ({
-  accordion
-}) => {  
+export const Accordion = ({ accordion }) => {  
   
   // Gestion de l'état des sections ouvertes
   const [openSections, setOpenSections] = useState({});
@@ -72,7 +70,7 @@ export const Accordion = ({
                   Détail du contenu
                 </Heading>
                 <ul className="Features__items">
-                  <ChecklistItems content={item.features} />
+                  <Checklist content={item.features} />
                 </ul>
               </div>
               <div className="Deliverables mb-6 lg:mb-0 lg:ml-4">
@@ -80,7 +78,7 @@ export const Accordion = ({
                   Livrables associés
                 </Heading>
                 <ul className="Deliverables__items">
-                  <ChecklistItems content={item.deliverables} />
+                  <Checklist content={item.deliverables} />
                 </ul>
               </div>
             </div>
