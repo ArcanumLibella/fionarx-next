@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, PagePrestationLayout, Introduction, Accordion, Paragraph, Text } from "@/app/_components";
+import { Heading, BlocksManager, PagePrestationLayout, Introduction, Paragraph, Text } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { fetchDataFromStrapi, fetchSEODataPage } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
