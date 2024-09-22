@@ -9,4 +9,4 @@ export { NoContent } from './NoContent';
 export { SocialIcons } from './SocialIcons';
 export { StackItem } from './StackItem';
 export { DescriptionCard } from './DescriptionCard';
-export { ChecklistItems } from './ChecklistItems';
+export { Checklist } from './Checklist';

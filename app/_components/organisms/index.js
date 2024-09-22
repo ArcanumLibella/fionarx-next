@@ -10,3 +10,6 @@ export { ImagesSlider } from "./ImagesSlider";
 export { Stages } from "./Stages";
 export { SectionCTA } from "./SectionCTA";
 export { Accordion } from "./Accordion";
+export { Checklists } from "./Checklists";
+export { List } from "./List";
+export { FormulaPack } from "./FormulaPack";

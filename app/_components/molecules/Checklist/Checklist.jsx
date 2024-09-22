@@ -6,7 +6,7 @@ import { Paragraph } from "../../atoms";
 import { CheckIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
 
-export const ChecklistItems = ({ content }) => {
+export const Checklist = ({ content }) => {
   if (!content) return;
 
   return (
@@ -14,7 +14,7 @@ export const ChecklistItems = ({ content }) => {
       content={content}
       blocks={{
         paragraph: ({ children }) => (
-          <li className="ChecklistItem flex items-start mb-4 not-italic">
+          <li className="Checklist flex items-start mb-6 not-italic">
             <CheckIcon
               fill={COLORS.tomato.DEFAULT}
               width={16}
@@ -27,7 +27,7 @@ export const ChecklistItems = ({ content }) => {
           </li>
         ),
         list: ({ children }) => (
-          <ul className="ChecklistItem__sublist list-disc md:pl-6">
+          <ul className="Checklist__sublist list-disc md:pl-6">
             {React.Children.map(children, (child, index) => (
               <li key={index} className="flex items-center mb-1 pl-5 text-normal xs:text-2normal not-italic">
                 {child}
