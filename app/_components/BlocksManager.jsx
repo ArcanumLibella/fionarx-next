@@ -3,8 +3,8 @@
 import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer, Text } from "./atoms";
-import { ButtonLarge, ListItem } from "./molecules";
-import { Accordion, CardsPrestation, CardsPricing, ImagesSlider, SectionCTA, StackItems, Stages } from "./organisms";
+import { ButtonLarge, ChecklistItems, ListItem } from "./molecules";
+import { Accordion, CardsPrestation, CardsPricing, Checklists, FormulaPack, ImagesSlider, List, SectionCTA, StackItems, Stages } from "./organisms";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
@@ -43,7 +43,8 @@ export function BlocksManager({ blocks }) {
               />
             );
           case "blocks.list":
-            return <ul key={`ListItems-${block.id}`} className="ListItems">{renderListBlock(block)}</ul>;
+            // return <ul key={`ListItems-${block.id}`} className="ListItems">{renderListBlock(block)}</ul>;
+            return <List key={`List-${block.id}`} items={block.items} />;
           case "blocks.prestations":
             return <CardsPrestation key={`CardsPrestation-${block.id}`} title={block.title} cardsPrestation={block.cardsPrestation} />
           case "blocks.stack":
@@ -91,11 +92,28 @@ export function BlocksManager({ blocks }) {
             return <Stages key={`Stages-${block.id}`} stages={block.stages} />;  
           case "blocks.section-cta":
             return <SectionCTA key={`SectionCTA-${block.id}`} title={block.title} subtitle={block.subtitle} button={block.button}  />;  
+          case "blocks.check-lists":
+            return (
+              <Checklists
+                key={`Checklists-${block.id}`}
+                content={block.checklists}
+              />
+            ); 
           case "blocks.accordions-group":
             return (
               <Accordion
                 key={`Accordion-${block.id}`}
                 accordion={block.accordion}
+              />
+            ); 
+          case "blocks.formula-pack":
+            return (
+              <FormulaPack
+                key={`FormulaPack-${block.id}`}
+                items={block.items}
+                mentoringTitle={block.mentoringTitle}
+                mentoringSubtitle={block.mentoringSubtitle}
+                mentoringDescription={block.mentoringDescription}
               />
             ); 
           default:
@@ -104,10 +122,4 @@ export function BlocksManager({ blocks }) {
       })}
     </div>
   );
-};
-
-export const renderListBlock = (block) => {
-  return block.item.map((item) => (
-      <ListItem key={item.id} number={item.number} text={item.text} />
-  ));
 };
