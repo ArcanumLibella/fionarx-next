@@ -5,7 +5,7 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 export const ListItem = ({ number, content }) => {
   return (
     <li className="ListItem flex md:items-center mb-8">
-      <span className="flex justify-center items-center mr-4 md:mr-6 px-2 py-0 md:p-4 max-h-8 md:max-h-10 bg-tomato">
+      <span className="flex justify-center items-center mr-4 md:mr-6 px-2 py-0 md:p-4 w-full max-w-6 xs:max-w-8 md:max-w-10 max-h-6 xs:max-h-8 md:max-h-10 bg-tomato">
         <Text type="custom" className="ListItem__number font-brother font-extrabold text-sm xs:text-base md:text-2base">
           {number}
         </Text>
