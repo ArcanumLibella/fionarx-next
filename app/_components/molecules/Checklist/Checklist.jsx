@@ -38,7 +38,7 @@ export const Checklist = ({ content }) => {
       }}
       modifiers={{
         bold: ({ children }) => (
-          <strong className="!font-bold text-tomato">{children}</strong>
+          <strong className="!font-medium !text-white">{children}</strong>
         ),
         italic: ({ children }) => (
           <span className="!italic">{children}</span>
