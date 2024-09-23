@@ -13,3 +13,4 @@ export { Accordion } from "./Accordion";
 export { Checklists } from "./Checklists";
 export { List } from "./List";
 export { FormulaPack } from "./FormulaPack";
+export { CtaBlob } from "./CtaBlob";

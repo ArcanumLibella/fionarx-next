@@ -113,6 +113,9 @@ export function BlocksManager({ blocks }) {
                 mentoringTitle={block.mentoringTitle}
                 mentoringSubtitle={block.mentoringSubtitle}
                 mentoringDescription={block.mentoringDescription}
+                ctaTitle={block.ctaTitle}
+                ctaPricing={block.ctaPricing}
+                ctaDetail={block.ctaDetail}
               />
             ); 
           default:

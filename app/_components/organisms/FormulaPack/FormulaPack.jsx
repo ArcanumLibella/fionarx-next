@@ -1,8 +1,9 @@
 import React from 'react';
 import { List } from "../List";
 import { Paragraph, Text } from "../../atoms";
+import { CtaBlob } from "../CtaBlob";
 
-export const FormulaPack = ({ items, mentoringTitle, mentoringSubtitle, mentoringDescription }) => {  
+export const FormulaPack = ({ items, mentoringTitle, mentoringSubtitle, mentoringDescription, ctaTitle, ctaPricing, ctaDetail }) => {  
   return (
     <div className="FormulaPack">
       <div className="FormulaPack__list p-6 pb-0 border-4 border-tomato rounded-lg">
@@ -22,6 +23,7 @@ export const FormulaPack = ({ items, mentoringTitle, mentoringSubtitle, mentorin
           {mentoringDescription}
         </Paragraph>
       </div>
+      <CtaBlob title={ctaTitle} pricing={ctaPricing} detail={ctaDetail} />
     </div>
   );
 };

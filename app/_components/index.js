@@ -40,6 +40,7 @@ export { Accordion } from "./organisms";
 export { Checklists } from "./organisms";
 export { List } from "./organisms";
 export { FormulaPack } from "./organisms";
+export { CtaBlob } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";
