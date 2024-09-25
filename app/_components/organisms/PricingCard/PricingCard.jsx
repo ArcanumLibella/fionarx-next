@@ -33,7 +33,7 @@ export const PricingCard = ({
   return (
     <div className="PricingCardFull flex flex-col justify-between h-full">
       <DescriptionCard key={slug} description={description} />
-      <Link href={`prestations/${slug}`} className="PricingCard flex flex-col justify-between h-full md:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 bg-purple-dark outline outline-2 outline-white -outline-offset-2 hover:outline-tomato xl:transform xl:hover:scale-110 transition-all rounded-xl cursor-pointer">
+      <Link href={slug} className="PricingCard flex flex-col justify-between h-full md:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 bg-purple-dark outline outline-2 outline-white -outline-offset-2 hover:outline-tomato xl:transform xl:hover:scale-110 transition-all rounded-xl cursor-pointer">
         <div className="PricingCard__top">
           {/* FORMULA */}
           <TagFormula label={formula} additionnalStyle="mb-6" />
