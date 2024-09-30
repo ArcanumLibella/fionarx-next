@@ -25,8 +25,11 @@ export const PricingCard = ({
   item7,
   item8,
   item9,
+  hasSupport,
   supportTitle,
-  supportDescription
+  supportDescription,
+  mentoringTitle,
+  mentoringDescription
 }) => {
   const items = [item1, item2, item3, item4, item5, item6, item7, item8, item9];
 
@@ -105,11 +108,26 @@ export const PricingCard = ({
           </div>
 
           {/* SUPPORT */}
-          <Text type="custom" className="PricingCard__support-title mb-6 font-brother font-bold text-center text-base text-white" >
-            {supportTitle}
+          {hasSupport && (
+            <>
+              <Text type="custom" className="PricingCard__support-title mb-6 font-brother font-bold text-center text-base text-tomato" >
+                {supportTitle}
+              </Text>
+              <Text type="custom" className="PricingCard__support-description mb-0 font-body text-center text-normal text-white" >
+                {supportDescription}
+              </Text>
+              <div className="PricingCard__plus flex justify-center">
+                <Text type="custom" className="text-bold text-xl text-tomato">+</Text>
+              </div>
+            </>
+          )}
+
+          {/* MENTORING */}
+          <Text type="custom" className="PricingCard__mentoring-title mb-6 font-brother font-bold text-center text-base text-tomato" >
+            {mentoringTitle}
           </Text>
-          <Text type="custom" className="PricingCard__support-description mb-6 font-body text-center text-normal text-white" >
-            {supportDescription}
+          <Text type="custom" className="PricingCard__mentoring-description mb-6 font-body text-center text-normal text-white" >
+            {mentoringDescription}
           </Text>
           
           {/* BUTTON */}

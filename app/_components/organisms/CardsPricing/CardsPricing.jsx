@@ -39,8 +39,12 @@ if (!pricingCards) return;
               item7={card.item7}
               item8={card.item8}
               item9={card.item9}
+              hasSupport={card.hasSupport}
               supportTitle={card.supportTitle}
               supportDescription={card.supportDescription}
+              mentoringTitle={card.mentoringTitle}
+              mentoringDescription={card.mentoringDescription}
+
             />
           );
         })}
