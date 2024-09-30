@@ -110,6 +110,9 @@ export function BlocksManager({ blocks }) {
               <FormulaPack
                 key={`FormulaPack-${block.id}`}
                 items={block.items}
+                hasSupport={block.hasSupport}
+                supportTitle={block.supportTitle}
+                supportDescription={block.supportDescription}
                 mentoringTitle={block.mentoringTitle}
                 mentoringSubtitle={block.mentoringSubtitle}
                 mentoringDescription={block.mentoringDescription}
