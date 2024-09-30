@@ -15,7 +15,7 @@ export const ListItem = ({ number, content }) => {
           content={content}
           blocks={{
             paragraph: ({ children }) => (
-              <Paragraph className="!mb-0 text-normal xs:text-2normal md:text-base">
+              <Paragraph className="!mb-0 text-normal xs:text-2normal md:text-base text-pretty">
                 {children}
               </Paragraph>
             ),
