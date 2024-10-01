@@ -12,5 +12,7 @@ export { SectionCTA } from "./SectionCTA";
 export { Accordion } from "./Accordion";
 export { Checklists } from "./Checklists";
 export { List } from "./List";
+export { PricingCard } from "./PricingCard";
 export { FormulaPack } from "./FormulaPack";
 export { CtaBlob } from "./CtaBlob";
+export { CardCTA } from "./CardCTA";

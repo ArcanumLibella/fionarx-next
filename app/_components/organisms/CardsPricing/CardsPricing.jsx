@@ -1,8 +1,8 @@
 import React from "react";
-import { PricingCard } from "../PricingCard";
 import { Heading, Paragraph } from "../../atoms";
+import { CardCTA, PricingCard } from "../../organisms";
 
-export const CardsPricing = ({ title, description, pricingCards }) => {
+export const CardsPricing = ({ title, description, pricingCards, cardCTA }) => {
 if (!pricingCards) return;
 
   return (
@@ -44,10 +44,18 @@ if (!pricingCards) return;
               supportDescription={card.supportDescription}
               mentoringTitle={card.mentoringTitle}
               mentoringDescription={card.mentoringDescription}
-
             />
           );
         })}
+        {cardCTA && (
+          <CardCTA
+            title={cardCTA.title}
+            subtitle={cardCTA.subtitle}
+            buttonLabel={cardCTA.buttonLabel}
+            buttonSlug={cardCTA.buttonSlug}
+            isExternal={cardCTA.isExternal}
+          />
+        )}
       </div>
     </div>
   );

@@ -35,12 +35,14 @@ export { StackItems } from "./organisms";
 export { ImagesSlider } from "./organisms";
 export { Stages } from "./organisms";
 export { SectionCTA } from "./organisms";
+export { PricingCard } from "./organisms";
 export { CardsPricing } from "./organisms";
 export { Accordion } from "./organisms";
 export { Checklists } from "./organisms";
 export { List } from "./organisms";
 export { FormulaPack } from "./organisms";
 export { CtaBlob } from "./organisms";
+export { CardCTA } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";

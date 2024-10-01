@@ -21,7 +21,7 @@ export const Button = ({
     >
       <Text 
         type="custom"
-        className="font-brother font-black text-tiny text-center text-white uppercase"
+        className="font-brother font-black text-tiny text-center text-white uppercase text-pretty"
       >
         {label}
       </Text>
