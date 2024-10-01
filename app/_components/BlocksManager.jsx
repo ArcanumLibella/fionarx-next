@@ -62,7 +62,6 @@ export function BlocksManager({ blocks }) {
                 key={`CardsPricing-${block.id}`}
                 title={block.title}
                 description={block.description}
-                displayAllFormula={block.displayAllFormula}
                 pricingCards={block.pricingCards}
                 cardCTA={block.cardCTA}
               />

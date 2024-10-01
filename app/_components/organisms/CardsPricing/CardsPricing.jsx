@@ -48,13 +48,15 @@ if (!pricingCards) return;
           );
         })}
         {cardCTA && (
-          <CardCTA
-            title={cardCTA.title}
-            subtitle={cardCTA.subtitle}
-            buttonLabel={cardCTA.buttonLabel}
-            buttonSlug={cardCTA.buttonSlug}
-            isExternal={cardCTA.isExternal}
-          />
+          <div className="col-span-2 lg:col-span-1">
+            <CardCTA
+              title={cardCTA.title}
+              subtitle={cardCTA.subtitle}
+              buttonLabel={cardCTA.buttonLabel}
+              buttonSlug={cardCTA.buttonSlug}
+              isExternal={cardCTA.isExternal}
+            />
+          </div>
         )}
       </div>
     </div>
