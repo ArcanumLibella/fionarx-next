@@ -3,8 +3,8 @@
 import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer, Text } from "./atoms";
-import { ButtonLarge, ChecklistItems, ListItem } from "./molecules";
-import { Accordion, CardsPrestation, CardsPricing, Checklists, FormulaPack, ImagesSlider, List, SectionCTA, StackItems, Stages } from "./organisms";
+import { ButtonLarge } from "./molecules";
+import { Accordion, CardsPrestation, CardsPricing, Checklists, FormulaPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
@@ -121,7 +121,14 @@ export function BlocksManager({ blocks }) {
                 ctaPricing={block.ctaPricing}
                 ctaDetail={block.ctaDetail}
               />
-            ); 
+            );
+          case "blocks.options":
+            return (
+              <Options 
+                key={`Options-${block.id}`}
+                options={block.options}
+              />
+            );
           default:
             return null;
         }
