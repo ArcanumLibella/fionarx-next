@@ -44,7 +44,7 @@ export const PricingCard = ({
           {/* TITLE */}
           <Heading
             level="custom"
-            className="PricingCard__title mb-6 lg:min-h-[72px] font-brother font-black uppercase text-2base xs:text-md md:text-2base tracking-wider text-white"
+            className="PricingCard__title mb-6 lg:min-h-[84px] font-brother font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
           >
             {title}
           </Heading>
@@ -88,7 +88,7 @@ export const PricingCard = ({
                       height={16}
                     />
                   </div>
-                  <Paragraph className="w-full ml-2 !mb-2 md:!text-normal">
+                  <Paragraph className="w-full ml-2 !mb-2">
                     {item}
                   </Paragraph>
                 </div>
@@ -110,7 +110,7 @@ export const PricingCard = ({
           {/* SUPPORT */}
           {hasSupport && (
             <>
-              <Text type="custom" className="PricingCard__support-title mb-6 font-brother font-bold text-center text-base text-tomato" >
+              <Text type="custom" className="PricingCard__support-title mb-6 font-brother font-bold text-center text-base xs:text-2base text-tomato" >
                 {supportTitle}
               </Text>
               <Text type="custom" className="PricingCard__support-description mb-0 font-body text-center text-normal text-white" >
@@ -123,7 +123,7 @@ export const PricingCard = ({
           )}
 
           {/* MENTORING */}
-          <Text type="custom" className="PricingCard__mentoring-title mb-6 font-brother font-bold text-center text-base text-tomato" >
+          <Text type="custom" className="PricingCard__mentoring-title mb-6 font-brother font-bold text-center text-base xs:text-2base text-tomato" >
             {mentoringTitle}
           </Text>
           <Text type="custom" className="PricingCard__mentoring-description mb-6 font-body text-center text-normal text-white" >
