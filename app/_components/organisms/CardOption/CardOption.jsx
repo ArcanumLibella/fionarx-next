@@ -29,7 +29,7 @@ export const CardOption = ({
           {/* TITLE */}
           <Text
             type="custom"
-            className="CardOption__title mb-6 font-brother font-bold text-2base xs:text-3base md:text-2base tracking-wider text-tomato text-pretty"
+            className="CardOption__title mb-6 font-brother font-bold text-2base xs:text-md md:text-2base tracking-wider text-tomato text-pretty"
           >
             {title}
           </Text>
@@ -47,7 +47,7 @@ export const CardOption = ({
             url={ctaLink}
             isCentered
             isExternal={isExternal}
-            className="CardOption__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%"
+            className="CardOption__button !bg-tomato border-2 border-tomato"
           />
         </div>
       </Link>

@@ -126,6 +126,8 @@ export function BlocksManager({ blocks }) {
             return (
               <Options 
                 key={`Options-${block.id}`}
+                title={block.title}
+                description={block.description}
                 options={block.options}
               />
             );

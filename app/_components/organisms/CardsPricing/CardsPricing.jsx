@@ -14,7 +14,7 @@ if (!pricingCards) return;
       )}
       {description && (
         <div className="CardsPrestation__description flex justify-center w-full">
-          <Paragraph level="gradient" className="text-center">{description}</Paragraph>
+          <Paragraph className="text-center">{description}</Paragraph>
         </div>
       )}
       
