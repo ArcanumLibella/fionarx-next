@@ -21,6 +21,7 @@ export async function generateMetadata({ params }) {
 }
 
 const SinglePage = async ({ params }) => {
+  const globalData = await fetchDataFromStrapi("global?populate=deep");
   const { page: slug } = params;
   let page;
 
@@ -40,6 +41,7 @@ const SinglePage = async ({ params }) => {
 
   const blocks = page.attributes.blocks || [];
   const sectionCTA = page.attributes.sectionCTA || null;
+  const footer = globalData.attributes.footer;
 
   return (
     <>
@@ -60,7 +62,7 @@ const SinglePage = async ({ params }) => {
           className="relative md:-bottom-20 xl:-bottom-36 2xl:-bottom-64 md:ml-24 pb-24 md:pb-48"
         />
       )}
-      <Footer />
+      <Footer footer={footer} />
     </>
   );
 };

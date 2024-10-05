@@ -2,8 +2,9 @@ import React from 'react'
 import { Copyright, Heading, Text } from "../../atoms"
 import Link from "next/link"
 
-export const Footer = () => {
+export const Footer = ({ footer }) => {
   const currentYear = new Date().getFullYear();
+  const { title, role, location, mail, menu, legalInformation } = footer;
 
   return (
     <div className="Footer relative bottom-0 flex justify-center xl:mt-36 2xl:mt-80 md:ml-20 py-16 px-4 md:px-8 backdrop-blur-3xl bg-gradient-to-t from-transparent to-purple-ultraDark z-50">
@@ -13,19 +14,19 @@ export const Footer = () => {
         <div className="Footer__left flex flex-col justify-between mb-16 md:mb-0">
           <div className="Footer__left--top mb-8 md:mb-0">
             <Heading level={2} className="!mt-0 !mb-2 !text-md lg:!text-2md !normal-case !text-white">
-              Fiona Roux
+              {title}
             </Heading>
             <Heading level={3} className="!mt-0 !mb-4 !text-2base lg:!text-3base text-pretty">
-              Consultante en Stratégie Digitale
+              {role}
             </Heading>
             <Text type="paragraphLight" className="!text-normal">
-              Basée à Avignon dans le Sud de la France.
+              {location}
             </Text>
           </div>
           <div className="Footer__left--bottom">
-            <Link href="">
+            <Link href={`mailto:${mail}`}>
               <Text type="custom" className="font-bold text-base lg:text-2base">
-                hello@fionarx.com
+                {mail}
               </Text>
             </Link>
           </div>
@@ -39,27 +40,17 @@ export const Footer = () => {
               MENU
             </Text>
             <ul className="Footer__menu">
-              <li className="mb-2">
-                <Link href="" className="cursor-pointer">
-                  <Text type="custom" className="font-bold text-sm text-white hover:text-tomato transition ease-in-out duration-300 uppercase">
-                    À propos
-                  </Text>
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link href="" className="cursor-pointer">
-                  <Text type="custom" className="font-bold text-sm text-white hover:text-tomato transition ease-in-out duration-300 uppercase">
-                    Prestations
-                  </Text>
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link href="" className="cursor-pointer">
-                  <Text type="custom" className="font-bold text-sm text-white hover:text-tomato transition ease-in-out duration-300 uppercase">
-                    Contact
-                  </Text>
-                </Link>
-              </li>
+              {menu.map((item) => {
+                return (
+                  <li key={item.id} className="mb-2">
+                    <Link href={item.link} className="cursor-pointer">
+                      <Text type="custom" className="font-bold text-sm text-white hover:text-tomato transition ease-in-out duration-300 uppercase">
+                        {item.label}
+                      </Text>
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </div>
 
@@ -68,27 +59,17 @@ export const Footer = () => {
               INFORMATIONS JURIDIQUES
             </Text>
             <ul className="Footer__menu">
-              <li className="mb-2">
-                <Link href="" className="cursor-pointer">
-                  <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
-                    Mentions légales
-                  </Text>
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link href="" className="cursor-pointer">
-                  <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
-                    Politique de confidentialité
-                  </Text>
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link href="" className="cursor-pointer">
-                  <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
-                    Conditions générales de vente
-                  </Text>
-                </Link>
-              </li>
+              {legalInformation.map((item) => {
+                return (
+                  <li key={item.id} className="mb-2 cursor-default">
+                    {/* <Link href={item.link} className="cursor-pointer"> */}
+                      <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
+                        {item.label}
+                      </Text>
+                    {/* </Link> */}
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>
