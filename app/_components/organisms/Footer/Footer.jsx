@@ -40,7 +40,7 @@ export const Footer = ({ footer }) => {
               MENU
             </Text>
             <ul className="Footer__menu">
-              {menu.map((item) => {
+              {menu && menu.map((item) => {
                 return (
                   <li key={item.id} className="mb-2">
                     <Link href={item.link} className="cursor-pointer">
@@ -59,7 +59,7 @@ export const Footer = ({ footer }) => {
               INFORMATIONS JURIDIQUES
             </Text>
             <ul className="Footer__menu">
-              {legalInformation.map((item) => {
+              {legalInformation && legalInformation.map((item) => {
                 return (
                   <li key={item.id} className="mb-2 cursor-default">
                     {/* <Link href={item.link} className="cursor-pointer"> */}
