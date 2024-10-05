@@ -23,6 +23,7 @@ export async function generateMetadata({ params }) {
 }
 
 const PrestationPage = async ({ params }) => {
+  const globalData = await fetchDataFromStrapi("global?populate=deep");
   const { prestation: slug } = params;
   let prestation;
 
@@ -41,6 +42,7 @@ const PrestationPage = async ({ params }) => {
   }
 
   const { title, vision, target, introduction, blocks } = prestation.attributes || [];
+  const footer = globalData.attributes.footer;
 
   return (
     <>
