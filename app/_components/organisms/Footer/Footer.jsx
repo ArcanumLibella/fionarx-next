@@ -55,22 +55,26 @@ export const Footer = ({ footer }) => {
           </div>
 
           <div className="Footer__right--bottom">
-            <Text type="custom" className="mb-3 font-normal text-sm text-purple-ultraLight">
-              INFORMATIONS JURIDIQUES
-            </Text>
-            <ul className="Footer__menu">
-              {legalInformation && legalInformation.map((item) => {
-                return (
-                  <li key={item.id} className="mb-2 cursor-default">
-                    {/* <Link href={item.link} className="cursor-pointer"> */}
-                      <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
-                        {item.label}
-                      </Text>
-                    {/* </Link> */}
-                  </li>
-                )
-              })}
-            </ul>
+            {legalInformation && (
+              <>
+                <Text type="custom" className="mb-3 font-normal text-sm text-purple-ultraLight">
+                  INFORMATIONS JURIDIQUES
+                </Text>
+                <ul className="Footer__menu">
+                  {legalInformation.map((item) => {
+                    return (
+                      <li key={item.id} className="mb-2 cursor-default">
+                        {/* <Link href={item.link} className="cursor-pointer"> */}
+                          <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
+                            {item.label}
+                          </Text>
+                        {/* </Link> */}
+                      </li>
+                    )
+                  })}
+                </ul>
+              </>
+            )}
           </div>
         </div>
       </div>

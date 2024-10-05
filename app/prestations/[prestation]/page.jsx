@@ -65,7 +65,7 @@ const PrestationPage = async ({ params }) => {
         <Paragraph>{target}</Paragraph>
         <BlocksManager blocks={blocks} />
       </PagePrestationLayout>
-      <Footer />
+      <Footer footer={footer} />
     </>
   );
 }
