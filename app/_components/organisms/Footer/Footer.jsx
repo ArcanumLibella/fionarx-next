@@ -36,9 +36,9 @@ export const Footer = ({ footer }) => {
         {/* RIGHT */}
         <div className="Footer__right md:text-right">
           <div className="Footer__right--top mb-8">
-            <Text type="custom" className="mb-3 font-normal text-sm text-purple-ultraLight">
+            <Heading className="mb-3 font-normal text-sm text-purple-ultraLight">
               MENU
-            </Text>
+            </Heading>
             <ul className="Footer__menu">
               {menu && menu.map((item) => {
                 return (
@@ -55,26 +55,22 @@ export const Footer = ({ footer }) => {
           </div>
 
           <div className="Footer__right--bottom">
-            {legalInformation && (
-              <>
-                <Text type="custom" className="mb-3 font-normal text-sm text-purple-ultraLight">
-                  INFORMATIONS JURIDIQUES
-                </Text>
-                <ul className="Footer__menu">
-                  {legalInformation.map((item) => {
-                    return (
-                      <li key={item.id} className="mb-2 cursor-default">
-                        {/* <Link href={item.link} className="cursor-pointer"> */}
-                          <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
-                            {item.label}
-                          </Text>
-                        {/* </Link> */}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </>
-            )}
+            <Heading className="mb-3 font-normal text-sm text-purple-ultraLight">
+              INFORMATIONS JURIDIQUES
+            </Heading>
+            <ul className="Footer__menu">
+              {legalInformation && legalInformation.map((item) => {
+                return (
+                  <li key={item.id} className="mb-2 cursor-default">
+                    {/* <Link href={item.link} className="cursor-pointer"> */}
+                      <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
+                        {item.label}
+                      </Text>
+                    {/* </Link> */}
+                  </li>
+                )
+              })}
+            </ul>
           </div>
         </div>
       </div>
