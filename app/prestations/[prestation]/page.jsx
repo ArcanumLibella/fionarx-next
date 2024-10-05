@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, PagePrestationLayout, Introduction, Paragraph, Text } from "@/app/_components";
+import { Heading, BlocksManager, PagePrestationLayout, Introduction, Paragraph, Text, Footer } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { fetchDataFromStrapi, fetchSEODataPage } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
@@ -43,27 +43,30 @@ const PrestationPage = async ({ params }) => {
   const { title, vision, target, introduction, blocks } = prestation.attributes || [];
 
   return (
-    <PagePrestationLayout
-      className="xl:pb-48 2xl:pb-96"
-    >
-      <Link href="/prestations" className="flex items-center mb-8">
-        <ArrowLeftIcon
-          fill={COLORS.white.DEFAULT}
-          width={24}
-          height={24}
-        />
-        <Heading level={6} className="text-white hover:text-tomato transition-all ease-in-out">
-          Prestations
-        </Heading>
-      </Link>
-      <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
-        {vision}
-      </Text>
-      <Heading level={1} className="mb-6 md:mb-10 text-tomato">{title}</Heading>
-      <Introduction content={introduction.content} />
-      <Paragraph>{target}</Paragraph>
-      <BlocksManager blocks={blocks} />
-    </PagePrestationLayout>
+    <>
+      <PagePrestationLayout
+        className="xl:pb-48 2xl:pb-96"
+      >
+        <Link href="/prestations" className="flex items-center mb-8">
+          <ArrowLeftIcon
+            fill={COLORS.white.DEFAULT}
+            width={24}
+            height={24}
+          />
+          <Heading level={6} className="text-white hover:text-tomato transition-all ease-in-out">
+            Prestations
+          </Heading>
+        </Link>
+        <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
+          {vision}
+        </Text>
+        <Heading level={1} className="mb-6 md:mb-10 text-tomato">{title}</Heading>
+        <Introduction content={introduction.content} />
+        <Paragraph>{target}</Paragraph>
+        <BlocksManager blocks={blocks} />
+      </PagePrestationLayout>
+      <Footer />
+    </>
   );
 }
 

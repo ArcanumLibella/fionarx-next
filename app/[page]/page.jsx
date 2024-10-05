@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlocksManager, PageLayout } from "../_components";
-import { SectionCTA } from "../_components/organisms";
+import { Footer, SectionCTA } from "../_components/organisms";
 import NotFoundPage from "../404";
 import { fetchDataFromStrapi, fetchSEODataPage } from "../_utils/strapi.utils";
 
@@ -44,7 +44,7 @@ const SinglePage = async ({ params }) => {
   return (
     <>
       <PageLayout
-        className="xl:pb-48"
+        className="xl:pb-80"
         title={page.attributes.title}
         introduction={page.attributes.introduction}
         slug={page.attributes.slug}
@@ -57,9 +57,10 @@ const SinglePage = async ({ params }) => {
           title={sectionCTA.title}
           subtitle={sectionCTA.subtitle}
           button={sectionCTA.button}
-          className="relative -bottom-16 md:-bottom-24 xl:-bottom-48 2xl:-bottom-96 md:ml-24 pb-24 md:pb-48"
+          className="relative md:-bottom-20 xl:-bottom-36 2xl:-bottom-64 md:ml-24 pb-24 md:pb-48"
         />
       )}
+      <Footer />
     </>
   );
 };

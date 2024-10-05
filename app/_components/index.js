@@ -45,6 +45,7 @@ export { CtaBlob } from "./organisms";
 export { CardCTA } from "./organisms";
 export { Options } from "./organisms";
 export { CardOption } from "./organisms";
+export { Footer } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";
