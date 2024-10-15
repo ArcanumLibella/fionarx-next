@@ -25,6 +25,7 @@ if (!pricingCards) return;
               key={card.formula}
               description={card.description}
               formula={card.formula}
+              isDisabled={card.isDisabled}
               title={card.title}
               slug={card.slug}
               isFrom={card.isFrom}
