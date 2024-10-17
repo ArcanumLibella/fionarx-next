@@ -13,11 +13,17 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
-      url: 'https://fionarx.com/prestations',
+      url: 'https://fionarx.com/formules',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // {
+    //   url: 'https://fionarx.com/prestations',
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.8,
+    // },
     {
       url: 'https://fionarx.com/contact',
       lastModified: new Date(),
