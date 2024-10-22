@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading } from "../../atoms";
 import { COLORS } from "../../../_constants/Colors";
 import { ArrowLeftIcon, ArrowRightIcon } from "@/public/_assets/icons";
 
@@ -36,9 +35,9 @@ export const LinkButton = ({
         ${additionalStyle}
       `}
     >
-      <Heading level={6} className="font-bold text-white uppercase">
+      <span className="mt-1 font-bold text-white uppercase">
         {label}
-      </Heading>
+      </span>
       {handleSideArrow()}
     </Link>
   );
