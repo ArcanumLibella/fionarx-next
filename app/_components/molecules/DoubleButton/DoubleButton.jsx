@@ -3,7 +3,7 @@ import { ButtonLarge } from "../ButtonLarge";
 
 export const DoubleButton = ({ firstButton, secondButton }) => {
   return (
-    <div className="flex justify-between">
+    <div className="grid md:grid-cols-2 justify-items-center place-items-stretch gap-4 mt-16">
       {firstButton && (
         <ButtonLarge
           label={firstButton.label}

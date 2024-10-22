@@ -13,7 +13,7 @@ export const ButtonLarge = ({
     <Link
       href={url}
       className={`
-        flex px-8 py-5 max-w-fit border-2 border-tomato rounded-md group transition-all ease-in-out hover:duration-300 hover:bg-tomato cursor-pointer
+        flex items-center px-8 py-5 max-w-fit border-2 border-tomato rounded-md group transition-all ease-in-out hover:duration-300 hover:bg-tomato cursor-pointer
         ${isCentered && 'mx-auto'}
         ${additionalStyle}
       `}
