@@ -9,13 +9,13 @@ export const metadata = {
     template: '%s | FionaRx',
     default: 'Fiona Roux - Consultante en Stratégie Digitale freelance',
   },
-  description: "Consultante en Stratégie Digitale indépendante, j'accompagne les Créateurs, les Artistes et les Artisans du Bien-Être et de l'Art de Vivre à bâtir une présence en ligne à la hauteur de leur expertise",
+  description: "Consultante en Stratégie Digitale freelance, j'accompagne les petites entreprises et les indépendants à bâtir une présence en ligne à la hauteur de leur expertise",
   keywords: ['Audit digital', 'Développement web', 'WebDesign', 'Charte graphique', 'Branding', 'WebMarketing', 'SEO', 'Réseaux sociaux', 'Tunnel de vente', 'Landing page'],
   authors: [{ name: 'Fiona Roux' }],
   metadataBase: new URL('https://www.fionarx.com/'),
   openGraph: {
     title: "Fiona Roux - Consultante en Stratégie Digitale freelance",
-    description: "Consultante en Stratégie Digitale indépendante, j'accompagne les Créateurs, les Artistes et les Artisans du Bien-Être et de l'Art de Vivre à bâtir une présence en ligne à la hauteur de leur expertise",
+    description: "Consultante en Stratégie Digitale freelance, j'accompagne les petites entreprises et les indépendants à bâtir une présence en ligne à la hauteur de leur expertise",
     url: 'https://www.fionarx.com',
     siteName: 'FionaRx',
     images: [
