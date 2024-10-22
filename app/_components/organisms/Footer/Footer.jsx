@@ -13,10 +13,10 @@ export const Footer = ({ footer }) => {
         {/* LEFT */}
         <div className="Footer__left flex flex-col justify-between mb-16 md:mb-0">
           <div className="Footer__left--top mb-8 md:mb-0">
-            <Heading level={2} className="!mt-0 !mb-2 !text-md lg:!text-2md !normal-case !text-white">
+            <Heading level={2} className="h2 !mt-0 !mb-2 !text-md lg:!text-2md !normal-case !text-white">
               {title}
             </Heading>
-            <Heading level={3} className="!mt-0 !mb-4 !text-2base lg:!text-3base text-pretty">
+            <Heading level={3} className="h3 !mt-0 !mb-4 !text-2base lg:!text-3base text-pretty">
               {role}
             </Heading>
             <Text type="paragraphLight" className="!text-normal">
@@ -36,7 +36,7 @@ export const Footer = ({ footer }) => {
         {/* RIGHT */}
         <div className="Footer__right md:text-right">
           <div className="Footer__right--top mb-8">
-            <Heading className="mb-3 font-normal text-sm text-purple-ultraLight">
+            <Heading level={6} className="h6 mb-3 font-normal text-sm text-purple-ultraLight">
               MENU
             </Heading>
             <ul className="Footer__menu">
@@ -55,7 +55,7 @@ export const Footer = ({ footer }) => {
           </div>
 
           <div className="Footer__right--bottom">
-            <Heading className="mb-3 font-normal text-sm text-purple-ultraLight">
+            <Heading level={6} className="h6 mb-3 font-normal text-sm text-purple-ultraLight">
               INFORMATIONS JURIDIQUES
             </Heading>
             <ul className="Footer__menu">

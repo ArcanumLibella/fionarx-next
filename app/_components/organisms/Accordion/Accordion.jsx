@@ -42,7 +42,7 @@ export const Accordion = ({ accordion }) => {
               aria-expanded={openSections[item.slug] || false}
               aria-controls={`collapse-${item.slug}`}
             >
-              <Heading level={4} className="!mb-0 text-left">
+              <Heading level={4} className="h4 !mb-0 text-left">
                 {item.title}
               </Heading>
               <span
@@ -66,7 +66,7 @@ export const Accordion = ({ accordion }) => {
               data-twe-parent="#Accordion"
             >
               <div className="Features mb-8 lg:mb-0 lg:mr-4">
-                <Heading level={5} className="mt-3 mb-4 text-purple-ultraLight">
+                <Heading level={5} className="h5 mt-3 mb-4 text-purple-ultraLight">
                   Détail du contenu
                 </Heading>
                 <ul className="Features__items">
@@ -74,7 +74,7 @@ export const Accordion = ({ accordion }) => {
                 </ul>
               </div>
               <div className="Deliverables mb-6 lg:mb-0 lg:ml-4">
-                <Heading level={5} className="mt-3 mb-4 text-purple-ultraLight">
+                <Heading level={5} className="h5 mt-3 mb-4 text-purple-ultraLight">
                   Livrables associés
                 </Heading>
                 <ul className="Deliverables__items">

@@ -55,14 +55,14 @@ const FormulaPage = async ({ params }) => {
             width={24}
             height={24}
           />
-          <Heading level={6} className="text-white hover:text-tomato transition-all ease-in-out">
+          <Heading level={6} className="h6 text-white hover:text-tomato transition-all ease-in-out">
             Formules
           </Heading>
         </Link>
         <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
           {vision}
         </Text>
-        <Heading level={1} className="mb-6 md:mb-10 text-tomato">{title}</Heading>
+        <Heading level={1} className="h1 mb-6 md:mb-10 text-tomato">{title}</Heading>
         <Introduction content={introduction.content} />
         <Paragraph>{target}</Paragraph>
         <BlocksManager blocks={blocks} />

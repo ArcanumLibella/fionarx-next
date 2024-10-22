@@ -12,8 +12,8 @@ const NotFoundPage = () => {
       <BlobsLight className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[48vw] xl:h-[54vh] 2xl:w-[40vw] 2xl:h-[72vh] !-z-50" />
       <div className="flex flex-col items-center justify-items-center xl:grid grid-cols-3 w-full">
         <div className="NotFound__content xl:col-span-2 mb-16 xl:mb-0 2xl:mr-16">
-          <Heading level={1} className="mb-8 text-tomato">Oups !</Heading>
-          <Heading level={3} className="text-white mb-16">
+          <Heading level={1} className="h1 mb-8 text-tomato">Oups !</Heading>
+          <Heading level={3} className="h3 text-white mb-16">
             Il semble que vous vous soyez égaré(e) ! 👀
           </Heading>
           
@@ -23,7 +23,7 @@ const NotFoundPage = () => {
               width={24}
               height={24}
             />
-            <Heading level={6} className="text-white hover:text-tomato transition-all ease-in-out">
+            <Heading level={6} className="h6 text-white hover:text-tomato transition-all ease-in-out">
               Retour à l'accueil
             </Heading>
           </Link>

@@ -9,7 +9,7 @@ if (!options) return;
     <div className="Options w-full my-16 2xl:mt-32">
       {title && (
         <div className="CardsPrestation__title flex justify-center w-full">
-          <Heading level="gradient" className="max-w-xl mb-4">{title}</Heading>
+          <Heading level="gradient" className="h-gradient max-w-xl mb-4">{title}</Heading>
         </div>
       )}
       {description && (
