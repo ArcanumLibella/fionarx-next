@@ -22,9 +22,9 @@ export const Hero = async () => {
       )
     } else {
       return (
-        <Heading key={item.id} level={2} className="font-brother !my-0 font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 select-none">
+        <span key={item.id} className="font-brother !my-0 font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 select-none">
           {item.label}
-        </Heading>
+        </span>
       )
     }
   })
