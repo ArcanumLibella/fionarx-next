@@ -24,6 +24,7 @@ export { SocialIcons } from './molecules';
 export { StackItem } from './molecules';
 export { DescriptionCard } from "./molecules";
 export { Checklist } from "./molecules";
+export { DoubleButton } from "./molecules";
 
 export { Blobs } from "./organisms";
 export { BlobsLight } from "./organisms";

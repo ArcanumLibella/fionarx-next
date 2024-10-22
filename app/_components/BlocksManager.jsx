@@ -3,7 +3,7 @@
 import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer, Text } from "./atoms";
-import { ButtonLarge } from "./molecules";
+import { ButtonLarge, DoubleButton } from "./molecules";
 import { Accordion, CardsPrestation, CardsPricing, Checklists, FormulaPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
 
 export function BlocksManager({ blocks }) {
@@ -52,6 +52,8 @@ export function BlocksManager({ blocks }) {
             return <Quote key={`Quote-${block.id}`} quotes={block.quotes} />;
           case "blocks.button":
             return <ButtonLarge key={`ButtonLarge-${block.id}`} label={block.label} url={block.url} isExternal={block.isExternal} isCentered={block.isCentered} className="my-12 md:my-16" />;
+          case "blocks.double-button":
+            return <DoubleButton key={`DoubleButton-${block.id}`} firstButton={block.firstButton} secondButton={block.secondButton} />;
           case "blocks.spacer":
             return <Spacer key={`Spacer-${block.id}`} mobileSize={block.mobileSize} size={block.size} />;
           case "blocks.separator":
