@@ -4,9 +4,11 @@ import React from "react";
 import { Paragraph, Text } from "../../atoms";
 import { Button } from "../../molecules";
 import Link from "next/link";
+import { additionalPaths } from "@/next-sitemap.config";
 
 export const CardOption = ({
-  number,
+  tag,
+  isLarge,
   title,
   description,
   ctaLabel,
@@ -18,12 +20,12 @@ export const CardOption = ({
       <Link href={ctaLink} className="CardOption flex flex-col justify-between h-full mb-4 lg:mb-0 p-6 bg-purple rounded-xl xl:transform hover:bg-purple-light transition-all cursor-pointer">
         <div className="CardOption__top">
 
-          {/* NUMBER */}
+          {/* TAG */}
           <Text
             type="custom"
-            className="CardOption__number mb-6 font-brother font-black text-md tracking-normal text-white"
+            className={`CardOption__tag mb-6 font-brother tracking-normal text-white ${isLarge ? "font-black text-md" : "font-bold text-normal"}`}
           >
-            {number}
+            {tag}
           </Text>
 
           {/* TITLE */}

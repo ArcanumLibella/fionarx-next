@@ -23,7 +23,8 @@ if (!options) return;
           return (
             <CardOption
               key={option.id}
-              number={option.number}
+              tag={option.tag}
+              isLarge={option.isLarge}
               title={option.title}
               description={option.description}
               ctaLabel={option.ctaLabel}
