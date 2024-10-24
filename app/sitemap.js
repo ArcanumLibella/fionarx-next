@@ -18,12 +18,12 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    // {
-    //   url: 'https://fionarx.com/prestations',
-    //   lastModified: new Date(),
-    //   changeFrequency: 'monthly',
-    //   priority: 0.8,
-    // },
+    {
+      url: 'https://fionarx.com/prestations',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     {
       url: 'https://fionarx.com/contact',
       lastModified: new Date(),
