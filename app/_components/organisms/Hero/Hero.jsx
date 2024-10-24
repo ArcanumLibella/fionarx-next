@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Heading, Paragraph } from "../../atoms";
 import { Blobs } from "../Blobs";
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
+import { ChevronsDownBigIcon } from "@/public/_assets/icons";
+import { COLORS } from "@/app/_constants/Colors";
 
 export const Hero = async () => {
   const data = await fetchDataFromStrapi("global?populate=deep");
@@ -22,7 +24,7 @@ export const Hero = async () => {
       )
     } else {
       return (
-        <span key={item.id} className="font-brother !my-0 font-black leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 select-none">
+        <span key={item.id} className="font-brother !my-0 font-black leading-snug xs:leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 select-none">
           {item.label}
         </span>
       )
@@ -33,6 +35,12 @@ export const Hero = async () => {
     <div className="Hero flex flex-col items-center justify-center h-svh min-h-svh overflow-hidden text-center px-4 md:pl-16 md:pr-8 lg:px-16 lg:py-16 md:items-end md:text-right">
       <Blobs className="absolute flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[56vw] h-[36vh] lg:w-[48vw] lg:h-[54vh] xl:w-[32vw] xl:h-[56vh]" />
       {renderHero}
+      <ChevronsDownBigIcon 
+        stroke={COLORS.tomato.DEFAULT}
+        width={32}
+        height={32}
+        className="absolute top-[92svh] xs:top-[94svh] lg:top-[96svh] xl:top-[94svh] 2xl:top-[96svh] left-1/2 xl:bottom-4 justify-self-auto animate-down z-50"
+      />
     </div>
   );
 };
