@@ -37,7 +37,7 @@ export function BlocksManager({ blocks }) {
                   list: ({ children }) => <ul key={`list-items-${block.id}`} className="List list-disc list-inside">{children}</ul>,
                 }}
                 modifiers={{
-                  bold: ({ children }) => <strong key={`strong-${block.id}`} className="font-bold text-tomato">{children}</strong>,
+                  bold: ({ children }) => <strong key={`strong-${block.id}`} className="font-extrabold text-tomato">{children}</strong>,
                   italic: ({ children }) => <span key={`span-${block.id}`} className="italic">{children}</span>,
                 }}
               />
