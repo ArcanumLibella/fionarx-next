@@ -17,7 +17,7 @@ export const Heading = ({
     case 2: /* SOUS-TITRE DE PAGE */
       return (
         <h2
-          className={`Heading h2 mt-12 md:mt-16 mb-6 md:mb-8 font-brother font-extrabold text-balance uppercase text-tomato selection:bg-purple ${additionalStyle}`}
+          className={`Heading h2 mt-12 md:mt-16 mb-6 md:mb-8 font-brother font-extrabold text-pretty uppercase text-tomato selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h2>
@@ -25,7 +25,7 @@ export const Heading = ({
     case 3: /* PETIT-TITRE DE PAGE */
       return (
         <h3
-          className={`Heading h3 mt-12 md:mt-16 mb-4 md:mb-8 font-brother font-extrabold leading-none text-tomato selection:bg-purple ${additionalStyle}`}
+          className={`Heading h3 mt-12 md:mt-16 mb-4 md:mb-8 font-brother font-extrabold text-pretty leading-none text-tomato selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h3>
@@ -33,7 +33,7 @@ export const Heading = ({
     case 4: /* MINI-TITRE OU TITRE DE CARD */
       return (
         <h4
-          className={`Heading h4 mb-4 font-brother font-extrabold uppercase selection:bg-purple ${additionalStyle}`}
+          className={`Heading h4 mb-4 font-brother font-extrabold text-pretty uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h4>
@@ -41,7 +41,7 @@ export const Heading = ({
     case 5:
       return (
         <h5
-          className={`Heading h5 font-brother font-bold uppercase selection:bg-purple ${additionalStyle}`}
+          className={`Heading h5 font-brother font-bold text-pretty uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h5>
@@ -49,7 +49,7 @@ export const Heading = ({
     case 6:
       return (
         <h6
-          className={`Heading h6 font-bold uppercase selection:bg-purple ${additionalStyle}`}
+          className={`Heading h6 font-bold text-pretty uppercase selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h6>
