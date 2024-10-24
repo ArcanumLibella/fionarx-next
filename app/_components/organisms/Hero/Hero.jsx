@@ -39,7 +39,7 @@ export const Hero = async () => {
         stroke={COLORS.tomato.DEFAULT}
         width={32}
         height={32}
-        className="absolute top-[92svh] xs:top-[94svh] lg:top-[96svh] xl:top-[94svh] 2xl:top-[96svh] left-1/2 xl:bottom-4 justify-self-auto animate-down z-50"
+        className="absolute top-[92svh] xs:top-[94svh] lg:top-[96svh] xl:top-[94svh] 2xl:top-[96svh] md:left-1/2 xl:bottom-4 justify-self-auto animate-down z-50"
       />
     </div>
   );
