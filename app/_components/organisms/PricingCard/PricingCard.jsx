@@ -42,7 +42,7 @@ export const PricingCard = ({
 
         {/* TITLE */}
         <Heading
-          level="custom"
+          level={4}
           className="PricingCard__title mb-6 lg:min-h-[84px] font-brother font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
         >
           {title}
@@ -57,12 +57,11 @@ export const PricingCard = ({
             </Text>
           )}
           {/* PRICE */}
-          <Heading
-            level="custom"
+          <span
             className="PricingCard__price font-body font-bold uppercase text-xl text-tomato"
           >
             {price} €
-          </Heading>
+          </span>
           <Text type="custom" className="font-bold">➤ {time} mois à vos côtés 💪🏻</Text>
         </div>
 

@@ -36,9 +36,9 @@ export const Footer = ({ footer }) => {
         {/* RIGHT */}
         <div className="Footer__right md:text-right">
           <div className="Footer__right--top mb-8">
-            <Heading level={6} className="h6 mb-3 font-normal text-sm text-purple-ultraLight">
+            <span className="block mb-3 font-normal text-sm text-purple-ultraLight">
               MENU
-            </Heading>
+            </span>
             <ul className="Footer__menu">
               {menu && menu.map((item) => {
                 return (
@@ -55,9 +55,9 @@ export const Footer = ({ footer }) => {
           </div>
 
           <div className="Footer__right--bottom">
-            <Heading level={6} className="h6 mb-3 font-normal text-sm text-purple-ultraLight">
+            <span className="block mb-3 font-normal text-sm text-purple-ultraLight">
               INFORMATIONS JURIDIQUES
-            </Heading>
+            </span>
             <ul className="Footer__menu">
               {legalInformation && legalInformation.map((item) => {
                 return (
