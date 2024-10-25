@@ -53,7 +53,7 @@ strong {
   }
 
   .h3 {
-    @apply text-base md:text-3base 2xl:text-2md;
+    @apply text-base md:text-2base 2xl:text-3base;
   }
 
   .h4 {
