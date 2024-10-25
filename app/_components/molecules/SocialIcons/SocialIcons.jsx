@@ -50,6 +50,7 @@ export const SocialIcons = ({
         target="_blank"
         rel="noreferrer"
         role="link"
+        title={icon.label}
         aria-label={`Lien vers ${icon.label}`}
         className="mb-3"
       >
