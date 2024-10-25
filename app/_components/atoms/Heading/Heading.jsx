@@ -25,7 +25,7 @@ export const Heading = ({
     case 3: /* PETIT-TITRE DE PAGE */
       return (
         <h3
-          className={`Heading h3 mt-12 md:mt-16 mb-4 md:mb-8 font-brother font-extrabold text-pretty leading-none text-tomato selection:bg-purple ${additionalStyle}`}
+          className={`Heading h3 mt-8 mb-4 md:mb-6 font-brother font-bold text-pretty leading-tight text-tomato selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h3>
