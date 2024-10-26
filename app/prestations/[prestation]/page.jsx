@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
     keywords: seoData.keywords,
     robots: seoData.metaRobots,
     alternates: {
-      canonical: `/${params.prestation}`,
+      canonical: `/prestations/${params.prestation}`,
     },
     structuredData: seoData.structuredData
   }
