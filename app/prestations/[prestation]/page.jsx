@@ -55,9 +55,9 @@ const PrestationPage = async ({ params }) => {
             width={24}
             height={24}
           />
-          <Heading level={6} className="h6 text-white hover:text-tomato transition-all ease-in-out">
+          <span className="h6 text-white font-bold uppercase hover:text-tomato transition-all ease-in-out">
             Prestations
-          </Heading>
+          </span>
         </Link>
         <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
           {vision}

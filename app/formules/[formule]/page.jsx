@@ -55,9 +55,9 @@ const FormulaPage = async ({ params }) => {
             width={24}
             height={24}
           />
-          <Heading level={6} className="h6 text-white hover:text-tomato transition-all ease-in-out">
+          <span className="h6 font-bold text-white uppercase hover:text-tomato transition-all ease-in-out">
             Formules
-          </Heading>
+          </span>
         </Link>
         <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
           {vision}
