@@ -24,7 +24,7 @@ export const Footer = ({ footer }) => {
             </Text>
           </div>
           <div className="Footer__left--bottom">
-            <Link href={`mailto:${mail}`}>
+            <Link href={`mailto:${mail}`} title={mail}>
               <Text type="custom" className="font-bold text-base lg:text-2base">
                 {mail}
               </Text>

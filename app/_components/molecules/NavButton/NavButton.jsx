@@ -15,7 +15,8 @@ export const NavButton = ({ socialsItems, openMenuHandler, isMenuOpen }) => {
       <Link
         href="/"
         role="link"
-        aria-label="Lien vers l'accueil"
+        aria-label="Lien vers la page d'accueil"
+        title="Lien vers la page d'accueil"
         className="NavButton__home hidden w-20 h-20 md:flex md:items-center md:justify-center font-bold transition-all duration-300 bg-transparent border-2 font-brother text-tiny border-purple-ultraDark"
       >
         HOME
