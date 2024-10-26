@@ -9,7 +9,7 @@ export const metadata = {
     template: 'Fiona Roux %s',
     default: 'Fiona Roux - Consultante en Stratégie Digitale freelance',
   },
-  description: "Consultante en Stratégie Digitale freelance, Fiona Roux accompagne les petites entreprises et les indépendants à bâtir une présence en ligne à la hauteur de leur expertise.",
+  description: "Fiona Roux, consultante en stratégie digitale freelance à Avignon 🌞, une seule collaboratrice pour une Stratégie Digitale 360 ✨ : référencement (seo), audit digital, webdesign, création de site internet et optimisation Instagram",
   keywords: ['consultant en stratégie digital freelance', 'consultant seo freelance', 'webdesigner freelance', 'audit digital', 'création de site internet', 'développeur wordpress avignon', 'développement web', 'web design', 'charte graphique', 'personal branding', 'webmarketing', 'seo', 'référencement naturel', 'référencement local', 'fiche google my business', 'optimisation instagram'],
   robots: "INDEX, FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1",
   authors: [{ name: 'Fiona Roux' }],
@@ -19,7 +19,7 @@ export const metadata = {
   metadataBase: new URL('https://www.fionarx.com/'),
   openGraph: {
     title: "Fiona Roux - Consultante en Stratégie Digitale freelance",
-    description: "Consultante en Stratégie Digitale freelance, j'accompagne les petites entreprises et les indépendants à bâtir une présence en ligne à la hauteur de leur expertise.",
+    description: "Fiona Roux, consultante en stratégie digitale freelance à Avignon 🌞, une seule collaboratrice pour une Stratégie Digitale 360 ✨ : référencement (seo), audit digital, webdesign, création de site internet et optimisation Instagram",
     url: 'https://www.fionarx.com',
     siteName: 'FionaRx',
     images: [
