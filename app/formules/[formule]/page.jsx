@@ -2,16 +2,16 @@ import React from 'react';
 import Link from "next/link";
 import { Heading, BlocksManager, PagePrestationLayout, Introduction, Paragraph, Text, Footer } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
-import { fetchDataFromStrapi, fetchSEODataPage } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
 import { ArrowLeftIcon } from "@/public/_assets/icons";
+import { fetchDataFromStrapi, fetchSEODataFormules } from "@/app/_utils/strapi.utils";
 
 export async function generateMetadata({ params }) {
-  const seoData = await fetchSEODataPage(params.formule);
+  const seoData = await fetchSEODataFormules(params.formule);
   if (!seoData) return;
  
   return {
-    title: seoData.metaTitle,
+    title: "| Formules > " + seoData.metaTitle,
     description: seoData.metaDescription,
     keywords: seoData.keywords,
     robots: seoData.metaRobots,

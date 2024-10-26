@@ -59,6 +59,32 @@ export async function fetchSEODataPage(slug) {
   }
 }
 
+export async function fetchSEODataFormules(slug) {
+  try {
+    const response = await axios.get(`${BASE_URL}/api/formules?populate=deep`);
+    const formules = response.data.data;
+
+    const seoData = formules.find(formule => formule.attributes.slug === slug)?.attributes?.seo || null;
+    return seoData;
+  } catch (error) {
+    console.error('Error fetching SEO data:', error);
+    return null;
+  }
+}
+
+export async function fetchSEODataPrestations(slug) {
+  try {
+    const response = await axios.get(`${BASE_URL}/api/prestations?populate=deep`);
+    const prestations = response.data.data;
+
+    const seoData = prestations.find(prestation => prestation.attributes.slug === slug)?.attributes?.seo || null;
+    return seoData;
+  } catch (error) {
+    console.error('Error fetching SEO data:', error);
+    return null;
+  }
+}
+
 
 export async function fetchSEODataProject(slug) {
   try {
