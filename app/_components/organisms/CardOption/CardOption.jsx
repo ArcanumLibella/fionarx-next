@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import { Paragraph, Text } from "../../atoms";
+import { Heading, Paragraph, Text } from "../../atoms";
 import { Button } from "../../molecules";
 import Link from "next/link";
-import { additionalPaths } from "@/next-sitemap.config";
 
 export const CardOption = ({
   tag,
@@ -29,12 +28,12 @@ export const CardOption = ({
           </Text>
 
           {/* TITLE */}
-          <Text
-            type="custom"
+          <Heading
+            level={4}
             className="CardOption__title mb-6 font-brother font-bold text-2base xs:text-md md:text-2base tracking-wider text-tomato text-pretty"
           >
             {title}
-          </Text>
+          </Heading>
 
           {/* DESCRIPTION */}
           <Paragraph className="CardOption__description !mb-10">
