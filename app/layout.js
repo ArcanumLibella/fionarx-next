@@ -7,9 +7,9 @@ import "./globals.css";
 export const metadata = {
   title: {
     template: 'Fiona Roux %s',
-    default: 'Fiona Roux - Consultante en Stratégie Digitale freelance',
+    default: 'Fiona Roux - Consultant en Stratégie Digitale freelance',
   },
-  description: "Fiona Roux, consultante en stratégie digitale freelance à Avignon 🌞, une seule collaboratrice pour une Stratégie Digitale 360 ✨ : référencement (seo), audit digital, webdesign, création de site internet et optimisation Instagram",
+  description: "Fiona Roux, consultant en stratégie digitale freelance à Avignon 🌞, une seule collaboratrice pour une Stratégie Digitale 360 ✨ : référencement (seo), audit digital, webdesign, création de site internet et optimisation Instagram",
   keywords: ['consultant en stratégie digital freelance', 'consultant seo freelance', 'webdesigner freelance', 'audit digital', 'création de site internet', 'développeur wordpress avignon', 'développement web', 'web design', 'charte graphique', 'personal branding', 'webmarketing', 'seo', 'référencement naturel', 'référencement local', 'fiche google my business', 'optimisation instagram'],
   robots: "INDEX, FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1",
   authors: [{ name: 'Fiona Roux' }],
