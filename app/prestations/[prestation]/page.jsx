@@ -41,7 +41,7 @@ const PrestationPage = async ({ params }) => {
     return <UnderConstructionPage />;
   }
 
-  const { title, vision, target, introduction, blocks } = prestation.attributes || [];
+  const { title, expertise, target, introduction, blocks } = prestation.attributes || [];
   const footer = globalData.attributes.footer;
 
   return (
@@ -59,10 +59,10 @@ const PrestationPage = async ({ params }) => {
             Prestations
           </span>
         </Link>
-        <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
-          {vision}
-        </Text>
-        <Heading level={1} className="h1 mb-6 md:mb-10 text-tomato">{title}</Heading>
+        <Heading level={1} className="paragraphLarge uppercase text-purple-ultraLight">
+          {expertise}
+        </Heading>
+        <Heading level={2} className="text-2md md:text-3lg lg:text-xl 2xl:text-2xl !mt-0 leading-tight text-tomato">{title}</Heading>
         <Introduction content={introduction.content} />
         <Paragraph>{target}</Paragraph>
         <BlocksManager blocks={blocks} />

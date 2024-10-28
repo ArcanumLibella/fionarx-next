@@ -45,31 +45,66 @@ strong {
 /* FONT-SIZE CLASSES */
 @layer components {
   .h1 {
-    @apply text-lg xs:text-2lg md:text-2xl 2xl:text-3xl;
+    @apply !text-lg xs:!text-2lg md:!text-2xl 2xl:!text-3xl;
   }
 
   .h2 {
-    @apply text-base md:text-3base 2xl:text-md;
+    @apply !text-base md:!text-3base 2xl:!text-md;
   }
 
   .h3 {
-    @apply text-base md:text-2base 2xl:text-3base;
+    @apply !text-base md:!text-2base 2xl:!text-3base;
   }
 
   .h4 {
-    @apply text-base md:text-2base 2xl:text-3base;
+    @apply !text-base md:!text-2base 2xl:!text-3base;
   }
 
   .h5 {
-    @apply text-2normal lg:text-base 2xl:text-2base;
+    @apply !text-2normal lg:!text-base 2xl:!text-2base;
   }
 
   .h6 {
-    @apply text-sm md:text-normal lg:text-2normal 2xl:text-base;
+    @apply !text-sm md:!text-normal lg:!text-2normal 2xl:!text-base;
   }
 
   .h-gradient {
-    @apply text-3base md:text-md lg:text-lg;
+    @apply !text-3base md:!text-md lg:!text-lg;
+  }
+
+  .paragraphLarge {
+    @apply !text-base xs:!text-2base md:!text-3base 2xl:!text-md;
+  }
+
+  .paragraphLight {
+    @apply !text-normal md:!text-base;
+  }
+}
+
+/* FONT-SIZE TAGS */
+@layer components {
+  h1 {
+    @apply text-lg xs:text-2lg md:text-2xl 2xl:text-3xl;
+  }
+
+  h2 {
+    @apply text-base md:text-3base 2xl:text-md;
+  }
+
+  h3 {
+    @apply text-base md:text-2base 2xl:text-3base;
+  }
+
+  h4 {
+    @apply text-base md:text-2base 2xl:text-3base;
+  }
+
+  h5 {
+    @apply text-2normal lg:text-base 2xl:text-2base;
+  }
+
+  h6 {
+    @apply text-sm md:text-normal lg:text-2normal 2xl:text-base;
   }
 }
 
