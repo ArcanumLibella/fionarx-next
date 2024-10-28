@@ -14,9 +14,9 @@ export const Hero = async () => {
     if (item.isMainTitle) {
       return (
         <Link href={item.link} key={item.id} rel="canonical" className="z-10 no-underline mb-4 md:mb-8">
-          <h2 className="font-brother font-black uppercase text-[12vw] md:text-[10vw] lg:text-[8vh] xl:text-[12vh] text-white cursor-pointer select-none">
+          <span className="font-brother font-black uppercase text-[12vw] md:text-[10vw] lg:text-[8vh] xl:text-[12vh] text-white cursor-pointer select-none">
             {item.label}
-          </h2>
+          </span>
           <Heading level={1} className="font-brother !my-0 font-extrabold uppercase xs:!text-[5vw] !text-[5vw] md:!text-[4vw] lg:!text-[3.5vh] xl:!text-[5vh] 2xl:!text-[5vh] text-white opacity-60 cursor-pointer select-none">
             Consultant en Stratégie Digitale freelance
           </Heading>
