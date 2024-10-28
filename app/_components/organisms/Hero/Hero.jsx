@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, Paragraph } from "../../atoms";
+import { Heading } from "../../atoms";
 import { Blobs } from "../Blobs";
 import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
 import { ChevronsDownBigIcon } from "@/public/_assets/icons";
@@ -18,7 +18,7 @@ export const Hero = async () => {
             {item.label}
           </h2>
           <Heading level={1} className="font-brother !my-0 font-extrabold uppercase xs:!text-[5vw] !text-[5vw] md:!text-[4vw] lg:!text-[3.5vh] xl:!text-[5vh] 2xl:!text-[5vh] text-white opacity-60 cursor-pointer select-none">
-            Consultante en Stratégie Digitale
+            Consultant en Stratégie Digitale freelance
           </Heading>
         </Link>
       )
