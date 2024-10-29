@@ -10,7 +10,7 @@ export default function sitemap() {
       url: 'https://fionarx.com/a-propos',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: 'https://fionarx.com/formules',
@@ -28,7 +28,19 @@ export default function sitemap() {
       url: 'https://fionarx.com/contact',
       lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.8,
+    },
+    {
+      url: 'https://fionarx.com/formules/digital-starter',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.64,
+    },
+    {
+      url: 'https://fionarx.com/formules/social-impact',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.64,
     },
     // {
     //   url: 'https://fionarx.com/projets',
