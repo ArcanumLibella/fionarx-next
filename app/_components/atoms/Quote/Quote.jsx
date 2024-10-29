@@ -1,8 +1,8 @@
 import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { Paragraph } from "../Paragraph";
 
 export const Quote = ({ quotes }) => {
+  console.log("quotes : ", quotes)
   if (!quotes) return;
 
   return (
@@ -11,9 +11,9 @@ export const Quote = ({ quotes }) => {
         content={quotes}
         blocks={{
           paragraph: ({ children }) => (
-            <Paragraph className="!mb-0 text-white">
+            <blockquote className="text-white">
               {children}
-            </Paragraph>
+            </blockquote>
           )
         }}
         modifiers={{
