@@ -41,7 +41,7 @@ export const Checklist = ({ content }) => {
           <strong className="!font-medium !text-white">{children}</strong>
         ),
         italic: ({ children }) => (
-          <span className="!italic">{children}</span>
+          <span className="font-semibold !not-italic">{children}</span>
         ),
       }}
     />
