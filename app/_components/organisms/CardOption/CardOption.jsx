@@ -30,7 +30,7 @@ export const CardOption = ({
           {/* TITLE */}
           <Heading
             level={4}
-            className="CardOption__title mb-6 font-brother font-bold text-2base xs:text-md md:text-2base tracking-wider text-tomato text-pretty"
+            className="CardOption__title mb-6 font-brother font-bold text-2base xs:text-md md:text-2base -tracking-wide text-tomato text-pretty"
           >
             {title}
           </Heading>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { FootNote, Heading, Paragraph, Quote, Separator, Spacer, Text } from "./atoms";
+import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, DoubleButton } from "./molecules";
 import { Accordion, CardsPrestation, CardsPricing, Checklists, FormulaPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
 
