@@ -24,7 +24,7 @@ if (!cardsPrestation) return;
         {cardsPrestation.map((card) => {
           return (
             <CardPrestation
-              key={card.slug}
+              key={card.id}
               title={card.title}
               slug={card.slug}
               description={card.description}
