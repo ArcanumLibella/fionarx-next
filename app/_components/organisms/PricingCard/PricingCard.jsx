@@ -42,8 +42,8 @@ export const PricingCard = ({
 
         {/* TITLE */}
         <Heading
-          level={4}
-          className="PricingCard__title mb-6 lg:min-h-[84px] font-brother font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
+          level={3}
+          className="PricingCard__title mb-6 lg:min-h-[84px] font-brother !font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
         >
           {title}
         </Heading>

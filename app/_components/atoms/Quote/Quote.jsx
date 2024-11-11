@@ -2,7 +2,6 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export const Quote = ({ quotes }) => {
-  console.log("quotes : ", quotes)
   if (!quotes) return;
 
   return (

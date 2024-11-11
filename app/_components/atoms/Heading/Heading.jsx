@@ -56,9 +56,9 @@ export const Heading = ({
       );
     case "gradient": /* TITRE DEGRADÉ */
       return (
-        <h3 className={`HeadingGradient ${additionalStyle} font-brother text-center font-black leading-tight text-balance bg-gradient-to-r from-purple-light from-12% via-tomato via-44% to-orange to-96% bg-clip-text text-transparent text-tomato`}>
+        <h2 className={`HeadingGradient ${additionalStyle} font-brother text-center font-black leading-tight text-balance bg-gradient-to-r from-purple-light from-12% via-tomato via-44% to-orange to-96% bg-clip-text text-transparent text-tomato`}>
           {children}
-        </h3>
+        </h2>
       )
     default:
       return <h6 className={`HeadingCustom ${additionalStyle}`}>{children}</h6>;
