@@ -31,7 +31,7 @@ export const ListItem = ({ number, content }) => {
           }}
           modifiers={{
             bold: ({ children }) => (
-              <strong className="!font-bold text-tomato">{children}</strong>
+              <strong className="!font-semibold text-tomato">{children}</strong>
             ),
             italic: ({ children }) => (
               <span className="!italic">{children}</span>
