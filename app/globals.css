@@ -96,11 +96,11 @@ strong {
   }
 
   h4 {
-    @apply text-base md:text-2base 2xl:text-3base;
+    @apply text-2normal md:text-base 2xl:text-2base;
   }
 
   h5 {
-    @apply text-2normal lg:text-base 2xl:text-2base;
+    @apply text-normal lg:text-2normal 2xl:text-base;
   }
 
   h6 {

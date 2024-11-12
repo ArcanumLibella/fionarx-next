@@ -62,7 +62,7 @@ const PrestationPage = async ({ params }) => {
         <Heading level={1} className="paragraphLarge uppercase text-purple-ultraLight">
           {expertise}
         </Heading>
-        <Heading level={2} className="text-2md md:text-2lg lg:text-3lg 2xl:text-xl !mt-0 tracking-tighter leading-tight text-pretty text-tomato">
+        <Heading level={2} className="text-md md:text-lg lg:text-2lg 2xl:text-xl !mt-0 tracking-tighter leading-tight text-pretty text-tomato">
           {title}
         </Heading>
         <Subtitle subtitle={subtitle} />

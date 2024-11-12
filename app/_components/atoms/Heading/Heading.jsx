@@ -33,7 +33,7 @@ export const Heading = ({
     case 4: /* MINI-TITRE OU TITRE DE CARD */
       return (
         <h4
-          className={`Heading mb-4 font-brother font-extrabold text-pretty uppercase selection:bg-purple ${additionalStyle}`}
+          className={`Heading mb-4 font-brother text-pretty selection:bg-purple ${additionalStyle}`}
         >
           {children}
         </h4>
