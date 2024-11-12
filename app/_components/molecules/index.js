@@ -11,3 +11,4 @@ export { StackItem } from './StackItem';
 export { DescriptionCard } from './DescriptionCard';
 export { Checklist } from './Checklist';
 export { DoubleButton } from './DoubleButton';
+export { CardBasic } from './CardBasic';

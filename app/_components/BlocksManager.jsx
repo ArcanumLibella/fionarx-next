@@ -4,7 +4,7 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, DoubleButton } from "./molecules";
-import { Accordion, CardsPrestation, CardsPricing, Checklists, FormulaPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
+import { Accordion, CardsBasic, CardsPrestation, CardsPricing, Checklists, FormulaPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
@@ -132,6 +132,13 @@ export function BlocksManager({ blocks }) {
                 title={block.title}
                 description={block.description}
                 options={block.options}
+              />
+            );
+          case "blocks.cards-basic":
+            return (
+              <CardsBasic 
+                key={`CardsBasic-${block.id}`}
+                items={block.items}
               />
             );
           default:
