@@ -38,7 +38,7 @@ export function BlocksManager({ blocks }) {
                   quote: ({ children }) => <blockquote key={`Quote-${block.id}`} className="my-6 p-4 xs:p-6 w-full max-w-full text-2normal rounded bg-purple-light">{children}</blockquote>,
                 }}
                 modifiers={{
-                  bold: ({ children }) => <strong key={`strong-${block.id}`} className="font-extrabold text-tomato">{children}</strong>,
+                  bold: ({ children }) => <strong key={`strong-${block.id}`} className="font-medium text-tomato">{children}</strong>,
                   italic: ({ children }) => <span key={`span-${block.id}`} className="italic">{children}</span>,
                 }}
               />
