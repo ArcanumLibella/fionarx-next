@@ -1,6 +1,6 @@
 import React from "react";
 import { Blobs, BlobsLight } from "../organisms";
-import { Heading, Introduction } from "../atoms";
+import { Heading, Subtitle } from "../atoms";
 
 export const PageLayout = ({title, introduction, children, className: additionalStyle}) => {
   return (
@@ -11,7 +11,7 @@ export const PageLayout = ({title, introduction, children, className: additional
         <Heading level={1} className="h1 mb-6 md:mb-10 tracking-tight md:tracking-tightest uppercase text-tomato">
           {title}
         </Heading>
-        <Introduction content={introduction.content} />
+        <Subtitle subtitle={introduction.content} />
         {children}
       </div>
     </div>

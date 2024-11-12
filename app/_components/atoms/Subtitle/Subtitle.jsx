@@ -2,23 +2,23 @@
 
 import React from 'react'
 import { BlocksRenderer } from "@strapi/blocks-react-renderer"
-import { Paragraph } from "../Paragraph";
+import { Text } from "../Text"
 
-export const Introduction = ({ introduction }) => {
-  if (!introduction.content) return;
+export const Subtitle = ({ subtitle }) => {
+  if (!subtitle) return;
 
   return (
     <BlocksRenderer 
-      content={introduction.content}
+      content={subtitle}
       blocks={{
         paragraph: ({ children }) => (
-          <Paragraph className="Introduction mb-8">
+          <Text type="paragraphLarge" className="Subtitle mb-8">
             {children}
-          </Paragraph>
+          </Text>
         )
       }}
       modifiers={{
-        bold: ({ children }) => <strong className="!font-semibold text-tomato">{children}</strong>,
+        bold: ({ children }) => <strong className="!font-bold text-tomato">{children}</strong>,
         italic: ({ children }) => <span className="!italic">{children}</span>,
       }}
     />

@@ -1,6 +1,5 @@
 import React from "react";
 import { Blobs, BlobsLight } from "../organisms";
-import { Heading, Introduction } from "../atoms";
 
 export const PagePrestationLayout = ({children, className: additionalStyle}) => {
   return (

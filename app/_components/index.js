@@ -11,6 +11,7 @@ export { TagFormula } from './atoms';
 export { Text } from './atoms';
 export { Copyright } from './atoms';
 export { Introduction } from './atoms';
+export { Subtitle } from './atoms';
 
 export { ButtonLarge } from './molecules';
 export { Button } from './molecules';

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, PagePrestationLayout, Introduction, Paragraph, Text, Footer } from "@/app/_components";
+import { Heading, BlocksManager, PagePrestationLayout, Introduction, Footer, Subtitle } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { fetchDataFromStrapi, fetchSEODataPrestations } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
@@ -41,7 +41,7 @@ const PrestationPage = async ({ params }) => {
     return <UnderConstructionPage />;
   }
 
-  const { title, expertise, target, introduction, blocks } = prestation.attributes || [];
+  const { title, expertise, subtitle, introduction, blocks } = prestation.attributes || [];
   const footer = globalData.attributes.footer;
 
   return (
@@ -62,9 +62,11 @@ const PrestationPage = async ({ params }) => {
         <Heading level={1} className="paragraphLarge uppercase text-purple-ultraLight">
           {expertise}
         </Heading>
-        <Heading level={2} className="text-2md md:text-3lg lg:text-xl 2xl:text-2xl !mt-0 leading-tight text-tomato">{title}</Heading>
-        <Introduction content={introduction.content} />
-        <Paragraph>{target}</Paragraph>
+        <Heading level={2} className="text-2md md:text-2lg lg:text-3lg 2xl:text-xl !mt-0 tracking-tighter leading-tight text-pretty text-tomato">
+          {title}
+        </Heading>
+        <Subtitle subtitle={subtitle} />
+        <Introduction introduction={introduction} />
         <BlocksManager blocks={blocks} />
       </PagePrestationLayout>
       <Footer footer={footer} />

@@ -1,4 +1,4 @@
-import { BlocksManager, Hero, Introduction, MainLayout, SectionCTA } from "./_components";
+import { BlocksManager, Hero, MainLayout, SectionCTA, Subtitle } from "./_components";
 import { fetchDataFromStrapi } from "./_utils/strapi.utils";
 
 const Home = async () => {
@@ -11,7 +11,7 @@ const Home = async () => {
     <MainLayout>
       <Hero />
       <div className="HomeContent relative xl:-right-1/3 3xl:-right-2/5 max-w-800 lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl px-4 md:px-8 xl:px-0 mt-24 mb-12 md:mb-0 md:ml-20 xl:ml-0">
-        <Introduction content={introduction.content} />
+        <Subtitle subtitle={introduction.content} />
         <BlocksManager blocks={blocks} />
       </div>
       {sectionCTA && (
