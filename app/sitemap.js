@@ -42,6 +42,12 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.64,
     },
+    {
+      url: 'https://fionarx.com/prestations/seo',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // {
     //   url: 'https://fionarx.com/projets',
     //   lastModified: new Date(),
