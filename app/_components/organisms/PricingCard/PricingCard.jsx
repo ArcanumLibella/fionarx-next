@@ -16,7 +16,7 @@ export const PricingCard = ({
   formula,
   isFrom,
   price,
-  time,
+  duration,
   item1,
   item2,
   item3,
@@ -43,7 +43,7 @@ export const PricingCard = ({
         {/* TITLE */}
         <Heading
           level={3}
-          className="PricingCard__title mb-6 lg:min-h-[84px] font-brother !font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
+          className="PricingCard__title mb-6 lg:min-h-[108px] font-brother !font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
         >
           {title}
         </Heading>
@@ -51,9 +51,13 @@ export const PricingCard = ({
         {/* PRICING */}
         <div className="PricingCard__pricing relative">
           {/* ISFROM */}
-          {isFrom && (
+          {isFrom ? (
             <Text type="custom" className="PricingCard__from absolute -top-2 font-body text-tiny text-tomato" >
               à partir de
+            </Text>
+          ) : (
+            <Text type="custom" className="PricingCard__from absolute -top-2 font-body text-tiny text-tomato" >
+              seulement
             </Text>
           )}
           {/* PRICE */}
@@ -62,7 +66,7 @@ export const PricingCard = ({
           >
             {price} €
           </span>
-          <Text type="custom" className="font-bold">➤ {time} mois à vos côtés 💪🏻</Text>
+          <Text type="custom" className="font-bold">➤ {duration}</Text>
         </div>
 
         {/* SEPARATOR */}
