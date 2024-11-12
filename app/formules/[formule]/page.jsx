@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, PagePrestationLayout, Introduction, Paragraph, Text, Footer } from "@/app/_components";
+import { Heading, BlocksManager, Paragraph, Text, Footer, Subtitle } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { COLORS } from "@/app/_constants/Colors";
 import { ArrowLeftIcon } from "@/public/_assets/icons";
 import { fetchDataFromStrapi, fetchSEODataFormules } from "@/app/_utils/strapi.utils";
+import { PageFormuleLayout } from "@/app/_components/layouts";
 
 export async function generateMetadata({ params }) {
   const seoData = await fetchSEODataFormules(params.formule);
@@ -46,7 +47,7 @@ const FormulaPage = async ({ params }) => {
 
   return (
     <>
-      <PagePrestationLayout
+      <PageFormuleLayout
         className="xl:pb-48 2xl:pb-96"
       >
         <Link href="/formules" className="flex items-center mb-8">
@@ -63,10 +64,10 @@ const FormulaPage = async ({ params }) => {
           {vision}
         </Text>
         <Heading level={1} className="h1 mb-6 md:mb-10 text-tomato">{title}</Heading>
-        <Introduction content={introduction.content} />
+        <Subtitle subtitle={introduction.content} />
         <Paragraph>{target}</Paragraph>
         <BlocksManager blocks={blocks} />
-      </PagePrestationLayout>
+      </PageFormuleLayout>
       <Footer footer={footer} />
     </>
   );
