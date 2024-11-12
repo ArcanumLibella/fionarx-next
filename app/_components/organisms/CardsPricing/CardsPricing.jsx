@@ -30,7 +30,7 @@ if (!pricingCards) return;
               slug={card.slug}
               isFrom={card.isFrom}
               price={card.price}
-              time={card.time}
+              duration={card.duration}
               item1={card.item1}
               item2={card.item2}
               item3={card.item3}
