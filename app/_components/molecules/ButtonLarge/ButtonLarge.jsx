@@ -13,7 +13,7 @@ export const ButtonLarge = ({
     <Link
       href={url}
       className={`
-        flex items-center px-8 py-5 max-w-fit border-2 border-tomato rounded-md group transition-all ease-in-out hover:duration-300 hover:bg-tomato cursor-pointer
+        ButtonLarge flex items-center px-8 py-5 max-w-fit border-2 border-tomato rounded-md group transition-all ease-in-out hover:duration-300 hover:bg-tomato cursor-pointer
         ${isCentered && 'mx-auto'}
         ${additionalStyle}
       `}
@@ -21,7 +21,7 @@ export const ButtonLarge = ({
     >
       <Text 
         type="custom"
-        className="font-brother font-black text-base text-center text-tomato group-hover:text-white group-hover:duration-300 uppercase"
+        className="font-brother font-black text-normal md:text-base text-center text-tomato group-hover:text-white group-hover:duration-300 uppercase text-pretty"
       >
         {label}
       </Text>
