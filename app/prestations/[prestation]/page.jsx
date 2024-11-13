@@ -59,7 +59,7 @@ const PrestationPage = async ({ params }) => {
             Prestations
           </span>
         </Link>
-        <Heading level={1} className="paragraphLarge uppercase text-purple-ultraLight">
+        <Heading level={1} className="!text-normal xs:!text-base md:!text-2base 2xl:!text-md mb-4 uppercase text-purple-ultraLight">
           {expertise}
         </Heading>
         <Heading level={2} className="text-md md:text-lg lg:text-2lg 2xl:text-xl !mt-0 tracking-tighter leading-tight text-pretty text-tomato">
