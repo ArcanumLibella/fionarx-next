@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, PagePrestationLayout, Introduction, Footer, Subtitle } from "@/app/_components";
+import { Heading, BlocksManager, PagePrestationLayout, Introduction, Footer, Subtitle, SectionCTA } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { fetchDataFromStrapi, fetchSEODataPrestations } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
@@ -41,7 +41,7 @@ const PrestationPage = async ({ params }) => {
     return <UnderConstructionPage />;
   }
 
-  const { title, expertise, subtitle, introduction, blocks } = prestation.attributes || [];
+  const { title, expertise, subtitle, introduction, blocks, sectionCTA } = prestation.attributes || [];
   const footer = globalData.attributes.footer;
 
   return (
@@ -69,6 +69,15 @@ const PrestationPage = async ({ params }) => {
         <Introduction introduction={introduction} />
         <BlocksManager blocks={blocks} />
       </PagePrestationLayout>
+      {sectionCTA && (
+        <SectionCTA
+          key={`SectionCTA-${sectionCTA.id}`}
+          title={sectionCTA.title}
+          subtitle={sectionCTA.subtitle}
+          button={sectionCTA.button}
+          className="relative md:-bottom-20 xl:-bottom-36 2xl:-bottom-64 md:ml-24 pb-24 md:pb-48"
+        />
+      )}
       <Footer footer={footer} />
     </>
   );
