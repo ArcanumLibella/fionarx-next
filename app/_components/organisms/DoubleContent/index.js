@@ -1,0 +1,1 @@
+export { DoubleContent } from "./DoubleContent";

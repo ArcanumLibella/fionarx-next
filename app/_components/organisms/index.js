@@ -20,3 +20,4 @@ export { Options } from "./Options";
 export { CardOption } from "./CardOption";
 export { CardsBasic } from "./CardsBasic";
 export { Footer } from "./Footer";
+export { DoubleContent } from "./DoubleContent";

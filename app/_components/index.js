@@ -50,6 +50,7 @@ export { Options } from "./organisms";
 export { CardOption } from "./organisms";
 export { CardsBasic } from "./organisms";
 export { Footer } from "./organisms";
+export { DoubleContent } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";

@@ -4,7 +4,7 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, DoubleButton } from "./molecules";
-import { Accordion, CardsBasic, CardsPrestation, CardsPricing, Checklists, FormulaPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
+import { Accordion, CardsBasic, CardsPrestation, CardsPricing, Checklists, DoubleContent, FormulaPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
@@ -94,7 +94,15 @@ export function BlocksManager({ blocks }) {
           case "blocks.stages":
             return <Stages key={`Stages-${block.id}`} stages={block.stages} />;  
           case "blocks.section-cta":
-            return <SectionCTA key={`SectionCTA-${block.id}`} title={block.title} subtitle={block.subtitle} button={block.button}  />;  
+            return (
+              <SectionCTA 
+                key={`SectionCTA-${block.id}`}
+                title={block.title}
+                subtitle={block.subtitle}
+                button={block.button}
+                isLarge={block.isLarge}
+              />
+            );  
           case "blocks.check-lists":
             return (
               <Checklists
@@ -141,7 +149,17 @@ export function BlocksManager({ blocks }) {
                 items={block.items}
               />
             );
-          default:
+            case "blocks.double-content":
+              return (
+                <DoubleContent 
+                  key={`DoubleContent-${block.id}`}
+                  image={block.image}
+                  text={block.text}
+                  button={block.button}
+                  reverse={block.reverse}
+                />
+              );
+            default:
             return null;
         }
       })}
