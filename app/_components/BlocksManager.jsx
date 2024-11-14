@@ -149,18 +149,18 @@ export function BlocksManager({ blocks }) {
                 items={block.items}
               />
             );
-            case "blocks.double-content":
-              return (
-                <DoubleContent 
-                  key={`DoubleContent-${block.id}`}
-                  image={block.image}
-                  text={block.text}
-                  button={block.button}
-                  reverse={block.reverse}
-                />
-              );
-            default:
-            return null;
+          case "blocks.double-content":
+            return (
+              <DoubleContent 
+                key={`DoubleContent-${block.id}`}
+                image={block.image}
+                text={block.text}
+                button={block.button}
+                reverse={block.reverse}
+              />
+            );
+          default:
+          return null;
         }
       })}
     </div>
