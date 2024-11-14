@@ -47,7 +47,7 @@ const PrestationPage = async ({ params }) => {
   return (
     <>
       <PagePrestationLayout
-        className="xl:pb-48 2xl:pb-96"
+        className="xl:pb-48 2xl:pb-64"
       >
         <Link href="/prestations" className="flex items-center mb-8">
           <ArrowLeftIcon

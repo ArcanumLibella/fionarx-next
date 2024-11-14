@@ -6,7 +6,7 @@ export const CardsPricing = ({ title, description, pricingCards, cardCTA }) => {
 if (!pricingCards) return;
 
   return (
-    <div className="CardsPricing w-full my-16 2xl:mt-32">
+    <div className="CardsPricing w-full my-12 xl:mb-20">
       {title && (
         <div className="CardsPrestation__title flex justify-center w-full">
           <Heading level="gradient" className="h-gradient max-w-xl mb-4">{title}</Heading>
@@ -18,7 +18,7 @@ if (!pricingCards) return;
         </div>
       )}
       
-      <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 mt-12 md:mt16 lg:px-0">
+      <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 mt-12 md:mt-16 lg:px-0">
         {pricingCards.map((card) => {
           return (
             <PricingCard
