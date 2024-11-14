@@ -18,7 +18,7 @@ export const Stages = ({ stages }) => {
               content={stage.description}
               blocks={{
                 paragraph: ({ children }) => (
-                  <Paragraph className="!text-normal md:!text-base">
+                  <Paragraph className="!text-normal md:!text-2normal">
                     {children}
                   </Paragraph>
                 )
