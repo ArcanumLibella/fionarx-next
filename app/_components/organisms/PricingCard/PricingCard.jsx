@@ -15,6 +15,7 @@ export const PricingCard = ({
   slug,
   formula,
   isFrom,
+  isMonthly,
   price,
   duration,
   item1,
@@ -43,7 +44,7 @@ export const PricingCard = ({
         {/* TITLE */}
         <Heading
           level={3}
-          className="PricingCard__title mb-6 lg:min-h-[108px] font-brother !font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
+          className="PricingCard__title mb-6 md:min-h-[60px] lg:min-h-[108px] font-brother !font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
         >
           {title}
         </Heading>
@@ -66,7 +67,13 @@ export const PricingCard = ({
           >
             {price} €
           </span>
-          <Text type="custom" className="font-bold">➤ {duration}</Text>
+          {/* ISMONTHLY */}
+          {isMonthly && (
+            <Text type="custom" className="PricingCard__isMonthly absolute bottom-8 font-body text-normal text-tomato" >
+              / mois
+            </Text>
+          )}
+          <Text type="custom" className="mt-4 font-bold">➤ {duration}</Text>
         </div>
 
         {/* SEPARATOR */}

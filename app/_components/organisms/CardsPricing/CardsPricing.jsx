@@ -29,6 +29,7 @@ if (!pricingCards) return;
               title={card.title}
               slug={card.slug}
               isFrom={card.isFrom}
+              isMonthly={card.isMonthly}
               price={card.price}
               duration={card.duration}
               item1={card.item1}
