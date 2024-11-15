@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { Heading } from "../../atoms";
+import { Heading, Paragraph } from "../../atoms";
 import { ChevronsDownIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
-import { Checklist } from "../../molecules";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export const Accordion = ({ accordion }) => {  
+  console.log(accordion)
   
   // Gestion de l'état des sections ouvertes
   const [openSections, setOpenSections] = useState({});
@@ -14,17 +15,17 @@ export const Accordion = ({ accordion }) => {
   // Ouverture de la première section à l'ouverture de la page
   useEffect(() => {
     if (accordion.length > 0) {
-      setOpenSections({ [accordion[0].slug]: true });
+      setOpenSections({ [accordion[0].id]: true });
     }
   }, [accordion]);
   
   if (!accordion) return;
 
   // Fonction pour gérer l'ouverture/fermeture des sections
-  const toggleSection = (sectionSlug) => {
+  const toggleSection = (sectionId) => {
     setOpenSections((prevState) => ({
       ...prevState,
-      [sectionSlug]: !prevState[sectionSlug],
+      [sectionId]: !prevState[sectionId],
     }));
   };
 
@@ -32,22 +33,20 @@ export const Accordion = ({ accordion }) => {
     <div id="Accordion" className="Accordion my-16">
       {accordion.map((item) => (
         <div key={item.id} className="Accordion__section">
-          <div id={`item-${item.slug}`} className="Accordion__header">
+          <div id={`item-${item.id}`} className="Accordion__header">
             <button
-              className={`group relative flex w-full items-center bg-purple-light text-white px-5 py-4 text-base transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none ${
-                openSections[item.slug] ? 'bg-purple-dark !text-tomato' : ''
-              }`}
+              className="group relative flex w-full items-center bg-purple-light px-5 py-4 text-base transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none"
               type="button"
-              onClick={() => toggleSection(item.slug)}
-              aria-expanded={openSections[item.slug] || false}
-              aria-controls={`collapse-${item.slug}`}
+              onClick={() => toggleSection(item.id)}
+              aria-expanded={openSections[item.id] || false}
+              aria-controls={`collapse-${item.id}`}
             >
-              <Heading level={2} className="h4 !mb-0 text-left font-extrabold uppercase">
+              <Heading level={3} className="h5 !my-0 text-left font-bold text-tomato">
                 {item.title}
               </Heading>
               <span
                 className={`-me-1 ms-auto h-5 w-5 shrink-0 transition-transform duration-200 ease-in-out ${
-                  openSections[item.slug] ? 'rotate-[-180deg]' : 'rotate-0'
+                  openSections[item.id] ? 'rotate-[-180deg]' : 'rotate-0'
                 }`}
               >
                 <ChevronsDownIcon
@@ -58,28 +57,40 @@ export const Accordion = ({ accordion }) => {
               </span>
             </button>
           </div>
-          {openSections[item.slug] && (
+          {openSections[item.id] && (
             <div
-              id={`collapse-${item.slug}`}
-              className="Accordion__content lg:grid lg:grid-cols-2 px-5 py-4 bg-purple"
-              aria-labelledby={`item-${item.slug}`}
+              id={`collapse-${item.id}`}
+              className="Accordion__text p-4 xl:p-8 bg-purple"
+              aria-labelledby={`item-${item.id}`}
               data-twe-parent="#Accordion"
             >
-              <div className="Features mb-8 lg:mb-0 lg:mr-4">
-                <Heading level={5} className="h5 mt-3 mb-4 text-purple-ultraLight">
-                  Détail du contenu
-                </Heading>
-                <ul className="Features__items">
-                  <Checklist content={item.features} />
-                </ul>
-              </div>
-              <div className="Deliverables mb-6 lg:mb-0 lg:ml-4">
-                <Heading level={5} className="h5 mt-3 mb-4 text-purple-ultraLight">
-                  Livrables associés
-                </Heading>
-                <ul className="Deliverables__items">
-                  <Checklist content={item.deliverables} />
-                </ul>
+              <div className="Accordion__text mb-8 lg:mb-0 lg:mr-4">
+                <BlocksRenderer 
+                  content={item.text}
+                  blocks={{
+                    paragraph: ({ children }) => {
+                      return (
+                      <Paragraph key={`Paragraph-${item.id}`}>
+                        {children}
+                      </Paragraph>
+                    )
+                  },
+                    heading: ({ children, level }) => {                    
+                      return (
+                        <Heading key={`Heading-${item.id}`} level={level} className="!mt-0">
+                          {children}
+                        </Heading>
+                      )
+                    },
+                    link: ({ children, url }) => <a key={`link-${item.id}`} href={url} target="_blank" rel="noreferrer" title="Ouvrir le lien" className="Link font-medium text-tomato hover:!underline">{children}</a>,
+                    list: ({ children }) => <ul key={`list-items-${item.id}`} className="List list-disc list-inside">{children}</ul>,
+                    quote: ({ children }) => <blockquote key={`Quote-${item.id}`} className="my-6 p-4 xs:p-6 w-full max-w-full text-normal rounded bg-purple-light">{children}</blockquote>,
+                  }}
+                  modifiers={{
+                    bold: ({ children }) => <strong className="!font-semibold text-tomato">{children}</strong>,
+                    italic: ({ children }) => <span className="!italic">{children}</span>,
+                  }}
+                />
               </div>
             </div>
           )}
