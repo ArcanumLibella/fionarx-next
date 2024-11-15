@@ -5,7 +5,6 @@ import { Heading, Paragraph } from "../../atoms";
 import { Button, ButtonLarge } from "../../molecules";
 
 export const DoubleContent = ({ image, text, button, reverse }) => {
-  console.log(image)
   return (
     <div className={`DoubleContent flex flex-col lg:flex-row ${reverse && "lg:flex-row-reverse"} items-center gap-4 xl:gap-8 my-8`}>
       <div className="mb-8 lg:mb-0">
@@ -13,7 +12,6 @@ export const DoubleContent = ({ image, text, button, reverse }) => {
           <BlocksRenderer 
             content={text}
             blocks={{
-              
               paragraph: ({ children }) => {
                 return (
                 <Paragraph key={`Paragraph-${text.id}`}>

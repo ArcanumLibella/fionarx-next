@@ -17,11 +17,16 @@ export const Stages = ({ stages }) => {
             key={`BlocksRenderer-${stage.id}`}
             content={stage.description}
             blocks={{
-              paragraph: ({ children }) => (
+              paragraph: ({ children }) => {
+                return (
                 <Paragraph className="!text-normal md:!text-2normal">
                   {children}
                 </Paragraph>
               )
+            },
+            link: ({ children, url }) => <a key={`link-${stage.id}`} href={url} target="_blank" rel="noreferrer" title="Ouvrir le lien" className="Link font-medium text-tomato hover:!underline">{children}</a>,
+            list: ({ children }) => <ul key={`list-items-${stage.id}`} className="List list-disc list-inside">{children}</ul>,
+            quote: ({ children }) => <blockquote key={`Quote-${stage.id}`} className="my-6 p-4 xs:p-6 w-full max-w-full text-2normal rounded bg-purple-light">{children}</blockquote>,
             }}
             modifiers={{
               bold: ({ children }) => <strong key={`strong-${stage.id}`} className="font-medium text-tomato">{children}</strong>,
