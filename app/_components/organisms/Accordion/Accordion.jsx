@@ -42,7 +42,7 @@ export const Accordion = ({ accordion }) => {
               aria-expanded={openSections[item.slug] || false}
               aria-controls={`collapse-${item.slug}`}
             >
-              <Heading level={4} className="h4 !mb-0 text-left font-extrabold uppercase">
+              <Heading level={2} className="h4 !mb-0 text-left font-extrabold uppercase">
                 {item.title}
               </Heading>
               <span

@@ -13,21 +13,21 @@ export const Stages = ({ stages }) => {
             </Text>
           </span>
           <Heading level={3} className="pt-1.5 md:pt-2 mb-4 text-normal md:!text-base !leading-tight uppercase">{stage.title}</Heading>
-            <BlocksRenderer 
-              key={`BlocksRenderer-${stage.id}`}
-              content={stage.description}
-              blocks={{
-                paragraph: ({ children }) => (
-                  <Paragraph className="!text-normal md:!text-2normal">
-                    {children}
-                  </Paragraph>
-                )
-              }}
-              modifiers={{
-                bold: ({ children }) => <strong key={`strong-${stage.id}`} className="font-medium text-tomato">{children}</strong>,
-                italic: ({ children }) => <span key={`italic-${stage.id}`} className="italic">{children}</span>,
-              }}
-            />
+          <BlocksRenderer 
+            key={`BlocksRenderer-${stage.id}`}
+            content={stage.description}
+            blocks={{
+              paragraph: ({ children }) => (
+                <Paragraph className="!text-normal md:!text-2normal">
+                  {children}
+                </Paragraph>
+              )
+            }}
+            modifiers={{
+              bold: ({ children }) => <strong key={`strong-${stage.id}`} className="font-medium text-tomato">{children}</strong>,
+              italic: ({ children }) => <span key={`italic-${stage.id}`} className="italic">{children}</span>,
+            }}
+          />
         </li>
         ))}                
     </ol>

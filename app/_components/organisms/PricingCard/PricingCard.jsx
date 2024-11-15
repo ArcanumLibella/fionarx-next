@@ -63,7 +63,7 @@ export const PricingCard = ({
           )}
           {/* PRICE */}
           <span
-            className="PricingCard__price font-body font-bold uppercase text-xl text-tomato"
+            className="PricingCard__price font-body font-bold uppercase text-xl xl:text-3lg 2xl:text-xl text-tomato"
           >
             {price} €
           </span>
