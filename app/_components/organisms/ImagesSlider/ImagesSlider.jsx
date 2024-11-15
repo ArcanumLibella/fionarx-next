@@ -14,7 +14,7 @@ export const ImagesSlider = ({ images }) => {
             <figure key={image.id} className="min-w-72 md:max-w-fit lg:min-w-80 xl:min-w-min mr-4 mb-4">
               <Image
                 src={image.attributes.url}
-                alt={image.attributes.alt}
+                alt={image.attributes.alternativeText}
                 width={image.attributes.width}
                 height={image.attributes.height}
                 blurDataURL={image.attributes.url}
