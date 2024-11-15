@@ -6,9 +6,7 @@ import { ChevronsDownIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-export const Accordion = ({ accordion }) => {  
-  console.log(accordion)
-  
+export const Accordion = ({ accordion }) => {
   // Gestion de l'état des sections ouvertes
   const [openSections, setOpenSections] = useState({});
   
@@ -41,7 +39,7 @@ export const Accordion = ({ accordion }) => {
               aria-expanded={openSections[item.id] || false}
               aria-controls={`collapse-${item.id}`}
             >
-              <Heading level={3} className="h5 !my-0 !font-medium text-white">
+              <Heading level={3} className="h5 !my-0 !font-medium !text-left text-white">
                 {item.title}
               </Heading>
               <span
