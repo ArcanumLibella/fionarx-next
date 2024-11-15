@@ -32,7 +32,7 @@ export const Accordion = ({ accordion }) => {
   return (
     <div id="Accordion" className="Accordion my-16">
       {accordion.map((item) => (
-        <div key={item.id} className="Accordion__section">
+        <div key={item.id} className="Accordion__section border border-purple">
           <div id={`item-${item.id}`} className="Accordion__header">
             <button
               className="group relative flex w-full items-center bg-purple-light px-5 py-4 text-base transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none"
@@ -41,7 +41,7 @@ export const Accordion = ({ accordion }) => {
               aria-expanded={openSections[item.id] || false}
               aria-controls={`collapse-${item.id}`}
             >
-              <Heading level={3} className="h5 !my-0 text-left font-bold text-tomato">
+              <Heading level={3} className="h5 !my-0 !font-medium text-white">
                 {item.title}
               </Heading>
               <span
@@ -60,7 +60,7 @@ export const Accordion = ({ accordion }) => {
           {openSections[item.id] && (
             <div
               id={`collapse-${item.id}`}
-              className="Accordion__text p-4 xl:p-8 bg-purple"
+              className="Accordion__content p-4 xl:p-8 bg-purple"
               aria-labelledby={`item-${item.id}`}
               data-twe-parent="#Accordion"
             >
