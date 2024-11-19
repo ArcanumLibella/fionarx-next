@@ -4,7 +4,6 @@ import React from "react";
 import { Heading, Paragraph, Text } from "../../atoms";
 import { Button } from "../../molecules";
 import Link from "next/link";
-import { Card } from "flowbite-react";
 
 export const CardOption = ({
   tag,
@@ -49,7 +48,7 @@ export const CardOption = ({
           isCentered
           isExternal={isExternal}
           isDisabled={isDisabled}
-          className="CardOption__button !bg-tomato border-2 border-tomato"
+          className="CardOption__button"
         />
       </div>
     </>

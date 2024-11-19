@@ -34,7 +34,7 @@ export const Button = ({
         <Link
           href={url}
           className={`
-            flex justify-center px-5 py-3 w-full rounded-md group transition-all ease-in-out hover:duration-300 hover:bg-tomato cursor-pointer
+            flex justify-center px-5 py-3 w-full rounded-md bg-tomato border-tomato group transition-all ease-in-out hover:duration-300 cursor-pointer
             ${isCentered && 'mx-auto'}
             ${additionalStyle}
           `}
