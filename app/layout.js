@@ -9,8 +9,8 @@ export const metadata = {
     template: 'Fiona Roux %s',
     default: 'Fiona Roux - Consultant en Stratégie Digitale freelance',
   },
-  description: "Fiona Roux, consultant en stratégie digitale freelance à Avignon 🌞, une seule collaboratrice pour une Stratégie Digitale 360 ✨ : référencement (seo), audit digital, webdesign, création de site internet et optimisation Instagram",
-  keywords: ['consultant en stratégie digital freelance', 'consultant seo freelance', 'webdesigner freelance', 'audit digital', 'création de site internet', 'développeur wordpress avignon', 'développement web', 'web design', 'charte graphique', 'personal branding', 'webmarketing', 'seo', 'référencement naturel', 'référencement local', 'fiche google my business', 'optimisation instagram'],
+  description: "Fiona Roux, consultant en stratégie digitale freelance, une seule collaboratrice pour une Stratégie Digitale 360 ✨ : audit digital, SEO et référencement local, branding, web design et création de site internet.",
+  keywords: ['consultant en stratégie digital freelance', 'consultant seo freelance', 'webdesigner freelance', 'audit digital', 'création de site internet', 'développeur wordpress avignon', 'développement web', 'web design', 'charte graphique', 'personal branding', 'webmarketing', 'seo', 'référencement naturel', 'référencement local', 'fiche google my business'],
   robots: "INDEX, FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1",
   authors: [{ name: 'Fiona Roux' }],
   alternates: {
@@ -19,7 +19,7 @@ export const metadata = {
   metadataBase: new URL('https://www.fionarx.com/'),
   openGraph: {
     title: "Fiona Roux - Consultante en Stratégie Digitale freelance",
-    description: "Fiona Roux, consultante en stratégie digitale freelance à Avignon 🌞, une seule collaboratrice pour une Stratégie Digitale 360 ✨ : référencement (seo), audit digital, webdesign, création de site internet et optimisation Instagram",
+    description: "Fiona Roux, consultante en stratégie digitale freelance, une seule collaboratrice pour une Stratégie Digitale 360 ✨ : audit digital, SEO et référencement local, branding, web design et création de site internet.",
     url: 'https://www.fionarx.com',
     siteName: 'FionaRx',
     images: [
