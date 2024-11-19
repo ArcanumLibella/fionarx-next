@@ -24,11 +24,12 @@ if (!options) return;
             <CardOption
               key={option.id}
               tag={option.tag}
-              isLarge={option.isLarge}
               title={option.title}
               description={option.description}
               ctaLabel={option.ctaLabel}
               ctaLink={option.ctaLink}
+              isLarge={option.isLarge}
+              isDisabled={option.isDisabled}
             />
           );
         })}
