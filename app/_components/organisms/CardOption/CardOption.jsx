@@ -65,8 +65,6 @@ export const CardOption = ({
           {CardContent}
         </Link>
       )}
-      
-      
     </div>
   );
 };

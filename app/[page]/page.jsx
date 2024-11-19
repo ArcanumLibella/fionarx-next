@@ -41,7 +41,7 @@ const SinglePage = async ({ params }) => {
 
   const blocks = page.attributes.blocks || [];
   const sectionCTA = page.attributes.sectionCTA || null;
-  const footer = globalData.attributes.footer;
+  const footer = globalData.attributes.footer || null;
 
   return (
     <>
