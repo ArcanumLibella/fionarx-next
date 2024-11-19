@@ -1,4 +1,4 @@
-import { BlocksManager, Hero, MainLayout, SectionCTA, Subtitle } from "./_components";
+import { BlocksManager, Footer, Hero, MainLayout, SectionCTA, Subtitle } from "./_components";
 import { fetchDataFromStrapi } from "./_utils/strapi.utils";
 
 const Home = async () => {
@@ -6,6 +6,7 @@ const Home = async () => {
   const introduction = data.attributes.introduction || null;
   const blocks = data.attributes.blocks || [];
   const sectionCTA = data.attributes.sectionCTA || null;
+  const footer = data.attributes.footer || null;
 
   return (
     <MainLayout>
@@ -23,6 +24,7 @@ const Home = async () => {
           className="relative md:-bottom-20 xl:-bottom-36 2xl:-bottom-64 py-16 md:py-24 md:ml-20"
         />
       )}
+      <Footer footer={footer} />
     </MainLayout>
   );
 }
