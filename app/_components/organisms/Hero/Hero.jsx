@@ -13,18 +13,18 @@ export const Hero = async () => {
   const renderHero = heroItems.map((item) => {
     if (item.isMainTitle) {
       return (
-        <Link href={item.link} key={item.id} rel="canonical" className="z-10 no-underline mb-4 md:mb-8">
+        <Link href={item.link} key={item.id} rel="canonical" className="z-10 no-underline mt-4 mb-5 md:mb-8">
           <span className="font-brother font-black uppercase text-[12vw] md:text-[10vw] lg:text-[8vh] xl:text-[12vh] text-white cursor-pointer select-none">
             {item.label}
           </span>
-          <Heading level={1} className="font-brother !my-0 font-extrabold uppercase xs:!text-[5vw] !text-[5vw] md:!text-[4vw] lg:!text-[3.5vh] xl:!text-[5vh] 2xl:!text-[5vh] text-white opacity-60 cursor-pointer select-none">
+          <Heading level={1} className="font-brother !mt-0 font-extrabold uppercase xs:!text-[5vw] !text-[5vw] md:!text-[4vw] lg:!text-[3.5vh] xl:!text-[5vh] 2xl:!text-[5vh] text-white opacity-60 cursor-pointer select-none">
             Consultant en Stratégie Digitale freelance
           </Heading>
         </Link>
       )
     } else {
       return (
-        <span key={item.id} className="font-brother !my-0 font-black leading-snug xs:leading-relaxed xl:leading-tight uppercase !text-[8vw] md:!text-[5vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 select-none">
+        <span key={item.id} className="font-brother !my-0 xs:!my-2 xl:!my-0 font-black leading-snug uppercase !text-[7.6vw] md:!text-[4.8vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 select-none">
           {item.label}
         </span>
       )
