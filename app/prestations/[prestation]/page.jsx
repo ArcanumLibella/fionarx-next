@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
     },
     structuredData: seoData.structuredData,
     openGraph: {
-      title: seoData.metaTitle,
+      title: "Fiona Roux | " + seoData.metaTitle,
       description: seoData.metaDescription,
       url: seoData.canonicalURL,
       siteName: 'FionaRx',
