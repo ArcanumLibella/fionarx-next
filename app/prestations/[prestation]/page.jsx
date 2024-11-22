@@ -18,7 +18,23 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `/prestations/${params.prestation}`,
     },
-    structuredData: seoData.structuredData
+    structuredData: seoData.structuredData,
+    openGraph: {
+      title: seoData.metaTitle,
+      description: seoData.metaDescription,
+      url: seoData.canonicalURL,
+      siteName: 'FionaRx',
+      images: [
+        {
+          url: seoData.metaImage.data.attributes.url, // Must be an absolute URL
+          width: seoData.metaImage.data.attributes.width,
+          height: seoData.metaImage.data.attributes.height,
+          alt: seoData.metaImage.data.attributes.alternativeText,
+        }
+      ],
+      locale: 'fr_FR',
+      type: 'website',
+    }
   }
 }
 
