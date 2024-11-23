@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "./_components/GoogleAnalytics";
 import { MainLayout } from "./_components";
 import "./globals.css";
@@ -43,8 +41,6 @@ export default function RootLayout({ children }) {
         <MainLayout>
           {children}
         </MainLayout>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   )
