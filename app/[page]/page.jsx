@@ -16,7 +16,23 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `/${params.page}`,
     },
-    structuredData: seoData.structuredData
+    structuredData: seoData.structuredData,
+    openGraph: {
+      title: "Fiona Roux - Consultante en Stratégie Digitale freelance",
+      description: "Une seule collaboratrice pour une Stratégie Digitale 360 : audit digital, SEO et référencement local, branding, web design et création de site internet.",
+      url: seoData.canonicalURL,
+      siteName: 'FionaRx',
+      images: [
+        {
+          url: 'https://raw.githubusercontent.com/ArcanumLibella/fionarx-next/main/public/_assets/images/OPENGRAPH-800x600.png', // Must be an absolute URL
+          width: 800,
+          height: 600,
+          alt: 'OpenGraph - 800 x 600',
+        }
+      ],
+      locale: 'fr_FR',
+      type: 'website',
+    }
   }
 }
 
