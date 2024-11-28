@@ -91,6 +91,8 @@ export const Menu = ({ socialsItems, menuItems }) => {
               href={malt}
               target="_blank"
               rel="noreferrer"
+              title="Mon profil Malt"
+              aria-label="Venez découvrir mon profil Malt !"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
               className="ml-1 xs:ml-4"
@@ -106,6 +108,8 @@ export const Menu = ({ socialsItems, menuItems }) => {
               href={linkedin}
               target="_blank"
               rel="noreferrer"
+              title="Mon profil Linkedin"
+              aria-label="Venez découvrir mon profil Linkedin !"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
               className="ml-1 xs:ml-4"
@@ -121,6 +125,8 @@ export const Menu = ({ socialsItems, menuItems }) => {
               href={github}
               target="_blank"
               rel="noreferrer"
+              title="Mon profil Github"
+              aria-label="Venez découvrir mon profil Github !"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
               className="ml-1 xs:ml-4"
@@ -136,6 +142,8 @@ export const Menu = ({ socialsItems, menuItems }) => {
               href={dribbble}
               target="_blank"
               rel="noreferrer"
+              title="Mon profil Dribbble"
+              aria-label="Venez découvrir mon profil Dribbble !"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
               className="ml-1 xs:ml-4"
@@ -151,6 +159,8 @@ export const Menu = ({ socialsItems, menuItems }) => {
               href={behance}
               target="_blank"
               rel="noreferrer"
+              title="Mon profil Behance"
+              aria-label="Venez découvrir mon profil Behance !"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
               className="ml-1 xs:ml-4"
@@ -166,6 +176,8 @@ export const Menu = ({ socialsItems, menuItems }) => {
               href={instagram}
               target="_blank"
               rel="noreferrer"
+              title="Mon compte Instagram"
+              aria-label="Venez découvrir mon compte Instagram !"
               whileHover={{ scale: 1.2 }}
               variants={menuItemVariants}
               className="ml-1 xs:ml-4"
