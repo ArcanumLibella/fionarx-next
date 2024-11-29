@@ -37,12 +37,6 @@ export default function sitemap() {
       priority: 0.64,
     },
     {
-      url: 'https://fionarx.com/formules/social-impact',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.64,
-    },
-    {
       url: 'https://fionarx.com/prestations/seo',
       lastModified: new Date(),
       changeFrequency: 'monthly',
