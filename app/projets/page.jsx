@@ -2,17 +2,19 @@ import { ProjectCard, ProjectsLayout } from "../_components";
 import { fetchDataFromStrapi, fetchProjects } from "../_utils/strapi.utils";
 
 export const metadata = {
-  title: 'Projets',
-  description: "Voici une liste de quelques projets que j'ai réalisé ces dernières années.",
-  keywords: ['Indépendant', 'Freelance', 'Design', 'Développement Web', 'WebDesign', 'Branding', 'WebMarketing', 'SEO', 'SEA', 'Social Media', 'Tunnel de vente', 'Site vitrine'],
+  title: "Projets",
+  description: "",
+  keywords: [],
+  robots: "NO-INDEX, NO-FOLLOW, MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1",
+  authors: [{ name: "Fiona Roux" }],
   alternates: {
-    canonical: '/projets',
+    canonical: "https://www.fionarx.com/projets",
   },
   openGraph: {
-    title: 'Fiona Roux',
-    description: 'Consultante en Stratégie Digitale dans le Sud de la France',
-    url: 'https://www.fionarx.com',
-    siteName: 'FionaRx',
+    title: "Fiona Roux | Projets",
+    description: "",
+    url: "https://www.fionarx.com/projets",
+    siteName: "FionaRx",
     images: [
       {
         url: 'https://raw.githubusercontent.com/ArcanumLibella/fionarx-next/main/public/_assets/images/OPENGRAPH-800x600.png', // Must be an absolute URL
@@ -21,8 +23,8 @@ export const metadata = {
         alt: 'OpenGraph - 800 x 600',
       }
     ],
-    locale: 'fr_FR',
-    type: 'website',
+    locale: "fr_FR",
+    type: "website",
   }
 }
 

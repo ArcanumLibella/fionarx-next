@@ -41,12 +41,6 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    // {
-    //   url: 'https://fionarx.com/projets',
-    //   lastModified: new Date(),
-    //   changeFrequency: 'monthly',
-    //   priority: 0.5,
-    // },
+    }
   ]
 }
