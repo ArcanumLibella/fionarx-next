@@ -4,20 +4,20 @@ import { Heading, BlocksManager, Paragraph, Text, Footer, Subtitle } from "@/app
 import UnderConstructionPage from "@/app/under-construction";
 import { COLORS } from "@/app/_constants/Colors";
 import { ArrowLeftIcon } from "@/public/_assets/icons";
-import { fetchDataFromStrapi, fetchSEODataFormules } from "@/app/_utils/strapi.utils";
-import { PageFormuleLayout } from "@/app/_components/layouts";
+import { fetchDataFromStrapi, fetchSEODataSolutions } from "@/app/_utils/strapi.utils";
+import { PageSolutionLayout } from "@/app/_components/layouts";
 
 export async function generateMetadata({ params }) {
-  const seoData = await fetchSEODataFormules(params.formule);
+  const seoData = await fetchSEODataSolutions(params.solution);
   if (!seoData) return;
  
   return {
-    title: "| Formules > " + seoData.metaTitle,
+    title: "| Solutions > " + seoData.metaTitle,
     description: seoData.metaDescription,
     keywords: seoData.keywords,
     robots: seoData.metaRobots,
     alternates: {
-      canonical: `/formules/${params.formule}`,
+      canonical: `/solutions/${params.solution}`,
     },
     structuredData: seoData.structuredData,
     openGraph: {
@@ -39,41 +39,41 @@ export async function generateMetadata({ params }) {
   }
 }
 
-const FormulaPage = async ({ params }) => {
+const SolutionPage = async ({ params }) => {
   const globalData = await fetchDataFromStrapi("global?populate=deep");
-  const { formule: slug } = params;
-  let formule;
+  const { solution: slug } = params;
+  let solution;
 
   try {
-    const formules = await fetchDataFromStrapi("formules?populate=deep");
-    if (formules && formules.length > 0) {
-      formule = formules.find((formule) => formule?.attributes?.slug === slug);
+    const solutions = await fetchDataFromStrapi("solutions?populate=deep");
+    if (solutions && solutions.length > 0) {
+      solution = solutions.find((solution) => solution?.attributes?.slug === slug);
     }
   } catch (error) {
-    console.error("Error fetching formules", error);
+    console.error("Error fetching solutions", error);
     return <UnderConstructionPage />;
   }
 
-  if (!formule || !formule.attributes) {
+  if (!solution || !solution.attributes) {
     return <UnderConstructionPage />;
   }
 
-  const { title, vision, target, introduction, blocks } = formule.attributes || [];
+  const { title, vision, target, introduction, blocks } = solution.attributes || [];
   const footer = globalData.attributes.footer;
 
   return (
     <>
-      <PageFormuleLayout
+      <PageSolutionLayout
         className="xl:pb-48 2xl:pb-96"
       >
-        <Link href="/formules" className="flex items-center mb-8">
+        <Link href="/solutions" className="flex items-center mb-8">
           <ArrowLeftIcon
             fill={COLORS.white.DEFAULT}
             width={24}
             height={24}
           />
           <span className="h6 font-bold text-white uppercase hover:text-tomato transition-all ease-in-out">
-            Formules
+            Solutions
           </span>
         </Link>
         <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
@@ -83,10 +83,10 @@ const FormulaPage = async ({ params }) => {
         <Subtitle subtitle={introduction.content} />
         <Paragraph>{target}</Paragraph>
         <BlocksManager blocks={blocks} />
-      </PageFormuleLayout>
+      </PageSolutionLayout>
       <Footer footer={footer} />
     </>
   );
 }
 
-export default FormulaPage;
+export default SolutionPage;

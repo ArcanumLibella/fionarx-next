@@ -59,12 +59,12 @@ export async function fetchSEODataPage(slug) {
   }
 }
 
-export async function fetchSEODataFormules(slug) {
+export async function fetchSEODataSolutions(slug) {
   try {
-    const response = await axios.get(`${BASE_URL}/api/formules?populate=deep`);
-    const formules = response.data.data;
+    const response = await axios.get(`${BASE_URL}/api/solutions?populate=deep`);
+    const solutions = response.data.data;
 
-    const seoData = formules.find(formule => formule.attributes.slug === slug)?.attributes?.seo || null;
+    const seoData = solutions.find(solution => solution.attributes.slug === slug)?.attributes?.seo || null;
     return seoData;
   } catch (error) {
     console.error('Error fetching SEO data:', error);
