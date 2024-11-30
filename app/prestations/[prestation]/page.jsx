@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, PagePrestationLayout, Introduction, Footer, Subtitle, SectionCTA } from "@/app/_components";
+import { Heading, BlocksManager, PrestationLayout, Introduction, Footer, Subtitle, SectionCTA } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { fetchDataFromStrapi, fetchSEODataPrestations } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
@@ -62,17 +62,17 @@ const PrestationPage = async ({ params }) => {
 
   return (
     <>
-      <PagePrestationLayout
+      <PrestationLayout
         className="xl:pb-48 2xl:pb-64"
       >
-        <Link href="/prestations" className="flex items-center mb-8">
+        <Link href="/strategie-digitale" className="flex items-center mb-8">
           <ArrowLeftIcon
             fill={COLORS.white.DEFAULT}
             width={24}
             height={24}
           />
           <span className="h6 text-white font-bold uppercase hover:text-tomato transition-all ease-in-out">
-            Prestations
+            Stratégie Digitale
           </span>
         </Link>
         <Heading level={1} className="!text-normal xs:!text-base md:!text-2base 2xl:!text-md mb-4 uppercase text-purple-ultraLight">
@@ -84,7 +84,7 @@ const PrestationPage = async ({ params }) => {
         <Subtitle subtitle={subtitle} />
         <Introduction introduction={introduction} />
         <BlocksManager blocks={blocks} />
-      </PagePrestationLayout>
+      </PrestationLayout>
       {sectionCTA && (
         <SectionCTA
           key={`SectionCTA-${sectionCTA.id}`}
