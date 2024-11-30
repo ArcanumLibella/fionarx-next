@@ -57,6 +57,7 @@ export { PageLayout } from "./layouts";
 export { ProjectLayout } from "./layouts";
 export { ProjectsLayout } from "./layouts";
 export { ProjectsByCategoryLayout } from "./layouts";
-export { PagePrestationLayout } from "./layouts";
+export { SolutionLayout } from "./layouts";
+export { PrestationLayout } from "./layouts";
 
 export { BlocksManager } from "./BlocksManager";

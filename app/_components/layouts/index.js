@@ -3,5 +3,5 @@ export { PageLayout } from "./PageLayout";
 export { ProjectLayout } from "./ProjectLayout";
 export { ProjectsLayout } from "./ProjectsLayout";
 export { ProjectsByCategoryLayout } from "./ProjectsByCategoryLayout";
-export { PagePrestationLayout } from "./PagePrestationLayout";
-export { PageSolutionLayout } from "./PageSolutionLayout";
+export { PrestationLayout } from "./PrestationLayout";
+export { SolutionLayout } from "./SolutionLayout";

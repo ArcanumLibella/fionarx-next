@@ -5,7 +5,7 @@ import UnderConstructionPage from "@/app/under-construction";
 import { COLORS } from "@/app/_constants/Colors";
 import { ArrowLeftIcon } from "@/public/_assets/icons";
 import { fetchDataFromStrapi, fetchSEODataSolutions } from "@/app/_utils/strapi.utils";
-import { PageSolutionLayout } from "@/app/_components/layouts";
+import { SolutionLayout } from "@/app/_components/layouts";
 
 export async function generateMetadata({ params }) {
   const seoData = await fetchSEODataSolutions(params.solution);
@@ -42,19 +42,28 @@ export async function generateMetadata({ params }) {
 const SolutionPage = async ({ params }) => {
   const globalData = await fetchDataFromStrapi("global?populate=deep");
   const { solution: slug } = params;
+  console.log("params", params)
+  console.log("slug", slug)
   let solution;
+  console.log("solution", solution)
 
   try {
     const solutions = await fetchDataFromStrapi("solutions?populate=deep");
+    console.log("solutions !!!!!", solutions)
     if (solutions && solutions.length > 0) {
       solution = solutions.find((solution) => solution?.attributes?.slug === slug);
+      console.log("SLUG ????", slug)
+      console.log("SOLUTION ????", solution)
+
     }
   } catch (error) {
+    console.log("PROUUUT")
     console.error("Error fetching solutions", error);
     return <UnderConstructionPage />;
   }
 
   if (!solution || !solution.attributes) {
+    console.log("POUET !")
     return <UnderConstructionPage />;
   }
 
@@ -63,7 +72,7 @@ const SolutionPage = async ({ params }) => {
 
   return (
     <>
-      <PageSolutionLayout
+      <SolutionLayout
         className="xl:pb-48 2xl:pb-96"
       >
         <Link href="/solutions" className="flex items-center mb-8">
@@ -83,7 +92,7 @@ const SolutionPage = async ({ params }) => {
         <Subtitle subtitle={introduction.content} />
         <Paragraph>{target}</Paragraph>
         <BlocksManager blocks={blocks} />
-      </PageSolutionLayout>
+      </SolutionLayout>
       <Footer footer={footer} />
     </>
   );
