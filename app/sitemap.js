@@ -19,7 +19,7 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/prestations',
+      url: 'https://fionarx.com/strategie-digitale',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
