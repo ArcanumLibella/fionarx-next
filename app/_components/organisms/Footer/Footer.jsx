@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export const Footer = ({ footer }) => {
   const currentYear = new Date().getFullYear();
-  const { title, role, location, mail, menu, prestations, legalInformation } = footer;
+  const { title, role, location, mail, menu, formules, legalInformation } = footer;
 
   return (
     <div className="Footer relative bottom-0 flex justify-center xl:mt-36 2xl:mt-80 md:ml-20 py-16 px-4 md:px-8 backdrop-blur-3xl bg-gradient-to-t from-transparent to-purple-ultraDark z-50">
@@ -54,12 +54,12 @@ export const Footer = ({ footer }) => {
                 })}
               </ul>
             </div>
-            <div className="Footer__prestations">
-              <span className="block mb-3 font-normal text-sm text-purple-ultraLight">
-                PRESTATIONS
+            <div className="Footer__formules">
+              <span className="block mb-3 font-normal text-sm text-purple-ultraLight uppercase">
+                Formules
               </span>
               <ul className="Footer__menu">
-                {prestations && prestations.map((item) => {
+                {formules && formules.map((item) => {
                   return (
                     <li key={item.id} className="mb-2">
                       <Link href={item.link} className="cursor-pointer">

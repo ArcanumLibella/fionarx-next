@@ -8,7 +8,7 @@ export const PageLayout = ({title, introduction, children, className: additional
       <Blobs className="fixed flex justify-center items-center -top-1/5 -right-1/10 xl:right-auto xl:top-auto xl:-left-1/10 xl:-bottom-1/5 w-[56vw] h-[36vh] xl:w-[48vw] xl:h-[54vh] 2xl:w-[40vw] 2xl:h-[64vh] !-z-1" />
       <BlobsLight className="hidden fixed xl:flex justify-center items-center xl:-right-1/10 xl:-top-1/5 w-[56vw] h-[40vh] xl:w-[48vw] xl:h-[54vh] 2xl:w-[40vw] 2xl:h-[72vh] !-z-1" />
       <div className="max-w-800 lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl">
-        <Heading level={1} className="h1 mb-6 md:mb-10 tracking-tight md:tracking-tightest uppercase text-tomato">
+        <Heading level={1} className="h1 mb-6 md:mb-10 tracking-normal leading-tight uppercase text-tomato">
           {title}
         </Heading>
         <Subtitle subtitle={introduction.content} />
