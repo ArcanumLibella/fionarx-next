@@ -13,7 +13,7 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/formules',
+      url: 'https://fionarx.com/solutions',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -31,7 +31,7 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/formules/digital-starter',
+      url: 'https://fionarx.com/solutions/digital-starter',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.64,
