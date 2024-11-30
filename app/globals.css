@@ -4,179 +4,185 @@
 
 /* GLOBAL STYLE */
 html {
-  @apply font-body text-white bg-purple-ultraDark;
-  font-size: 16px;
-  height: -webkit-fill-available;
+	@apply font-body text-white bg-purple-ultraDark;
+	font-size: 16px;
+	height: -webkit-fill-available;
 }
 
 body {
-  max-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+	max-height: 100vh;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
 }
 
 li {
-  font-weight: 300;
+	font-weight: 300;
 }
 
 /* Avoid Chrome to see Safari hack */
 @supports (-webkit-touch-callout: none) {
-  body {
-    /* The hack for Safari */
-    height: -webkit-fill-available;
-  }
+	body {
+		/* The hack for Safari */
+		height: -webkit-fill-available;
+	}
 }
 
 /* Custom styles for hiding scrollbars */
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 .scrollbar-hidden {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 strong {
-  @apply text-tomato;
-  @apply font-bold;
+	@apply text-tomato;
+	@apply font-bold;
 }
 
 /* FONT-SIZE CLASSES */
 @layer components {
-  .h1 {
-    @apply !text-lg xs:!text-2lg md:!text-2xl 2xl:!text-3xl;
-  }
+	.h1 {
+		@apply !text-lg xs:!text-2lg md:!text-2xl xl:!text-xl 2xl:!text-2xl;
+	}
 
-  .h2 {
-    @apply !text-base md:!text-3base 2xl:!text-md;
-  }
+	.h2 {
+		@apply !text-base md:!text-3base 2xl:!text-md;
+	}
 
-  .h3 {
-    @apply !text-base md:!text-2base 2xl:!text-3base;
-  }
+	.h3 {
+		@apply !text-base md:!text-2base 2xl:!text-3base;
+	}
 
-  .h4 {
-    @apply !text-base md:!text-2base 2xl:!text-3base;
-  }
+	.h4 {
+		@apply !text-base md:!text-2base 2xl:!text-3base;
+	}
 
-  .h5 {
-    @apply !text-2normal lg:!text-base 2xl:!text-2base;
-  }
+	.h5 {
+		@apply !text-2normal lg:!text-base 2xl:!text-2base;
+	}
 
-  .h6 {
-    @apply !text-sm md:!text-normal lg:!text-2normal 2xl:!text-base;
-  }
+	.h6 {
+		@apply !text-sm md:!text-normal lg:!text-2normal 2xl:!text-base;
+	}
 
-  .h-gradient {
-    @apply !text-3base md:!text-md lg:!text-lg;
-  }
+	.h-gradient {
+		@apply !text-3base md:!text-md lg:!text-lg;
+	}
 
-  .paragraphLarge {
-    @apply !text-base xs:!text-2base md:!text-3base 2xl:!text-md;
-  }
+	.paragraphLarge {
+		@apply !text-base xs:!text-2base md:!text-3base 2xl:!text-md;
+	}
 
-  .paragraphLight {
-    @apply !text-normal md:!text-base;
-  }
+	.paragraphLight {
+		@apply !text-normal md:!text-base;
+	}
 }
 
 /* FONT-SIZE TAGS */
 @layer components {
-  h1 {
-    @apply text-lg xs:text-2lg md:text-2xl 2xl:text-3xl;
-  }
+	h1 {
+		@apply text-lg xs:text-2lg md:text-2xl 2xl:text-3xl;
+	}
 
-  h2 {
-    @apply text-base md:text-3base 2xl:text-md;
-  }
+	h2 {
+		@apply text-base md:text-3base 2xl:text-md;
+	}
 
-  h3 {
-    @apply text-base md:text-2base 2xl:text-3base;
-  }
+	h3 {
+		@apply text-base md:text-2base 2xl:text-3base;
+	}
 
-  h4 {
-    @apply text-2normal md:text-base 2xl:text-2base;
-  }
+	h4 {
+		@apply text-2normal md:text-base 2xl:text-2base;
+	}
 
-  h5 {
-    @apply text-normal lg:text-2normal 2xl:text-base;
-  }
+	h5 {
+		@apply text-normal lg:text-2normal 2xl:text-base;
+	}
 
-  h6 {
-    @apply text-sm md:text-normal lg:text-2normal 2xl:text-base;
-  }
+	h6 {
+		@apply text-sm md:text-normal lg:text-2normal 2xl:text-base;
+	}
 }
 
 /* FONTS IMPORT */
 @font-face {
-  font-family: 'Brother';
-  src: url('../public/_assets/fonts/brother-1816-black-webfont.woff2') format('woff2'),
-        url('../public/_assets/fonts/brother-1816-black-webfont.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Brother";
+	src: url("../public/_assets/fonts/brother-1816-black-webfont.woff2")
+			format("woff2"),
+		url("../public/_assets/fonts/brother-1816-black-webfont.woff")
+			format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Brother';
-  src: url('../public/_assets/fonts/brother-1816-bold-webfont.woff2') format('woff2'),
-        url('../public/_assets/fonts/brother-1816-bold-webfont.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Brother";
+	src: url("../public/_assets/fonts/brother-1816-bold-webfont.woff2")
+			format("woff2"),
+		url("../public/_assets/fonts/brother-1816-bold-webfont.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Brother';
-  src: url('../public/_assets/fonts/brother-1816-medium-webfont.woff2') format('woff2'),
-        url('../public/_assets/fonts/brother-1816-medium-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Brother";
+	src: url("../public/_assets/fonts/brother-1816-medium-webfont.woff2")
+			format("woff2"),
+		url("../public/_assets/fonts/brother-1816-medium-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Josefin Sans';
-  src: url('../public/_assets/fonts/JosefinSans-ExtraLight.woff2') format('woff2'),
-      url('../public/_assets/fonts/JosefinSans-ExtraLight.woff') format('woff');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Josefin Sans";
+	src: url("../public/_assets/fonts/JosefinSans-ExtraLight.woff2")
+			format("woff2"),
+		url("../public/_assets/fonts/JosefinSans-ExtraLight.woff") format("woff");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Josefin Sans';
-  src: url('../public/_assets/fonts/JosefinSans-Light.woff2') format('woff2'),
-      url('../public/_assets/fonts/JosefinSans-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Josefin Sans";
+	src: url("../public/_assets/fonts/JosefinSans-Light.woff2") format("woff2"),
+		url("../public/_assets/fonts/JosefinSans-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Josefin Sans';
-  src: url('../public/_assets/fonts/JosefinSans-Regular.woff2') format('woff2'),
-      url('../public/_assets/fonts/JosefinSans-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Josefin Sans";
+	src: url("../public/_assets/fonts/JosefinSans-Regular.woff2") format("woff2"),
+		url("../public/_assets/fonts/JosefinSans-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Josefin Sans';
-  src: url('../public/_assets/fonts/JosefinSans-SemiBold.woff2') format('woff2'),
-      url('../public/_assets/fonts/JosefinSans-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Josefin Sans";
+	src: url("../public/_assets/fonts/JosefinSans-SemiBold.woff2") format("woff2"),
+		url("../public/_assets/fonts/JosefinSans-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Josefin Sans';
-  src: url('../public/_assets/fonts/JosefinSans-Bold.woff2') format('woff2'),
-      url('../public/_assets/fonts/JosefinSans-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Josefin Sans";
+	src: url("../public/_assets/fonts/JosefinSans-Bold.woff2") format("woff2"),
+		url("../public/_assets/fonts/JosefinSans-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
 }

@@ -37,7 +37,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
         initial={{ width: "0%", opacity: 0 }}
         animate={{ width: isMenuOpen ? "100%" : "0%", opacity: isMenuOpen ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-        className="Menu fixed overflow-hidden xl:max-w-8/12 z-[200]"
+        className="Menu fixed overflow-hidden xl:max-w-[80%] z-[200]"
         style={{ pointerEvents: isMenuOpen ? 'auto' : 'none' }}
       >
         <motion.ul
@@ -52,7 +52,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
             <motion.li
               variants={menuItemVariants}
               whileHover={{ scale: 1.05 }}
-              className="Menu__item not-italic"
+              className="Menu__item mr-6 my-2 xs:my-4 md:my-8 xl:my-4 not-italic"
             >
               <MenuItem
                 toggleMenuItem={toggleMenuItem}
@@ -67,7 +67,7 @@ export const Menu = ({ socialsItems, menuItems }) => {
                 key={item.id}
                 variants={menuItemVariants}
                 whileHover={{ scale: 1.05 }}
-                className="Menu__item not-italic"
+                className="Menu__item mr-6 my-2 xs:my-4 md:my-8 xl:my-4 not-italic"
               >
                 <MenuItem
                   toggleMenuItem={toggleMenuItem}
