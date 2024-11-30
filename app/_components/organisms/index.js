@@ -13,7 +13,7 @@ export { Accordion } from "./Accordion";
 export { Checklists } from "./Checklists";
 export { List } from "./List";
 export { PricingCard } from "./PricingCard";
-export { FormulaPack } from "./FormulaPack";
+export { SolutionPack } from "./SolutionPack";
 export { CtaBlob } from "./CtaBlob";
 export { CardCTA } from "./CardCTA";
 export { Options } from "./Options";

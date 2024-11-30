@@ -4,7 +4,7 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, DoubleButton } from "./molecules";
-import { Accordion, CardsBasic, CardsPrestation, CardsPricing, Checklists, DoubleContent, FormulaPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
+import { Accordion, CardsBasic, CardsPrestation, CardsPricing, Checklists, DoubleContent, SolutionPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
@@ -117,10 +117,10 @@ export function BlocksManager({ blocks }) {
                 accordion={block.accordion}
               />
             ); 
-          case "blocks.formula-pack":
+          case "blocks.solution-pack":
             return (
-              <FormulaPack
-                key={`FormulaPack-${block.id}`}
+              <SolutionPack
+                key={`SolutionPack-${block.id}`}
                 items={block.items}
                 hasSupport={block.hasSupport}
                 supportTitle={block.supportTitle}

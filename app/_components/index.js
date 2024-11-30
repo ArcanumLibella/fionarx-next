@@ -43,7 +43,7 @@ export { CardsPricing } from "./organisms";
 export { Accordion } from "./organisms";
 export { Checklists } from "./organisms";
 export { List } from "./organisms";
-export { FormulaPack } from "./organisms";
+export { SolutionPack } from "./organisms";
 export { CtaBlob } from "./organisms";
 export { CardCTA } from "./organisms";
 export { Options } from "./organisms";
