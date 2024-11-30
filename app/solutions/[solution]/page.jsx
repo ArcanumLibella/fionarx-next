@@ -42,28 +42,19 @@ export async function generateMetadata({ params }) {
 const SolutionPage = async ({ params }) => {
   const globalData = await fetchDataFromStrapi("global?populate=deep");
   const { solution: slug } = params;
-  console.log("params", params)
-  console.log("slug", slug)
   let solution;
-  console.log("solution", solution)
 
   try {
     const solutions = await fetchDataFromStrapi("solutions?populate=deep");
-    console.log("solutions !!!!!", solutions)
     if (solutions && solutions.length > 0) {
       solution = solutions.find((solution) => solution?.attributes?.slug === slug);
-      console.log("SLUG ????", slug)
-      console.log("SOLUTION ????", solution)
-
     }
   } catch (error) {
-    console.log("PROUUUT")
     console.error("Error fetching solutions", error);
     return <UnderConstructionPage />;
   }
 
   if (!solution || !solution.attributes) {
-    console.log("POUET !")
     return <UnderConstructionPage />;
   }
 
