@@ -7,7 +7,7 @@ export const metadata = {
     template: 'Fiona Roux %s',
     default: 'Fiona Roux - Consultant en Stratégie Digitale freelance',
   },
-  description: "Votre consultant en stratégie digitale freelance, une seule collaboratrice pour une Stratégie Digitale 360 : audit, SEO, branding, design et création de site internet.",
+  description: "Votre Consultant en Stratégie Digitale freelance, une seule collaboratrice pour une Stratégie Digitale 360 : audit, SEO, branding et création de site internet.",
   keywords: ['consultant en stratégie digital freelance', 'consultant seo freelance', 'webdesigner freelance', 'audit digital', 'création de site internet', 'développeur wordpress avignon', 'développement web', 'web design', 'charte graphique', 'personal branding', 'webmarketing', 'seo', 'référencement naturel', 'référencement local', 'fiche google my business', "transformation digitale", "création de site", "conseil en stratégie digitale", "digitalisation", "marketing digital", "présence digitale", "spécialiste du digital", "image de marque"],
   robots: "MAX-IMAGE-PREVIEW:LARGE, MAX-SNIPPET:-1, MAX-VIDEO-PREVIEW:-1",
   authors: [{ name: 'Fiona Roux' }],
