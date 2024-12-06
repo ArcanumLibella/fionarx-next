@@ -1,10 +1,12 @@
 import React from 'react'
 import { Copyright, Heading, Text } from "../../atoms"
 import Link from "next/link"
+import { MailIcon, MapPinIcon } from "@/public/_assets/icons";
+import { COLORS } from "@/app/_constants/Colors";
 
 export const Footer = ({ footer }) => {
   const currentYear = new Date().getFullYear();
-  const { title, role, location, mail, menu, formules, legalInformation } = footer;
+  const { title, role, location, google, mail, menu, formules, legalInformation } = footer;
 
   return (
     <div className="Footer relative bottom-0 flex justify-center xl:mt-36 2xl:mt-80 md:ml-20 py-16 px-4 md:px-8 backdrop-blur-3xl bg-gradient-to-t from-transparent to-purple-ultraDark z-50">
@@ -24,8 +26,25 @@ export const Footer = ({ footer }) => {
             </Text>
           </div>
           <div className="Footer__left--bottom">
-            <Link href={`mailto:${mail}`} title={mail}>
-              <Text type="custom" className="font-bold text-base lg:text-2base">
+            <Link href={google} title="Google My Business de Fiona Roux" className="flex mb-2">
+              <MapPinIcon
+                fill={COLORS.purple.DEFAULT}
+                height={32}
+                width={32}
+                className="mr-2 transition-all duration-300 hover:fill-purple-light"
+              />
+              <Text type="custom" className="font-normal text-2normal md:text-base">
+                Google My Business
+              </Text>
+            </Link>
+            <Link href={`mailto:${mail}`} title={mail} className="flex">
+              <MailIcon
+                fill={COLORS.purple.DEFAULT}
+                height={32}
+                width={32}
+                className="mr-2 transition-all duration-300 hover:fill-purple-light"
+              />
+              <Text type="custom" className="font-normal text-2normal md:text-base">
                 {mail}
               </Text>
             </Link>
