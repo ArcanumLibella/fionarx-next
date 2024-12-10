@@ -27,6 +27,7 @@ export { DescriptionCard } from "./molecules";
 export { Checklist } from "./molecules";
 export { DoubleButton } from "./molecules";
 export { CardBasic } from "./molecules";
+export { CardBasicImage } from "./molecules";
 
 export { Blobs } from "./organisms";
 export { BlobsLight } from "./organisms";
@@ -49,6 +50,7 @@ export { CardCTA } from "./organisms";
 export { Options } from "./organisms";
 export { CardOption } from "./organisms";
 export { CardsBasic } from "./organisms";
+export { CardsBasicImage } from "./organisms";
 export { Footer } from "./organisms";
 export { DoubleContent } from "./organisms";
 

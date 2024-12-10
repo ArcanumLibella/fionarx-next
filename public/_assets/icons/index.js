@@ -16,6 +16,11 @@ import CheckIcon from "./check.svg";
 import CheckBigIcon from "./check-big.svg";
 import MapPinIcon from "./map-pin.svg";
 import MailIcon from "./mail.svg";
+import DollarIcon from "./dollar-sign.svg";
+import EyeIcon from "./eye.svg";
+import HeartIcon from "./heart.svg";
+import SmileIcon from "./smile.svg";
+import TargetIcon from "./target.svg";
 
 export {
   GithubIcon,
@@ -35,5 +40,10 @@ export {
   CheckIcon,
   CheckBigIcon,
   MapPinIcon,
-  MailIcon
+  MailIcon,
+  DollarIcon,
+  EyeIcon,
+  HeartIcon,
+  SmileIcon,
+  TargetIcon
 };
