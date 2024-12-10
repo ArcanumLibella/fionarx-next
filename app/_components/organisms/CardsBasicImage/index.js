@@ -1,0 +1,1 @@
+export { CardsBasicImage } from "./CardsBasicImage";
