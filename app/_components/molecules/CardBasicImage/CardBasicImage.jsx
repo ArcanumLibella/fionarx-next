@@ -1,6 +1,6 @@
 import React from "react";
 import { Heading, Paragraph } from "../../atoms";
-import { DollarIcon, EyeIcon, HeartIcon, SmileIcon, TargetIcon } from "@/public/_assets/icons";
+import { AwardIcon, BarChartIcon, ClockIcon, DollarIcon, EyeIcon, GiftIcon, GlobeIcon, HeartIcon, SearchIcon, ShoppingCartIcon, SmileIcon, TargetIcon, ThumbsUpIcon, TrendingUpIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
 
 export const CardBasicImage = ({
@@ -44,6 +44,69 @@ export const CardBasicImage = ({
         width={48}
       />
     ),
+    award: (
+      <AwardIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    barChart: (
+      <BarChartIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    clock: (
+      <ClockIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    gift: (
+      <GiftIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    globe: (
+      <GlobeIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    search: (
+      <SearchIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    shoppingCart: (
+      <ShoppingCartIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    thumbsUp: (
+      <ThumbsUpIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    trendingUp: (
+      <TrendingUpIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    )
   };
 
   const renderIcon = Icons[icon] || null;

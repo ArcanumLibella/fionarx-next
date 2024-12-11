@@ -21,6 +21,15 @@ import EyeIcon from "./eye.svg";
 import HeartIcon from "./heart.svg";
 import SmileIcon from "./smile.svg";
 import TargetIcon from "./target.svg";
+import AwardIcon from "./award.svg";
+import BarChartIcon from "./bar-chart.svg";
+import ClockIcon from "./clock.svg";
+import GiftIcon from "./gift.svg";
+import GlobeIcon from "./globe.svg";
+import SearchIcon from "./search.svg";
+import ShoppingCartIcon from "./shopping-cart.svg";
+import ThumbsUpIcon from "./thumbs-up.svg";
+import TrendingUpIcon from "./trending-up.svg";
 
 export {
   GithubIcon,
@@ -45,5 +54,14 @@ export {
   EyeIcon,
   HeartIcon,
   SmileIcon,
-  TargetIcon
+  TargetIcon,
+  AwardIcon,
+  BarChartIcon,
+  ClockIcon,
+  GiftIcon,
+  GlobeIcon,
+  SearchIcon,
+  ShoppingCartIcon,
+  ThumbsUpIcon,
+  TrendingUpIcon
 };

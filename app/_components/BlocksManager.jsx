@@ -71,7 +71,7 @@ export function BlocksManager({ blocks }) {
             );
           case "blocks.foot-note":
             return (
-              <div className="mt-4">
+              <aside className="mt-4">
                 <BlocksRenderer
                   key={`BlocksRenderer-${block.id}`}
                   content={block.note}
@@ -87,7 +87,7 @@ export function BlocksManager({ blocks }) {
                     italic: ({ children }) => <span key={`span-${block.id}`} className="italic">{children}</span>,
                   }}
                 />
-              </div>
+              </aside>
             );
           case "blocks.images-slider":
             return <ImagesSlider key={`ImagesSlider-${block.id}`} images={block.images} />;  
