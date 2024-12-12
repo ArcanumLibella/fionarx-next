@@ -73,10 +73,10 @@ export const Footer = ({ footer }) => {
                 })}
               </ul>
             </div>
-            <div className="Footer__formules">
+            <div className="Footer__prestations">
               <span className="block mb-3 font-normal text-sm text-purple-ultraLight uppercase">
-                Formules
-              </span>
+                Prestations
+              </span>s
               <ul className="Footer__menu">
                 {formules && formules.map((item) => {
                   return (
