@@ -10,9 +10,9 @@ export const CardCTA = ({
   isExternal
 }) => {
   return (
-    <div className="CardCTAFull flex flex-col justify-between h-full">
+    <div className="CardCTAFull flex flex-col justify-between h-full cursor-default">
       <div className="DescriptionCard flex flex-col justify-between items-center md:h-full lg:max-h-[188px] lg:min-h-[188px] xl:max-h-[220px] xl:min-h-[220px] 2xl:max-h-[180px] 2xl:min-h-[180px] md:mx-4 xl:mx-3 mb-4 p-2" />
-      <div className="CardCTA flex flex-col justify-center items-center h-full md:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 cursor-pointer">
+      <div className="CardCTA flex flex-col justify-center items-center h-full md:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4">
         <Text type="paragraphLarge" className="CardCTA__title mb-4 text-center text-base text-balance text-tomato">
           {title}
         </Text>
