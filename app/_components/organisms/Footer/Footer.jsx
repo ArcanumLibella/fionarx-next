@@ -76,7 +76,7 @@ export const Footer = ({ footer }) => {
             <div className="Footer__prestations">
               <span className="block mb-3 font-normal text-sm text-purple-ultraLight uppercase">
                 Prestations
-              </span>s
+              </span>
               <ul className="Footer__menu">
                 {formules && formules.map((item) => {
                   return (
