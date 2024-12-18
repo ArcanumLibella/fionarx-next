@@ -25,18 +25,6 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/contact',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://fionarx.com/solutions/digital-starter',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.64,
-    },
-    {
       url: 'https://fionarx.com/prestations/audit-digital',
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -47,6 +35,12 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
-    }
+    },
+    {
+      url: 'https://fionarx.com/solutions/digital-starter',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.64,
+    },
   ]
 }
