@@ -1,6 +1,7 @@
 # *
 User-agent: *
-Allow: /
+Disallow: /_next/
+Allow: /_next/image/
 
 # Sitemaps
 Sitemap: https://www.fionarx.com/sitemap.xml
