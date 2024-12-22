@@ -101,11 +101,11 @@ export const Footer = ({ footer }) => {
               {legalInformation && legalInformation.map((item) => {
                 return (
                   <li key={item.id} className="mb-2 cursor-default">
-                    {/* <Link href={item.link} className="cursor-pointer"> */}
+                    <Link href={item.link} className="cursor-pointer">
                       <Text type="custom" className="font-normal text-sm text-white hover:text-tomato transition ease-in-out duration-300 normal-case">
                         {item.label}
                       </Text>
-                    {/* </Link> */}
+                    </Link>
                   </li>
                 )
               })}
