@@ -5,10 +5,11 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, DoubleButton } from "./molecules";
 import { Accordion, CardsBasic, CardsBasicImage, CardsPrestation, CardsPricing, Checklists, DoubleContent, SolutionPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
+import Image from "next/image";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
-
+  
   return (
     <div className="Blocks">
       {blocks.map((block) => {
@@ -165,6 +166,20 @@ export function BlocksManager({ blocks }) {
                 button={block.button}
                 reverse={block.reverse}
               />
+            );
+          case "blocks.image":
+            console.log(block.image)
+            return (
+              <figure key={block.image.id} className="">
+                <Image
+                  src={block.image.data.attributes.url}
+                  alt={block.image.data.attributes.alternativeText}
+                  width={block.image.data.attributes.width}
+                  height={block.image.data.attributes.height}
+                  blurDataURL={block.image.data.attributes.url}
+                  placeholder="blur"
+                />
+              </figure>
             );
           default:
           return null;
