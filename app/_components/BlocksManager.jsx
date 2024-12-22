@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export function BlocksManager({ blocks }) {
   if (!blocks) return null;
-  
+
   return (
     <div className="Blocks">
       {blocks.map((block) => {
@@ -27,7 +27,7 @@ export function BlocksManager({ blocks }) {
                       </Paragraph>
                     )
                   },
-                  heading: ({ children, level }) => {                    
+                  heading: ({ children, level }) => {
                     return (
                       <Heading key={`Heading-${block.id}`} level={level}>
                         {children}
@@ -62,7 +62,7 @@ export function BlocksManager({ blocks }) {
             return <Separator key={`Separator-${block.id}`} />;
           case "blocks.pricings":
             return (
-              <CardsPricing 
+              <CardsPricing
                 key={`CardsPricing-${block.id}`}
                 title={block.title}
                 description={block.description}
@@ -91,33 +91,33 @@ export function BlocksManager({ blocks }) {
               </aside>
             );
           case "blocks.images-slider":
-            return <ImagesSlider key={`ImagesSlider-${block.id}`} images={block.images} />;  
+            return <ImagesSlider key={`ImagesSlider-${block.id}`} images={block.images} />;
           case "blocks.stages":
-            return <Stages key={`Stages-${block.id}`} stages={block.stages} />;  
+            return <Stages key={`Stages-${block.id}`} stages={block.stages} />;
           case "blocks.section-cta":
             return (
-              <SectionCTA 
+              <SectionCTA
                 key={`SectionCTA-${block.id}`}
                 title={block.title}
                 subtitle={block.subtitle}
                 button={block.button}
                 isLarge={block.isLarge}
               />
-            );  
+            );
           case "blocks.check-lists":
             return (
               <Checklists
                 key={`Checklists-${block.id}`}
                 content={block.checklists}
               />
-            ); 
+            );
           case "blocks.accordions-group":
             return (
               <Accordion
                 key={`Accordion-${block.id}`}
                 accordion={block.accordion}
               />
-            ); 
+            );
           case "blocks.solution-pack":
             return (
               <SolutionPack
@@ -136,7 +136,7 @@ export function BlocksManager({ blocks }) {
             );
           case "blocks.options":
             return (
-              <Options 
+              <Options
                 key={`Options-${block.id}`}
                 title={block.title}
                 description={block.description}
@@ -145,7 +145,7 @@ export function BlocksManager({ blocks }) {
             );
           case "blocks.cards-basic":
             return (
-              <CardsBasic 
+              <CardsBasic
                 key={`CardsBasic-${block.id}`}
                 items={block.items}
               />
@@ -159,7 +159,7 @@ export function BlocksManager({ blocks }) {
             );
           case "blocks.double-content":
             return (
-              <DoubleContent 
+              <DoubleContent
                 key={`DoubleContent-${block.id}`}
                 image={block.image}
                 text={block.text}
@@ -168,7 +168,6 @@ export function BlocksManager({ blocks }) {
               />
             );
           case "blocks.image":
-            console.log(block.image)
             return (
               <figure key={block.image.id} className="">
                 <Image
@@ -182,7 +181,7 @@ export function BlocksManager({ blocks }) {
               </figure>
             );
           default:
-          return null;
+            return null;
         }
       })}
     </div>

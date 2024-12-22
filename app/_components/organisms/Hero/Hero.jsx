@@ -23,12 +23,21 @@ export const Hero = async () => {
         </Link>
       )
     } else {
+      if (item.link) {
+        return (
+          <Link href={item.link} key={item.id}>
+            <span className="font-brother !my-0 xs:!my-2 xl:!my-0 font-black leading-snug uppercase !text-[7.6vw] md:!text-[4.8vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 select-none">
+              {item.label}
+            </span>
+          </Link>
+        )
+    } else {
       return (
         <span key={item.id} className="font-brother !my-0 xs:!my-2 xl:!my-0 font-black leading-snug uppercase !text-[7.6vw] md:!text-[4.8vh] xl:!text-[8vh] !tracking-normal !text-white text-shadow text-stroke-white-DEFAULT md:text-stroke-2 md:text-fill-transparent opacity-20 md:opacity-40 select-none">
           {item.label}
         </span>
       )
-    }
+    }}
   })
 
   return (
