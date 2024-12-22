@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   if (!seoData) return;
  
   return {
-    title: "| Consultant en Stratégie Digitale > " + seoData.metaTitle,
+    title: "Consultant en Stratégie Digitale > " + seoData.metaTitle,
     description: seoData.metaDescription,
     keywords: seoData.keywords,
     robots: seoData.metaRobots,
