@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlocksManager, PageLayout } from "../../_components";
+import { BlocksManager, Heading, PrestationLayout } from "../../_components";
 import { Footer } from "../../_components/organisms";
 import NotFoundPage from "../../404";
 import { fetchDataFromStrapi } from "../../_utils/strapi.utils";
@@ -13,7 +13,6 @@ const LegalPage = async ({ params }) => {
     const legalPolicies = await fetchDataFromStrapi(`legal-policies?populate=deep`);
     if (legalPolicies && legalPolicies.length > 0) {
       legalPolicy = legalPolicies.find((legalPolicy) => legalPolicy?.attributes?.slug === slug);
-      console.log("legalPolicy !!!!! ", legalPolicy)
     }
   } catch (error) {
     console.error("Error fetching legal policies", error);
@@ -29,14 +28,18 @@ const LegalPage = async ({ params }) => {
 
   return (
     <>
-      <PageLayout
+      <PrestationLayout
         className="xl:pb-64"
-        title={title}
-        introduction={title}
         slug={legalPolicy.attributes.slug}
       >
+        <Heading level={1} className="!text-normal xs:!text-base md:!text-2base 2xl:!text-md mb-4 uppercase text-purple-ultraLight">
+          Pages légales
+        </Heading>
+        <Heading level={2} className="text-md md:text-lg lg:text-2lg 2xl:text-xl !mt-0 tracking-tighter leading-tight text-pretty text-tomato">
+          {title}
+        </Heading>
         <BlocksManager blocks={blocks} />
-      </PageLayout>
+      </PrestationLayout>
       <Footer footer={footer} />
     </>
   );
