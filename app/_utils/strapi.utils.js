@@ -85,6 +85,19 @@ export async function fetchSEODataStrategies(slug) {
   }
 }
 
+export async function fetchSEODataLegals(slug) {
+  try {
+    const response = await axios.get(`${BASE_URL}/api/legal-policies?populate=deep`);
+    const legalPolicies = response.data.data;
+
+    const seoData = legalPolicies.find(legalPolicy => legalPolicy.attributes.slug === slug)?.attributes?.seo || null;
+    return seoData;
+  } catch (error) {
+    console.error('Error fetching Legal Policies data:', error);
+    return null;
+  }
+}
+
 export async function fetchSEODataPrestations(slug) {
   try {
     const response = await axios.get(`${BASE_URL}/api/prestations?populate=deep`);
