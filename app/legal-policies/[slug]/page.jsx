@@ -16,23 +16,6 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: `/legal-policies/${params.slug}`,
     },
-    structuredData: seoData.structuredData,
-    openGraph: {
-      title: "Fiona Roux | " + seoData.metaTitle,
-      description: seoData.metaDescription,
-      url: seoData.canonicalURL,
-      siteName: 'FionaRx',
-      images: [
-        {
-          url: seoData.metaImage.data.attributes.url, // Must be an absolute URL
-          width: seoData.metaImage.data.attributes.width,
-          height: seoData.metaImage.data.attributes.height,
-          alt: seoData.metaImage.data.attributes.alternativeText,
-        }
-      ],
-      locale: 'fr_FR',
-      type: 'website',
-    }
   }
 }
 
