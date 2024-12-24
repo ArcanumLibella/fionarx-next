@@ -2,7 +2,39 @@ import React from 'react';
 import { BlocksManager, Heading, PrestationLayout } from "../../_components";
 import { Footer } from "../../_components/organisms";
 import NotFoundPage from "../../404";
-import { fetchDataFromStrapi } from "../../_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchSEODataLegals } from "../../_utils/strapi.utils";
+
+export async function generateMetadata({ params }) {
+  const seoData = await fetchSEODataLegals(params.slug);
+  if (!seoData) return;
+
+  return {
+    title: seoData.metaTitle,
+    description: seoData.metaDescription,
+    keywords: seoData.keywords,
+    robots: seoData.metaRobots,
+    alternates: {
+      canonical: `/legal-policies/${params.slug}`,
+    },
+    structuredData: seoData.structuredData,
+    openGraph: {
+      title: "Fiona Roux | " + seoData.metaTitle,
+      description: seoData.metaDescription,
+      url: seoData.canonicalURL,
+      siteName: 'FionaRx',
+      images: [
+        {
+          url: seoData.metaImage.data.attributes.url, // Must be an absolute URL
+          width: seoData.metaImage.data.attributes.width,
+          height: seoData.metaImage.data.attributes.height,
+          alt: seoData.metaImage.data.attributes.alternativeText,
+        }
+      ],
+      locale: 'fr_FR',
+      type: 'website',
+    }
+  }
+}
 
 const LegalPage = async ({ params }) => {
   const globalData = await fetchDataFromStrapi("global?populate=deep");
