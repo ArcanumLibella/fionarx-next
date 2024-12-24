@@ -72,6 +72,19 @@ export async function fetchSEODataSolutions(slug) {
   }
 }
 
+export async function fetchSEODataStrategies(slug) {
+  try {
+    const response = await axios.get(`${BASE_URL}/api/strategies-digitales?populate=deep`);
+    const strategies = response.data.data;
+
+    const seoData = strategies.find(strategie => strategie.attributes.slug === slug)?.attributes?.seo || null;
+    return seoData;
+  } catch (error) {
+    console.error('Error fetching Strategies data:', error);
+    return null;
+  }
+}
+
 export async function fetchSEODataPrestations(slug) {
   try {
     const response = await axios.get(`${BASE_URL}/api/prestations?populate=deep`);

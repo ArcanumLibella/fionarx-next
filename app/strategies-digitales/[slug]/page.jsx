@@ -2,12 +2,12 @@ import React from 'react';
 import Link from "next/link";
 import { Heading, BlocksManager, PrestationLayout, Introduction, Footer, Subtitle, SectionCTA } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
-import { fetchDataFromStrapi, fetchSEODataPrestations } from "@/app/_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchSEODataStrategies } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
 import { ArrowLeftIcon } from "@/public/_assets/icons";
 
 export async function generateMetadata({ params }) {
-  const seoData = await fetchSEODataPrestations(params.prestation);
+  const seoData = await fetchSEODataStrategies(params.slug);
   if (!seoData) return;
 
   return {
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
     keywords: seoData.keywords,
     robots: seoData.metaRobots,
     alternates: {
-      canonical: `/prestations/${params.prestation}`,
+      canonical: `/strategies-digitales/${params.slug}`,
     },
     structuredData: seoData.structuredData,
     openGraph: {
@@ -40,24 +40,24 @@ export async function generateMetadata({ params }) {
 
 const PrestationPage = async ({ params }) => {
   const globalData = await fetchDataFromStrapi("global?populate=deep");
-  const { prestation: slug } = params;
-  let prestation;
+  const { slug } = params;
+  let strategie;
 
   try {
-    const prestations = await fetchDataFromStrapi("prestations?populate=deep");
-    if (prestations && prestations.length > 0) {
-      prestation = prestations.find((prestation) => prestation?.attributes?.slug === slug);
+    const strategies = await fetchDataFromStrapi("strategies-digitales?populate=deep");
+    if (strategies && strategies.length > 0) {
+      strategie = strategies.find((strategie) => strategie?.attributes?.slug === slug);
     }
   } catch (error) {
-    console.error("Error fetching prestations", error);
+    console.error("Error fetching strategies", error);
     return <UnderConstructionPage />;
   }
 
-  if (!prestation || !prestation.attributes) {
+  if (!strategie || !strategie.attributes) {
     return <UnderConstructionPage />;
   }
 
-  const { title, expertise, subtitle, introduction, blocks, sectionCTA } = prestation.attributes || [];
+  const { title, expertise, subtitle, introduction, blocks, sectionCTA } = strategie.attributes || [];
   const footer = globalData.attributes.footer;
 
   return (
@@ -65,14 +65,14 @@ const PrestationPage = async ({ params }) => {
       <PrestationLayout
         className="xl:pb-48 2xl:pb-64"
       >
-        <Link href="/strategie-digitale" className="flex items-center mb-8">
+        <Link href="/strategies-digitales" className="flex items-center mb-8">
           <ArrowLeftIcon
             fill={COLORS.white.DEFAULT}
             width={24}
             height={24}
           />
           <span className="h6 text-white font-bold uppercase hover:text-tomato transition-all ease-in-out">
-            Stratégie Digitale
+            Stratégies Digitales
           </span>
         </Link>
         <Heading level={1} className="!text-normal xs:!text-base md:!text-2base 2xl:!text-md mb-4 uppercase text-purple-ultraLight">
@@ -82,7 +82,9 @@ const PrestationPage = async ({ params }) => {
           {title}
         </Heading>
         <Subtitle subtitle={subtitle} />
-        <Introduction introduction={introduction} />
+        {introduction && (
+          <Introduction introduction={introduction} />
+        )}
         <BlocksManager blocks={blocks} />
       </PrestationLayout>
       {sectionCTA && (
