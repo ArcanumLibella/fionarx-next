@@ -1,43 +1,43 @@
 export default function sitemap() {
   return [
     {
-      url: 'https://fionarx.com',
+      url: 'https://www.fionarx.com',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: 'https://fionarx.com/a-propos',
+      url: 'https://www.fionarx.com/a-propos',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/solutions',
+      url: 'https://www.fionarx.com/solutions',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/strategie-digitale',
+      url: 'https://www.fionarx.com/strategies-digitales',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/prestations/audit-digital',
+      url: 'https://www.fionarx.com/strategies-digitales/audit-digital',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/prestations/seo',
+      url: 'https://www.fionarx.com/strategies-digitales/seo',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://fionarx.com/solutions/digital-starter',
+      url: 'https://www.fionarx.com/solutions/digital-starter',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.64,
