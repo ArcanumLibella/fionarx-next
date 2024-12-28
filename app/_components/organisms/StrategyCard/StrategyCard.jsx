@@ -5,6 +5,7 @@ import { Heading, Paragraph, Text } from "../../atoms";
 import { CheckIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
 import Image from "next/image";
+import { useIsMobile } from "@/app/_utils/useWindowSize";
 
 export const StrategyCard = ({
   type,
@@ -16,9 +17,11 @@ export const StrategyCard = ({
   item4,
   item5,
   isStrategyCard,
+  isLastCard,
   emoji,
   short
 }) => {
+  const isMobile = useIsMobile();
   const items = [item1, item2, item3, item4, item5];
 
   const emojiMapping = {
@@ -36,44 +39,67 @@ export const StrategyCard = ({
 
   const CardContent = (
     <>
-      <div className="StrategyCardContent flex flex-col h-full">
-        <div className="StrategyCard__top lg:min-h-[160px] pb-8 border-b border-tomato">
-          {/* TYPE */}
-          <Text
-            type="custom"
-            className="StrategyCard__type mb-2 font-brother font-bold text-sm uppercase text-purple-ultraLight"
-          >
-            {type}
-          </Text>
-          {/* TITLE */}
-          <Heading
-            level={4}
-            className="StrategyCard__title mb-4 font-brother !font-bold text-3base lg:text-3base 2xl:text-md text-tomato"
-          >
-            {title}
-          </Heading>
-          {/* DESCRIPTION */}
-          {description && (
+      <div className="StrategyCardContent flex flex-col justify-between h-full">
+        <div>
+          <div className="StrategyCard__top lg:min-h-[160px] pb-8 border-b border-tomato">
+            {/* TYPE */}
             <Text
               type="custom"
-              className="StrategyCard__description font-body text-2normal font-semibold text-pretty"
+              className="StrategyCard__type mb-2 font-brother font-bold text-sm uppercase text-purple-ultraLight"
             >
-              {description}
+              {type}
             </Text>
-          )}
-        </div>
-
-        <div className="StrategyCard__middle mt-8">
-          {isStrategyCard ? (
-            <>
+            {/* TITLE */}
+            <Heading
+              level={4}
+              className="StrategyCard__title mb-4 font-brother !font-bold text-3base lg:text-3base 2xl:text-md text-tomato"
+            >
+              {title}
+            </Heading>
+            {/* DESCRIPTION */}
+            {description && (
               <Text
                 type="custom"
-                className="mb-4 font-body font-normal text-tiny uppercase text-tomato"
+                className="StrategyCard__description font-body text-2normal font-semibold text-pretty"
               >
-                Exemple d'actions :
+                {description}
               </Text>
-              {/* ITEMS */}
-              <div className="StrategyCard__items">
+            )}
+          </div>
+
+          <div className="StrategyCard__middle mt-8">
+            {isStrategyCard ? (
+              <>
+                <Text
+                  type="custom"
+                  className="mb-4 font-body font-normal text-tiny uppercase text-tomato"
+                >
+                  Exemple d'actions :
+                </Text>
+                {/* ITEMS */}
+                <div className="StrategyCard__items">
+                  {items.map((item, index) => 
+                    item && (
+                      <div key={index} className="StrategyCard__item flex w-full mb-1">
+                        <div className="StrategyCard__icon min-w-4 pt-0.5">
+                          <CheckIcon 
+                            fill={COLORS.white.DEFAULT}
+                            width={16}
+                            height={16}
+                          />
+                        </div>
+                        <Paragraph className="w-full ml-2 !mb-2">
+                          {item}
+                        </Paragraph>
+                      </div>
+                    )
+                  )}
+                </div>
+              </>
+            ) : (
+              <>
+                {/* ITEMS */}
+                <div className="StrategyCard__items">
                 {items.map((item, index) => 
                   item && (
                     <div key={index} className="StrategyCard__item flex w-full mb-1">
@@ -90,32 +116,26 @@ export const StrategyCard = ({
                     </div>
                   )
                 )}
-              </div>
-            </>
-          ) : (
-            <>
-              {/* ITEMS */}
-              <div className="StrategyCard__items">
-              {items.map((item, index) => 
-                item && (
-                  <div key={index} className="StrategyCard__item flex w-full mb-1">
-                    <div className="StrategyCard__icon min-w-4 pt-0.5">
-                      <CheckIcon 
-                        fill={COLORS.white.DEFAULT}
-                        width={16}
-                        height={16}
-                      />
-                    </div>
-                    <Paragraph className="w-full ml-2 !mb-2">
-                      {item}
-                    </Paragraph>
-                  </div>
-                )
-              )}
-              </div>
-            </>
-          )}
+                </div>
+              </>
+            )}
+          </div>
         </div>
+
+        {(!isMobile && isStrategyCard) && (
+          <div className="StrategyCard__bottom flex flex-col justify-between mt-8">
+            <figure className="flex justify-center align-center mb-8">
+              <Image
+                src="/_assets/images/corner-down-right.svg"
+                alt="Flèche courbée sur la droite"
+                width={80}
+                height={80}
+                blurDataURL="/_assets/images/corner-down-right.svg"
+                placeholder="blur"
+              />
+            </figure>
+          </div>
+        )}
       </div>
 
       {!isStrategyCard && (
@@ -152,12 +172,36 @@ export const StrategyCard = ({
 
   return (
     isStrategyCard ? (
-      <div className="StrategyCard flex flex-col justify-between h-full md:mx-2 lg:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 md:p-3 lg:p-4 bg-purple-dark outline outline-2 outline-tomato -outline-offset-2 md:scale-105 rounded-xl">
+      <div className="StrategyCard StrategyCard--strategy relative flex flex-col justify-between h-full md:mx-2 lg:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 md:p-3 lg:p-4 bg-purple-dark outline outline-2 outline-tomato -outline-offset-2 md:scale-105 rounded-xl">
         {CardContent}
+        {isMobile && (
+          <figure className="absolute -bottom-12 w-full flex justify-center -ml-4 z-50">
+            <Image
+              src="/_assets/images/arrow-down.svg"
+              alt="Flèche vers le bas"
+              width={56}
+              height={56}
+              blurDataURL="/_assets/images/arrow-down.svg"
+              placeholder="blur"
+            />
+          </figure>
+        )}
       </div>
     ) : (
-      <div className="StrategyCard flex flex-col justify-between h-full md:mx-2 lg:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 md:p-3 lg:p-4 bg-purple-dark outline outline-2 outline-white -outline-offset-2 rounded-xl">
+      <div className="StrategyCard relative flex flex-col justify-between h-full md:mx-2 lg:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 md:p-3 lg:p-4 bg-purple-dark outline outline-2 outline-white -outline-offset-2 rounded-xl">
         {CardContent}
+        {isMobile && !isLastCard && (
+          <figure className="absolute -bottom-12 w-full flex justify-center -ml-4 z-50">
+            <Image
+              src="/_assets/images/arrow-down.svg"
+              alt="Flèche vers le bas"
+              width={56}
+              height={56}
+              blurDataURL="/_assets/images/arrow-down.svg"
+              placeholder="blur"
+            />
+          </figure>
+        )}
       </div>
     )
   );

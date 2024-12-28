@@ -3,13 +3,13 @@ import { Heading } from "../../atoms";
 import { StrategyCard } from "../StrategyCard";
 
 export const CardsStrategy = ({ title, strategyCards }) => {
-if (!strategyCards) return;
+  if (!strategyCards) return;
 
   return (
     <div className="CardsStrategy w-full my-12 lg:mb-16 xl:mb-20">
       {title && (
         <div className="CardsStrategy__title flex justify-center w-full">
-          <Heading level="gradient" className="h-gradient max-w-xl mb-4">{title}</Heading>
+          <Heading level={4} className="mb-4 text-md xs:text-2md 2xl:text-lg font-bold text-tomato">{title}</Heading>
         </div>
       )}
       
@@ -28,6 +28,7 @@ if (!strategyCards) return;
               item4={card.item4}
               item5={card.item5}
               isStrategyCard={card.isStrategyCard}
+              isLastCard={card.isLastCard}
               emoji={card.emoji}
               short={card.short}
             />
