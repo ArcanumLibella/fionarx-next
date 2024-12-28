@@ -22,3 +22,5 @@ export { CardsBasic } from "./CardsBasic";
 export { CardsBasicImage } from "./CardsBasicImage";
 export { Footer } from "./Footer";
 export { DoubleContent } from "./DoubleContent";
+export { CardsStrategy } from "./CardsStrategy";
+export { StrategyCard } from "./StrategyCard";

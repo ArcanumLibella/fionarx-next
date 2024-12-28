@@ -53,6 +53,8 @@ export { CardsBasic } from "./organisms";
 export { CardsBasicImage } from "./organisms";
 export { Footer } from "./organisms";
 export { DoubleContent } from "./organisms";
+export { StrategyCard } from "./organisms";
+export { CardsStrategy } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";

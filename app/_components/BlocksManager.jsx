@@ -4,7 +4,7 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, DoubleButton } from "./molecules";
-import { Accordion, CardsBasic, CardsBasicImage, CardsPrestation, CardsPricing, Checklists, DoubleContent, SolutionPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages } from "./organisms";
+import { Accordion, CardsBasic, CardsBasicImage, CardsPrestation, CardsPricing, Checklists, DoubleContent, SolutionPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages, CardsStrategy } from "./organisms";
 import Image from "next/image";
 
 export function BlocksManager({ blocks }) {
@@ -68,6 +68,14 @@ export function BlocksManager({ blocks }) {
                 description={block.description}
                 pricingCards={block.pricingCards}
                 cardCTA={block.cardCTA}
+              />
+            );
+          case "blocks.cards-strategy":
+            return (
+              <CardsStrategy
+                key={`CardsStrategy-${block.id}`}
+                title={block.title}
+                strategyCards={block.strategyCards}
               />
             );
           case "blocks.foot-note":
