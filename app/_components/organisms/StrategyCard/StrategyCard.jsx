@@ -64,14 +64,14 @@ export const StrategyCard = ({
         </div>
 
         <div className="StrategyCard__middle mt-8">
-          <Text
-            type="custom"
-            className="mb-4 font-body font-normal text-tiny uppercase text-tomato"
-          >
-            Exemple d'actions :
-          </Text>
           {isStrategyCard ? (
             <>
+              <Text
+                type="custom"
+                className="mb-4 font-body font-normal text-tiny uppercase text-tomato"
+              >
+                Exemple d'actions :
+              </Text>
               {/* ITEMS */}
               <div className="StrategyCard__items">
                 {items.map((item, index) => 
