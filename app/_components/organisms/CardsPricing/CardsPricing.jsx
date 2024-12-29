@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Paragraph } from "../../atoms";
+import { DynamicText, Heading } from "../../atoms";
 import { CardCTA, PricingCard } from "../../organisms";
 
 export const CardsPricing = ({ title, description, pricingCards, cardCTA }) => {
@@ -9,12 +9,14 @@ if (!pricingCards) return;
     <div className="CardsPricing w-full my-12 xl:mb-20">
       {title && (
         <div className="CardsPrestation__title flex justify-center w-full">
-          <Heading level="gradient" className="h-gradient max-w-xl mb-4">{title}</Heading>
+          <Heading level="gradient" className="h-gradient max-w-xl mb-4 text-pretty">{title}</Heading>
         </div>
       )}
       {description && (
         <div className="CardsPrestation__description flex justify-center w-full">
-          <Paragraph className="text-center">{description}</Paragraph>
+          <div className="text-center">
+            <DynamicText text={description} />
+          </div>
         </div>
       )}
       
