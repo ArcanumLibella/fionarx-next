@@ -7,6 +7,7 @@ import { FormuleLayout } from "@/app/_components/layouts";
 export async function generateMetadata({ params }) {
   const seoData = await fetchSEODataFormules(params.formule);
   if (!seoData) return;
+  console.log("seoData !!!!!!!!!!!!!!!! : ", seoData)
  
   return {
     title: seoData.metaTitle,
@@ -22,14 +23,14 @@ export async function generateMetadata({ params }) {
       description: seoData.metaDescription,
       url: seoData.canonicalURL,
       siteName: 'FionaRx',
-      images: [
-        {
-          url: seoData.metaImage.data.attributes.url, // Must be an absolute URL
-          width: seoData.metaImage.data.attributes.width,
-          height: seoData.metaImage.data.attributes.height,
-          alt: seoData.metaImage.data.attributes.alternativeText,
-        }
-      ],
+      // images: [
+      //   {
+      //     url: seoData.metaImage.data.attributes.url, // Must be an absolute URL
+      //     width: seoData.metaImage.data.attributes.width,
+      //     height: seoData.metaImage.data.attributes.height,
+      //     alt: seoData.metaImage.data.attributes.alternativeText,
+      //   }
+      // ],
       locale: 'fr_FR',
       type: 'website',
     }
