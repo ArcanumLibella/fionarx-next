@@ -72,6 +72,19 @@ export async function fetchSEODataSolutions(slug) {
   }
 }
 
+export async function fetchSEODataFormules(slug) {
+  try {
+    const response = await axios.get(`${BASE_URL}/api/formules?populate=deep`);
+    const formules = response.data.data;
+
+    const seoData = formules.find(formule => formule.attributes.slug === slug)?.attributes?.seo || null;
+    return seoData;
+  } catch (error) {
+    console.error('Error fetching SEO data:', error);
+    return null;
+  }
+}
+
 export async function fetchSEODataStrategies(slug) {
   try {
     const response = await axios.get(`${BASE_URL}/api/strategies-digitales?populate=deep`);

@@ -1,40 +1,40 @@
 import React from 'react';
-import { Heading, BlocksManager, Text, Footer, Subtitle, DynamicText, Introduction, SectionCTA, BackToParentLink } from "@/app/_components";
+import { Heading, BlocksManager, Text, Footer, Subtitle, DynamicText, SectionCTA, BackToParentLink } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
-import { fetchDataFromStrapi } from "@/app/_utils/strapi.utils";
+import { fetchDataFromStrapi, fetchSEODataFormules } from "@/app/_utils/strapi.utils";
 import { FormuleLayout } from "@/app/_components/layouts";
 
-// export async function generateMetadata({ params }) {
-//   const seoData = await fetchSEODataSolutions(params.solution);
-//   if (!seoData) return;
+export async function generateMetadata({ params }) {
+  const seoData = await fetchSEODataFormules(params.solution);
+  if (!seoData) return;
  
-//   return {
-//     title: "| Solutions > " + seoData.metaTitle,
-//     description: seoData.metaDescription,
-//     keywords: seoData.keywords,
-//     robots: seoData.metaRobots,
-//     alternates: {
-//       canonical: `/solutions/${params.solution}`,
-//     },
-//     structuredData: seoData.structuredData,
-//     openGraph: {
-//       title: "Fiona Roux | " + seoData.metaTitle,
-//       description: seoData.metaDescription,
-//       url: seoData.canonicalURL,
-//       siteName: 'FionaRx',
-//       images: [
-//         {
-//           url: seoData.metaImage.data.attributes.url, // Must be an absolute URL
-//           width: seoData.metaImage.data.attributes.width,
-//           height: seoData.metaImage.data.attributes.height,
-//           alt: seoData.metaImage.data.attributes.alternativeText,
-//         }
-//       ],
-//       locale: 'fr_FR',
-//       type: 'website',
-//     }
-//   }
-// }
+  return {
+    title: seoData.metaTitle,
+    description: seoData.metaDescription,
+    keywords: seoData.keywords,
+    robots: seoData.metaRobots,
+    alternates: {
+      canonical: `/formules/${params.solution}`,
+    },
+    structuredData: seoData.structuredData,
+    openGraph: {
+      title: "Fiona Roux | " + seoData.metaTitle,
+      description: seoData.metaDescription,
+      url: seoData.canonicalURL,
+      siteName: 'FionaRx',
+      images: [
+        {
+          url: seoData.metaImage.data.attributes.url, // Must be an absolute URL
+          width: seoData.metaImage.data.attributes.width,
+          height: seoData.metaImage.data.attributes.height,
+          alt: seoData.metaImage.data.attributes.alternativeText,
+        }
+      ],
+      locale: 'fr_FR',
+      type: 'website',
+    }
+  }
+}
 
 const FormulaPage = async ({ params }) => {
   const parentPath = `/strategies-digitales/${params.slug}/`;
