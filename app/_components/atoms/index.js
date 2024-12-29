@@ -13,3 +13,4 @@ export { FootNote } from './FootNote';
 export { Copyright } from './Copyright';
 export { Introduction } from './Introduction';
 export { Subtitle } from './Subtitle';
+export { DynamicText } from './DynamicText';
