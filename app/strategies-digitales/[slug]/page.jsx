@@ -75,7 +75,8 @@ const PrestationPage = async ({ params }) => {
             Stratégies Digitales
           </span>
         </Link>
-        <Heading level={1} className="h1 mb-6 md:mb-10 uppercase leading-tight text-pretty text-tomato">{title}</Heading>
+        <Heading level={1} className="mb-4 !text-normal xs:!text-base md:!text-2base 2xl:!text-md uppercase text-purple-ultraLight">{expertise}</Heading>
+        <Heading level={2} className="text-md md:text-lg lg:text-2lg 2xl:text-xl !mt-0 tracking-tighter leading-tight text-pretty text-tomato">{title}</Heading>
         <Subtitle subtitle={subtitle} />
         {introduction && (
           <Introduction introduction={introduction} />
