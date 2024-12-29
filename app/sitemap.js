@@ -42,5 +42,11 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.64,
     },
+    {
+      url: 'https://www.fionarx.com/strategies-digitales/audit-digital/formule-audit-seo-audit-local',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.64,
+    },
   ]
 }
