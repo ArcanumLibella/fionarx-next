@@ -3,7 +3,7 @@ import { List } from "../List";
 import { Paragraph, Text } from "../../atoms";
 import { CtaBlob } from "../CtaBlob";
 
-export const SolutionPack = ({
+export const PricingPack = ({
   items,
   hasSupport,
   supportTitle,
@@ -16,29 +16,29 @@ export const SolutionPack = ({
   ctaDetail 
 }) => {  
   return (
-    <div className="SolutionPack">
-      <div className="SolutionPack__list p-6 pb-0 border-4 border-tomato rounded-lg">
+    <div className="PricingPack">
+      <div className="PricingPack__list p-6 pb-0 border-4 border-tomato rounded-lg">
         <List items={items} />
       </div>
-      <div className="SolutionPack__plus flex justify-center">
+      <div className="PricingPack__plus flex justify-center">
         <Text type="custom" className="text-bold text-xl text-tomato">+</Text>
       </div>
       {hasSupport && (
         <>
-          <div className="SolutionPack__support Support flex flex-col justify-center">
+          <div className="PricingPack__support Support flex flex-col justify-center">
           <Text type="paragraphLarge" className="Support__title text-center text-base lg:!text-md 2xl:!text-2lg text-tomato text-balance">
             {supportTitle}
           </Text>
           <Paragraph className="Support__description mb-16 text-center text-balance">
             {supportDescription}
           </Paragraph>
-          <div className="SolutionPack__plus flex justify-center">
+          <div className="PricingPack__plus flex justify-center">
             <Text type="custom" className="text-bold text-xl text-tomato">+</Text>
           </div>
         </div>
         </>
       )}
-      <div className="SolutionPack__mentoring Mentoring flex flex-col justify-center">
+      <div className="PricingPack__mentoring Mentoring flex flex-col justify-center">
         <Text type="paragraphLarge" className="Mentoring__title text-center text-base lg:!text-md 2xl:!text-2lg text-tomato text-balance">
           {mentoringTitle}
         </Text>

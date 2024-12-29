@@ -4,7 +4,7 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, DoubleButton } from "./molecules";
-import { Accordion, CardsBasic, CardsBasicImage, CardsPrestation, CardsPricing, Checklists, DoubleContent, SolutionPack, ImagesSlider, List, Options, SectionCTA, StackItems, Stages, CardsStrategy } from "./organisms";
+import { Accordion, CardsBasic, CardsBasicImage, CardsPrestation, CardsPricing, Checklists, DoubleContent, ImagesSlider, List, Options, SectionCTA, StackItems, Stages, CardsStrategy, PricingPack } from "./organisms";
 import Image from "next/image";
 
 export function BlocksManager({ blocks }) {
@@ -126,10 +126,10 @@ export function BlocksManager({ blocks }) {
                 accordion={block.accordion}
               />
             );
-          case "blocks.solution-pack":
+          case "blocks.pricing-pack":
             return (
-              <SolutionPack
-                key={`SolutionPack-${block.id}`}
+              <PricingPack
+                key={`PricingPack-${block.id}`}
                 items={block.items}
                 hasSupport={block.hasSupport}
                 supportTitle={block.supportTitle}
