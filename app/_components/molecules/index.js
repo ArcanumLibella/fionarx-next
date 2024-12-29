@@ -13,3 +13,4 @@ export { Checklist } from './Checklist';
 export { DoubleButton } from './DoubleButton';
 export { CardBasic } from './CardBasic';
 export { CardBasicImage } from './CardBasicImage';
+export { BackToParentLink } from './BackToParentLink';

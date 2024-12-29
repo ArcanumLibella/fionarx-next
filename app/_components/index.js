@@ -12,6 +12,7 @@ export { Text } from './atoms';
 export { Copyright } from './atoms';
 export { Introduction } from './atoms';
 export { Subtitle } from './atoms';
+export { DynamicText } from './atoms';
 
 export { ButtonLarge } from './molecules';
 export { Button } from './molecules';
@@ -28,6 +29,7 @@ export { Checklist } from "./molecules";
 export { DoubleButton } from "./molecules";
 export { CardBasic } from "./molecules";
 export { CardBasicImage } from "./molecules";
+export { BackToParentLink } from "./molecules";
 
 export { Blobs } from "./organisms";
 export { BlobsLight } from "./organisms";
@@ -44,7 +46,6 @@ export { CardsPricing } from "./organisms";
 export { Accordion } from "./organisms";
 export { Checklists } from "./organisms";
 export { List } from "./organisms";
-export { SolutionPack } from "./organisms";
 export { CtaBlob } from "./organisms";
 export { CardCTA } from "./organisms";
 export { Options } from "./organisms";
