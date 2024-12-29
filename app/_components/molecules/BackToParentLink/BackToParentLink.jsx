@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Link from 'next/link';
 import { ArrowLeftIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
