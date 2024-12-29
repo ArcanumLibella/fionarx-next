@@ -5,7 +5,7 @@ import { fetchDataFromStrapi, fetchSEODataFormules } from "@/app/_utils/strapi.u
 import { FormuleLayout } from "@/app/_components/layouts";
 
 export async function generateMetadata({ params }) {
-  const seoData = await fetchSEODataFormules(params.solution);
+  const seoData = await fetchSEODataFormules(params.formule);
   if (!seoData) return;
  
   return {
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
     keywords: seoData.keywords,
     robots: seoData.metaRobots,
     alternates: {
-      canonical: `/formules/${params.solution}`,
+      canonical: `/formules/${params.formule}`,
     },
     structuredData: seoData.structuredData,
     openGraph: {
