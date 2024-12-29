@@ -73,9 +73,9 @@ export const Footer = ({ footer }) => {
                 })}
               </ul>
             </div>
-            <div className="Footer__prestations">
+            <div className="Footer__strategies">
               <span className="block mb-3 font-normal text-sm text-purple-ultraLight uppercase">
-                Prestations
+                Stratégies
               </span>
               <ul className="Footer__menu">
                 {formules && formules.map((item) => {
@@ -95,7 +95,7 @@ export const Footer = ({ footer }) => {
 
           <div className="Footer__right--bottom md:text-right">
             <span className="block mb-3 font-normal text-sm text-purple-ultraLight">
-              INFORMATIONS JURIDIQUES
+              Informations juridiques
             </span>
             <ul className="Footer__menu">
               {legalInformation && legalInformation.map((item) => {
