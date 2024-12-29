@@ -37,7 +37,6 @@ import { FormuleLayout } from "@/app/_components/layouts";
 // }
 
 const FormulaPage = async ({ params }) => {
-  console.log("PARAAAAMS : ", params)
   const parentPath = `/strategies-digitales/${params.slug}/`;
   const globalData = await fetchDataFromStrapi("global?populate=deep");
   const { formule: slug } = params;
