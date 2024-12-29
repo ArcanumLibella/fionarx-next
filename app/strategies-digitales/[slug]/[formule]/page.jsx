@@ -7,7 +7,6 @@ import { FormuleLayout } from "@/app/_components/layouts";
 export async function generateMetadata({ params }) {
   const seoData = await fetchSEODataFormules(params.formule);
   if (!seoData) return;
-  console.log("seoData !!!!!!!!!!!!!!!! : ", seoData)
  
   return {
     title: seoData.metaTitle,
@@ -68,9 +67,9 @@ const FormulaPage = async ({ params }) => {
       >
         <BackToParentLink parentPath={parentPath} />
         <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
-          {vision}
+          Formule
         </Text>
-        <Heading level={1} className="h1 mb-6 md:mb-10 text-tomato">{title}</Heading>
+        <Heading level={1} className="h1 mb-6 md:mb-10 leading-tight text-pretty text-tomato">{title}</Heading>
         <Subtitle subtitle={objectif} />
         <DynamicText text={accroche} />
         <BlocksManager blocks={blocks} />
