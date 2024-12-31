@@ -69,7 +69,7 @@ const FormulaPage = async ({ params }) => {
         <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
           Formule
         </Text>
-        <Heading level={1} className="h1 mb-6 md:mb-10 leading-tight text-pretty text-tomato">{title}</Heading>
+        <Heading level={1} className="h1 mb-6 md:mb-10 leading-tight text-balance text-tomato">{title}</Heading>
         <Subtitle subtitle={objectif} />
         <DynamicText text={accroche} />
         <BlocksManager blocks={blocks} />

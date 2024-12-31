@@ -15,7 +15,7 @@ export const CtaBlob = ({ title, pricing, detail }) => {
         />
       </figure>
       <BlobsLight className="absolute flex justify-center items-center !w-[240px] !h-full -z-1" />
-      <div className="CtaBlob__content w-48 xs:w-56 md:w-72 lg:w-80">
+      <div className="CtaBlob__content w-56 xs:w-64 md:w-72 lg:w-96">
         <Text type="custom" className="font-brother font-bold xs:text-base md:text-2base lg:text-3base text-center text-white">
           {title} 
         </Text>
