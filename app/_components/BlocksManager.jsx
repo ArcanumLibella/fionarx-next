@@ -34,7 +34,7 @@ export function BlocksManager({ blocks }) {
                       </Heading>
                     )
                   },
-                  link: ({ children, url }) => <a key={`link-${block.id}`} href={url} target="_blank" rel="noreferrer" title="Ouvrir le lien" className="Link font-medium text-tomato hover:!underline">{children}</a>,
+                  link: ({ children, url }) => <a key={`link-${block.id}`} href={url} target="_blank" title="Ouvrir le lien" className="Link font-medium text-tomato hover:!underline">{children}</a>,
                   list: ({ children }) => <ul key={`list-items-${block.id}`} className="List list-disc list-inside">{children}</ul>,
                   quote: ({ children }) => <blockquote key={`Quote-${block.id}`} className="my-6 p-4 xs:p-6 w-full max-w-full text-2normal rounded bg-purple-light">{children}</blockquote>,
                 }}

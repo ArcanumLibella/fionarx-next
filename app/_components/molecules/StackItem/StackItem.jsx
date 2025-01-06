@@ -1,5 +1,7 @@
 import React from 'react'
 import { Text } from "../../atoms/Text"
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { Paragraph } from "../../atoms";
 
 export const StackItem = ({title, content, items}) => {
   if (!content) return;
@@ -12,13 +14,23 @@ export const StackItem = ({title, content, items}) => {
         >
           {title}
         </Text>
-        {content.map((item, index) => {
-          return (
-            <Text key={index} type="paragraphLight">
-              {item.children[0].text}
-            </Text>
-          )
-        })}
+        <BlocksRenderer
+          content={content}
+          blocks={{
+            paragraph: ({ children }) => {
+              return (
+                <Text type="paragraphLight">
+                  {children}
+                </Text>
+              )
+            },
+            link: ({ children, url }) => <a href={url} target="_blank" title="Ouvrir le lien" className="Link transition-colors ease-in-out duration-300 hover:text-tomato">{children}</a>,
+          }}
+          modifiers={{
+            bold: ({ children }) => <strong className="font-medium text-tomato">{children}</strong>,
+            italic: ({ children }) => <span className="italic">{children}</span>,
+          }}
+        />
     </div>
   )
 }
