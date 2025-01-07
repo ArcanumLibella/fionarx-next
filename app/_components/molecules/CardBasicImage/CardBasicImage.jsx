@@ -1,6 +1,6 @@
 import React from "react";
 import { Heading, Paragraph } from "../../atoms";
-import { AwardIcon, BarChartIcon, ClockIcon, DollarIcon, EyeIcon, GiftIcon, GlobeIcon, HeartIcon, SearchIcon, ShoppingCartIcon, SmileIcon, TargetIcon, ThumbsUpIcon, TrendingUpIcon } from "@/public/_assets/icons";
+import { AwardIcon, BarChartIcon, BookOpenIcon, BriefCaseIcon, ClockIcon, CodeIcon, DollarIcon, EyeIcon, FeatherIcon, FrownIcon, GiftIcon, GlobeIcon, HeartIcon, LinkIcon, LockIcon, MehIcon, MessageCircleIcon, MonitorIcon, PenToolIcon, SearchIcon, SettingsIcon, ShareIcon, ShoppingCartIcon, SmileIcon, StarIcon, SunIcon, TagIcon, TargetIcon, ThumbsDownIcon, ThumbsUpIcon, ToolIcon, TrendingDownIcon, TrendingUpIcon, UsersIcon, ZapIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
 
 export const CardBasicImage = ({
@@ -102,6 +102,153 @@ export const CardBasicImage = ({
     ),
     trendingUp: (
       <TrendingUpIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    bookOpen: (
+      <BookOpenIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    briefCase: (
+      <BriefCaseIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    code: (
+      <CodeIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    feather: (
+      <FeatherIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    frown: (
+      <FrownIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    link: (
+      <LinkIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    lock: (
+      <LockIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    meh: (
+      <MehIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    messageCircle: (
+      <MessageCircleIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    monitor: (
+      <MonitorIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    penTool: (
+      <PenToolIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    settings: (
+      <SettingsIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    share: (
+      <ShareIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    star: (
+      <StarIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    sun: (
+      <SunIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    tag: (
+      <TagIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    thumbsDown: (
+      <ThumbsDownIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    tool: (
+      <ToolIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    trendingDown: (
+      <TrendingDownIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    users: (
+      <UsersIcon
+        stroke={COLORS.tomato.DEFAULT}
+        height={48}
+        width={48}
+      />
+    ),
+    zap: (
+      <ZapIcon
         stroke={COLORS.tomato.DEFAULT}
         height={48}
         width={48}

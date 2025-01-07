@@ -30,6 +30,27 @@ import SearchIcon from "./search.svg";
 import ShoppingCartIcon from "./shopping-cart.svg";
 import ThumbsUpIcon from "./thumbs-up.svg";
 import TrendingUpIcon from "./trending-up.svg";
+import FrownIcon from "./frown.svg";
+import LinkIcon from "./link.svg";
+import LockIcon from "./lock.svg";
+import MehIcon from "./meh.svg";
+import MessageCircleIcon from "./message-circle.svg";
+import MonitorIcon from "./monitor.svg";
+import PenToolIcon from "./pen-tool.svg";
+import SettingsIcon from "./settings.svg";
+import ShareIcon from "./share-2.svg";
+import StarIcon from "./star.svg";
+import SunIcon from "./sun.svg";
+import TagIcon from "./tag.svg";
+import ThumbsDownIcon from "./thumbs-down.svg";
+import ToolIcon from "./tool.svg";
+import TrendingDownIcon from "./trending-down.svg";
+import UsersIcon from "./users.svg";
+import ZapIcon from "./zap.svg";
+import BookOpenIcon from "./book-open.svg";
+import BriefCaseIcon from "./briefcase.svg";
+import CodeIcon from "./code.svg";
+import FeatherIcon from "./feather.svg";
 
 export {
   GithubIcon,
@@ -63,5 +84,26 @@ export {
   SearchIcon,
   ShoppingCartIcon,
   ThumbsUpIcon,
-  TrendingUpIcon
+  TrendingUpIcon,
+  FrownIcon,
+  LinkIcon,
+  LockIcon,
+  MehIcon,
+  MessageCircleIcon,
+  MonitorIcon,
+  PenToolIcon,
+  SettingsIcon,
+  ShareIcon,
+  StarIcon,
+  SunIcon,
+  TagIcon,
+  ThumbsDownIcon,
+  ToolIcon,
+  TrendingDownIcon,
+  UsersIcon,
+  ZapIcon,
+  BookOpenIcon,
+  FeatherIcon,
+  CodeIcon,
+  BriefCaseIcon
 };
