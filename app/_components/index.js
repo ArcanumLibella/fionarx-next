@@ -30,6 +30,7 @@ export { DoubleButton } from "./molecules";
 export { CardBasic } from "./molecules";
 export { CardBasicImage } from "./molecules";
 export { BackToParentLink } from "./molecules";
+export { MiniStep } from "./molecules";
 
 export { Blobs } from "./organisms";
 export { BlobsLight } from "./organisms";
@@ -56,6 +57,7 @@ export { Footer } from "./organisms";
 export { DoubleContent } from "./organisms";
 export { StrategyCard } from "./organisms";
 export { CardsStrategy } from "./organisms";
+export { MiniStepBlock } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";

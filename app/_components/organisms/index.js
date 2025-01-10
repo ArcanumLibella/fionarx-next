@@ -24,3 +24,4 @@ export { Footer } from "./Footer";
 export { DoubleContent } from "./DoubleContent";
 export { CardsStrategy } from "./CardsStrategy";
 export { StrategyCard } from "./StrategyCard";
+export { MiniStepBlock } from "./MiniStepBlock";
