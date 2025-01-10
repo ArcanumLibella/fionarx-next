@@ -45,66 +45,66 @@ strong {
 /* FONT-SIZE CLASSES */
 @layer components {
 	.h1 {
-		@apply !text-lg xs:!text-2lg md:!text-2xl xl:!text-xl 2xl:!text-2xl;
+		@apply !text-lg xs:!text-2lg md:!text-2xl xl:!text-xl 2xl:!text-2xl text-pretty;
 	}
 
 	.h2 {
-		@apply !text-base md:!text-3base 2xl:!text-md;
+		@apply !text-2base md:!text-3base 2xl:!text-md text-pretty;
 	}
 
 	.h3 {
-		@apply !text-base md:!text-2base 2xl:!text-3base;
+		@apply !text-base md:!text-2base 2xl:!text-3base text-pretty;
 	}
 
 	.h4 {
-		@apply !text-base md:!text-2base 2xl:!text-3base;
+		@apply !text-base md:!text-2base 2xl:!text-3base text-pretty;
 	}
 
 	.h5 {
-		@apply !text-2normal lg:!text-base 2xl:!text-2base;
+		@apply !text-2normal lg:!text-base 2xl:!text-2base text-pretty;
 	}
 
 	.h6 {
-		@apply !text-sm md:!text-normal lg:!text-2normal 2xl:!text-base;
+		@apply !text-sm md:!text-normal lg:!text-2normal 2xl:!text-base text-pretty;
 	}
 
 	.h-gradient {
-		@apply !text-3base md:!text-md lg:!text-lg;
+		@apply !text-3base md:!text-md lg:!text-lg text-pretty;
 	}
 
 	.paragraphLarge {
-		@apply !text-base xs:!text-2base md:!text-3base 2xl:!text-md;
+		@apply !text-base xs:!text-2base md:!text-3base 2xl:!text-md text-pretty;
 	}
 
 	.paragraphLight {
-		@apply !text-normal md:!text-base;
+		@apply !text-normal md:!text-base text-pretty;
 	}
 }
 
 /* FONT-SIZE TAGS */
 @layer components {
 	h1 {
-		@apply text-lg xs:text-2lg md:text-2xl 2xl:text-3xl;
+		@apply text-lg xs:text-2lg md:text-2xl 2xl:text-3xl text-pretty;
 	}
 
 	h2 {
-		@apply text-base md:text-3base 2xl:text-md;
+		@apply text-2base md:text-3base 2xl:text-md text-pretty;
 	}
 
 	h3 {
-		@apply text-base md:text-2base 2xl:text-3base;
+		@apply text-base md:text-2base 2xl:text-3base text-pretty;
 	}
 
 	h4 {
-		@apply text-2normal md:text-base 2xl:text-2base;
+		@apply text-2normal md:text-base 2xl:text-2base text-pretty;
 	}
 
 	h5 {
-		@apply text-normal lg:text-2normal 2xl:text-base;
+		@apply text-normal lg:text-2normal 2xl:text-base text-pretty;
 	}
 
 	h6 {
-		@apply text-sm md:text-normal lg:text-2normal 2xl:text-base;
+		@apply text-sm md:text-normal lg:text-2normal 2xl:text-base text-pretty;
 	}
 }
 

@@ -14,7 +14,7 @@ export const CardPrestation = ({
       <div className="p-6 bg-purple">
         <Heading
           level={3}
-          className="!my-0 font-extrabold uppercase text-tomato"
+          className="!text-base !my-0 font-extrabold text-tomato"
         >
           {title}
         </Heading>
