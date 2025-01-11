@@ -18,7 +18,7 @@ export const Footer = ({ footer }) => {
             <Heading level={2} className="h2 !mt-0 !mb-2 !text-md lg:!text-2md !normal-case !text-white">
               {title}
             </Heading>
-            <Heading level={3} className="h3 !mt-0 !mb-4 !text-2base lg:!text-3base text-pretty">
+            <Heading level={3} className="h3 !mt-0 !mb-4 !text-2base lg:!text-3base !normal-case text-pretty">
               {role}
             </Heading>
             <Text type="paragraphLight" className="!text-normal">
