@@ -2,16 +2,20 @@
 
 import React from "react";
 import Link from "next/link";
-import { Heading, Paragraph } from "../../atoms";
+import { Heading, Paragraph, Text } from "../../atoms";
+import { Button } from "../Button";
 
 export const CardPrestation = ({
   title,
   slug,
-  description 
+  description,
+  isFrom,
+  pricing,
+  button
 }) => {
   const CardContent = (
     <>
-      <div className="p-6 bg-purple">
+      <div className="p-6 bg-purple-light">
         <Heading
           level={3}
           className="!text-base !my-0 font-extrabold text-tomato"
@@ -19,8 +23,26 @@ export const CardPrestation = ({
           {title}
         </Heading>
       </div>
-      <div className="p-6 bg-purple-light group-hover:bg-tomato transition-all ease-in-out duration-300">
+      <div className="p-6 bg-purple">
         <Paragraph>{description}</Paragraph>
+        {isFrom && pricing && (
+          <div className="my-8">
+            <Text className="text-sm font-semibold text-tomato">
+              à partir de
+            </Text>
+            <Text type="custom" className="!text-2lg !font-black !text-tomato">
+              {pricing} €
+            </Text>
+          </div>
+        )}
+        {button && (
+          <Button
+            label={button.label}
+            url={button.url}
+            isCentered
+            className="CardPrestation__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%"
+          />
+        )}
       </div>
     </>
   )

@@ -28,6 +28,9 @@ if (!cardsPrestation) return;
               title={card.title}
               slug={card.slug}
               description={card.description}
+              isFrom={card.isFrom}
+              pricing={card.pricing}
+              button={card.button}
             />
           );
         })}

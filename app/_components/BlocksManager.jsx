@@ -4,7 +4,7 @@ import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
 import { ButtonLarge, DoubleButton } from "./molecules";
-import { Accordion, CardsBasic, CardsBasicImage, CardsPrestation, CardsPricing, Checklists, DoubleContent, ImagesSlider, List, Options, SectionCTA, StackItems, Stages, CardsStrategy, PricingPack, MiniStepBlock } from "./organisms";
+import { Accordion, CardsBasic, CardsBasicImage, CardsPrestation, CardsPricing, Checklists, DoubleContent, ImagesSlider, List, Options, SectionCTA, StackItems, Stages, CardsStrategy, PricingPack, MiniStepBlock, PricingCard } from "./organisms";
 import Image from "next/image";
 
 export function BlocksManager({ blocks }) {
@@ -68,6 +68,35 @@ export function BlocksManager({ blocks }) {
                 description={block.description}
                 pricingCards={block.pricingCards}
                 cardCTA={block.cardCTA}
+              />
+            );
+          case "blocks.pricing-card":
+            return (
+              <PricingCard
+                key={block.id}
+                description={block.description}
+                formula={block.formula}
+                isDisabled={block.isDisabled}
+                title={block.title}
+                slug={block.slug}
+                isFrom={block.isFrom}
+                isMonthly={block.isMonthly}
+                price={block.price}
+                duration={block.duration}
+                item1={block.item1}
+                item2={block.item2}
+                item3={block.item3}
+                item4={block.item4}
+                item5={block.item5}
+                item6={block.item6}
+                item7={block.item7}
+                item8={block.item8}
+                item9={block.item9}
+                hasSupport={block.hasSupport}
+                supportTitle={block.supportTitle}
+                supportDescription={block.supportDescription}
+                mentoringTitle={block.mentoringTitle}
+                mentoringDescription={block.mentoringDescription}
               />
             );
           case "blocks.cards-strategy":
