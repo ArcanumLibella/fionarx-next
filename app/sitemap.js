@@ -25,6 +25,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://www.fionarx.com/prestations',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://www.fionarx.com/strategies-digitales/audit-digital',
       lastModified: new Date(),
       changeFrequency: 'monthly',
