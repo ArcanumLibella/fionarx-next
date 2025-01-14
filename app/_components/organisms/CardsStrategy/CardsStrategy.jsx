@@ -27,6 +27,7 @@ export const CardsStrategy = ({ title, strategyCards }) => {
               item3={card.item3}
               item4={card.item4}
               item5={card.item5}
+              ctaLink={card.ctaLink}
               isStrategyCard={card.isStrategyCard}
               isLastCard={card.isLastCard}
               emoji={card.emoji}

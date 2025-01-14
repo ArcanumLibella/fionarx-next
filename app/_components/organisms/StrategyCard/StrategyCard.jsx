@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Heading, Paragraph, Text } from "../../atoms";
+import { Button } from "../../molecules";
 import { CheckIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
 import Image from "next/image";
@@ -16,6 +17,7 @@ export const StrategyCard = ({
   item3,
   item4,
   item5,
+  ctaLink,
   isStrategyCard,
   isLastCard,
   emoji,
@@ -95,6 +97,15 @@ export const StrategyCard = ({
                     )
                   )}
                 </div>
+                {/* BUTTON */}
+                {isMobile && ctaLink && (
+                  <Button
+                    label="En savoir plus"
+                    url={ctaLink}
+                    isCentered
+                    className="StrategyCard__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%"
+                  />
+                )}
               </>
             ) : (
               <>
@@ -134,6 +145,15 @@ export const StrategyCard = ({
                 placeholder="blur"
               />
             </figure>
+            {/* BUTTON */}
+            {ctaLink && (
+              <Button
+                label="En savoir plus"
+                url={ctaLink}
+                isCentered
+                className="StrategyCard__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%"
+              />
+            )}
           </div>
         )}
       </div>
