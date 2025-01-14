@@ -13,19 +13,7 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://www.fionarx.com/solutions',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: 'https://www.fionarx.com/strategies-digitales',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.fionarx.com/prestations',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -43,19 +31,31 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://www.fionarx.com/solutions',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://www.fionarx.com/solutions/digital-starter',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.64,
     },
     {
-      url: 'https://www.fionarx.com/strategies-digitales/audit-digital/formule-audit-seo-audit-local',
+      url: 'https://www.fionarx.com/prestations',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://www.fionarx.com/prestations/audit-seo-audit-local',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.64,
     },
     {
-      url: 'https://www.fionarx.com/strategies-digitales/audit-digital/formule-audit-digital-strategie-editoriale',
+      url: 'https://www.fionarx.com/prestations/audit-digital-strategie-editoriale',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.64,
