@@ -28,6 +28,7 @@ if (!pricingCards) return;
               description={card.description}
               formula={card.formula}
               isDisabled={card.isDisabled}
+              isLarge={card.isLarge}
               title={card.title}
               slug={card.slug}
               isFrom={card.isFrom}

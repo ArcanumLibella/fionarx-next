@@ -77,6 +77,7 @@ export function BlocksManager({ blocks }) {
                 description={block.description}
                 formula={block.formula}
                 isDisabled={block.isDisabled}
+                isLarge={block.isLarge}
                 title={block.title}
                 slug={block.slug}
                 isFrom={block.isFrom}

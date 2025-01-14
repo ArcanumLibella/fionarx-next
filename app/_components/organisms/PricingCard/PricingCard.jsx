@@ -14,6 +14,7 @@ export const PricingCard = ({
   title,
   slug,
   formula,
+  isLarge,
   isFrom,
   isMonthly,
   price,
@@ -44,7 +45,7 @@ export const PricingCard = ({
         {/* TITLE */}
         <Heading
           level={3}
-          className="PricingCard__title mb-6 md:min-h-[60px] lg:min-h-[108px] font-brother !font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white"
+          className={`PricingCard__title mb-6 ${isLarge ? "min-h-auto" : "md:min-h-[60px] lg:min-h-[108px]"} font-brother !font-black uppercase text-3base xs:text-md md:text-2base lg:text-3base tracking-wider text-white`}
         >
           {title}
         </Heading>
@@ -73,7 +74,10 @@ export const PricingCard = ({
               / mois
             </Text>
           )}
-          <Text type="custom" className="mt-4 font-bold">➤ {duration}</Text>
+          {/* DURATION */}
+          {duration && (
+            <Text type="custom" className="mt-4 font-bold">➤ {duration}</Text>
+          )}
         </div>
 
         {/* SEPARATOR */}
@@ -86,7 +90,7 @@ export const PricingCard = ({
         </div>
 
         {/* ITEMS */}
-        <div className="PricingCard__items">
+        <div className={`PricingCard__items ${isLarge && "grid grid-cols-2 gap-2"}`}>
           {items.map((item, index) => 
             item && (
               <div key={index} className="PricingCard__item flex w-full mb-1">
@@ -154,7 +158,9 @@ export const PricingCard = ({
 
   return (
     <div className="PricingCardFull flex flex-col justify-between h-full">
-      <DescriptionCard key={slug} description={description} />
+      {description && (
+        <DescriptionCard key={slug} description={description} />
+      )}
       {isDisabled ? (
         <div className="PricingCard flex flex-col justify-between h-full md:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 bg-purple-dark outline outline-2 outline-white -outline-offset-2 rounded-xl">
           {CardContent}
