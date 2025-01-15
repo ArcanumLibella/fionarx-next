@@ -55,7 +55,7 @@ export default function sitemap() {
       priority: 0.64,
     },
     {
-      url: 'https://www.fionarx.com/prestations/audit-digital-strategie-editoriale',
+      url: 'https://www.fionarx.com/prestations/strategie-editoriale',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.64,
