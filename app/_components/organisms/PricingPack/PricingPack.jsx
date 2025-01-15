@@ -20,9 +20,12 @@ export const PricingPack = ({
       <div className="PricingPack__list p-6 pb-0 border-4 border-tomato rounded-lg">
         <List items={items} />
       </div>
-      <div className="PricingPack__plus flex justify-center">
-        <Text type="custom" className="text-bold text-xl text-tomato">+</Text>
-      </div>
+      {(hasSupport || mentoringTitle) && (
+        <div className="PricingPack__plus flex justify-center">
+          <Text type="custom" className="text-bold text-xl text-tomato">+</Text>
+        </div>
+      )}
+
       {hasSupport && (
         <>
           <div className="PricingPack__support Support flex flex-col justify-center">
