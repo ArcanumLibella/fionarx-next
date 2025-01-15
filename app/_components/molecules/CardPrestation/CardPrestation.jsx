@@ -11,6 +11,7 @@ export const CardPrestation = ({
   description,
   isFrom,
   pricing,
+  isDisabled,
   button
 }) => {
   const CardContent = (
@@ -26,7 +27,7 @@ export const CardPrestation = ({
       <div className="p-6 bg-purple">
         <Paragraph>{description}</Paragraph>
         {isFrom && pricing && (
-          <div className="my-8">
+          <div className="mt-8">
             <Text className="text-sm font-semibold text-tomato">
               à partir de
             </Text>
@@ -35,25 +36,36 @@ export const CardPrestation = ({
             </Text>
           </div>
         )}
-        {button && (
+        {isDisabled ? (
           <Button
-            label={button.label}
-            url={button.url}
+            label="Bientôt disponible"
+            url="#"
             isCentered
-            className="CardPrestation__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%"
+            isDisabled={isDisabled}          
+            className="CardPrestation__button mt-8"
           />
-        )}
+          ) : (
+            <Button
+              label={button.label}
+              url={button.url}
+              isCentered
+              isExternal={button.isExternal}
+              isDisabled={isDisabled}          
+              className="CardPrestation__button mt-8 !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%"
+            />
+          )
+        }
       </div>
     </>
   )
 
   return (
     slug ? (
-      <Link href={slug} className="CardPrestation flex-1 h-full mr-8 mb-8 text-center min-w-240 scroll-mr-8 group cursor-pointer">
+      <Link href={slug} className="CardPrestation flex-1 mr-8 md:mr-0 mb-8 md:mb-0 text-center min-w-240 scroll-mr-8 group cursor-pointer">
         {CardContent}
       </Link>
     ) : (
-      <div className="CardPrestation flex-1 h-full mr-8 mb-8 text-center min-w-240 scroll-mr-8 cursor-default">
+      <div className="CardPrestation flex-1 mr-8 md:mr-0 mb-8 md:mb-0 text-center min-w-240 scroll-mr-8 cursor-default">
         {CardContent}
       </div>
     )

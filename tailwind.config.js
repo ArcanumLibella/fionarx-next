@@ -133,6 +133,9 @@ module.exports = {
         down: {
           '40%': { transform: 'translateY(16%)', opacity: '64%' },
         },
+        right: {
+          '40%': { transform: 'translateX(16%)', opacity: '64%' },
+        },
       },
       animation: {
         'movement': 'movement 4s ease-in-out infinite both',
@@ -141,6 +144,7 @@ module.exports = {
         'transform5s': 'transform 17s ease-in-out infinite both alternate 5s',
         'transform8s': 'transform 17s ease-in-out infinite both alternate 8s',
         'down': 'down 1.2s ease-in-out infinite',
+        'right': 'right 1.2s ease-in-out infinite',
       },
       textFillColor: theme => theme('borderColor'),
       textStrokeColor: theme => theme('borderColor'),

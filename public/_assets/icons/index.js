@@ -51,6 +51,7 @@ import BookOpenIcon from "./book-open.svg";
 import BriefCaseIcon from "./briefcase.svg";
 import CodeIcon from "./code.svg";
 import FeatherIcon from "./feather.svg";
+import ChevronRightIcon from "./chevron-right.svg";
 
 export {
   GithubIcon,
@@ -105,5 +106,6 @@ export {
   BookOpenIcon,
   FeatherIcon,
   CodeIcon,
-  BriefCaseIcon
+  BriefCaseIcon,
+  ChevronRightIcon
 };
