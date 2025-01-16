@@ -194,6 +194,7 @@ export function BlocksManager({ blocks }) {
                 key={`MiniStepBlock-${block.id}`}
                 items={block.items}
                 description={block.description}
+                withArrow={block.withArrow}
               />
             );
           case "blocks.cards-basic-image":

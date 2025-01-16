@@ -2,10 +2,10 @@ import React from "react";
 import { MiniStep } from "../../molecules";
 import { Text } from "../../atoms";
 
-export const MiniStepBlock = ({ items, description }) => {
+export const MiniStepBlock = ({ items, description, withArrow }) => {
   return (
     <div className="MiniStepBlock my-16">
-      <div className="MiniStepBlock__steps flex flex-col md:grid grid-cols-4 gap-4 xl:gap-6 my-8">
+      <div className={`MiniStepBlock__steps flex flex-col md:grid grid-cols-${items.length} gap-4 xl:gap-6 my-8`}>
         {items.map((item) => {
           return (
             <MiniStep
@@ -13,6 +13,7 @@ export const MiniStepBlock = ({ items, description }) => {
               title={item.title}
               content={item.content}
               isLast={item.isLast}
+              withArrow={withArrow}
             />
           );
         })}
