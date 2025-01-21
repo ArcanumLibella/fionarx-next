@@ -61,7 +61,7 @@ export const CardOption = ({
           {CardContent}
         </div>
       ) : (
-        <Link href={ctaLink} className="CardOption flex flex-col justify-between h-full mb-4 lg:mb-0 p-6 bg-purple rounded-xl xl:transform hover:bg-purple-light transition-all cursor-pointer">
+        <Link href={ctaLink} target={isExternal ? '_blank' : '_self'} className="CardOption flex flex-col justify-between h-full mb-4 lg:mb-0 p-6 bg-purple rounded-xl xl:transform hover:bg-purple-light transition-all cursor-pointer">
           {CardContent}
         </Link>
       )}

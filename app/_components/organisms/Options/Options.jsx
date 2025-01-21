@@ -29,6 +29,7 @@ if (!options) return;
               ctaLabel={option.ctaLabel}
               ctaLink={option.ctaLink}
               isLarge={option.isLarge}
+              isExternal={option.isExternal}
               isDisabled={option.isDisabled}
             />
           );
