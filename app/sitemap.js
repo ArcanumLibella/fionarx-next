@@ -49,7 +49,7 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://www.fionarx.com/prestations/audit-seo-audit-local',
+      url: 'https://www.fionarx.com/prestations/audit-digital',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.64,
