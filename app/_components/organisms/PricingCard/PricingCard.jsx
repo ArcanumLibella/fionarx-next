@@ -13,11 +13,13 @@ export const PricingCard = ({
   isDisabled,
   title,
   slug,
+  isExternal,
   formula,
   isLarge,
   isFrom,
   isMonthly,
   price,
+  isFree,
   duration,
   item1,
   item2,
@@ -53,21 +55,23 @@ export const PricingCard = ({
         {/* PRICING */}
         <div className="PricingCard__pricing relative">
           {/* ISFROM */}
-          {isFrom ? (
-            <Text type="custom" className="PricingCard__from absolute -top-2 font-body text-tiny text-tomato" >
-              à partir de
-            </Text>
+          {isFree ? (
+            <span className="PricingCard__price font-body font-bold text-xl xl:text-3lg 2xl:text-xl text-tomato">
+              Offert
+            </span>
           ) : (
-            <Text type="custom" className="PricingCard__from absolute -top-2 font-body text-tiny text-tomato" >
-              seulement
-            </Text>
-          )}
-          {/* PRICE */}
-          <span
-            className="PricingCard__price font-body font-bold uppercase text-xl xl:text-3lg 2xl:text-xl text-tomato"
-          >
-            {price} €
-          </span>
+            <>
+              <Text
+                type="custom"
+                className="PricingCard__from absolute -top-2 font-body text-tiny text-tomato"
+              >
+                {isFrom ? "à partir de" : "seulement"}
+              </Text>
+              <span className="PricingCard__price font-body font-bold uppercase text-xl xl:text-3lg 2xl:text-xl text-tomato">
+                {price} €
+              </span>
+            </>
+        )}
           {/* ISMONTHLY */}
           {isMonthly && (
             <Text type="custom" className="PricingCard__isMonthly absolute bottom-8 font-body text-normal text-tomato" >
@@ -149,6 +153,7 @@ export const PricingCard = ({
             label="En savoir plus"
             url={slug}
             isCentered
+            isExternal={isExternal}
             className="PricingCard__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%"
           />
         )}
@@ -166,7 +171,7 @@ export const PricingCard = ({
           {CardContent}
         </div>
       ) : (
-        <Link href={slug} className="PricingCard flex flex-col justify-between h-full md:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 bg-purple-dark outline outline-2 outline-white -outline-offset-2 hover:outline-tomato xl:transform xl:hover:scale-110 transition-all rounded-xl cursor-pointer">
+        <Link href={slug} target={isExternal ? '_blank' : '_self'} className="PricingCard flex flex-col justify-between h-full md:mx-4 xl:mx-3 mb-8 lg:mb-0 p-4 bg-purple-dark outline outline-2 outline-white -outline-offset-2 hover:outline-tomato xl:transform xl:hover:scale-[1.02] transition-all rounded-xl cursor-pointer">
           {CardContent}
         </Link>
       )}

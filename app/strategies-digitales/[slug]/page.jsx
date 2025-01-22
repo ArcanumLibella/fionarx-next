@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, PrestationLayout, Introduction, Footer, Subtitle, SectionCTA } from "@/app/_components";
+import { Heading, BlocksManager, PrestationLayout, Footer, Subtitle, SectionCTA, DynamicText } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { fetchDataFromStrapi, fetchSEODataStrategies } from "@/app/_utils/strapi.utils";
 import { COLORS } from "@/app/_constants/Colors";
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
   }
 }
 
-const PrestationPage = async ({ params }) => {
+const StrategiePage = async ({ params }) => {
   const globalData = await fetchDataFromStrapi("global?populate=deep");
   const { slug } = params;
   let strategie;
@@ -57,7 +57,7 @@ const PrestationPage = async ({ params }) => {
     return <UnderConstructionPage />;
   }
 
-  const { title, expertise, subtitle, introduction, blocks, sectionCTA } = strategie.attributes || [];
+  const { title, expertise, subtitle, accroche, blocks, sectionCTA } = strategie.attributes || [];
   const footer = globalData.attributes.footer;
 
   return (
@@ -78,9 +78,7 @@ const PrestationPage = async ({ params }) => {
         <Heading level={1} className="mb-4 !text-normal xs:!text-base md:!text-2base 2xl:!text-md uppercase text-purple-ultraLight">{expertise}</Heading>
         <Heading level={2} className="text-md md:text-lg lg:text-2lg 2xl:text-xl !mt-0 tracking-tighter leading-tight text-pretty text-tomato">{title}</Heading>
         <Subtitle subtitle={subtitle} />
-        {introduction && (
-          <Introduction introduction={introduction} />
-        )}
+        <DynamicText text={accroche} />
         <BlocksManager blocks={blocks} />
       </PrestationLayout>
       {sectionCTA && (
@@ -97,4 +95,4 @@ const PrestationPage = async ({ params }) => {
   );
 }
 
-export default PrestationPage;
+export default StrategiePage;

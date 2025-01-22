@@ -31,9 +31,11 @@ if (!pricingCards) return;
               isLarge={card.isLarge}
               title={card.title}
               slug={card.slug}
+              isExternal={card.isExternal}
               isFrom={card.isFrom}
               isMonthly={card.isMonthly}
               price={card.price}
+              isFree={card.isFree}
               duration={card.duration}
               item1={card.item1}
               item2={card.item2}
