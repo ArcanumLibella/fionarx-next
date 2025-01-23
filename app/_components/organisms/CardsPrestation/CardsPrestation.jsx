@@ -20,7 +20,7 @@ if (!cardsPrestation) return;
           <Heading level="gradient" className="h-gradient max-w-xl my-12 md:my-16">{title}</Heading>
         </div>
       )}
-      <div className="CardsPrestation__wrapper flex md:grid md:place-items-stretch md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 md:mb-12 !-mx-4 md:!-mx-8 xl:!mx-0 px-4 md:px-8 xl:px-0 overflow-x-auto lg:overflow-hidden max-w-800 lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl scrollbar-hidden">
+      <div className="CardsPrestation__wrapper flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 md:mb-12 !-mx-4 md:!-mx-8 xl:!mx-0 px-4 md:px-8 xl:px-0 overflow-x-auto lg:overflow-hidden max-w-800 lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl scrollbar-hidden">
         {cardsPrestation.map((card) => {
           return (
             <CardPrestation
