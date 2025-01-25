@@ -55,16 +55,16 @@ const SinglePage = async ({ params }) => {
     return <NotFoundPage />;
   }
 
-  const blocks = page.attributes.blocks || [];
-  const sectionCTA = page.attributes.sectionCTA || null;
+  const { title, introduction, accroche, blocks, sectionCTA } = page.attributes || [];
   const footer = globalData.attributes.footer || null;
 
   return (
     <>
       <PageLayout
         className="xl:pb-64"
-        title={page.attributes.title}
-        introduction={page.attributes.introduction}
+        title={title}
+        introduction={introduction}
+        accroche={accroche}
         slug={page.attributes.slug}
       >
         <BlocksManager blocks={blocks} />
