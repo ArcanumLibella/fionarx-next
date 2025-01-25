@@ -13,14 +13,14 @@ if (!pricingCards) return;
         </div>
       )}
       {description && (
-        <div className="CardsPrestation__description flex justify-center w-full">
+        <div className="CardsPrestation__description flex justify-center w-full mb-12">
           <div className="text-center">
             <DynamicText text={description} />
           </div>
         </div>
       )}
       
-      <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 mt-12 md:mt-16 lg:px-0">
+      <div className="CardsPricing__items flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 lg:px-0">
         {pricingCards.map((card) => {
           return (
             <PricingCard
