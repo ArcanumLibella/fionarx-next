@@ -8,11 +8,13 @@ export { TagCategory } from './atoms';
 export { TagMission } from './atoms';
 export { TagTechno } from './atoms';
 export { TagFormula } from './atoms';
+export { TagDiscount } from './atoms';
 export { Text } from './atoms';
 export { Copyright } from './atoms';
 export { Introduction } from './atoms';
 export { Subtitle } from './atoms';
 export { DynamicText } from './atoms';
+export { HeadingGradient } from './atoms';
 
 export { ButtonLarge } from './molecules';
 export { Button } from './molecules';
@@ -31,6 +33,7 @@ export { CardBasic } from "./molecules";
 export { CardBasicImage } from "./molecules";
 export { BackToParentLink } from "./molecules";
 export { MiniStep } from "./molecules";
+export { HeaderGradient } from "./molecules";
 
 export { Blobs } from "./organisms";
 export { BlobsLight } from "./organisms";
