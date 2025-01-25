@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import { Heading, BlocksManager, Paragraph, Text, Footer, Subtitle } from "@/app/_components";
+import { Heading, BlocksManager, Text, Footer, Subtitle, DynamicText, SectionCTA } from "@/app/_components";
 import UnderConstructionPage from "@/app/under-construction";
 import { COLORS } from "@/app/_constants/Colors";
 import { ArrowLeftIcon } from "@/public/_assets/icons";
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     keywords: seoData.keywords,
     robots: seoData.metaRobots,
     alternates: {
-      canonical: `/solutions/${params.solution}`,
+      canonical: seoData.canonicalURL,
     },
     structuredData: seoData.structuredData,
     openGraph: {
@@ -58,7 +58,7 @@ const SolutionPage = async ({ params }) => {
     return <UnderConstructionPage />;
   }
 
-  const { title, vision, target, introduction, blocks } = solution.attributes || [];
+  const { title, objectif, accroche, blocks, sectionCTA } = solution.attributes || [];
   const footer = globalData.attributes.footer;
 
   return (
@@ -77,13 +77,22 @@ const SolutionPage = async ({ params }) => {
           </span>
         </Link>
         <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
-          {vision}
+          Solution
         </Text>
-        <Heading level={1} className="h1 mb-6 md:mb-10 text-tomato">{title}</Heading>
-        <Subtitle subtitle={introduction.content} />
-        <Paragraph>{target}</Paragraph>
+        <Heading level={1} className="h1 mb-6 md:mb-10 leading-tight text-balance text-tomato">{title}</Heading>
+        <Subtitle subtitle={objectif} />
+        <DynamicText text={accroche} />
         <BlocksManager blocks={blocks} />
       </SolutionLayout>
+      {sectionCTA && (
+        <SectionCTA
+          key={`SectionCTA-${sectionCTA.id}`}
+          title={sectionCTA.title}
+          subtitle={sectionCTA.subtitle}
+          button={sectionCTA.button}
+          className="relative md:-bottom-20 xl:-bottom-36 2xl:-bottom-64 md:ml-24 pb-24 md:pb-48"
+        />
+      )}
       <Footer footer={footer} />
     </>
   );

@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   if (!seoData) return;
  
   return {
-    title: seoData.metaTitle,
+    title: "Prestation > " +seoData.metaTitle,
     description: seoData.metaDescription,
     keywords: seoData.keywords,
     robots: seoData.metaRobots,
@@ -59,7 +59,7 @@ const PrestationPage = async ({ params }) => {
     return <UnderConstructionPage />;
   }
 
-  const { title, vision, objectif, accroche, blocks, sectionCTA } = prestation.attributes || [];
+  const { title, objectif, accroche, blocks, sectionCTA } = prestation.attributes || [];
   const footer = globalData.attributes.footer;
 
   return (
@@ -78,7 +78,7 @@ const PrestationPage = async ({ params }) => {
           </span>
         </Link>
         <Text type="paragraphLarge" className="uppercase text-purple-ultraLight">
-          Prestations
+          Prestation
         </Text>
         <Heading level={1} className="h1 mb-6 md:mb-10 leading-tight text-balance text-tomato">{title}</Heading>
         <Subtitle subtitle={objectif} />
