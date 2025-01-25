@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text } from "../../atoms";
+import { TagDiscount, Text } from "../../atoms";
 import Image from "next/image";
 import { BlobsLight } from "../BlobsLight";
 
-export const CtaBlob = ({ title, pricing, detail }) => {  
+export const CtaBlob = ({ title, pricing, detail, isDiscounted }) => {  
   return (
-    <div className="CtaBlob relative flex justify-center items-center !w-full !h-[240px] my-12 lg:my-16 cursor-pointer">
+    <div className="CtaBlob relative flex justify-center items-center !w-full !h-[240px] my-12 lg:my-16">
       <figure className="CtaBlob__image absolute w-20 h-20 md:w-24 lg:w-32 md:h-24 lg:h-32 -top-16 xs:-top-12 md:-top-8 lg:-top-16 -right-4 xs:-right-0 md:right-12 lg:right-32 xl:right-24 2xl:right-48">
         <Image
           src="/_assets/images/curved-arrow.svg"
@@ -25,6 +25,7 @@ export const CtaBlob = ({ title, pricing, detail }) => {
         <Text type="custom" className="font-brother font-light text-tiny xs:text-normal text-center text-white">
           {detail}
         </Text>
+        {isDiscounted && <TagDiscount className="mx-auto mt-8" />}
       </div>
     </div>
   );

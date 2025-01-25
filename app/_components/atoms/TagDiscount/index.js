@@ -1,0 +1,1 @@
+export { TagDiscount } from "./TagDiscount";

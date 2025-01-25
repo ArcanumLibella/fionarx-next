@@ -2,7 +2,7 @@ import React from "react";
 import { CardPrestation } from "../../molecules";
 import { ChevronRightIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
-import { Heading } from "../../atoms";
+import { HeadingGradient } from "../../atoms";
 
 export const CardsPrestation = ({ title, cardsPrestation }) => {
 if (!cardsPrestation) return;
@@ -16,9 +16,7 @@ if (!cardsPrestation) return;
         height={36}
       />
       {title && (
-        <div className="CardsPrestation__title flex justify-center w-full">
-          <Heading level="gradient" className="h-gradient max-w-xl my-12 md:my-16">{title}</Heading>
-        </div>
+        <HeadingGradient title={title} />
       )}
       <div className="CardsPrestation__wrapper flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 md:mb-12 !-mx-4 md:!-mx-8 xl:!mx-0 px-4 md:px-8 xl:px-0 overflow-x-auto lg:overflow-hidden max-w-800 lg:max-w-5xl xl:max-w-800 2xl:max-w-5xl scrollbar-hidden">
         {cardsPrestation.map((card) => {

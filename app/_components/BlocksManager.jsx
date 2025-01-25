@@ -3,7 +3,7 @@
 import React from "react";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FootNote, Heading, Paragraph, Quote, Separator, Spacer } from "./atoms";
-import { ButtonLarge, DoubleButton } from "./molecules";
+import { ButtonLarge, DoubleButton, HeaderGradient } from "./molecules";
 import { Accordion, CardsBasic, CardsBasicImage, CardsPrestation, CardsPricing, Checklists, DoubleContent, ImagesSlider, List, Options, SectionCTA, StackItems, Stages, CardsStrategy, PricingPack, MiniStepBlock, PricingCard } from "./organisms";
 import Image from "next/image";
 
@@ -52,6 +52,8 @@ export function BlocksManager({ blocks }) {
             return <StackItems key={`StackItems-${block.id}`} items={block.items} />
           case "blocks.quote":
             return <Quote key={`Quote-${block.id}`} title={block.title} quotes={block.quotes} />;
+          case "blocks.header-gradient":
+            return <HeaderGradient key={`HeaderGradient-${block.id}`} title={block.title} description={block.description} button={block.button} />;
           case "blocks.button":
             return <ButtonLarge key={`ButtonLarge-${block.id}`} label={block.label} url={block.url} isExternal={block.isExternal} isCentered={block.isCentered} className="my-12 md:my-16" />;
           case "blocks.double-button":
@@ -147,6 +149,7 @@ export function BlocksManager({ blocks }) {
               <Checklists
                 key={`Checklists-${block.id}`}
                 content={block.checklists}
+                isCrossIcon={block.isCrossIcon}
               />
             );
           case "blocks.accordions-group":
@@ -160,6 +163,9 @@ export function BlocksManager({ blocks }) {
             return (
               <PricingPack
                 key={`PricingPack-${block.id}`}
+                title={block.title}
+                description={block.description}
+                button={block.button}
                 items={block.items}
                 hasSupport={block.hasSupport}
                 supportTitle={block.supportTitle}
@@ -170,6 +176,7 @@ export function BlocksManager({ blocks }) {
                 ctaTitle={block.ctaTitle}
                 ctaPricing={block.ctaPricing}
                 ctaDetail={block.ctaDetail}
+                isDiscounted={block.isDiscounted}
               />
             );
           case "blocks.options":
