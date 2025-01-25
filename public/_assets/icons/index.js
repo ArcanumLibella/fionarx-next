@@ -53,6 +53,7 @@ import CodeIcon from "./code.svg";
 import FeatherIcon from "./feather.svg";
 import ChevronRightIcon from "./chevron-right.svg";
 import CalendarMiniIcon from "./calendar-mini.svg";
+import CrossIcon from "./x-circle.svg";
 
 export {
   GithubIcon,
@@ -109,5 +110,6 @@ export {
   CodeIcon,
   BriefCaseIcon,
   ChevronRightIcon,
-  CalendarMiniIcon
+  CalendarMiniIcon,
+  CrossIcon
 };
