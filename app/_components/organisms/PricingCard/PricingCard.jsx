@@ -148,12 +148,22 @@ export const PricingCard = ({
         </Text>
         
         {/* BUTTON */}
-        {!isDisabled && (
+        {isDisabled ? (
+          <Button
+          label="Bientôt disponible"
+          url={slug}
+          isCentered
+          isExternal={isExternal}
+          isDisabled={isDisabled}
+          className="PricingCard__button border !bg-purple !border-purple-light"
+        />
+        ) : (
           <Button
             label="En savoir plus"
             url={slug}
             isCentered
             isExternal={isExternal}
+            isDisabled={isDisabled}
             className="PricingCard__button !text-white bg-gradient-to-r from-orange from-12% via-tomato via-44% to-purple-light to-96%"
           />
         )}
