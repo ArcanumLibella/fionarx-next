@@ -35,7 +35,7 @@ export const PricingPack = ({
       {hasSupport && (
         <>
           <div className="PricingPack__support Support flex flex-col justify-center">
-          <Text type="paragraphLarge" className="Support__title text-center text-base lg:!text-md 2xl:!text-2lg text-tomato text-balance">
+          <Text type="paragraphLarge" className="Support__title text-center text-base xs:!text-3base lg:!text-md 2xl:!text-2lg text-tomato text-balance">
             {supportTitle}
           </Text>
           <Text type="paragraphLarge" className="Support__description mb-4 text-center text-base md:!text-base lg:!text-2base 2xl:!text-md text-balance">
@@ -48,7 +48,7 @@ export const PricingPack = ({
         </>
       )}
       <div className="PricingPack__mentoring Mentoring flex flex-col justify-center">
-        <Text type="paragraphLarge" className="Mentoring__title text-center text-base lg:!text-md 2xl:!text-2lg text-tomato text-balance">
+        <Text type="paragraphLarge" className="Mentoring__title text-center text-base xs:!text-3base lg:!text-md 2xl:!text-2lg text-tomato text-balance">
           {mentoringTitle}
         </Text>
         <Text type="paragraphLarge" className="Mentoring__subtitle mb-4 text-center text-base md:!text-base lg:!text-2base 2xl:!text-md text-balance">
