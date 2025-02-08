@@ -1,6 +1,6 @@
 import React from "react";
 import { CardOption } from "../CardOption";
-import { Heading, Paragraph } from "../../atoms";
+import { DynamicText, Heading } from "../../atoms";
 
 export const Options = ({ title, description, options }) => {
 if (!options) return;
@@ -13,8 +13,8 @@ if (!options) return;
         </div>
       )}
       {description && (
-        <div className="CardsPrestation__description flex justify-center w-full">
-          <Paragraph className="text-center">{description}</Paragraph>
+        <div className="CardsPrestation__description text-center w-full">
+          <DynamicText text={description} />
         </div>
       )}
 
