@@ -90,6 +90,7 @@ export const Accordion = ({ accordion }) => {
                           <Image
                             src={image.url}
                             alt={image.alternativeText}
+                            title={image.alternativeText}
                             width={image.width}
                             height={image.height}
                           />
