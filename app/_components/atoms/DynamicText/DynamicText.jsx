@@ -3,6 +3,7 @@
 import React from 'react'
 import { BlocksRenderer } from "@strapi/blocks-react-renderer"
 import { Paragraph } from "../Paragraph";
+import { Heading } from "../Heading";
 
 export const DynamicText = ({ text }) => {
   if (!text) return;
@@ -11,15 +12,27 @@ export const DynamicText = ({ text }) => {
     <BlocksRenderer 
       content={text}
       blocks={{
-        paragraph: ({ children }) => (
-          <Paragraph className="DynamicText mb-8">
-            {children}
-          </Paragraph>
-        )
+        paragraph: ({ children }) => {
+          return (
+            <Paragraph key={"Paragraph"}>
+              {children}
+            </Paragraph>
+          )
+        },
+        heading: ({ children, level }) => {
+          return (
+            <Heading key={`Heading-${block.id}`} level={level}>
+              {children}
+            </Heading>
+          )
+        },
+        link: ({ children, url }) => <a /* key={`link-${block.id}`} */ href={url} target="_blank" title="Ouvrir le lien" className="Link font-medium text-tomato hover:!underline">{children}</a>,
+        list: ({ children }) => <ul /* key={`list-items-${block.id}`} */ className="List list-disc list-inside text-normal xs:text-base text-pretty">{children}</ul>,
+        quote: ({ children }) => <blockquote k/* ey={`Quote-${block.id}`} */ className="my-6 p-4 xs:p-6 w-full max-w-full text-2normal rounded bg-purple-light">{children}</blockquote>,
       }}
       modifiers={{
-        bold: ({ children }) => <strong className="!font-semibold text-tomato">{children}</strong>,
-        italic: ({ children }) => <span className="!italic">{children}</span>,
+        bold: ({ children }) => <strong /* key={`strong-${block.id}`} */ className="font-medium text-tomato">{children}</strong>,
+        italic: ({ children }) => <span /* key={`span-${block.id}`} */ className="italic">{children}</span>,
       }}
     />
   )
