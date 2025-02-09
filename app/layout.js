@@ -4,7 +4,6 @@ import "./globals.css";
 
 export const metadata = {
   title: {
-    template: 'Fiona Roux | %s',
     default: 'Consultant en stratégie digitale freelance | Fiona Roux',
   },
   description: "Votre business manque de visibilité ? Consultant en stratégie digitale freelance 🧚🏻‍♀️, j’élabore des stratégies 100% personnalisées & 100% ROI.",
