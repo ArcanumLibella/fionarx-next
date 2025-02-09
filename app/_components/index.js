@@ -61,6 +61,8 @@ export { DoubleContent } from "./organisms";
 export { StrategyCard } from "./organisms";
 export { CardsStrategy } from "./organisms";
 export { MiniStepBlock } from "./organisms";
+export { CardsList } from "./organisms";
+export { CardList } from "./organisms";
 
 export { MainLayout } from "./layouts";
 export { PageLayout } from "./layouts";

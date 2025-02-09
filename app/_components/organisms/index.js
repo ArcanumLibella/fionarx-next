@@ -25,3 +25,5 @@ export { DoubleContent } from "./DoubleContent";
 export { CardsStrategy } from "./CardsStrategy";
 export { StrategyCard } from "./StrategyCard";
 export { MiniStepBlock } from "./MiniStepBlock";
+export { CardsList } from "./CardsList";
+export { CardList } from "./CardList";
