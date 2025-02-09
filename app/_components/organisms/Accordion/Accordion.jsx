@@ -5,6 +5,7 @@ import { Heading, Paragraph } from "../../atoms";
 import { ChevronsDownIcon } from "@/public/_assets/icons";
 import { COLORS } from "@/app/_constants/Colors";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import Image from "next/image";
 
 export const Accordion = ({ accordion }) => {
   // Gestion de l'état des sections ouvertes
@@ -83,6 +84,18 @@ export const Accordion = ({ accordion }) => {
                     link: ({ children, url }) => <a key={`link-${item.id}`} href={url} target="_blank" rel="noreferrer" title="Ouvrir le lien" className="Link font-medium text-tomato hover:!underline">{children}</a>,
                     list: ({ children }) => <ul key={`list-items-${item.id}`} className="List list-disc list-inside">{children}</ul>,
                     quote: ({ children }) => <blockquote key={`Quote-${item.id}`} className="my-6 p-4 xs:p-6 w-full max-w-full text-normal rounded bg-purple-light">{children}</blockquote>,
+                    image: ({ image }) => {
+                      return (
+                        <figure className="Accordion__image">
+                          <Image
+                            src={image.url}
+                            alt={image.alternativeText}
+                            width={image.width}
+                            height={image.height}
+                          />
+                        </figure>
+                      )
+                    },
                   }}
                   modifiers={{
                     bold: ({ children }) => <strong className="!font-semibold text-tomato">{children}</strong>,
