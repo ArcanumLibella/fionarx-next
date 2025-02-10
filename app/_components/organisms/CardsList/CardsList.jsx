@@ -6,7 +6,7 @@ export const CardsList = ({ title, description, cards }) => {
 if (!cards) return;
 
   return (
-    <div className="CardsList w-full my-16">
+    <div className="CardsList w-full my-8 lg:my-16">
       {title && (
         <div className="CardsList__title flex justify-center w-full">
           <Heading level="gradient" className="h-gradient max-w-xl mb-4">{title}</Heading>

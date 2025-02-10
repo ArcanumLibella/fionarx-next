@@ -1,13 +1,12 @@
 import React from "react";
 import { HeadingGradient, Paragraph } from "../../atoms";
-import { Button } from "../Button";
 import { ButtonLarge } from "../ButtonLarge";
 
 export const HeaderGradient = ({ title, description, button }) => {
   if (!title) return;
   
   return (
-    <div className="HeaderGradient mb-16">
+    <div className="HeaderGradient mb-8 lg:mb-16">
       {title && (
         <HeadingGradient title={title} className="HeaderGradient__title !mb-4" />
       )}
