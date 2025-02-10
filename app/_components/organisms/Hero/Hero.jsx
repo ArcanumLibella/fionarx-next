@@ -13,7 +13,7 @@ export const Hero = async () => {
   const renderHero = heroItems.map((item) => {
     if (item.isMainTitle) {
       return (
-        <Link href={item.link} key={item.id} rel="canonical" className="z-10 no-underline mt-4 mb-5 md:mb-8">
+        <Link href={item.link} key={item.id} rel="canonical" className="z-10 no-underline mt-4 mb-5 md:mb-8 cursor-pointer">
           <span className="font-brother font-black uppercase text-[12vw] md:text-[10vw] lg:text-[8vh] xl:text-[12vh] text-white cursor-pointer select-none">
             {item.label}
           </span>
