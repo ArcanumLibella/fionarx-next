@@ -25,7 +25,7 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://www.fionarx.com/strategies-digitales/seo',
+      url: 'https://www.fionarx.com/strategies-digitales/consultant-seo-freelance',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
