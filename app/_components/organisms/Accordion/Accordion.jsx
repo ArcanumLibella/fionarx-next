@@ -52,7 +52,7 @@ export const Accordion = ({ accordion }) => {
           <div
             id={`collapse-${item.id}`}
             className={`Accordion__content p-4 xl:p-8 bg-purple transition-[max-height] duration-300 overflow-hidden ${
-              openSections[item.id] ? 'max-h-screen' : 'max-h-0 hidden'
+              openSections[item.id] ? 'max-h-auto' : 'max-h-0 hidden'
             }`}
             aria-labelledby={`item-${item.id}`}
             aria-hidden={!openSections[item.id]}
@@ -73,8 +73,8 @@ export const Accordion = ({ accordion }) => {
                   ),
                 }}
                 modifiers={{
-                  bold: ({ children }) => <strong className="!font-semibold text-tomato">{children}</strong>,
-                  italic: ({ children }) => <span className="!italic">{children}</span>,
+                  bold: ({ children }) => <strong className="!font-semibold !text-tomato">{children}</strong>,
+                  italic: ({ children }) => <span className="!font-medium">{children}</span>,
                 }}
               />
             </div>
