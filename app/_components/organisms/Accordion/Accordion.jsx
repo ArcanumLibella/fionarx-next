@@ -64,7 +64,7 @@ export const Accordion = ({ accordion }) => {
                   paragraph: ({ children }) => <Paragraph>{children}</Paragraph>,
                   heading: ({ children, level }) => <Heading level={level} className="!mt-0">{children}</Heading>,
                   link: ({ children, url }) => <a href={url} target="_blank" rel="noreferrer" className="Link font-medium text-tomato hover:!underline">{children}</a>,
-                  list: ({ children }) => <ul className="List list-disc list-inside">{children}</ul>,
+                  list: ({ children }) => <ul className="List list-disc list-inside !text-2normal">{children}</ul>,
                   quote: ({ children }) => <blockquote className="my-6 p-4 w-full max-w-full text-normal rounded bg-purple-light">{children}</blockquote>,
                   image: ({ image }) => (
                     <figure className="Accordion__image">
