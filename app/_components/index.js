@@ -34,6 +34,7 @@ export { CardBasicImage } from "./molecules";
 export { BackToParentLink } from "./molecules";
 export { MiniStep } from "./molecules";
 export { HeaderGradient } from "./molecules";
+export { CustomList } from "./molecules";
 
 export { Blobs } from "./organisms";
 export { BlobsLight } from "./organisms";

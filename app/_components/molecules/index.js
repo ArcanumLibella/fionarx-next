@@ -16,3 +16,4 @@ export { CardBasicImage } from './CardBasicImage';
 export { BackToParentLink } from './BackToParentLink';
 export { MiniStep } from './MiniStep';
 export { HeaderGradient } from './HeaderGradient';
+export { CustomList } from './CustomList';

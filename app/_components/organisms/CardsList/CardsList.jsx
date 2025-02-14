@@ -18,7 +18,7 @@ if (!cards) return;
         </div>
       )}
 
-      <div className="CardsList__items flex flex-col md:grid md:grid-cols-2 mt-12 lg:px-0 gap-3 xl:gap-12">
+      <div className="CardsList__items flex flex-col md:grid md:grid-cols-2 mt-12 lg:px-0 gap-3 md:gap-8 lg:gap-12">
         {cards.map((card) => {
           return (
             <CardList
