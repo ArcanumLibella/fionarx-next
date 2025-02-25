@@ -31,10 +31,16 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://www.fionarx.com/solutions',
+      url: 'https://www.fionarx.com/strategies-digitales/consultant-seo-local',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: 'https://www.fionarx.com/solutions',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.64,
     },
     {
       url: 'https://www.fionarx.com/solutions/digital-starter',
@@ -46,7 +52,7 @@ export default function sitemap() {
       url: 'https://www.fionarx.com/prestations',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.64,
     },
     {
       url: 'https://www.fionarx.com/prestations/audit-digital',
