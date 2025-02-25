@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 
 export async function middleware(req) {
-  console.log("Middleware exécuté pour :", req.nextUrl.pathname);
-
   try {
     // Récupérer les redirections depuis Strapi
     const res = await fetch("https://fionarx-strapi-d31f1e7bca7a.herokuapp.com/api/redirects"); // Remplacez par l'URL Strapi en prod
@@ -22,8 +20,6 @@ export async function middleware(req) {
     if (redirect) {
       console.log(`✅ Redirection trouvée : ${redirect.from} -> ${redirect.to}`);
       return NextResponse.redirect(new URL(redirect.to, req.url), redirect.type === "moved_permanently_301" ? 301 : 302);
-    } else {
-      console.log("❌ Aucune correspondance trouvée.");
     }
   } catch (error) {
     console.error("❌ Erreur middleware redirections:", error);

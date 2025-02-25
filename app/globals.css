@@ -53,11 +53,11 @@ strong {
 	}
 
 	.h3 {
-		@apply !text-base md:!text-2base 2xl:!text-3base text-pretty;
+		@apply !text-base 2xl:!text-3base text-pretty;
 	}
 
 	.h4 {
-		@apply !text-base md:!text-2base 2xl:!text-3base text-pretty;
+		@apply !text-base lg:!text-2base 2xl:!text-3base text-pretty;
 	}
 
 	.h5 {
@@ -92,11 +92,11 @@ strong {
 	}
 
 	h3 {
-		@apply text-base md:text-2base 2xl:text-3base text-pretty;
+		@apply text-base 2xl:text-3base text-pretty;
 	}
 
 	h4 {
-		@apply text-2normal md:text-base 2xl:text-2base text-pretty;
+		@apply text-2normal lg:text-base 2xl:text-2base text-pretty;
 	}
 
 	h5 {
