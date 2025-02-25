@@ -33,5 +33,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: "/strategies-digitales/:path*", // Appliquer à cette catégorie
+  matcher: "/:path*", // Appliquer à toutes les routes
 };
