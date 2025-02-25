@@ -10,7 +10,7 @@ export const CardBasic = ({
     <div className="CardBasic p-6 text-center min-w-240 min-h-240 bg-purple-light">
       <Text
         type="custom"
-        className="font-brother font-extrabold text-3base lg:text-md xl:text-2md uppercase text-tomato"
+        className="font-brother font-extrabold text-3base uppercase text-tomato"
       >
         {title}
       </Text>
